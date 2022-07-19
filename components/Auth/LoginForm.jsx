@@ -5,14 +5,10 @@ import RegisterForm from "./RegisterForm";
 const LoginForm = () => {
 
     const [visibleLoginItem, setVisibleLoginItem] = useState(true);
-    // const [visibleRegisterItem, setVisibleRegisterItem] = useState(false);
     const [visibleForgetItem, setVisibleForgetItem] = useState(true);
 
     const loadRegisterForm = () => {
-        // console.log(visibleItem);
-        // setVisibleRegisterItem(true);
         setVisibleLoginItem(false);
-        // setVisibleForgetItem(false);
     }
 
     const loadForgetPassForm = () => {
