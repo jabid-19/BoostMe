@@ -1,13 +1,12 @@
 import Image from 'next/image'
 import React from 'react'
 import { BsPlayBtn } from 'react-icons/bs'
-import styles from '../../../styles/Home.module.css'
 const Hero = () => {
   return (
-    <div className="hero min-h-screen">
-      <div className="flex lg:flex-row md:flex-col sm:flex-col">
-        <div className="flex lg:flex-col md:flex-row sm:flex-row lg:w-max">
-          <div className={styles.hero}>
+    <>
+      <div className="flex flex-col min-h-full md:flex-row gap-x-8">
+        <div className="flex justify-between gap-x-20 md:flex-col md:gap-8">
+          <div className="w-[260px]">
             <Image
               width={260}
               height={380}
@@ -27,23 +26,23 @@ const Hero = () => {
           </div>
         </div>
         <div className="flex flex-col">
-          <div className="h-52">
-            <h1 className="text-5xl font-semibold text-neutral tracking-wide ml-48">
+          <div className="h-20 md:h-52">
+            <h1 className="text-2xl text-center md:text-5xl md:font-semibold md:text-neutral md:tracking-wide md:ml-48">
               Build your <span className="text-primary">audience</span> and{' '}
               <span className="text-secondary">grow</span> your brand
             </h1>
           </div>
-          <div className="flex align-start justify-start p-4 gap-4 flex-col lg:flex-row">
-            <div className={styles.hero}>
+          <div className="flex flex-col justify-center items-center md:flex-row">
+            <div className="w-1/3">
               <Image
-                width={260}
-                height={380}
+                width={100}
+                height={100}
                 src="/landing-section/Group 10.png"
                 alt="Landing"
                 className="max-w-sm rounded-lg shadow-2xl"
               />
             </div>
-            <div className="pl-16">
+            <div className="pl-16 w-2/3">
               <p className="py-6 text-neutral">
                 Plan and publish your content for Instagram, TikTok, Facebook, Twitter, Pinterest,
                 and LinkedIn, all from one simple dashboard.
@@ -69,7 +68,7 @@ const Hero = () => {
           className="max-w-sm rounded-lg shadow-2xl"
         />
       </div> */}
-    </div>
+    </>
   )
 }
 
