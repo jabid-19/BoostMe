@@ -1,7 +1,7 @@
 const LoginForm = () => {
     return (
         <div className="px-2 my-12 lg:my-36">
-            <div className="lg:w-9/12">
+            <div className="max-w-md mx-auto">
                 <form>
                     <input type="text" placeholder="Email address" className="block input input-bordered input-primary rounded-full w-full min-w-xs mb-4" />
                     <input type="text" placeholder="Password" className="block input input-bordered input-primary rounded-full w-full min-w-xs" />
