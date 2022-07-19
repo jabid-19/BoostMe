@@ -1,25 +1,28 @@
 import { useState } from "react";
-// import ForgetPassForm from "./ForgetPassForm";
+import ForgetPassForm from "./ForgetPassForm";
 import RegisterForm from "./RegisterForm";
 
 const LoginForm = () => {
 
-    const [visibleItem, setVisibleItem] = useState(true);
-    // const [visibleForgetItem, setVisibleForgetItem] = useState(true);
+    const [visibleLoginItem, setVisibleLoginItem] = useState(true);
+    // const [visibleRegisterItem, setVisibleRegisterItem] = useState(false);
+    const [visibleForgetItem, setVisibleForgetItem] = useState(true);
 
     const loadRegisterForm = () => {
         // console.log(visibleItem);
-        setVisibleItem(false);
+        // setVisibleRegisterItem(true);
+        setVisibleLoginItem(false);
+        // setVisibleForgetItem(false);
     }
 
-    // const loadForgetPassForm = () => {
-    //     console.log(visibleForgetItem);
-    //     setVisibleForgetItem(false);
-    // }
+    const loadForgetPassForm = () => {
+        console.log(visibleForgetItem);
+        setVisibleForgetItem(false);
+    }
 
     return (
         <div className="lg:min-h-screen">
-            <div className={(visibleItem) ? "px-2 my-12 lg:sticky lg:inset-y-1/3 lg:z-50" : "hidden"}>
+            <div className={(visibleLoginItem && visibleForgetItem) ? "px-2 my-12 lg:sticky lg:inset-y-1/3 lg:z-50" : "hidden"}>
                 <div className="max-w-md mx-auto">
                     <form>
                         <input type="text" placeholder="Email address" className="block input input-bordered input-primary rounded-full w-full min-w-xs mb-4" />
@@ -29,13 +32,13 @@ const LoginForm = () => {
                     </form>
                     <br />
                     <div className="flex justify-between w-full px-2">
-                        <p className="hover:underline cursor-pointer">Forgot Password?</p>
+                        <p className="hover:underline cursor-pointer" onClick={loadForgetPassForm}>Forgot Password?</p>
                         <p className="hover:underline cursor-pointer" onClick={loadRegisterForm}>Create account</p>
                     </div>
                 </div>
             </div>
-            {/* {!visibleForgetItem && <ForgetPassForm />} */}
-            {!visibleItem && <RegisterForm />}
+            {!visibleForgetItem && <ForgetPassForm />}
+            {!visibleLoginItem && <RegisterForm />}
         </div>
     );
 }
