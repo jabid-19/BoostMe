@@ -1,19 +1,41 @@
+import { useState } from "react";
+// import ForgetPassForm from "./ForgetPassForm";
+import RegisterForm from "./RegisterForm";
+
 const LoginForm = () => {
+
+    const [visibleItem, setVisibleItem] = useState(true);
+    // const [visibleForgetItem, setVisibleForgetItem] = useState(true);
+
+    const loadRegisterForm = () => {
+        // console.log(visibleItem);
+        setVisibleItem(false);
+    }
+
+    // const loadForgetPassForm = () => {
+    //     console.log(visibleForgetItem);
+    //     setVisibleForgetItem(false);
+    // }
+
     return (
-        <div className="px-2 my-12 lg:my-36">
-            <div className="max-w-md mx-auto">
-                <form>
-                    <input type="text" placeholder="Email address" className="block input input-bordered input-primary rounded-full w-full min-w-xs mb-4" />
-                    <input type="text" placeholder="Password" className="block input input-bordered input-primary rounded-full w-full min-w-xs" />
+        <div className="lg:min-h-screen">
+            <div className={(visibleItem) ? "px-2 my-12 lg:sticky lg:inset-y-1/3 lg:z-50" : "hidden"}>
+                <div className="max-w-md mx-auto">
+                    <form>
+                        <input type="text" placeholder="Email address" className="block input input-bordered input-primary rounded-full w-full min-w-xs mb-4" />
+                        <input type="text" placeholder="Password" className="block input input-bordered input-primary rounded-full w-full min-w-xs" />
+                        <br />
+                        <input className='bg-secondary hover:bg-orange-400 py-1.5 w-full min-w-xs normal-case text-white rounded-full' type="submit" value="Submit" />
+                    </form>
                     <br />
-                    <input className='bg-secondary hover:bg-orange-400 py-1.5 w-full min-w-xs normal-case text-white rounded-full' type="submit" value="Submit" />
-                </form>
-                <br />
-                <div className="flex justify-between w-full px-2">
-                    <p>Forgot Password?</p>
-                    <p>Create account</p>
+                    <div className="flex justify-between w-full px-2">
+                        <p className="hover:underline cursor-pointer">Forgot Password?</p>
+                        <p className="hover:underline cursor-pointer" onClick={loadRegisterForm}>Create account</p>
+                    </div>
                 </div>
             </div>
+            {/* {!visibleForgetItem && <ForgetPassForm />} */}
+            {!visibleItem && <RegisterForm />}
         </div>
     );
 }
