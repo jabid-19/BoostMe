@@ -18,7 +18,7 @@ const LoginForm = () => {
 
     return (
         <div className="lg:min-h-screen">
-            <div className={(visibleLoginItem && visibleForgetItem) ? "px-2 my-12 lg:sticky lg:inset-y-1/3 lg:z-50" : "hidden"}>
+            <div className={(visibleLoginItem && visibleForgetItem) ? "px-2 my-24 lg:sticky lg:inset-y-1/3 lg:z-50" : "hidden"}>
                 <div className="max-w-md mx-auto">
                     <form>
                         <input type="text" placeholder="Email address" className="block input input-bordered input-primary rounded-full w-full min-w-xs mb-4" />
