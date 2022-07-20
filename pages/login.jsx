@@ -1,12 +1,12 @@
 import LoginForm from "../components/Auth/LoginForm";
-import LoginFrameImage from "../components/LoginFrameImage";
-import RectangleLoginImage from "../components/RectangleLoginImage";
+import LoginFrameImage from "../components/Auth/LoginFrameImage";
+import RectangleLoginImage from "../components/Auth/RectangleLoginImage";
 
 const Login = () => {
     return (
-        <div className="lg:flex lg:justify-between">
+        <div className="lg:grid lg:grid-cols-2">
             <RectangleLoginImage />
-            <div className="lg:w-1/2">
+            <div>
                 <LoginForm />
                 <LoginFrameImage />
             </div>
