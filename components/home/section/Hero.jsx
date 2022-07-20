@@ -11,14 +11,14 @@ const Hero = () => {
             width={240}
             height={270}
             alt="Landing"
-            class="max-w-full h-auto rounded-lg"
+            className="max-w-full h-auto rounded-lg"
           />
           <Image
             src="/landing-section/Group 9.png"
             width={240}
             height={270}
             alt="Landing"
-            class="max-w-full h-auto rounded-lg"
+            className="max-w-full h-auto rounded-lg"
           />
         </div>
         <div className="flex flex-col items-center justify-start lg:items-center lg:justify-start">
@@ -37,7 +37,7 @@ const Hero = () => {
                 width={240}
                 height={270}
                 alt="Landing"
-                class="max-w-full h-auto rounded-lg"
+                className="max-w-full h-auto rounded-lg"
               />
             </div>
             <div>
