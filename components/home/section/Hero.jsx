@@ -23,7 +23,7 @@ const Hero = () => {
         </div>
         <div className="flex flex-col items-center justify-start lg:items-center lg:justify-start">
           <div className="h-40 lg:mb-10">
-            <h1 className="text-2xl font-semibold break-words  md:text-4xl text-neutral lg:tracking-wide xl:text-5xl">
+            <h1 className="text-2xl font-semibold break-words md:text-4xl text-neutral lg:tracking-wide xl:text-5xl">
               Build your <span className="text-primary">audience</span> and
               <br />
               <span className="text-secondary">grow</span> your brand
@@ -47,7 +47,7 @@ const Hero = () => {
                   Pinterest, and LinkedIn, all from one simple dashboard.
                 </p>
               </div>
-              <div className="flex flex-col mt-4 items-center md:flex-row md:justify-around ">
+              <div className="flex flex-col mt-4 items-center md:flex-row md:justify-around lg:-ml-32">
                 <div className="flex gap-4 md:flex-row">
                   <div className="mb-4 md:mr-4 md:mb-0">
                     <button className="btn btn-primary text-white rounded-2xl">Get Started</button>
