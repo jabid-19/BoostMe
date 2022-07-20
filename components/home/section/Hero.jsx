@@ -3,7 +3,7 @@ import React from 'react'
 import { BsPlayBtn } from 'react-icons/bs'
 const Hero = () => {
   return (
-    <div className="min-h-screen w-full bg-cover place-items-start bg-center hero place-items-center">
+    <div className="min-h-screen w-full bg-cover  bg-center hero place-items-center">
       <div className="flex flex-col justify-center gap-4 h-3/5 items-center lg:flex-row">
         <div className="flex justify-around items-center gap-4 lg:flex-col">
           <Image
@@ -21,9 +21,9 @@ const Hero = () => {
             class="max-w-full h-auto rounded-lg"
           />
         </div>
-        <div className="flex flex-col items-center justify-start lg:items-start">
+        <div className="flex flex-col items-center justify-start lg:items-center lg:justify-start">
           <div className="h-40 lg:mb-10">
-            <h1 className="text-2xl font-semibold break-words md:text-center md:text-4xl text-neutral lg:tracking-wide py-14 xl:text-5xl">
+            <h1 className="text-2xl font-semibold break-words  md:text-4xl text-neutral lg:tracking-wide xl:text-5xl">
               Build your <span className="text-primary">audience</span> and
               <br />
               <span className="text-secondary">grow</span> your brand
@@ -41,8 +41,8 @@ const Hero = () => {
               />
             </div>
             <div>
-              <div className="flex flex-col items-center md:flex-row md:justify-around">
-                <p className="w-2/3 lg:w1/4">
+              <div className="flex flex-col items-center md:flex-row md:justify-around lg:items-start">
+                <p className="w-2/3 lg:w-3/4">
                   Plan and publish your content for Instagram, <br /> TikTok, Facebook, Twitter,
                   Pinterest, and LinkedIn, all from one simple dashboard.
                 </p>
@@ -62,7 +62,7 @@ const Hero = () => {
               </div>
             </div>
           </div>
-          <div className="hidden xl:block xl:flex xl:justify-end xl:items-end">
+          <div className="hidden lg:block lg:absolute lg:bottom-0 lg:right-0 lg:h-[100px] lg:w-[500px] ">
             <Image
               src="/landing-section/Frame 10.png"
               width={500}
