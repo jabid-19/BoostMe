@@ -17,7 +17,7 @@ const LoginForm = () => {
 
   return (
     <div>
-      <div className={visibleLoginItem && visibleForgetItem ? 'px-2 my-32 lg:mt-64' : 'hidden'}>
+      <div className={visibleLoginItem && visibleForgetItem ? 'px-2 my-36 lg:mt-64' : 'hidden'}>
         <div className="max-w-md mx-auto">
           <form>
             <input
