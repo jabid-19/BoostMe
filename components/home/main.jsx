@@ -1,10 +1,19 @@
 import React from 'react'
-import Hero from './section/Hero'
+import Audience from './section/Audience'
+import Banner from './section/Banner'
+import Companies from './section/Companies'
+import LearnMore from './section/LearnMore'
+import Testimonials from './section/Testimonials'
 
 const HomeMain = () => {
   return (
     <>
-      <Hero />
+      {/* <Hero /> */}
+      <Audience />
+      <Companies />
+      <LearnMore />
+      <Banner />
+      <Testimonials />
     </>
   )
 }
