@@ -68,7 +68,7 @@ const Hero = () => {
               width={500}
               height={100}
               alt="Landing"
-              class="max-w-full h-auto rounded-lg"
+              className="max-w-full h-auto rounded-lg"
             />
           </div>
         </div>
