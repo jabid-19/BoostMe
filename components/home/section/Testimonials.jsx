@@ -7,15 +7,15 @@ import 'swiper/css/pagination'
 import { Swiper, SwiperSlide } from 'swiper/react'
 const Testimonials = () => {
   return (
-    <div className="min-h-screen mt-16">
+    <div className="min-h-screen  flex flex-col justify-center">
       <div>
         {/* text div head */}
-        <div className="flex justify-around">
-          <div className="hidden lg:block lg:flex items-center lg:-ml-40">
+        <div className="flex justify-around relative mb-4">
+          <div className="hidden xl:block xl:absolute xl:left-0 xl:top-12">
             <Image src="/landing-section/Frame 11.png" width={400} height={100} alt="Landing" />
           </div>
           <div>
-            <h1 className="text-2xl font-semibold break-words lg:text-4xl text-neutral lg:tracking-wide py-14 xl:text-5xl">
+            <h1 className="text-2xl font-semibold break-words md:text-4xl text-neutral lg:tracking-wide py-14 xl:text-5xl">
               Business <span className="text-primary">all over the world</span> <br />
               <span className="text-secondary">trust</span> us to build the brand
             </h1>

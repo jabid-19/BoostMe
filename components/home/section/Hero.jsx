@@ -3,7 +3,7 @@ import React from 'react'
 import { BsPlayBtn } from 'react-icons/bs'
 const Hero = () => {
   return (
-    <div className="min-h-screen w-full bg-cover  bg-center hero place-items-center">
+    <div className="min-h-screen w-full bg-cover bg-center hero place-items-center">
       <div className="flex flex-col justify-center gap-4 h-3/5 items-center lg:flex-row">
         <div className="flex justify-around items-center gap-4 lg:flex-col">
           <Image
@@ -42,7 +42,7 @@ const Hero = () => {
             </div>
             <div>
               <div className="flex flex-col items-center md:flex-row md:justify-around lg:items-start">
-                <p className="w-2/3 lg:w-3/4">
+                <p className="w-2/3 lg:w-3/4 text-neutral">
                   Plan and publish your content for Instagram, <br /> TikTok, Facebook, Twitter,
                   Pinterest, and LinkedIn, all from one simple dashboard.
                 </p>
