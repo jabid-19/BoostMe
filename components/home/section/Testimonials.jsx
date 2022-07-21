@@ -7,7 +7,7 @@ import 'swiper/css/pagination'
 import { Swiper, SwiperSlide } from 'swiper/react'
 const Testimonials = () => {
   return (
-    <div className="min-h-screen  flex flex-col justify-center">
+    <div className=" min-h-screen  flex flex-col justify-center">
       <div>
         {/* text div head */}
         <div className="flex justify-around relative mb-4">
