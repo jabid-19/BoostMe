@@ -155,9 +155,9 @@ const Navbar = () => {
           <li className="text-primary font-bold mr-4">
             <a>Login</a>
           </li>
-          <li className="btn btn-primary text-white text-center capitalize rounded-full px-8 ml-4 mr-8">
-            <button>Get Started</button>
-          </li>
+          <button className="btn btn-primary text-white text-center capitalize rounded-full px-8 ml-4 mr-8">
+            Get Started
+          </button>
         </ul>
       </div>
     </div>
