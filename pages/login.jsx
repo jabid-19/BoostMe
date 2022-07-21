@@ -6,14 +6,17 @@ import Navbar from '../components/Shared/Navbar'
 
 const Login = () => {
   return (
-    <div className="min-h-screen lg:grid lg:grid-cols-2">
-      <div className="flex items-end">
-        <RectangleLoginImage />
-      </div>
-      <div className="flex flex-col justify-center items-center lg:justify-end lg:items-end">
-        <LoginForm />
-        <div>
-          <LoginFrameImage />
+    <div className="">
+      <Navbar />
+      <div className="min-h-screen lg:grid lg:grid-cols-2">
+        <div className="flex items-end">
+          <RectangleLoginImage />
+        </div>
+        <div className="flex flex-col justify-center items-center lg:justify-end lg:items-end">
+          <LoginForm />
+          <div>
+            <LoginFrameImage />
+          </div>
         </div>
       </div>
     </div>
