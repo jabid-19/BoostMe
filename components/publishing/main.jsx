@@ -1,4 +1,5 @@
 import React from 'react'
+import Background from './section/Background'
 import Banner from './section/Banner'
 import BrandBuild from './section/BrandBuild'
 import Hero from './section/Hero'
@@ -11,6 +12,7 @@ const PublishingMain = () => {
       <Banner />
       <LearnMore />
       <BrandBuild />
+      <Background />
     </div>
   )
 }
