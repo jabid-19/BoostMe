@@ -1,25 +1,21 @@
 import LoginForm from '../components/Auth/LoginForm'
 import LoginFrameImage from '../components/Auth/LoginFrameImage'
 import RectangleLoginImage from '../components/Auth/RectangleLoginImage'
-import Footer from '../components/Shared/Footer'
-import Navbar from '../components/Shared/Navbar'
 
 const Login = () => {
   return (
-    <div className="">
-      <Navbar />
-      <div className="min-h-screen lg:grid lg:grid-cols-2">
+    <div className="relative">
+      <div className="min-h-[91vh] gap-4 lg:grid lg:grid-cols-2">
         <div className="flex items-end">
           <RectangleLoginImage />
         </div>
-        <div className="flex flex-col justify-center items-center lg:justify-end lg:items-end">
+        <div className="flex justify-center items-center ">
           <LoginForm />
-          <div>
-            <LoginFrameImage />
-          </div>
         </div>
       </div>
-      <Footer />
+      <div className="absolute bottom-0 right-0">
+        <LoginFrameImage />
+      </div>
     </div>
   )
 }

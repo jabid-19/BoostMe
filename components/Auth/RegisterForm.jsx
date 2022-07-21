@@ -5,7 +5,6 @@ const RegisterForm = () => {
   const [visibleItem, setVisibleItem] = useState(true)
 
   const loadLoginForm = () => {
-    console.log(visibleItem)
     setVisibleItem(false)
   }
 
@@ -13,6 +12,13 @@ const RegisterForm = () => {
     <div>
       <div className={visibleItem ? 'px-2 lg:mr-24' : 'hidden'}>
         <div className="max-w-md">
+          <div className="h-40 lg:mb-10">
+            <h1 className="text-2xl font-semibold break-words md:text-5xl text-neutral lg:tracking-wide xl:text-5xl">
+              Build your <span className="text-primary">audience</span> and
+              <br />
+              <span className="text-secondary">grow</span> your brand
+            </h1>
+          </div>
           <form>
             <input
               type="text"

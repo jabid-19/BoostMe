@@ -4,7 +4,7 @@ import imageLoader from '../../helper/imageLoader'
 
 const LoginFrameImage = () => {
   return (
-    <div className="mt-36">
+    <div>
       <Image width={500} height={117} src={FrameImage} alt="" loader={imageLoader} />
     </div>
   )

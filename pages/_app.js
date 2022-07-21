@@ -4,11 +4,11 @@ import Footer from '../components/Shared/Footer'
 
 function MyApp({ Component, pageProps }) {
   return (
-    <>
+    <div>
       <Navbar />
       <Component {...pageProps} />
       <Footer />
-    </>
+    </div>
   )
 }
 
