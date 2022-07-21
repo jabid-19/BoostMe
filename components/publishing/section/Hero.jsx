@@ -14,7 +14,7 @@ const Hero = () => {
         <div className="hidden lg:block lg:absolute lg:left-0 lg:top-[100px]">
           <Image src="/landing-section/Frame 10.png" width={500} height={100} alt="publishing" />
         </div>
-        <h1 className="hidden lg:block lg:mb-[100px] text-end font-semibold break-words text-neutral lg:tracking-wide lg:text-5xl">
+        <h1 className="hidden lg:block lg:mb-[100px] text-end font-semibold break-words text-neutral lg:tracking-wide lg:text-[40px] xl:text-5xl">
           Build your <span className="text-primary">audience</span> and
           <br />
           <span className="text-secondary">grow</span> your brand
