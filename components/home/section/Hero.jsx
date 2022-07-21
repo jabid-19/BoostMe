@@ -29,7 +29,6 @@ const Hero = () => {
               <span className="text-secondary">grow</span> your brand
             </h1>
           </div>
-          {/* complex */}
           <div className="h-auto flex flex-col items-center justify-center lg:flex-row lg:items-start">
             <div>
               <Image
@@ -47,13 +46,15 @@ const Hero = () => {
                   Pinterest, and LinkedIn, all from one simple dashboard.
                 </p>
               </div>
-              <div className="flex flex-col mt-4 items-center md:flex-row md:justify-around lg:-ml-32">
+              <div className="flex flex-col mt-4 items-center md:flex-row md:justify-around lg:ml-20">
                 <div className="flex gap-4 md:flex-row">
                   <div className="mb-4 md:mr-4 md:mb-0">
-                    <button className="btn btn-primary text-white rounded-2xl">Get Started</button>
+                    <button className="btn btn-primary normal-case lg:btn-wide text-white rounded-2xl">
+                      Get Started
+                    </button>
                   </div>
                   <div>
-                    <button className="btn btn-primary  text-primary rounded-2xl bg-white hover:bg-transparent">
+                    <button className="btn btn-primary normal-case lg:btn-wide text-primary rounded-2xl bg-white hover:bg-transparent">
                       <BsPlayBtn />
                       <span className="ml-2">Watch Video</span>
                     </button>
