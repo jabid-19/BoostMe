@@ -11,23 +11,23 @@ const RegisterForm = () => {
 
   return (
     <div>
-      <div className={visibleItem ? 'px-2 my-24 lg:mt-64' : 'hidden'}>
-        <div className="max-w-md mx-auto">
+      <div className={visibleItem ? 'px-2 lg:mr-24' : 'hidden'}>
+        <div className="max-w-md">
           <form>
             <input
               type="text"
               placeholder="Email address"
-              className="block input input-bordered input-primary rounded-full w-full min-w-xs mb-4"
+              className="input input-bordered input-primary rounded-full w-full min-w-xs mb-4"
             />
             <input
               type="text"
               placeholder="Password"
-              className="block input input-bordered input-primary rounded-full w-full min-w-xs mb-4"
+              className="input input-bordered input-primary rounded-full w-full min-w-xs mb-4"
             />
             <input
               type="text"
               placeholder="Confirm password"
-              className="block input input-bordered input-primary rounded-full w-full min-w-xs"
+              className="input input-bordered input-primary rounded-full w-full min-w-xs mb-6"
             />
             <br />
             <input
