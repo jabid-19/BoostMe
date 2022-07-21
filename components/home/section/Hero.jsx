@@ -29,7 +29,6 @@ const Hero = () => {
               <span className="text-secondary">grow</span> your brand
             </h1>
           </div>
-          {/* complex */}
           <div className="h-auto flex flex-col items-center justify-center lg:flex-row lg:items-start">
             <div>
               <Image
