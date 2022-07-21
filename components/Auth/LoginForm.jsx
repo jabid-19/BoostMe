@@ -32,7 +32,7 @@ const LoginForm = () => {
             />
             <br />
             <input
-              className="bg-secondary hover:bg-orange-400 py-1.5 w-full min-w-xs normal-case text-white rounded-full"
+              className="bg-secondary hover:bg-orange-400 py-1.5 w-full min-w-xs normal-case text-white rounded-full cursor-pointer"
               type="submit"
               value="Sign In"
             />

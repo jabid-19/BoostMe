@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import RectangleImage from '../../public/login-section/Rectangle 10.png'
 import imageLoader from '../../helper/imageLoader'
-const Profile = () => {
+const Employee = () => {
   return (
     <div className="my-36">
       <div className="flex flex-col lg:flex-row lg:justify-center items-center py-4 px-8 lg:px-20">
@@ -11,7 +11,7 @@ const Profile = () => {
           </div>
         </div>
         <div className="mt-6 lg:pl-12 text-center lg:text-start">
-          <h1 className="text-3xl">Box Office News!</h1>
+          <h1 className="text-3xl">Employee No 1</h1>
           <p className="py-6">
             Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi
             exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.
@@ -25,7 +25,7 @@ const Profile = () => {
           </div>
         </div>
         <div className="mt-6 lg:pl-12 text-center lg:text-start">
-          <h1 className="text-3xl">Box Office News!</h1>
+          <h1 className="text-3xl">Employee No 2</h1>
           <p className="py-6">
             Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi
             exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.
@@ -39,7 +39,7 @@ const Profile = () => {
           </div>
         </div>
         <div className="mt-6 lg:pl-12 text-center lg:text-start">
-          <h1 className="text-3xl">Box Office News!</h1>
+          <h1 className="text-3xl">Employee No 3</h1>
           <p className="py-6">
             Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi
             exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.
@@ -50,4 +50,4 @@ const Profile = () => {
   )
 }
 
-export default Profile
+export default Employee

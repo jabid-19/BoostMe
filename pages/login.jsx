@@ -1,8 +1,6 @@
 import LoginForm from '../components/Auth/LoginForm'
 import LoginFrameImage from '../components/Auth/LoginFrameImage'
 import RectangleLoginImage from '../components/Auth/RectangleLoginImage'
-import Footer from '../components/Shared/Footer'
-import Navbar from '../components/Shared/Navbar'
 
 const Login = () => {
   return (

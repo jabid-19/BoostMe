@@ -1,4 +1,4 @@
-const Description = () => {
+const Goal = () => {
   return (
     <div className="bg-[url('https://images.unsplash.com/photo-1634876679764-422a0414d72b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80')] bg-no-repeat bg-cover mt-36">
       <div className="py-12 px-8 lg:max-w-5xl lg:mx-auto">
@@ -31,4 +31,4 @@ const Description = () => {
   )
 }
 
-export default Description
+export default Goal

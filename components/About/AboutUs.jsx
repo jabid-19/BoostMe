@@ -1,6 +1,6 @@
-const Intro = () => {
+const AboutUs = () => {
   return (
-    <div className="hero min-h-screen bg-pink-300 p-8 mx-auto text-white">
+    <div className="hero min-h-screen bg-pink-200 p-8 mx-auto text-white">
       <div className="hero-content p-8 lg:m-12 bg-primary flex-col lg:flex-row-reverse">
         <div>
           <h1 className="text-3xl lg:text-5xl text-center">About Us</h1>
@@ -31,4 +31,4 @@ const Intro = () => {
   )
 }
 
-export default Intro
+export default AboutUs
