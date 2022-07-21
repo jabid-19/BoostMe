@@ -49,12 +49,12 @@ const Hero = () => {
               <div className="flex flex-col mt-4 items-center md:flex-row md:justify-around lg:ml-20">
                 <div className="flex gap-4 md:flex-row">
                   <div className="mb-4 md:mr-4 md:mb-0">
-                    <button className="btn btn-primary  lg:btn-wide text-white rounded-2xl">
+                    <button className="btn btn-primary normal-case lg:btn-wide text-white rounded-2xl">
                       Get Started
                     </button>
                   </div>
                   <div>
-                    <button className="btn btn-primary lg:btn-wide text-primary rounded-2xl bg-white hover:bg-transparent">
+                    <button className="btn btn-primary normal-case lg:btn-wide text-primary rounded-2xl bg-white hover:bg-transparent">
                       <BsPlayBtn />
                       <span className="ml-2">Watch Video</span>
                     </button>

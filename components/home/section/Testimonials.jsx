@@ -9,9 +9,8 @@ const Testimonials = () => {
   return (
     <div className="min-h-screen flex flex-col justify-center">
       <div>
-        {/* text div head */}
-        <div className="flex justify-end relative mb-4">
-          <div className="hidden xl:block xl:absolute xl:left-0 xl:top-12">
+        <div className="flex justify-center relative mb-4 lg:justify-end">
+          <div className="hidden lg:block lg:absolute lg:left-0 lg:top-12">
             <Image src="/landing-section/Frame 11.png" width={400} height={100} alt="Landing" />
           </div>
           <div>
