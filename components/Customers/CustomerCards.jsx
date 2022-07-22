@@ -3,12 +3,14 @@ import Image from 'next/image'
 import imageLoader from '../../helper/imageLoader'
 import CampaignLogo from '../../public/customers-section/campaign-monitor-logo.svg'
 import CampaignPicture from '../../public/customers-section/aaron-beashel.svg'
+import { FiArrowRight } from 'react-icons/fi'
+import { GoQuote } from 'react-icons/go'
 
 const customersInfo = [
   {
     companyLogo: CampaignLogo,
     customerReview:
-      '"BoostMe helps us measure what networks, and what content, is working best for us."',
+      'BoostMe helps us measure what networks, and what content, is working best for us.',
     customerPicture: CampaignPicture,
     customerName: 'Aaron Beashel',
     borderColor: 'primary',
@@ -16,7 +18,7 @@ const customersInfo = [
   {
     companyLogo: CampaignLogo,
     customerReview:
-      '"BoostMe helps us measure what networks, and what content, is working best for us."',
+      'BoostMe helps us measure what networks, and what content, is working best for us.',
     customerPicture: CampaignPicture,
     customerName: 'Aaron Beashel',
     borderColor: 'secondary',
@@ -24,7 +26,7 @@ const customersInfo = [
   {
     companyLogo: CampaignLogo,
     customerReview:
-      '"BoostMe helps us measure what networks, and what content, is working best for us."',
+      'BoostMe helps us measure what networks, and what content, is working best for us.',
     customerPicture: CampaignPicture,
     customerName: 'Aaron Beashel',
     borderColor: 'secondary',
@@ -32,7 +34,7 @@ const customersInfo = [
   {
     companyLogo: CampaignLogo,
     customerReview:
-      '"BoostMe helps us measure what networks, and what content, is working best for us."',
+      'BoostMe helps us measure what networks, and what content, is working best for us.',
     customerPicture: CampaignPicture,
     customerName: 'Aaron Beashel',
     borderColor: 'primary',
@@ -40,7 +42,7 @@ const customersInfo = [
   {
     companyLogo: CampaignLogo,
     customerReview:
-      '"BoostMe helps us measure what networks, and what content, is working best for us."',
+      'BoostMe helps us measure what networks, and what content, is working best for us.',
     customerPicture: CampaignPicture,
     customerName: 'Aaron Beashel',
     borderColor: 'primary',
@@ -48,7 +50,7 @@ const customersInfo = [
   {
     companyLogo: CampaignLogo,
     customerReview:
-      '"BoostMe helps us measure what networks, and what content, is working best for us."',
+      'BoostMe helps us measure what networks, and what content, is working best for us.',
     customerPicture: CampaignPicture,
     customerName: 'Aaron Beashel',
     borderColor: 'secondary',
@@ -56,7 +58,7 @@ const customersInfo = [
   {
     companyLogo: CampaignLogo,
     customerReview:
-      '"BoostMe helps us measure what networks, and what content, is working best for us."',
+      'BoostMe helps us measure what networks, and what content, is working best for us.',
     customerPicture: CampaignPicture,
     customerName: 'Aaron Beashel',
     borderColor: 'secondary',
@@ -64,7 +66,7 @@ const customersInfo = [
   {
     companyLogo: CampaignLogo,
     customerReview:
-      '"BoostMe helps us measure what networks, and what content, is working best for us."',
+      'BoostMe helps us measure what networks, and what content, is working best for us.',
     customerPicture: CampaignPicture,
     customerName: 'Aaron Beashel',
     borderColor: 'primary',
@@ -73,7 +75,7 @@ const customersInfo = [
 
 const CustomerCards = () => {
   return (
-    <div className="grid grid-cols-2 gap-16 mx-36 my-12">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 sm:mx-36 mx-12 my-8 sm:my-20">
       {customersInfo.map((item, index) => (
         <div
           key={index}
@@ -81,28 +83,29 @@ const CustomerCards = () => {
             item.borderColor == 'primary' ? 'border-primary' : 'border-secondary'
           }`}>
           <Image width={200} height={50} src={item.companyLogo} alt="" loader={imageLoader} />
-          <h4 className="text-neutral text-2xl">{item.customerReview}</h4>
+          <GoQuote size={'2em'} color={'#777777'} className="text-lg" />
+          <h4 className="text-neutral text-lg sm:text-2xl text-center">{item.customerReview}</h4>
           <a
             href="#"
             rel="noreferrer"
             target="_blank"
-            className="my-4 text-blue-600 hover:underline underline-offset-4">
+            className="my-4 text-xs sm:text-base text-blue-600 hover:underline underline-offset-4">
             Read The Case Study
+            <FiArrowRight className="inline" />
           </a>
           <div className="flex flex-row items-center">
             <div className="avatar">
-              <div className="w-12 rounded-full">
+              <div className="w-8 sm:w-12 rounded-full">
                 <Image
                   width={50}
                   height={50}
-                  // className="inline-block h-8 w-8 rounded-full ring-2 ring-white"
                   src={item.customerPicture}
                   alt=""
                   loader={imageLoader}
                 />
               </div>
             </div>
-            <p className="pl-4 text-neutral">{item.customerName}</p>
+            <p className="pl-4 text-sm sm:text-base text-neutral">{item.customerName}</p>
           </div>
         </div>
       ))}
