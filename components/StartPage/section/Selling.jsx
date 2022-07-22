@@ -6,11 +6,11 @@ const Selling = () => {
     <div className="flex items-center w-auto mx-6 mb-20 mt-10 lg:h-screen lg:mb-0 2xl:w-[1400px] 2xl:mx-auto">
       {/* section div */}
       <div className="flex flex-col gap-10 w-full md:flex-row">
-        <div className="w-[95%] mx-auto flex lg:w-1/2 ">
+        <div className="w-[95%] mx-auto flex justify-center lg:w-1/2 ">
           <Image src="/start-page/Small-business-1.png" width={550} height={620} alt="Engagement" />
         </div>
         <div className="w-[90%] mx-auto flex flex-col justify-center item-center lg:w-1/2 ">
-          <h1 className="text-2xl text-center font-semibold break-words md:text-4xl text-neutral md:text-start lg:tracking-wide xl:text-5xl">
+          <h1 className="text-4xl text-center font-semibold break-words text-neutral md:text-start lg:tracking-wide xl:text-5xl">
             Build a loyal and <span className="text-primary">audience</span> on
             <br />
             <span className="text-secondary">social media</span>
