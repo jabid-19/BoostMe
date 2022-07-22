@@ -29,7 +29,7 @@ const PricingChart = ({ headings, pricingPackages }) => {
         {pricingPackages.map((item, index) => {
           return (
             <div
-              className="card-compact h-96 bg-base-100 border-2 border-primary-300 hover:border-secondary duration-300"
+              className="card-compact min-h-max bg-base-100 border-2 border-primary-300 hover:border-secondary duration-300"
               key={index}>
               <div className="card-body">
                 <h2 className="card-title">{item.name}</h2>
@@ -44,7 +44,7 @@ const PricingChart = ({ headings, pricingPackages }) => {
                 <ul className="flex flex-col">
                   {item.features.map((feature, index) => {
                     return (
-                      <li key={index}>
+                      <li key={index} className="my-1">
                         <TiTick className="inline-block mr-2 text-primary" />
                         {feature}
                       </li>
