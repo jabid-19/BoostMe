@@ -13,8 +13,8 @@ const index = () => {
     {
       name: 'Name',
       caption: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-      monthlyPrice: '$4.00',
-      yearlyPrice: '$8.00',
+      monthlyPrice: '$4',
+      yearlyPrice: '$8',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       features: ['Feature', 'Feature', 'Feature', 'Feature', 'Feature'],
@@ -24,8 +24,8 @@ const index = () => {
     {
       name: 'Name',
       caption: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-      monthlyPrice: '$3.00',
-      yearlyPrice: '$7.00',
+      monthlyPrice: '$3',
+      yearlyPrice: '$7',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       features: ['Feature', 'Feature', 'Feature', 'Feature', 'Feature'],
@@ -35,8 +35,8 @@ const index = () => {
     {
       name: 'Name',
       caption: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-      monthlyPrice: '$1.00',
-      yearlyPrice: '$5.00',
+      monthlyPrice: '$1',
+      yearlyPrice: '$5',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       features: ['Feature', 'Feature', 'Feature', 'Feature', 'Feature'],
@@ -46,8 +46,8 @@ const index = () => {
     {
       name: 'Name',
       caption: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-      monthlyPrice: '$2.00',
-      yearlyPrice: '6.00',
+      monthlyPrice: '$2',
+      yearlyPrice: '$6',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       features: ['Feature', 'Feature', 'Feature', 'Feature', 'Feature'],

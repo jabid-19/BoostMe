@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { TiTick } from 'react-icons/ti'
 
 const PricingChart = ({ headings, pricingPackages }) => {
   const [pricingMode, setPricingMode] = useState('monthly')
@@ -28,16 +29,28 @@ const PricingChart = ({ headings, pricingPackages }) => {
         {pricingPackages.map((item, index) => {
           return (
             <div
-              className="card h-96 bg-base-100 border-2 border-primary-300 hover:border-secondary duration-300"
+              className="card-compact h-96 bg-base-100 border-2 border-primary-300 hover:border-secondary duration-300"
               key={index}>
               <div className="card-body">
                 <h2 className="card-title">{item.name}</h2>
-                <p>
+                <p className="text-3xl font-bold">
                   {pricingMode == 'monthly' ? item.monthlyPrice : item.yearlyPrice}
-                  <span>{pricingMode == 'monthly' ? '  / month' : '  / year'}</span>
+                  <span className="text-sm">
+                    {pricingMode == 'monthly' ? '  / month' : '  / year'}
+                  </span>
                 </p>
-                <p>{item.description}</p>
+                <p className=" text-justify text-sm">{item.description}</p>
                 <hr />
+                <ul className="flex flex-col">
+                  {item.features.map((feature, index) => {
+                    return (
+                      <li key={index}>
+                        <TiTick className="inline-block mr-2 text-primary" />
+                        {feature}
+                      </li>
+                    )
+                  })}
+                </ul>
 
                 <div className="card-actions justify-center">
                   <button className="btn-sm w-2/3 btn-primary text-white rounded-2xl">
