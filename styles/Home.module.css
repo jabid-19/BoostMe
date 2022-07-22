@@ -1,15 +1,26 @@
 .container {
-  padding: 0 2rem;
+  padding: 0 80px;
 }
 
 .main {
   min-height: 100vh;
-  padding: 4rem 0;
-  flex: 1;
+}
+
+.hero {
+  width: 260px !important;
+}
+
+.hero_section {
   display: flex;
-  flex-direction: column;
+  width: 1400px;
+  gap: 60px;
+  margin-top: 80px;
   justify-content: center;
-  align-items: center;
+}
+
+.hero_text {
+  height: 200px;
+  padding-left: 80px;
 }
 
 .footer {
