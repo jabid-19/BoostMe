@@ -17,8 +17,8 @@ const Banner = () => {
       </div>
       <div className="mt-10 md:mt-28 w-full">
         <Image
-          src="/landing-section/Rectangle 7.png"
           alt="Banner"
+          src="/landing-section/Rectangle 7.png"
           width="100%"
           height={28}
           objectFit="contain"

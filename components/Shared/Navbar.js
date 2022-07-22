@@ -1,8 +1,8 @@
 import Image from 'next/image'
-import Logo from '../../public/common/logo.png'
-import imageLoader from '../../helper/imageLoader'
+import Link from 'next/link'
 import { useEffect, useState } from 'react'
-
+import imageLoader from '../../helper/imageLoader'
+import Logo from '../../public/common/logo.png'
 const Navbar = () => {
   const [show, setShow] = useState(true)
   const [lastScrollY, setLastScrollY] = useState(0)
@@ -77,7 +77,9 @@ const Navbar = () => {
                   <a>Publishing</a>
                 </li>
                 <li>
-                  <a>Engagement</a>
+                  <Link href='/engagement'>
+                    <a>Engagement</a>
+                  </Link>
                 </li>
                 <li>
                   <a>Start Page</a>
@@ -131,7 +133,9 @@ const Navbar = () => {
                 <a href="publishing">Publishing</a>
               </li>
               <li>
-                <a>Engagement</a>
+                <Link href='/engagement'>
+                    <a>Engagement</a>
+                </Link>
               </li>
               <li>
                 <a>Start Page</a>
