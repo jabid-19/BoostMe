@@ -2,7 +2,7 @@ import React from 'react'
 
 const Traffic = () => {
   return (
-    <div className="flex items-center flex-col justify-center w-auto mx-6 lg:h-screen 2xl:w-[1400px] 2xl:mx-auto mb-20">
+    <div className="flex items-center flex-col justify-center w-auto mx-6 mt-12 mb-20 lg:h-screen lg:mt-0 2xl:w-[1400px] 2xl:mx-auto">
       <div className="w-[90%] lg:w-2/3">
         <h1 className="text-4xl text-center font-semibold break-words text-neutral lg:tracking-wide xl:text-5xl">
           Build a loyal and <span className="text-primary">engaged</span> audience on
