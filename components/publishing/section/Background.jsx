@@ -11,7 +11,7 @@ const Background = () => {
           <h1 className="mb-5 text-5xl font-bold">
             Build your audience and <br /> grow your brand{' '}
           </h1>
-          <button className="btn btn-primary normal-case btn-wide text-white rounded-2xl mt-12">
+          <button className="btn btn-primary normal-case px-12 text-white rounded-full mt-12">
             Get Started
           </button>
         </div>

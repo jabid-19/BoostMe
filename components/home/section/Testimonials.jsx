@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
-import { Pagination } from 'swiper'
+import { Pagination, Navigation } from 'swiper'
 import 'swiper/css/bundle'
 import 'swiper/css/free-mode'
 import 'swiper/css/pagination'
@@ -23,10 +23,11 @@ const Testimonials = () => {
         {/* card design */}
         <div className="lg:w-[70%] lg:mx-auto">
           <Swiper
+            navigation={true}
             pagination={{
               dynamicBullets: true,
             }}
-            modules={[Pagination]}
+            modules={[Pagination, Navigation]}
             className="mySwiper">
             <SwiperSlide>
               <div className="flex flex-col flex-wrap mx-10 lg:flex-row lg:justify-around lg:items-center lg:gap-10">
