@@ -25,7 +25,7 @@ const PricingChart = ({ headings, pricingPackages }) => {
           </button>
         </div>
       </div>
-      <div className="cardContainer my-5 grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2  gap-4">
+      <div className="cardContainer my-5 grid lg:grid-cols-4 md:grid-cols-3 gap-4 sm:grid-cols-2 p-3 md:p-0 lg:p-0">
         {pricingPackages.map((item, index) => {
           return (
             <div
