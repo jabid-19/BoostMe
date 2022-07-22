@@ -14,7 +14,7 @@ const FAQ = () => {
             {faqData?.map((faq, index) => (
               <div key={index}>
                 <details className="border rounded-lg ">
-                  <summary className="px-4 py-6 font-bold">{faq.title}</summary>
+                  <summary className="px-4 py-6 font-bold text-neutral">{faq.title}</summary>
                   <p className="px-4 py-6 pt-0 ml-4 -mt-4 text-neutral">{faq.data}</p>
                 </details>
               </div>

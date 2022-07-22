@@ -8,17 +8,23 @@ const Showcase = () => {
     <div className="flex items-center flex-col w-auto mx-6 lg:h-screen 2xl:w-[1400px] 2xl:mx-auto mb-20">
       <div className="tabs mb-10">
         <a
-          className={`tab tab-lg tab-lifted ${tabs === 1 && 'tab-active'}`}
+          className={`tab tab-lg tab-lifted text-neutral ${
+            tabs === 1 && 'tab-active text-primary'
+          }`}
           onClick={() => setTabs(1)}>
           Small Business
         </a>
         <a
-          className={`tab tab-lg tab-lifted ${tabs === 2 && 'tab-active'}`}
+          className={`tab tab-lg tab-lifted text-neutral ${
+            tabs === 2 && 'tab-active text-primary'
+          }`}
           onClick={() => setTabs(2)}>
           Social Media
         </a>
         <a
-          className={`tab tab-lg tab-lifted ${tabs === 3 && 'tab-active'}`}
+          className={`tab tab-lg tab-lifted text-neutral ${
+            tabs === 3 && 'tab-active text-primary'
+          }`}
           onClick={() => setTabs(3)}>
           NFTs
         </a>
@@ -35,7 +41,7 @@ const Showcase = () => {
               See all of your comments, stay on top of important <br /> interactions, and turn
               followers into fans <br /> using Buffer.
             </p>
-            <button className="btn btn-wide rounded-full mt-10 btn-primary mx-auto text-white md:mx-0">
+            <button className="btn btn-wide rounded-full mt-10 btn-primary mx-auto text-white normal-case md:mx-0">
               Create Your Page For Free
             </button>
           </div>
@@ -64,7 +70,7 @@ const Showcase = () => {
               See all of your comments, stay on top of important <br /> interactions, and turn
               followers into fans <br /> using Buffer.
             </p>
-            <button className="btn btn-wide rounded-full mt-10 btn-primary mx-auto text-white md:mx-0">
+            <button className="btn btn-wide rounded-full mt-10 btn-primary mx-auto text-white normal-case md:mx-0">
               Create Your Page For Free
             </button>
           </div>
@@ -82,7 +88,7 @@ const Showcase = () => {
               See all of your comments, stay on top of important <br /> interactions, and turn
               followers into fans <br /> using Buffer.
             </p>
-            <button className="btn btn-wide rounded-full mt-10 btn-primary mx-auto text-white md:mx-0">
+            <button className="btn btn-wide rounded-full mt-10 btn-primary mx-auto text-white normal-case md:mx-0">
               Create Your Page For Free
             </button>
           </div>

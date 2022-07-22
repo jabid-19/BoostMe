@@ -19,7 +19,7 @@ const Selling = () => {
             See all of your comments, stay on top of important <br /> interactions, and turn
             followers into fans <br /> using Buffer.
           </p>
-          <button className="btn btn-wide rounded-full mt-10 btn-primary mx-auto text-white md:mx-0">
+          <button className="btn btn-wide rounded-full mt-10 btn-primary mx-auto text-white normal-case md:mx-0">
             Create Your Page For Free
           </button>
         </div>
