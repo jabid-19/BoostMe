@@ -40,14 +40,15 @@ const Hero = () => {
               />
             </div>
             <div>
-              <div className="flex flex-col items-center md:flex-row md:justify-around lg:items-start">
+              <div className="flex flex-col items-center md:flex-row md:ml-12 lg:items-start">
                 <p className="w-2/3 lg:w-3/4 text-neutral">
                   Plan and publish your content for Instagram, <br /> TikTok, Facebook, Twitter,
-                  Pinterest, and LinkedIn, all from one simple dashboard.
+                  Pinterest, and LinkedIn,
+                  <br /> all from one simple dashboard.
                 </p>
               </div>
-              <div className="flex flex-col mt-4 items-center md:flex-row md:justify-around lg:ml-20">
-                <div className="flex gap-4 md:flex-row">
+              <div className="flex flex-col mt-4 items-center md:flex-row md:justify-around lg:ml-10">
+                <div className="flex md:flex-row">
                   <div className="mb-4 md:mr-4 md:mb-0">
                     <button className="btn btn-primary normal-case lg:btn-wide text-white rounded-2xl">
                       Get Started
