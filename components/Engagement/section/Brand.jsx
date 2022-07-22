@@ -3,7 +3,7 @@ import React from 'react'
 const Brand = () => {
   return (
     <div
-      className="w-auto mt-8 flex items-center bg-primary justify-around flex-wrap h-[200px]  2xl:mx-auto mb-40"
+      className="w-auto mt-8 flex items-center bg-primary justify-around flex-wrap h-[200px]  2xl:mx-auto mb-20"
       style={{ border: '1px solid red' }}>
       <div className="flex items-center">
         <Image src="/landing-section/Image 7.png" width={63} height={77} alt="Landing" />

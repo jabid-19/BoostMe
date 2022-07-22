@@ -15,7 +15,7 @@ const Audiences = () => {
             See all of your comments, stay on top of important <br /> interactions, and turn
             followers into fans <br /> using Buffer.
           </p>
-          <button className="btn btn-wide mt-10 btn-primary mx-auto text-white md:mx-0">
+          <button className="btn btn-wide mt-10 btn-primary mx-auto rounded-full text-white md:mx-0">
             Start 14 days Free Trial
           </button>
         </div>
