@@ -15,7 +15,7 @@ const CommentsCheck = () => {
           />
         </div>
         <div className="w-[90%] mx-auto flex flex-col justify-center item-center lg:w-1/2 ">
-          <h1 className="text-2xl text-center font-semibold break-words md:text-4xl text-neutral md:text-start lg:tracking-wide xl:text-5xl">
+          <h1 className="text-4xl text-center font-semibold break-words text-neutral md:text-start lg:tracking-wide xl:text-5xl">
             Build a loyal and <span className="text-primary">audience</span> on
             <br />
             <span className="text-secondary">social media</span>
