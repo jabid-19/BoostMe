@@ -3,7 +3,7 @@ import React from 'react'
 
 const Banner = () => {
   return (
-    <div className="min-h-screen flex justify-center items-center flex-col">
+    <div className="sm:min-h-[75vh]  flex justify-center items-center flex-col md:min-h-screen">
       <div className="w-full flex flex-col items-center md:w-1/2">
         <h1 className="text-2xl md:text-3xl mb-6 lg:mb-[40px] text-center font-semibold break-words text-neutral lg:tracking-wide lg:text-5xl">
           Build your <span className="text-primary">audience</span> and
@@ -15,7 +15,7 @@ const Banner = () => {
           LinkedIn, all from one simple dashboard.
         </p>
       </div>
-      <div className="mt-28 w-full">
+      <div className="mt-10 md:mt-28 w-full">
         <Image
           src="/landing-section/Rectangle 7.png"
           alt="Banner"
