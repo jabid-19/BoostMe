@@ -108,7 +108,9 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        <Image width={141} height={43} src={Logo} alt="" loader={imageLoader} />
+        <a href="/">
+          <Image width={141} height={43} src={Logo} alt="" loader={imageLoader} />
+        </a>
       </div>
       <div className="navbar-end hidden lg:flex">
         <ul className="menu menu-horizontal p-0">
@@ -126,7 +128,7 @@ const Navbar = () => {
             </a>
             <ul className="p-2 bg-white">
               <li>
-                <a>Publishing</a>
+                <a href="publishing">Publishing</a>
               </li>
               <li>
                 <a>Engagement</a>
@@ -137,23 +139,23 @@ const Navbar = () => {
             </ul>
           </li>
           <li className="mr-4">
-            <a>Pricing</a>
+            <a href="pricing">Pricing</a>
           </li>
           <li className="mr-4">
-            <a>About</a>
+            <a href="about">About</a>
           </li>
           <li className="mr-4">
-            <a>Customers</a>
+            <a href="customers">Customers</a>
           </li>
           <div className="form-control mr-4 py-2">
             <label className="label cursor-pointer">
               <span className="label-text">EN</span>
-              <input type="checkbox" className="toggle toggle-secondary mx-1.5" checked />
+              <input type="checkbox" className="toggle toggle-secondary mx-1.5" />
               <span className="label-text">BN</span>
             </label>
           </div>
           <li className="text-primary font-bold mr-4">
-            <a>Login</a>
+            <a href="login">Login</a>
           </li>
           <button className="btn btn-primary text-white text-center capitalize rounded-full px-8 ml-4 mr-8">
             Get Started
