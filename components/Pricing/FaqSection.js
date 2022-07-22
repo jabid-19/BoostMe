@@ -11,7 +11,7 @@ const FaqSection = ({ faqQuestions }) => {
           <div
             key={index}
             tabIndex="0"
-            className="collapse collapse-arrow border border-primary-300 bg-base-100 rounded-box w-2/3 mx-auto mt-2 hover:border-secondary duration-300">
+            className="collapse collapse-arrow border border-primary-300 bg-base-100 rounded-box lg:w-2/3 mx-auto mt-2 hover:border-secondary duration-300">
             <div className="collapse-title text-xl font-medium">{item.question}</div>
             <div className="collapse-content">
               <p> {item.answer} </p>
