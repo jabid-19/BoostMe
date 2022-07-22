@@ -82,7 +82,9 @@ const Navbar = () => {
                   </Link>
                 </li>
                 <li>
-                  <a>Start Page</a>
+                  <Link href='/start-page'>
+                    <a>Start Page</a>
+                  </Link>
                 </li>
               </ul>
             </li>
@@ -138,7 +140,9 @@ const Navbar = () => {
                 </Link>
               </li>
               <li>
-                <a>Start Page</a>
+                <Link href='/start-page'>
+                  <a>Start Page</a>
+                </Link>
               </li>
             </ul>
           </li>

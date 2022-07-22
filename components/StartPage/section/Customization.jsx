@@ -1,12 +1,13 @@
+import Image from 'next/image'
 import React from 'react'
 
-const Audiences = () => {
+const Customization = () => {
   return (
-    <div className="w-auto mx-6 lg:h-screen 2xl:w-[1400px] 2xl:mx-auto">
+    <div className="flex items-center w-auto mx-6 mb-20 mt-10 lg:h-screen lg:mb-0 2xl:w-[1400px] 2xl:mx-auto">
       {/* section div */}
-      <div className="flex flex-col w-full md:flex-row">
+      <div className="flex flex-col gap-10 w-full md:flex-row">
         <div className="w-[90%] mx-auto flex flex-col justify-center item-center lg:w-1/2 ">
-          <h1 className="text-4xl text-center font-semibold break-words text-neutral md:text-start lg:tracking-wide xl:text-5xl">
+          <h1 className="text-2xl text-center font-semibold break-words md:text-4xl text-neutral md:text-start lg:tracking-wide xl:text-5xl">
             Build a loyal and <span className="text-primary">audience</span> on
             <br />
             <span className="text-secondary">social media</span>
@@ -15,19 +16,16 @@ const Audiences = () => {
             See all of your comments, stay on top of important <br /> interactions, and turn
             followers into fans <br /> using Buffer.
           </p>
-          <button className="btn btn-wide mt-10 btn-primary mx-auto rounded-full text-white md:mx-0">
-            Start 14 days Free Trial
+          <button className="btn btn-wide rounded-full mt-10 btn-primary mx-auto text-white md:mx-0">
+            Create Your Page For Free
           </button>
         </div>
-
         <div className="w-[95%] mx-auto flex lg:w-1/2 ">
-          <video autoPlay playsInline loop muted>
-            <source src="/engagement-section/hero-buffer-engage-animation.mp4" type="video/mp4" />
-          </video>
+          <Image src="/start-page/customize-1.png" width={650} height={600} alt="Engagement" />
         </div>
       </div>
     </div>
   )
 }
 
-export default Audiences
+export default Customization
