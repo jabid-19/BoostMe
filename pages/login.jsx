@@ -9,7 +9,7 @@ const Login = () => {
         <div className="flex items-end">
           <RectangleLoginImage />
         </div>
-        <div className="flex justify-center items-center ">
+        <div className="flex justify-center items-center z-20">
           <LoginForm />
         </div>
       </div>

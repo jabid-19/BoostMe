@@ -17,7 +17,9 @@ const Vision = () => {
             laborum illum, eius, saepe architecto nam doloribus tempora obcaecati nobis? Nisi, neque
             est!
           </p>
-          <button className="btn btn-primary">Get Started</button>
+          <button className="btn btn-primary normal-case btn-wide text-white rounded-full mt-12">
+            Get Started
+          </button>
         </div>
       </div>
     </div>

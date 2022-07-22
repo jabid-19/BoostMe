@@ -4,7 +4,7 @@ import imageLoader from '../../helper/imageLoader'
 
 const Items = () => {
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 px-20 mt-36">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 px-8 lg:px-80 mt-36">
       <div className="flex flex-col">
         <Image width={620} height={620} src={RectangleImage} alt="" loader={imageLoader} />
         <div className="mt-12 text-center lg:text-start">

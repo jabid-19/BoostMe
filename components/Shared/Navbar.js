@@ -1,45 +1,46 @@
 import Image from 'next/image'
 import Logo from '../../public/common/logo.png'
 import imageLoader from '../../helper/imageLoader'
-import { useEffect, useState } from 'react'
+// import { useEffect, useState } from 'react'
 
 const Navbar = () => {
-  const [show, setShow] = useState(true)
-  const [lastScrollY, setLastScrollY] = useState(0)
+  // const [show, setShow] = useState(true)
+  // const [lastScrollY, setLastScrollY] = useState(0)
 
-  const controlNavbar = () => {
-    if (typeof window !== 'undefined') {
-      if (window.scrollY > lastScrollY) {
-        // if scroll down hide the navbar
-        setShow(false)
-      } else {
-        // if scroll up show the navbar
-        setShow(true)
-      }
+  // const controlNavbar = () => {
+  //   if (typeof window !== 'undefined') {
+  //     if (window.scrollY > lastScrollY) {
+  //       // if scroll down hide the navbar
+  //       setShow(false)
+  //     } else {
+  //       // if scroll up show the navbar
+  //       setShow(true)
+  //     }
 
-      // remember current page location to use in the next move
-      setLastScrollY(window.scrollY)
-    }
-  }
+  //     // remember current page location to use in the next move
+  //     setLastScrollY(window.scrollY)
+  //   }
+  // }
 
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      window.addEventListener('scroll', controlNavbar)
+  // useEffect(() => {
+  //   if (typeof window !== 'undefined') {
+  //     window.addEventListener('scroll', controlNavbar)
 
-      // cleanup function
-      return () => {
-        window.removeEventListener('scroll', controlNavbar)
-      }
-    }
-  }, [lastScrollY])
+  //     // cleanup function
+  //     return () => {
+  //       window.removeEventListener('scroll', controlNavbar)
+  //     }
+  //   }
+  // }, [lastScrollY])
 
   return (
-    <div
-      className={
-        show
-          ? 'navbar bg-base-100 shadow-md shadow-pink-300 lg:px-24 py-4 sticky top-0 z-50'
-          : 'navbar bg-base-100 shadow-md shadow-pink-300 px-24 py-4'
-      }>
+    // <div
+    //   className={
+    //     show
+    //       ? 'navbar bg-base-100 shadow-md shadow-pink-300 lg:px-24 py-4 sticky top-0 z-50'
+    //       : 'navbar bg-base-100 shadow-md shadow-pink-300 px-24 py-4'
+    //   }>
+    <div className={'navbar bg-base-100 shadow-md shadow-pink-300 lg:px-24 py-4 sticky top-0 z-50'}>
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex="0" className="btn btn-ghost lg:hidden">
@@ -93,18 +94,18 @@ const Navbar = () => {
             <li>
               <a>Customers</a>
             </li>
-            <div className="form-control mr-4 py-2">
+            <div className="form-control py-2">
               <label className="label cursor-pointer">
-                <span className="label-text">EN</span>
-                <input type="checkbox" className="toggle toggle-secondary" checked />
-                <span className="label-text">BN</span>
+                <span className="label-text pl-3">EN</span>
+                <input type="checkbox" className="toggle toggle-secondary" />
+                <span className="label-text pr-3">BN</span>
               </label>
             </div>
             <li>
               <a>Login</a>
             </li>
             <li>
-              <button className="btn btn-primary text-white">Get Started</button>
+              <button className="btn btn-primary text-white mt-1.5">Get Started</button>
             </li>
           </ul>
         </div>
@@ -112,7 +113,7 @@ const Navbar = () => {
           <Image width={141} height={43} src={Logo} alt="" loader={imageLoader} />
         </a>
       </div>
-      <div className="navbar-end hidden lg:flex">
+      <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal p-0">
           <li className="mr-4" tabIndex="0">
             <a>
@@ -147,17 +148,21 @@ const Navbar = () => {
           <li className="mr-4">
             <a href="customers">Customers</a>
           </li>
+        </ul>
+      </div>
+      <div className="navbar-end hidden lg:flex">
+        <ul className="menu menu-horizontal p-0">
           <div className="form-control mr-4 py-2">
             <label className="label cursor-pointer">
-              <span className="label-text">EN</span>
+              <span className="label-text text-secondary">EN</span>
               <input type="checkbox" className="toggle toggle-secondary mx-1.5" />
-              <span className="label-text">BN</span>
+              <span className="label-text text-secondary">BN</span>
             </label>
           </div>
-          <li className="text-primary font-bold mr-4">
+          <li className="text-primary mr-4">
             <a href="login">Login</a>
           </li>
-          <button className="btn btn-primary text-white text-center capitalize rounded-full px-8 ml-4 mr-8">
+          <button className="btn btn-primary text-white text-center capitalize rounded-full px-8">
             Get Started
           </button>
         </ul>

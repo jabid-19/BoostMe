@@ -23,12 +23,12 @@ const Audience = () => {
           </p>
           <div className="flex flex-col md:flex-row">
             <div className="mb-4 md:mr-4 md:mb-0">
-              <button className="btn btn-primary normal-case btn-wide text-white rounded-2xl">
+              <button className="btn btn-primary normal-case px-12 text-white rounded-full">
                 Get Started
               </button>
             </div>
             <div>
-              <button className="btn btn-primary normal-case btn-wide text-primary rounded-2xl bg-white hover:bg-transparent">
+              <button className="btn btn-primary normal-case px-12 text-primary rounded-full bg-white hover:bg-transparent">
                 Learn More
               </button>
             </div>
