@@ -3,44 +3,11 @@ import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import imageLoader from '../../helper/imageLoader'
 import Logo from '../../public/common/logo.png'
+
 const Navbar = () => {
   const [languageMode, setLanguageMode] = useState('EN')
-  // const [show, setShow] = useState(true)
-  // const [lastScrollY, setLastScrollY] = useState(0)
-
-  // const controlNavbar = () => {
-  //   if (typeof window !== 'undefined') {
-  //     if (window.scrollY > lastScrollY) {
-  //       // if scroll down hide the navbar
-  //       setShow(false)
-  //     } else {
-  //       // if scroll up show the navbar
-  //       setShow(true)
-  //     }
-
-  //     // remember current page location to use in the next move
-  //     setLastScrollY(window.scrollY)
-  //   }
-  // }
-
-  // useEffect(() => {
-  //   if (typeof window !== 'undefined') {
-  //     window.addEventListener('scroll', controlNavbar)
-
-  //     // cleanup function
-  //     return () => {
-  //       window.removeEventListener('scroll', controlNavbar)
-  //     }
-  //   }
-  // }, [lastScrollY])
 
   return (
-    // <div
-    //   className={
-    //     show
-    //       ? 'navbar bg-base-100 shadow-md shadow-pink-300 lg:px-24 py-4 sticky top-0 z-50'
-    //       : 'navbar bg-base-100 shadow-md shadow-pink-300 px-24 py-4'
-    //   }>
     <div className={'navbar bg-base-100 shadow-md shadow-pink-300 lg:px-24 py-4 sticky top-0 z-50'}>
       <div className="navbar-start">
         <div className="dropdown">
