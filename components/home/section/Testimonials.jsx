@@ -30,36 +30,41 @@ const Testimonials = () => {
             }}
             modules={[Pagination, Autoplay]}>
             {testimonialsData.map((testimonial) => (
-              <>
-                <SwiperSlide>
+              <div key={testimonial.key}>
+                <SwiperSlide key={testimonial.key}>
                   <div className="w-full ml-2 flex flex-wrap flex-col gap-16 justify-between items-center py-16 lg:flex-row md:px-16">
-                    {testimonial?.data.map((item) => (
-                      <>
-                        <div className="relative w-[70%] border-4 border-primary rounded-3xl lg:max-w-[25%]">
-                          <div className="w-[80px] absolute -ml-8 -mt-8 md:w-[100px] md:-ml-12 md:-mt-12">
-                            <Image
-                              src={item?.image}
-                              className=""
-                              width={100}
-                              height="100%"
-                              alt="Landing"
-                            />
-                          </div>
-                          <div className="mt-10 py-6">
-                            <div className="flex justify-center">
-                              <div className="w-full px-4">
-                                <p className=" leading-relaxed text-neutral mb-4">{item.comment}</p>
-                                <p className="text-neutral font-bold">{item.name}</p>
-                                <p className="text-neutral font-bold">{item.position}</p>
-                              </div>
+                    {Object.keys(testimonial?.data).map((item) => (
+                      <div
+                        className="relative w-[70%] border-4 border-primary rounded-3xl lg:max-w-[25%]"
+                        key={item}>
+                        <div className="w-[80px] absolute -ml-8 -mt-8 md:w-[100px] md:-ml-12 md:-mt-12">
+                          <Image
+                            src={testimonial.data[item]?.image}
+                            width={100}
+                            height="100%"
+                            alt="Landing"
+                          />
+                        </div>
+                        <div className="mt-10 py-6">
+                          <div className="flex justify-center">
+                            <div className="w-full px-4">
+                              <p className=" leading-relaxed text-neutral mb-4">
+                                {testimonial.data[item].comment}
+                              </p>
+                              <p className="text-neutral font-bold">
+                                {testimonial.data[item].name}
+                              </p>
+                              <p className="text-neutral font-bold">
+                                {testimonial.data[item].position}
+                              </p>
                             </div>
                           </div>
                         </div>
-                      </>
+                      </div>
                     ))}
                   </div>
                 </SwiperSlide>
-              </>
+              </div>
             ))}
           </Swiper>
         </div>
