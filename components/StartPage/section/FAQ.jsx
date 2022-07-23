@@ -15,7 +15,7 @@ const FAQ = () => {
           <div data-aos="fade-up" className="space-y-4">
             {faqData?.map((faq, index) => (
               <div key={index}>
-                <details className="border rounded-lg ">
+                <details className="border border-primary rounded-lg ">
                   <summary className="px-4 py-6 font-bold text-neutral">{faq.title}</summary>
                   <p className="px-4 py-6 pt-0 ml-4 -mt-4 text-neutral">{faq.data}</p>
                 </details>
