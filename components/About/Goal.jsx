@@ -1,6 +1,7 @@
 const Goal = () => {
   return (
     <div
+      data-aos="zoom-in"
       style={{ backgroundImage: `url('/landing-section/Group 28.png')` }}
       className="bg-no-repeat bg-cover mt-36">
       <div className="py-12 px-8 lg:max-w-5xl lg:mx-auto text-white">

@@ -6,13 +6,16 @@ const Audience = () => {
     <div className="hero min-h-screen">
       <div className="hero-content flex-col lg:flex-row-reverse">
         <Image
+          data-aos="fade-left"
           src="/landing-section/Rectangle 5.png"
           width={423}
           height={460}
           className="max-w-sm rounded-lg shadow-2xl"
           alt="Landing"
         />
-        <div className="flex flex-col justify-center items-center lg:items-start">
+        <div
+          data-aos="fade-right"
+          className="flex flex-col justify-center items-center lg:items-start">
           <h1 className="text-2xl font-semibold break-words lg:text-4xl text-neutral lg:tracking-wide py-14 xl:text-5xl">
             Build your <span className="text-primary">audience</span> and{' '}
             <span className="text-secondary">grow</span> your brand

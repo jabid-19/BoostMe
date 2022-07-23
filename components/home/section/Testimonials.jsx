@@ -10,10 +10,12 @@ const Testimonials = () => {
     <div className="min-h-screen flex flex-col justify-center">
       <div>
         <div className="flex justify-center relative mb-4 lg:justify-end">
-          <div className="hidden lg:block lg:absolute lg:left-0 lg:top-12">
+          <div
+            data-aos="fade-down-right"
+            className="hidden lg:block lg:absolute lg:left-0 lg:top-12">
             <Image src="/landing-section/Frame 11.png" width={400} height={100} alt="Landing" />
           </div>
-          <div>
+          <div data-aos="fade-down-left">
             <h1 className="text-2xl font-semibold break-words md:text-4xl text-neutral lg:tracking-wide py-14 xl:text-5xl">
               Business <span className="text-primary">all over the world</span> <br />
               <span className="text-secondary">trust</span> us to build the brand
@@ -31,7 +33,9 @@ const Testimonials = () => {
             className="mySwiper">
             <SwiperSlide>
               <div className="flex flex-col flex-wrap mx-10 lg:flex-row lg:justify-around lg:items-center lg:gap-10">
-                <div className="relative max-w-sm mx-auto md:max-w-sm mt-6 min-w-0 break-words  mb-6 shadow-lg rounded-3xl border-solid border-4 border-primary">
+                <div
+                  data-aos="flip-left"
+                  className="relative max-w-sm mx-auto md:max-w-sm mt-6 min-w-0 break-words  mb-6 shadow-lg rounded-3xl border-solid border-4 border-primary">
                   <div className="px-6">
                     <div className="flex flex-wrap justify-center">
                       <div className="w-full flex justify-start -ml-[130px] -mt-[30px]">
@@ -60,7 +64,9 @@ const Testimonials = () => {
                     </div>
                   </div>
                 </div>
-                <div className="relative mx-auto max-w-sm md:max-w-sm mt-6 min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-3xl border-solid border-4 border-primary">
+                <div
+                  data-aos="flip-right"
+                  className="relative mx-auto max-w-sm md:max-w-sm mt-6 min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-3xl border-solid border-4 border-primary">
                   <div className="px-6">
                     <div className="flex flex-wrap justify-center">
                       <div className="w-full flex justify-start -ml-[130px] -mt-[30px]">
@@ -89,98 +95,9 @@ const Testimonials = () => {
                     </div>
                   </div>
                 </div>
-                <div className="relative mx-auto max-w-sm md:max-w-sm mt-6 min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-3xl border-solid border-4 border-primary">
-                  <div className="px-6">
-                    <div className="flex flex-wrap justify-center">
-                      <div className="w-full flex justify-start -ml-[130px] -mt-[30px]">
-                        <div className="relative ">
-                          <Image
-                            src="/landing-section/Ellipse 3.png"
-                            className="border-solid border-4 border-primary shadow-xl rounded-full align-middle absolute -m-16 -ml-20 lg:-ml-16 max-w-[150px]"
-                            width={100}
-                            height="100%"
-                            alt="Landing"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div className="mt-6 py-6">
-                      <div className="flex flex-wrap justify-center">
-                        <div className="w-full px-4">
-                          <p className=" leading-relaxed text-neutral mb-4">
-                            On social, we need to be fast, efficient, and intentional. Boost allows
-                            us to be exactly that.
-                          </p>
-                          <p className="text-neutral font-bold">LUIS CANCEL</p>
-                          <p className="text-neutral font-bold">MANAGING EDITOR</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="flex flex-col flex-wrap mx-10 lg:flex-row lg:justify-around lg:items-center lg:gap-10">
-                <div className="relative max-w-sm mx-auto md:max-w-sm mt-6 min-w-0 break-words  mb-6 shadow-lg rounded-3xl border-solid border-4 border-primary">
-                  <div className="px-6">
-                    <div className="flex flex-wrap justify-center">
-                      <div className="w-full flex justify-start -ml-[130px] -mt-[30px]">
-                        <div className="relative ">
-                          <Image
-                            src="/landing-section/Ellipse 3.png"
-                            className="border-solid border-4 border-primary shadow-xl rounded-full align-middle absolute -m-16 -ml-20 lg:-ml-16 max-w-[150px]"
-                            width={100}
-                            height="100%"
-                            alt="Landing"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div className="mt-6 py-6">
-                      <div className="flex flex-wrap justify-center">
-                        <div className="w-full px-4">
-                          <p className=" leading-relaxed text-neutral mb-4">
-                            On social, we need to be fast, efficient, and intentional. Boost allows
-                            us to be exactly that.
-                          </p>
-                          <p className="text-neutral font-bold">LUIS CANCEL</p>
-                          <p className="text-neutral font-bold">MANAGING EDITOR</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="relative mx-auto max-w-sm md:max-w-sm mt-6 min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-3xl border-solid border-4 border-primary">
-                  <div className="px-6">
-                    <div className="flex flex-wrap justify-center">
-                      <div className="w-full flex justify-start -ml-[130px] -mt-[30px]">
-                        <div className="relative ">
-                          <Image
-                            src="/landing-section/Ellipse 3.png"
-                            className="border-solid border-4 border-primary shadow-xl rounded-full align-middle absolute -m-16 -ml-20 lg:-ml-16 max-w-[150px]"
-                            width={100}
-                            height="100%"
-                            alt="Landing"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div className="mt-6 py-6">
-                      <div className="flex flex-wrap justify-center">
-                        <div className="w-full px-4">
-                          <p className=" leading-relaxed text-neutral mb-4">
-                            On social, we need to be fast, efficient, and intentional. Boost allows
-                            us to be exactly that.
-                          </p>
-                          <p className="text-neutral font-bold">LUIS CANCEL</p>
-                          <p className="text-neutral font-bold">MANAGING EDITOR</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="relative mx-auto max-w-sm md:max-w-sm mt-6 min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-3xl border-solid border-4 border-primary">
+                <div
+                  data-aos="flip-up"
+                  className="relative mx-auto max-w-sm md:max-w-sm mt-6 min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-3xl border-solid border-4 border-primary">
                   <div className="px-6">
                     <div className="flex flex-wrap justify-center">
                       <div className="w-full flex justify-start -ml-[130px] -mt-[30px]">
@@ -213,7 +130,9 @@ const Testimonials = () => {
             </SwiperSlide>
             <SwiperSlide>
               <div className="flex flex-col flex-wrap mx-10 lg:flex-row lg:justify-around lg:items-center lg:gap-10">
-                <div className="relative max-w-sm mx-auto md:max-w-sm mt-6 min-w-0 break-words  mb-6 shadow-lg rounded-3xl border-solid border-4 border-primary">
+                <div
+                  data-aos="flip-left"
+                  className="relative max-w-sm mx-auto md:max-w-sm mt-6 min-w-0 break-words  mb-6 shadow-lg rounded-3xl border-solid border-4 border-primary">
                   <div className="px-6">
                     <div className="flex flex-wrap justify-center">
                       <div className="w-full flex justify-start -ml-[130px] -mt-[30px]">
@@ -242,7 +161,9 @@ const Testimonials = () => {
                     </div>
                   </div>
                 </div>
-                <div className="relative mx-auto max-w-sm md:max-w-sm mt-6 min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-3xl border-solid border-4 border-primary">
+                <div
+                  data-aos="flip-right"
+                  className="relative mx-auto max-w-sm md:max-w-sm mt-6 min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-3xl border-solid border-4 border-primary">
                   <div className="px-6">
                     <div className="flex flex-wrap justify-center">
                       <div className="w-full flex justify-start -ml-[130px] -mt-[30px]">
@@ -271,7 +192,106 @@ const Testimonials = () => {
                     </div>
                   </div>
                 </div>
-                <div className="relative mx-auto max-w-sm md:max-w-sm mt-6 min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-3xl border-solid border-4 border-primary">
+                <div
+                  data-aos="flip-up"
+                  className="relative mx-auto max-w-sm md:max-w-sm mt-6 min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-3xl border-solid border-4 border-primary">
+                  <div className="px-6">
+                    <div className="flex flex-wrap justify-center">
+                      <div className="w-full flex justify-start -ml-[130px] -mt-[30px]">
+                        <div className="relative ">
+                          <Image
+                            src="/landing-section/Ellipse 3.png"
+                            className="border-solid border-4 border-primary shadow-xl rounded-full align-middle absolute -m-16 -ml-20 lg:-ml-16 max-w-[150px]"
+                            width={100}
+                            height="100%"
+                            alt="Landing"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div className="mt-6 py-6">
+                      <div className="flex flex-wrap justify-center">
+                        <div className="w-full px-4">
+                          <p className=" leading-relaxed text-neutral mb-4">
+                            On social, we need to be fast, efficient, and intentional. Boost allows
+                            us to be exactly that.
+                          </p>
+                          <p className="text-neutral font-bold">LUIS CANCEL</p>
+                          <p className="text-neutral font-bold">MANAGING EDITOR</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="flex flex-col flex-wrap mx-10 lg:flex-row lg:justify-around lg:items-center lg:gap-10">
+                <div
+                  data-aos="flip-left"
+                  className="relative max-w-sm mx-auto md:max-w-sm mt-6 min-w-0 break-words  mb-6 shadow-lg rounded-3xl border-solid border-4 border-primary">
+                  <div className="px-6">
+                    <div className="flex flex-wrap justify-center">
+                      <div className="w-full flex justify-start -ml-[130px] -mt-[30px]">
+                        <div className="relative ">
+                          <Image
+                            src="/landing-section/Ellipse 3.png"
+                            className="border-solid border-4 border-primary shadow-xl rounded-full align-middle absolute -m-16 -ml-20 lg:-ml-16 max-w-[150px]"
+                            width={100}
+                            height="100%"
+                            alt="Landing"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div className="mt-6 py-6">
+                      <div className="flex flex-wrap justify-center">
+                        <div className="w-full px-4">
+                          <p className=" leading-relaxed text-neutral mb-4">
+                            On social, we need to be fast, efficient, and intentional. Boost allows
+                            us to be exactly that.
+                          </p>
+                          <p className="text-neutral font-bold">LUIS CANCEL</p>
+                          <p className="text-neutral font-bold">MANAGING EDITOR</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  data-aos="flip-right"
+                  className="relative mx-auto max-w-sm md:max-w-sm mt-6 min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-3xl border-solid border-4 border-primary">
+                  <div className="px-6">
+                    <div className="flex flex-wrap justify-center">
+                      <div className="w-full flex justify-start -ml-[130px] -mt-[30px]">
+                        <div className="relative ">
+                          <Image
+                            src="/landing-section/Ellipse 3.png"
+                            className="border-solid border-4 border-primary shadow-xl rounded-full align-middle absolute -m-16 -ml-20 lg:-ml-16 max-w-[150px]"
+                            width={100}
+                            height="100%"
+                            alt="Landing"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div className="mt-6 py-6">
+                      <div className="flex flex-wrap justify-center">
+                        <div className="w-full px-4">
+                          <p className=" leading-relaxed text-neutral mb-4">
+                            On social, we need to be fast, efficient, and intentional. Boost allows
+                            us to be exactly that.
+                          </p>
+                          <p className="text-neutral font-bold">LUIS CANCEL</p>
+                          <p className="text-neutral font-bold">MANAGING EDITOR</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  data-aos="flip-up"
+                  className="relative mx-auto max-w-sm md:max-w-sm mt-6 min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-3xl border-solid border-4 border-primary">
                   <div className="px-6">
                     <div className="flex flex-wrap justify-center">
                       <div className="w-full flex justify-start -ml-[130px] -mt-[30px]">

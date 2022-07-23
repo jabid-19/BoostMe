@@ -11,7 +11,7 @@ const ForgetPassForm = () => {
 
   return (
     <div>
-      <div className={visibleItem ? 'px-2 lg:mr-24' : 'hidden'}>
+      <div data-aos="fade-down-left" className={visibleItem ? 'px-2 lg:mr-24' : 'hidden'}>
         <div className="max-w-md">
           <div className="h-40 lg:mb-10">
             <h1 className="text-2xl font-semibold break-words md:text-5xl text-neutral lg:tracking-wide xl:text-5xl">

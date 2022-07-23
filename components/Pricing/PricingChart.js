@@ -5,7 +5,7 @@ const PricingChart = ({ headings, pricingPackages }) => {
   const [pricingMode, setPricingMode] = useState('monthly')
   return (
     <div className="pricingChartContainer container mx-auto">
-      <div className="sectionHeader flex flex-col items-center">
+      <div data-aos="fade-down" className="sectionHeader flex flex-col items-center">
         <p className="text-2xl font-bold text-center my-5">{headings.headings}</p>
         <p className="text-sm w-2/3 text-center mx-auto ">{headings.subHeadings}</p>
         <div className="btn-group my-5">
@@ -29,6 +29,7 @@ const PricingChart = ({ headings, pricingPackages }) => {
         {pricingPackages.map((item, index) => {
           return (
             <div
+              data-aos="zoom-in"
               className="card-compact min-h-max bg-base-100 border-2 border-primary-300 hover:border-secondary duration-300"
               key={index}>
               <div className="card-body">

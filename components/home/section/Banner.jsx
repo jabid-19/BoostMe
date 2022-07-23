@@ -6,7 +6,7 @@ const Banner = () => {
       style={{ backgroundImage: `url('/landing-section/Group 28.png')` }}>
       <div className="hero-overlay bg-opacity-60"></div>
       <div className="hero-content text-center text-neutral-content">
-        <div className="max-w-full">
+        <div data-aos="zoom-in" className="max-w-full">
           <h1 className="mb-5 text-5xl font-bold">
             Build your audience and <br /> grow your brand{' '}
           </h1>

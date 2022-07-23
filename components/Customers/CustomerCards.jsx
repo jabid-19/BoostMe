@@ -14,6 +14,7 @@ const customersInfo = [
     customerPicture: CampaignPicture,
     customerName: 'Aaron Beashel',
     borderColor: 'primary',
+    animation: 'right',
   },
   {
     companyLogo: CampaignLogo,
@@ -22,6 +23,7 @@ const customersInfo = [
     customerPicture: CampaignPicture,
     customerName: 'Aaron Beashel',
     borderColor: 'secondary',
+    animation: 'left',
   },
   {
     companyLogo: CampaignLogo,
@@ -30,6 +32,7 @@ const customersInfo = [
     customerPicture: CampaignPicture,
     customerName: 'Aaron Beashel',
     borderColor: 'secondary',
+    animation: 'right',
   },
   {
     companyLogo: CampaignLogo,
@@ -38,6 +41,7 @@ const customersInfo = [
     customerPicture: CampaignPicture,
     customerName: 'Aaron Beashel',
     borderColor: 'primary',
+    animation: 'left',
   },
   {
     companyLogo: CampaignLogo,
@@ -46,6 +50,7 @@ const customersInfo = [
     customerPicture: CampaignPicture,
     customerName: 'Aaron Beashel',
     borderColor: 'primary',
+    animation: 'right',
   },
   {
     companyLogo: CampaignLogo,
@@ -54,6 +59,7 @@ const customersInfo = [
     customerPicture: CampaignPicture,
     customerName: 'Aaron Beashel',
     borderColor: 'secondary',
+    animation: 'left',
   },
   {
     companyLogo: CampaignLogo,
@@ -62,6 +68,7 @@ const customersInfo = [
     customerPicture: CampaignPicture,
     customerName: 'Aaron Beashel',
     borderColor: 'secondary',
+    animation: 'right',
   },
   {
     companyLogo: CampaignLogo,
@@ -70,6 +77,7 @@ const customersInfo = [
     customerPicture: CampaignPicture,
     customerName: 'Aaron Beashel',
     borderColor: 'primary',
+    animation: 'left',
   },
 ]
 
@@ -79,6 +87,7 @@ const CustomerCards = () => {
       {customersInfo.map((item, index) => (
         <div
           key={index}
+          data-aos={`${item.animation == 'right' ? 'fade-right' : 'fade-left'}`}
           className={`border-solid border-4 rounded-2xl px-8 py-4 flex flex-col items-center ${
             item.borderColor == 'primary' ? 'border-primary' : 'border-secondary'
           }`}>

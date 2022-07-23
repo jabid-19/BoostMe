@@ -6,7 +6,7 @@ const CommentsCheck = () => {
     <div className="flex items-center w-auto mx-6 mb-20 mt-10 lg:h-screen lg:mb-0 2xl:w-[1400px] 2xl:mx-auto">
       {/* section div */}
       <div className="flex flex-col gap-10 w-full md:flex-row">
-        <div className="w-[95%] mx-auto flex lg:w-1/2 ">
+        <div data-aos="fade-right" className="w-[95%] mx-auto flex lg:w-1/2 ">
           <Image
             src="/engagement-section/engage-comments.png"
             width={700}
@@ -14,7 +14,9 @@ const CommentsCheck = () => {
             alt="Engagement"
           />
         </div>
-        <div className="w-[90%] mx-auto flex flex-col justify-center item-center lg:w-1/2 ">
+        <div
+          data-aos="fade-left"
+          className="w-[90%] mx-auto flex flex-col justify-center item-center lg:w-1/2 ">
           <h1 className="text-4xl text-center font-semibold break-words text-neutral md:text-start lg:tracking-wide xl:text-5xl">
             Build a loyal and <span className="text-primary">audience</span> on
             <br />

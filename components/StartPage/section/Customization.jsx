@@ -6,7 +6,9 @@ const Customization = () => {
     <div className="flex items-center w-auto mx-6 mb-20 mt-10 lg:h-screen lg:mb-0 2xl:w-[1400px] 2xl:mx-auto">
       {/* section div */}
       <div className="flex flex-col-reverse lg:flex-row gap-10 w-full md:flex-row">
-        <div className="w-[90%] mx-auto flex flex-col justify-center item-center lg:w-1/2 ">
+        <div
+          data-aos="fade-down-right"
+          className="w-[90%] mx-auto flex flex-col justify-center item-center lg:w-1/2 ">
           <h1 className="text-4xl text-center font-semibold break-words text-neutral md:text-start lg:tracking-wide xl:text-5xl">
             Build a loyal and <span className="text-primary">audience</span> on
             <br />
@@ -20,7 +22,7 @@ const Customization = () => {
             Create Your Page For Free
           </button>
         </div>
-        <div className="w-[95%] mx-auto flex lg:w-1/2 ">
+        <div data-aos="fade-down-left" className="w-[95%] mx-auto flex lg:w-1/2 ">
           <Image src="/start-page/customize-1.png" width={650} height={600} alt="Engagement" />
         </div>
       </div>

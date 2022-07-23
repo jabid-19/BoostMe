@@ -5,12 +5,12 @@ const Employee = () => {
   return (
     <div className="my-36">
       <div className="flex flex-col lg:flex-row lg:justify-center items-center py-4 px-8 lg:px-20">
-        <div className="avatar">
+        <div data-aos="fade-right" className="avatar">
           <div className="w-48 rounded-full">
             <Image width={320} height={320} src={RectangleImage} alt="" loader={imageLoader} />
           </div>
         </div>
-        <div className="mt-6 lg:pl-12 text-center lg:text-start">
+        <div data-aos="fade-left" className="mt-6 lg:pl-12 text-center lg:text-start">
           <h1 className="text-3xl">Employee No 1</h1>
           <p className="py-6">
             Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi
@@ -19,12 +19,12 @@ const Employee = () => {
         </div>
       </div>
       <div className="flex flex-col lg:flex-row lg:justify-center items-center py-4 px-8 lg:px-20">
-        <div className="avatar">
+        <div data-aos="fade-right" className="avatar">
           <div className="w-48 rounded-full">
             <Image width={320} height={320} src={RectangleImage} alt="" loader={imageLoader} />
           </div>
         </div>
-        <div className="mt-6 lg:pl-12 text-center lg:text-start">
+        <div data-aos="fade-left" className="mt-6 lg:pl-12 text-center lg:text-start">
           <h1 className="text-3xl">Employee No 2</h1>
           <p className="py-6">
             Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi
@@ -33,12 +33,12 @@ const Employee = () => {
         </div>
       </div>
       <div className="flex flex-col lg:flex-row lg:justify-center items-center py-4 px-8 lg:px-20">
-        <div className="avatar">
+        <div data-aos="fade-right" className="avatar">
           <div className="w-48 rounded-full">
             <Image width={320} height={320} src={RectangleImage} alt="" loader={imageLoader} />
           </div>
         </div>
-        <div className="mt-6 lg:pl-12 text-center lg:text-start">
+        <div data-aos="fade-left" className="mt-6 lg:pl-12 text-center lg:text-start">
           <h1 className="text-3xl">Employee No 3</h1>
           <p className="py-6">
             Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi

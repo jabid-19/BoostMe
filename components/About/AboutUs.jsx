@@ -1,7 +1,9 @@
 const AboutUs = () => {
   return (
     <div className="hero min-h-screen bg-pink-200 p-8 mx-auto text-white">
-      <div className="hero-content p-8 lg:m-12 bg-primary flex-col lg:flex-row-reverse">
+      <div
+        data-aos="zoom-in"
+        className="hero-content p-8 lg:m-12 bg-primary flex-col lg:flex-row-reverse border-4 rounded-2xl border-pink-700">
         <div>
           <h1 className="text-3xl lg:text-5xl text-center">About Us</h1>
           <p className="py-6">

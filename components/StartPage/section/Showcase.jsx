@@ -6,7 +6,7 @@ const Showcase = () => {
 
   return (
     <div className="flex items-center flex-col w-auto mx-6 lg:h-screen 2xl:w-[1400px] 2xl:mx-auto mb-20">
-      <div className="tabs mb-10">
+      <div data-aos="zoom-in" className="tabs mb-10">
         <a
           className={`tab tab-lg tab-lifted text-neutral ${
             tabs === 1 && 'tab-active text-primary'
@@ -31,7 +31,9 @@ const Showcase = () => {
       </div>
       {tabs === 1 && (
         <div className="flex flex-col-reverse lg:flex-row gap-10 w-full md:flex-row">
-          <div className="w-[90%] mx-auto flex flex-col justify-center item-center lg:w-1/2 ">
+          <div
+            data-aos="fade-up-right"
+            className="w-[90%] mx-auto flex flex-col justify-center item-center lg:w-1/2 ">
             <h1 className="text-4xl text-center font-semibold break-words text-neutral md:text-start lg:tracking-wide xl:text-5xl">
               Build a loyal and <span className="text-primary">audience</span> on
               <br />
@@ -45,14 +47,14 @@ const Showcase = () => {
               Create Your Page For Free
             </button>
           </div>
-          <div className="w-[95%] mx-auto flex lg:w-1/2 ">
+          <div data-aos="fade-up-left" className="w-[95%] mx-auto flex lg:w-1/2 ">
             <Image src="/start-page/customize-1.png" width={650} height={600} alt="Engagement" />
           </div>
         </div>
       )}
       {tabs === 2 && (
         <div className="flex flex-col gap-10 w-full md:flex-row">
-          <div className="w-[95%] mx-auto flex justify-center lg:w-1/2 ">
+          <div data-aos="fade-up-right" className="w-[95%] mx-auto flex justify-center lg:w-1/2 ">
             <Image
               src="/start-page/Small-business-1.png"
               width={550}
@@ -60,7 +62,9 @@ const Showcase = () => {
               alt="Engagement"
             />
           </div>
-          <div className="w-[90%] mx-auto flex flex-col justify-center item-center lg:w-1/2 ">
+          <div
+            data-aos="fade-up-left"
+            className="w-[90%] mx-auto flex flex-col justify-center item-center lg:w-1/2 ">
             <h1 className="text-4xl text-center font-semibold break-words text-neutral md:text-start lg:tracking-wide xl:text-5xl">
               Build a loyal and <span className="text-primary">audience</span> on
               <br />
@@ -78,7 +82,9 @@ const Showcase = () => {
       )}
       {tabs === 3 && (
         <div className="flex flex-col-reverse gap-10 w-full md:flex-row">
-          <div className="w-[90%] mx-auto flex flex-col justify-center item-center lg:w-1/2 ">
+          <div
+            data-aos="fade-up-right"
+            className="w-[90%] mx-auto flex flex-col justify-center item-center lg:w-1/2 ">
             <h1 className="text-4xl text-center font-semibold break-words text-neutral md:text-start lg:tracking-wide xl:text-5xl">
               Build a loyal and <span className="text-primary">audience</span> on
               <br />
@@ -92,7 +98,7 @@ const Showcase = () => {
               Create Your Page For Free
             </button>
           </div>
-          <div className="w-[95%] mx-auto flex justify-center lg:w-1/2 ">
+          <div data-aos="fade-up-left" className="w-[95%] mx-auto flex justify-center lg:w-1/2 ">
             <Image src="/start-page/NFT-1.png" width={550} height={620} alt="Engagement" />
           </div>
         </div>
