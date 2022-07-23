@@ -11,14 +11,18 @@ const PricingChart = ({ headings, pricingPackages }) => {
         <div className="btn-group my-5">
           <button
             className={
-              pricingMode == 'monthly' ? 'btn-sm bg-primary text-white' : 'btn-sm bg-slate-200'
+              pricingMode == 'monthly'
+                ? 'btn-sm bg-primary rounded-l-full text-white'
+                : 'btn-sm bg-slate-200 rounded-l-full'
             }
             onClick={() => setPricingMode('monthly')}>
             Monthly
           </button>
           <button
             className={
-              pricingMode == 'yearly' ? 'btn-sm bg-primary text-white' : 'btn-sm bg-slate-200'
+              pricingMode == 'yearly'
+                ? 'btn-sm bg-primary text-white rounded-r-full'
+                : 'btn-sm bg-slate-200 rounded-r-full'
             }
             onClick={() => setPricingMode('yearly')}>
             Yearly
