@@ -3,43 +3,11 @@ import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import imageLoader from '../../helper/imageLoader'
 import Logo from '../../public/common/logo.png'
+
 const Navbar = () => {
-  // const [show, setShow] = useState(true)
-  // const [lastScrollY, setLastScrollY] = useState(0)
-
-  // const controlNavbar = () => {
-  //   if (typeof window !== 'undefined') {
-  //     if (window.scrollY > lastScrollY) {
-  //       // if scroll down hide the navbar
-  //       setShow(false)
-  //     } else {
-  //       // if scroll up show the navbar
-  //       setShow(true)
-  //     }
-
-  //     // remember current page location to use in the next move
-  //     setLastScrollY(window.scrollY)
-  //   }
-  // }
-
-  // useEffect(() => {
-  //   if (typeof window !== 'undefined') {
-  //     window.addEventListener('scroll', controlNavbar)
-
-  //     // cleanup function
-  //     return () => {
-  //       window.removeEventListener('scroll', controlNavbar)
-  //     }
-  //   }
-  // }, [lastScrollY])
+  const [languageMode, setLanguageMode] = useState('EN')
 
   return (
-    // <div
-    //   className={
-    //     show
-    //       ? 'navbar bg-base-100 shadow-md shadow-pink-300 lg:px-24 py-4 sticky top-0 z-50'
-    //       : 'navbar bg-base-100 shadow-md shadow-pink-300 px-24 py-4'
-    //   }>
     <div className={'navbar bg-base-100 shadow-md shadow-pink-300 lg:px-24 py-4 sticky top-0 z-50'}>
       <div className="navbar-start">
         <div className="dropdown">
@@ -160,12 +128,25 @@ const Navbar = () => {
       </div>
       <div className="navbar-end hidden lg:flex">
         <ul className="menu menu-horizontal p-0">
-          <div className="form-control mr-4 py-2">
-            <label className="label cursor-pointer">
-              <span className="label-text text-secondary">EN</span>
-              <input type="checkbox" className="toggle toggle-secondary mx-1.5" />
-              <span className="label-text text-secondary">BN</span>
-            </label>
+          <div className="btn-group my-2 mr-4">
+            <button
+              className={
+                languageMode == 'EN'
+                  ? 'btn-sm bg-secondary rounded-l-full text-white'
+                  : 'btn-sm bg-slate-200 rounded-l-full'
+              }
+              onClick={() => setLanguageMode('EN')}>
+              EN
+            </button>
+            <button
+              className={
+                languageMode == 'BN'
+                  ? 'btn-sm bg-secondary text-white rounded-r-full'
+                  : 'btn-sm bg-slate-200 rounded-r-full'
+              }
+              onClick={() => setLanguageMode('BN')}>
+              BN
+            </button>
           </div>
           <li className="text-primary mr-4">
             <a href="login">Login</a>

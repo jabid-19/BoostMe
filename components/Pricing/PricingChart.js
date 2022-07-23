@@ -11,21 +11,25 @@ const PricingChart = ({ headings, pricingPackages }) => {
         <div className="btn-group my-5">
           <button
             className={
-              pricingMode == 'monthly' ? 'btn-sm bg-primary text-white' : 'btn-sm bg-slate-200'
+              pricingMode == 'monthly'
+                ? 'btn-sm bg-primary rounded-l-full text-white'
+                : 'btn-sm bg-slate-200 rounded-l-full'
             }
             onClick={() => setPricingMode('monthly')}>
             Monthly
           </button>
           <button
             className={
-              pricingMode == 'yearly' ? 'btn-sm bg-primary text-white' : 'btn-sm bg-slate-200'
+              pricingMode == 'yearly'
+                ? 'btn-sm bg-primary text-white rounded-r-full'
+                : 'btn-sm bg-slate-200 rounded-r-full'
             }
             onClick={() => setPricingMode('yearly')}>
             Yearly
           </button>
         </div>
       </div>
-      <div className="cardContainer my-5 grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2  gap-4">
+      <div className="cardContainer my-5 grid lg:grid-cols-4 md:grid-cols-3 gap-4 sm:grid-cols-2 p-3 md:p-0 lg:p-0">
         {pricingPackages.map((item, index) => {
           return (
             <div
