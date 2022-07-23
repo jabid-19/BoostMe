@@ -44,5 +44,28 @@ export const testimonialsData = [
                 position: 'MANAGING EDITOR',
             },
         }
-    }
+    },
+    {
+        key: 3,
+        data: {
+            'testimonials-7':{
+                image: '/landing-section/Ellipse 3.png',
+                comment: ' On social, we need to be fast, efficient, and intentional. Boost allows us to be exactly that.',
+                name: 'LUIS CANCEL',
+                position: 'MANAGING EDITOR',
+            },
+            'testimonials-8':{
+                image: '/landing-section/Ellipse 3.png',
+                comment: ' On social, we need to be fast, efficient, and intentional. Boost allows us to be exactly that.',
+                name: 'LUIS CANCEL',
+                position: 'MANAGING EDITOR',
+            },
+            'testimonials-9':{
+                image: '/landing-section/Ellipse 3.png',
+                comment: ' On social, we need to be fast, efficient, and intentional. Boost allows us to be exactly that.',
+                name: 'LUIS CANCEL',
+                position: 'MANAGING EDITOR',
+            },
+        }
+    },
 ]
