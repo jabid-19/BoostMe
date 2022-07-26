@@ -35,7 +35,7 @@ const AboutUs = () => {
           </p>
         </div>
       </div>
-      <div className="absolute bottom-0 right-0">
+      <div data-aos="fade-up-left" className="absolute bottom-0 right-0">
         <Image width={500} height={117} src={FrameImage} alt="" loader={imageLoader} />
       </div>
     </div>

@@ -11,7 +11,7 @@ function MyApp({ Component, pageProps }) {
   }, [])
 
   return (
-    <div>
+    <div className="overflow-x-hidden">
       <Navbar />
       <Component {...pageProps} />
       <Footer />

@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import imageLoader from '../../helper/imageLoader'
 import Logo from '../../public/common/logo.png'
 
@@ -77,7 +77,9 @@ const Navbar = () => {
               <a>Login</a>
             </li>
             <li>
-              <button className="btn btn-primary text-white mt-1.5">Get Started</button>
+              <Link href={{ pathname: 'login', query: { keyword: 'register' } }}>
+                <button className="btn btn-primary text-white mt-1.5">Get Started</button>
+              </Link>
             </li>
           </ul>
         </div>
@@ -151,9 +153,11 @@ const Navbar = () => {
           <li className="text-primary mr-4">
             <a href="login">Login</a>
           </li>
-          <button className="btn btn-primary text-white text-center capitalize rounded-full px-8">
-            Get Started
-          </button>
+          <Link href={{ pathname: 'login', query: { keyword: 'register' } }}>
+            <button className="btn btn-primary text-white text-center capitalize rounded-full px-8">
+              Get Started
+            </button>
+          </Link>
         </ul>
       </div>
     </div>
