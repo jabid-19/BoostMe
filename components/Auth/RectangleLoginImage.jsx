@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import imageLoader from '../../helper/imageLoader'
-import RectangleImage from '../../public/login-section/loginImage.png'
+import RectangleImage from '../../public/common/loginImage.png'
 const RectangleLoginImage = () => {
   return (
     <div data-aos="fade-up-right" className="hidden lg:flex">

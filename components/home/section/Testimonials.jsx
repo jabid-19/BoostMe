@@ -7,7 +7,7 @@ import 'swiper/css'
 import 'swiper/css/pagination'
 import { testimonialsData } from '../../../data/TestimonialData'
 import imageLoader from '../../../helper/imageLoader'
-import BoxBackground2 from '../../../public/landing-section/BoxBackground2.png'
+import BoxBackground2 from '../../../public/common/BoxBackground2.png'
 const Testimonials = () => {
   return (
     <div className="relative">

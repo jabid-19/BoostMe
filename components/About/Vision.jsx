@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import imageLoader from '../../helper/imageLoader'
-import RectangleImage from '../../public/login-section/LoginImage.png'
+import RectangleImage from '../../public/common/LoginImage.png'
 
 const Vision = () => {
   return (

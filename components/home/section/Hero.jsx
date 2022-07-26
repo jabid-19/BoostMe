@@ -2,7 +2,7 @@ import Image from 'next/image'
 import React from 'react'
 import { BsPlayBtn } from 'react-icons/bs'
 import imageLoader from '../../../helper/imageLoader'
-import Background from '../../../public/landing-section/BoxBackground.png'
+import Background from '../../../public/common/BoxBackground.png'
 const Hero = () => {
   return (
     <div className="min-h-screen w-full bg-cover bg-center hero place-items-center">

@@ -1,8 +1,8 @@
 import Image from 'next/image'
 import React from 'react'
 import imageLoader from '../../../helper/imageLoader'
-import BoxBackground from '../../../public/landing-section/BoxBackground.png'
-import BoxBackground2 from '../../../public/landing-section/BoxBackground2.png'
+import BoxBackground from '../../../public/common/BoxBackground.png'
+import BoxBackground2 from '../../../public/common/BoxBackground2.png'
 import Dashboard from '../../../public/landing-section/Dashboard.png'
 
 const Hero = () => {
