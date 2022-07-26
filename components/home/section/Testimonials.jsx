@@ -50,7 +50,7 @@ const Testimonials = () => {
                             src={testimonial.data[item]?.image}
                             width={100}
                             height="100%"
-                            alt="BoostMe testimonials"
+                            alt="BoostMe's testimonials"
                             loader={imageLoader}
                           />
                         </div>

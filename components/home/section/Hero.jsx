@@ -3,16 +3,13 @@ import React from 'react'
 import { BsPlayBtn } from 'react-icons/bs'
 import imageLoader from '../../../helper/imageLoader'
 import Background from '../../../public/landing-section/BoxBackground.png'
-import Facebook from '../../../public/landing-section/SocialMedia_Facebook.png'
-import Instagram from '../../../public/landing-section/SocialMedia_Instagram.png'
-import Likes from '../../../public/landing-section/SocialMedia_Likes.png'
 const Hero = () => {
   return (
     <div className="min-h-screen w-full bg-cover bg-center hero place-items-center">
       <div className="flex flex-col justify-center gap-4 h-3/5 items-center lg:flex-row">
         <div data-aos="fade-right" className="flex justify-around items-center gap-4 lg:flex-col">
           <Image
-            src={Facebook}
+            src="/landing-section/SocialMedia_Facebook.png"
             width={240}
             height={270}
             alt="Facebook Digital Marketing"
@@ -21,7 +18,7 @@ const Hero = () => {
             priority={true}
           />
           <Image
-            src={Instagram}
+            src="/landing-section/SocialMedia_Instagram.png"
             width={240}
             height={270}
             alt="Instagram Digital Marketing"
@@ -40,7 +37,7 @@ const Hero = () => {
           <div className="h-auto flex flex-col items-center justify-center lg:flex-row lg:items-start">
             <div data-aos="fade-up">
               <Image
-                src={Likes}
+                src="/landing-section/SocialMedia_Likes.png"
                 width={240}
                 height={270}
                 alt="Social Media Likes"
