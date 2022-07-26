@@ -17,15 +17,17 @@ const Vision = () => {
           loader={imageLoader}
         />
         <div data-aos="fade-up-left" className="max-w-2xl lg:pl-8">
-          <h1 className="text-3xl lg:text-5xl">Vision</h1>
-          <p className="py-6">
+          <h1 className="text-xl md:text-2xl font-semibold break-words lg:text-4xl text-neutral lg:tracking-wide xl:text-5xl">
+            Vision
+          </h1>
+          <p className="text-neutral text-xs lg:text-lg py-6">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse, non ratione. Harum unde
             veritatis commodi ut, obcaecati delectus quae, deleniti aut excepturi necessitatibus,
             neque esse? Ipsum eos cum nobis facilis. Fuga earum aliquid quasi minus blanditiis error
             laborum illum, eius, saepe architecto nam doloribus tempora obcaecati nobis? Nisi, neque
             est!
           </p>
-          <button className="btn btn-primary normal-case px-12 text-white rounded-full mt-12">
+          <button className="btn btn-primary normal-case px-12 text-white rounded-full mt-6">
             Get Started
           </button>
         </div>

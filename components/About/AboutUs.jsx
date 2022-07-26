@@ -1,12 +1,18 @@
+import Image from 'next/image'
+import FrameImage from '../../public/login-section/Frame 10.png'
+import imageLoader from '../../helper/imageLoader'
+
 const AboutUs = () => {
   return (
-    <div className="hero min-h-screen bg-pink-200 p-8 mx-auto text-white">
+    <div className="hero min-h-screen p-8 mx-auto relative">
       <div
         data-aos="zoom-in"
-        className="hero-content p-8 lg:m-12 bg-primary flex-col lg:flex-row-reverse border-4 rounded-2xl border-pink-700">
+        className="hero-content p-8 lg:m-12 flex-col lg:flex-row-reverse border-4 rounded-2xl border-primary z-20">
         <div>
-          <h1 className="text-3xl lg:text-5xl text-center">About Us</h1>
-          <p className="py-6">
+          <h1 className=" text-xl md:text-2xl font-semibold break-words lg:text-4xl text-neutral lg:tracking-wide xl:text-5xl">
+            About <span className="text-primary">Our Community</span>
+          </h1>
+          <p className="text-neutral text-xs lg:text-lg py-6">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus, culpa explicabo!
             Totam omnis, repellat veritatis voluptates, culpa nostrum laborum quo ipsam odio dolore
             sapiente quaerat porro ipsum, cum fuga quos animi autem repudiandae possimus doloremque.
@@ -28,6 +34,9 @@ const AboutUs = () => {
             adipisci voluptatibus?
           </p>
         </div>
+      </div>
+      <div className="absolute bottom-0 right-0">
+        <Image width={500} height={117} src={FrameImage} alt="" loader={imageLoader} />
       </div>
     </div>
   )

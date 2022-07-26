@@ -15,9 +15,13 @@ const Items = () => {
           alt=""
           loader={imageLoader}
         />
-        <div data-aos="fade-up" className="mt-12 text-center lg:text-start">
-          <h1 className="text-center text-3xl mb-6">News 1</h1>
-          <p>
+        <div
+          data-aos="fade-up"
+          className="mt-12 text-center lg:text-start p-8 border-4 rounded-2xl border-primary">
+          <h1 className="text-center text-xl md:text-2xl font-semibold break-words lg:text-4xl text-neutral lg:tracking-wide xl:text-5xl mb-6">
+            News 1
+          </h1>
+          <p className="text-neutral text-xs lg:text-lg">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui mollitia vero alias
             consequatur doloremque numquam necessitatibus natus commodi illo error! Earum blanditiis
             dolores dolor tempore inventore ipsam temporibus quam est.
@@ -34,9 +38,13 @@ const Items = () => {
           alt=""
           loader={imageLoader}
         />
-        <div data-aos="fade-down" className="mt-12 lg:mb-12 text-center lg:text-start">
-          <h1 className="text-center text-3xl mb-6">News 2</h1>
-          <p>
+        <div
+          data-aos="fade-down"
+          className="mt-12 lg:mb-12 text-center lg:text-start p-8 border-4 rounded-2xl border-secondary">
+          <h1 className="text-center text-xl md:text-2xl font-semibold break-words lg:text-4xl text-neutral lg:tracking-wide xl:text-5xl mb-6">
+            News 2
+          </h1>
+          <p className="text-neutral text-xs lg:text-lg">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui mollitia vero alias
             consequatur doloremque numquam necessitatibus natus commodi illo error! Earum blanditiis
             dolores dolor tempore inventore ipsam temporibus quam est.
@@ -53,9 +61,13 @@ const Items = () => {
           alt=""
           loader={imageLoader}
         />
-        <div data-aos="fade-up" className="mt-12 text-center lg:text-start">
-          <h1 className="text-center text-3xl mb-6">News 3</h1>
-          <p>
+        <div
+          data-aos="fade-up"
+          className="mt-12 lg:mb-12 text-center lg:text-start p-8 border-4 rounded-2xl border-primary">
+          <h1 className="text-center text-xl md:text-2xl font-semibold break-words lg:text-4xl text-neutral lg:tracking-wide xl:text-5xl mb-6">
+            News 3
+          </h1>
+          <p className="text-neutral text-xs lg:text-lg">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui mollitia vero alias
             consequatur doloremque numquam necessitatibus natus commodi illo error! Earum blanditiis
             dolores dolor tempore inventore ipsam temporibus quam est.
@@ -72,9 +84,13 @@ const Items = () => {
           alt=""
           loader={imageLoader}
         />
-        <div data-aos="fade-up" className="mt-12 lg:mb-12 text-center lg:text-start">
-          <h1 className="text-center text-3xl mb-6">News 4</h1>
-          <p>
+        <div
+          data-aos="fade-up"
+          className="mt-12 lg:mb-12 text-center lg:text-start p-8 border-4 rounded-2xl border-secondary">
+          <h1 className="text-center text-xl md:text-2xl font-semibold break-words lg:text-4xl text-neutral lg:tracking-wide xl:text-5xl mb-6">
+            News 4
+          </h1>
+          <p className="text-neutral text-xs lg:text-lg">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui mollitia vero alias
             consequatur doloremque numquam necessitatibus natus commodi illo error! Earum blanditiis
             dolores dolor tempore inventore ipsam temporibus quam est.
