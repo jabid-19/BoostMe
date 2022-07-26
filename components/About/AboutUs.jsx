@@ -1,6 +1,6 @@
 import Image from 'next/image'
-import FrameImage from '../../public/login-section/Frame 10.png'
 import imageLoader from '../../helper/imageLoader'
+import FrameImage from '../../public/login-section/BoxBackground.png'
 
 const AboutUs = () => {
   return (

@@ -1,6 +1,6 @@
 import Image from 'next/image'
-import RectangleImage from '../../public/login-section/Rectangle 10.png'
 import imageLoader from '../../helper/imageLoader'
+import RectangleImage from '../../public/login-section/LoginImage.png'
 
 const Vision = () => {
   return (
@@ -13,7 +13,7 @@ const Vision = () => {
           width={620}
           height={620}
           src={RectangleImage}
-          alt=""
+          alt="BoostMe's Vision"
           loader={imageLoader}
         />
         <div data-aos="fade-up-left" className="max-w-2xl lg:pl-8">

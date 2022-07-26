@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import imageLoader from '../../helper/imageLoader'
-import RectangleImage from '../../public/login-section/Rectangle 10.png'
+import RectangleImage from '../../public/login-section/LoginImage.png'
 
 const Items = () => {
   return (
@@ -12,7 +12,7 @@ const Items = () => {
           width={620}
           height={620}
           src={RectangleImage}
-          alt=""
+          alt="BoostMe's Background"
           loader={imageLoader}
         />
         <div
@@ -35,7 +35,7 @@ const Items = () => {
           width={620}
           height={620}
           src={RectangleImage}
-          alt=""
+          alt="BoostMe's Background"
           loader={imageLoader}
         />
         <div
@@ -58,7 +58,7 @@ const Items = () => {
           width={620}
           height={620}
           src={RectangleImage}
-          alt=""
+          alt="BoostMe's Background"
           loader={imageLoader}
         />
         <div
@@ -81,7 +81,7 @@ const Items = () => {
           width={620}
           height={620}
           src={RectangleImage}
-          alt=""
+          alt="BoostMe's Background"
           loader={imageLoader}
         />
         <div

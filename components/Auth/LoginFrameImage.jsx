@@ -1,11 +1,17 @@
 import Image from 'next/image'
 import imageLoader from '../../helper/imageLoader'
-import FrameImage from '../../public/login-section/Frame 10.png'
+import FrameImage from '../../public/login-section/BoxBackground.png'
 
 const LoginFrameImage = () => {
   return (
     <div>
-      <Image width={500} height={117} src={FrameImage} alt="" loader={imageLoader} />
+      <Image
+        width={500}
+        height={117}
+        src={FrameImage}
+        alt="BoostMe's Background Image"
+        loader={imageLoader}
+      />
     </div>
   )
 }

@@ -1,10 +1,10 @@
-import React from 'react'
 import Image from 'next/image'
-import imageLoader from '../../helper/imageLoader'
-import CampaignLogo from '../../public/customers-section/campaign-monitor-logo.svg'
-import CampaignPicture from '../../public/customers-section/aaron-beashel.svg'
+import React from 'react'
 import { FiArrowRight } from 'react-icons/fi'
 import { GoQuote } from 'react-icons/go'
+import imageLoader from '../../helper/imageLoader'
+import CampaignPicture from '../../public/customers-section/aaron-beashel.svg'
+import CampaignLogo from '../../public/customers-section/campaign-monitor-logo.svg'
 
 const customersInfo = [
   {
@@ -91,7 +91,13 @@ const CustomerCards = () => {
           className={`border-solid border-4 rounded-2xl px-8 py-4 flex flex-col items-center ${
             item.borderColor == 'primary' ? 'border-primary' : 'border-secondary'
           }`}>
-          <Image width={200} height={50} src={item.companyLogo} alt="" loader={imageLoader} />
+          <Image
+            width={200}
+            height={50}
+            src={item.companyLogo}
+            alt="BoostMe's customer company logo"
+            loader={imageLoader}
+          />
           <GoQuote size={'2em'} color={'#777777'} className="text-lg" />
           <h4 className="text-neutral text-lg sm:text-2xl text-center">{item.customerReview}</h4>
           <a
@@ -109,7 +115,7 @@ const CustomerCards = () => {
                   width={50}
                   height={50}
                   src={item.customerPicture}
-                  alt=""
+                  alt="BoostMe's customer image"
                   loader={imageLoader}
                 />
               </div>
