@@ -66,12 +66,25 @@ const Navbar = () => {
             <li>
               <a>Customers</a>
             </li>
-            <div className="form-control py-2">
-              <label className="label cursor-pointer">
-                <span className="label-text pl-3">EN</span>
-                <input type="checkbox" className="toggle toggle-secondary" />
-                <span className="label-text pr-3">BN</span>
-              </label>
+            <div className="btn-group md:min-w-[70px] my-4 ml-4">
+              <button
+                className={
+                  languageMode == 'EN'
+                    ? 'btn-xs bg-secondary rounded-l-full text-white text-xs'
+                    : 'btn-xs bg-slate-200 rounded-l-full'
+                }
+                onClick={() => setLanguageMode('EN')}>
+                EN
+              </button>
+              <button
+                className={
+                  languageMode == 'BN'
+                    ? 'btn-xs bg-secondary rounded-r-full text-white text-xs'
+                    : 'btn-xs bg-slate-200 rounded-r-full'
+                }
+                onClick={() => setLanguageMode('BN')}>
+                BN
+              </button>
             </div>
             <li>
               <a>Login</a>
@@ -130,12 +143,12 @@ const Navbar = () => {
       </div>
       <div className="navbar-end hidden lg:flex">
         <ul className="menu menu-horizontal p-0">
-          <div className="btn-group my-2 mr-4">
+          <div className="btn-group md:min-w-[70px] my-4 mr-4">
             <button
               className={
                 languageMode == 'EN'
-                  ? 'btn-sm bg-secondary rounded-l-full text-white'
-                  : 'btn-sm bg-slate-200 rounded-l-full'
+                  ? 'btn-xs bg-secondary rounded-l-full text-white text-xs'
+                  : 'btn-xs bg-slate-200 rounded-l-full'
               }
               onClick={() => setLanguageMode('EN')}>
               EN
@@ -143,8 +156,8 @@ const Navbar = () => {
             <button
               className={
                 languageMode == 'BN'
-                  ? 'btn-sm bg-secondary text-white rounded-r-full'
-                  : 'btn-sm bg-slate-200 rounded-r-full'
+                  ? 'btn-xs bg-secondary rounded-r-full text-white text-xs'
+                  : 'btn-xs bg-slate-200 rounded-r-full'
               }
               onClick={() => setLanguageMode('BN')}>
               BN
