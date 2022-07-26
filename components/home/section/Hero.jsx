@@ -64,9 +64,7 @@ const Hero = () => {
               </div>
             </div>
           </div>
-          <div
-            data-aos="fade-up-left"
-            className="hidden lg:block lg:absolute lg:bottom-0 lg:right-0 lg:h-[100px] lg:w-[500px] ">
+          <div className="hidden lg:block lg:absolute lg:bottom-0 lg:right-0 lg:h-[100px] lg:w-[500px] ">
             <Image
               src="/landing-section/Frame 10.png"
               width={500}
