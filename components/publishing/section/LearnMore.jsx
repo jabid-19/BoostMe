@@ -1,17 +1,20 @@
 import Image from 'next/image'
 import React from 'react'
+import imageLoader from '../../../helper/imageLoader'
+import ContentWriting from '../../../public/landing-section/ContentWriting.png'
 
 const LearnMore = () => {
   return (
     <div className="hero min-h-screen">
       <div className="hero-content flex-col lg:flex-row gap-8">
         <Image
-          data-aos="fade-right"
-          src="/landing-section/Rectangle 6.png"
+          data-aos="flip-left"
+          src={ContentWriting}
           width={423}
           height={460}
           className="max-w-sm rounded-lg shadow-2xl"
-          alt="Landing"
+          alt="Social Media Content Writing"
+          loader={imageLoader}
         />
         <div
           data-aos="fade-left"

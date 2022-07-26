@@ -1,13 +1,19 @@
 import Image from 'next/image'
 import React from 'react'
-
+import imageLoader from '../../../helper/imageLoader'
 const Selling = () => {
   return (
     <div className="flex items-center w-auto mx-6 mb-20 mt-10 lg:h-screen lg:mb-0 2xl:w-[1400px] 2xl:mx-auto">
       {/* section div */}
       <div className="flex flex-col gap-10 w-full md:flex-row">
         <div data-aos="flip-left" className="w-[95%] mx-auto flex justify-center lg:w-1/2 ">
-          <Image src="/start-page/Small-business-1.png" width={550} height={620} alt="Engagement" />
+          <Image
+            src="/start-page/SmallBusiness.png"
+            width={550}
+            height={620}
+            alt="Manage Social Media Businesses"
+            loader={imageLoader}
+          />
         </div>
         <div
           data-aos="flip-right"

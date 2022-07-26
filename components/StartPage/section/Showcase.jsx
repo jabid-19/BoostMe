@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import React, { useState } from 'react'
+import imageLoader from '../../../helper/imageLoader'
 
 const Showcase = () => {
   const [tabs, setTabs] = useState(1)
@@ -48,7 +49,13 @@ const Showcase = () => {
             </button>
           </div>
           <div data-aos="fade-up-left" className="w-[95%] mx-auto flex lg:w-1/2 ">
-            <Image src="/start-page/customize-1.png" width={650} height={600} alt="Engagement" />
+            <Image
+              src="/start-page/PostCustomization.png"
+              width={650}
+              height={600}
+              alt="Social Media Post Customization"
+              loader={imageLoader}
+            />
           </div>
         </div>
       )}
@@ -56,10 +63,11 @@ const Showcase = () => {
         <div className="flex flex-col gap-10 w-full md:flex-row">
           <div data-aos="fade-up-right" className="w-[95%] mx-auto flex justify-center lg:w-1/2 ">
             <Image
-              src="/start-page/Small-business-1.png"
+              src="/start-page/SmallBusiness.png"
               width={550}
               height={620}
-              alt="Engagement"
+              alt="Brand Building using Social Media"
+              loader={imageLoader}
             />
           </div>
           <div
@@ -99,7 +107,13 @@ const Showcase = () => {
             </button>
           </div>
           <div data-aos="fade-up-left" className="w-[95%] mx-auto flex justify-center lg:w-1/2 ">
-            <Image src="/start-page/NFT-1.png" width={550} height={620} alt="Engagement" />
+            <Image
+              src="/start-page/NFT.png"
+              width={550}
+              height={620}
+              alt="Generate NFTs"
+              loader={imageLoader}
+            />
           </div>
         </div>
       )}

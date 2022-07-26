@@ -1,6 +1,6 @@
 import Image from 'next/image'
-import RectangleImage from '../../public/login-section/Rectangle 10.png'
 import imageLoader from '../../helper/imageLoader'
+import RectangleImage from '../../public/common/LoginImage.png'
 const Employee = () => {
   return (
     <div className="my-36 lg:mx-36">
