@@ -4,10 +4,12 @@ import Employee from '../components/About/Employee'
 import Goal from '../components/About/Goal'
 import AboutUs from '../components/About/AboutUs'
 import EmployeeCover from '../components/About/EmployeeCover'
+import AboutHeader from '../components/About/AboutHeader'
 
 const About = () => {
   return (
     <div>
+      <AboutHeader />
       <AboutUs />
       <Vision />
       <Goal />
