@@ -1,20 +1,42 @@
 import Image from 'next/image'
 import React from 'react'
+import imageLoader from '../../../helper/imageLoader'
+import BoxBackground from '../../../public/landing-section/BoxBackground.png'
+import BoxBackground2 from '../../../public/landing-section/BoxBackground2.png'
+import Dashboard from '../../../public/landing-section/Dashboard.png'
 
 const Hero = () => {
   return (
     <div className="hero min-h-screen">
       <div className="flex flex-col">
         <div data-aos="fade-down-right" className="hidden lg:block lg:absolute lg:left-0 lg:top-0">
-          <Image src="/landing-section/Frame 10.png" width={500} height={100} alt="publishing" />
+          <Image
+            src={BoxBackground}
+            width={500}
+            height={100}
+            alt="BoostMe's Background"
+            loader={imageLoader}
+          />
         </div>
         <div data-aos="fade-down" className="hidden lg:block lg:absolute lg:left-[500px] top-0">
-          <Image src="/landing-section/Frame 10.png" width={500} height={100} alt="publishing" />
+          <Image
+            src={BoxBackground2}
+            width={500}
+            height={100}
+            alt="BoostMe's Background"
+            loader={imageLoader}
+          />
         </div>
         <div
           data-aos="fade-up-right"
           className="hidden lg:block lg:absolute lg:left-0 lg:top-[100px]">
-          <Image src="/landing-section/Frame 10.png" width={500} height={100} alt="publishing" />
+          <Image
+            src={BoxBackground}
+            width={500}
+            height={100}
+            alt="BoostMe's Background"
+            loader={imageLoader}
+          />
         </div>
         <h1
           data-aos="fade-left"
@@ -26,12 +48,13 @@ const Hero = () => {
         <div>
           <div className="hero-content flex-col lg:flex-row-reverse">
             <Image
-              data-aos="fade-up"
-              src="/landing-section/Rectangle 5.png"
+              data-aos="fade-left"
+              src={Dashboard}
               width={423}
               height={460}
               className="max-w-sm rounded-lg shadow-2xl"
-              alt="Landing"
+              alt="Digital Marketing Dashboard"
+              loader={imageLoader}
             />
             <div
               data-aos="fade-down"

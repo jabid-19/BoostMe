@@ -6,11 +6,19 @@ import { Autoplay, Pagination } from 'swiper'
 import 'swiper/css'
 import 'swiper/css/pagination'
 import { testimonialsData } from '../../../data/TestimonialData'
+import imageLoader from '../../../helper/imageLoader'
+import BoxBackground2 from '../../../public/landing-section/BoxBackground2.png'
 const Testimonials = () => {
   return (
     <div className="relative">
       <div className="hidden lg:block lg:absolute lg:left-0 lg:top-12">
-        <Image src="/landing-section/Frame 11.png" width={400} height={100} alt="Landing" />
+        <Image
+          src={BoxBackground2}
+          width={400}
+          height={100}
+          alt="BoostMe's Background"
+          loader={imageLoader}
+        />
       </div>
       <div className="w-full flex justify-center lg:justify-end">
         <h1 className="text-2xl font-semibold break-words md:text-4xl text-neutral lg:tracking-wide py-14 xl:text-5xl">
@@ -42,7 +50,8 @@ const Testimonials = () => {
                             src={testimonial.data[item]?.image}
                             width={100}
                             height="100%"
-                            alt="Landing"
+                            alt="BoostMe testimonials"
+                            loader={imageLoader}
                           />
                         </div>
                         <div className="mt-10 py-6">

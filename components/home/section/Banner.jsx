@@ -3,7 +3,7 @@ const Banner = () => {
   return (
     <div
       className="hero min-h-screen"
-      style={{ backgroundImage: `url('/landing-section/Group 28.png')` }}>
+      style={{ backgroundImage: `url('/landing-section/BackgroundBanner.png')` }}>
       <div className="hero-overlay bg-opacity-60"></div>
       <div className="hero-content text-center text-neutral-content">
         <div data-aos="zoom-in" className="max-w-full">

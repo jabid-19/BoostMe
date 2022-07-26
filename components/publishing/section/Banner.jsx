@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
-
+import imageLoader from '../../../helper/imageLoader'
+import SocialMediaBanner from '../../../public/landing-section/SocialMediaBanner.png'
 const Banner = () => {
   return (
     <div className="sm:min-h-[75vh]  flex justify-center items-center flex-col md:min-h-screen">
@@ -17,12 +18,13 @@ const Banner = () => {
       </div>
       <div data-aos="zoom-in" className="mt-10 md:mt-28 w-full">
         <Image
-          alt="Banner"
-          src="/landing-section/Rectangle 7.png"
+          alt="BoostMe's Marketing Banner"
+          src={SocialMediaBanner}
           width="100%"
           height={28}
           objectFit="contain"
           layout="responsive"
+          loader={imageLoader}
         />
       </div>
     </div>

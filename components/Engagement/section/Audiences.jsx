@@ -1,5 +1,4 @@
 import React from 'react'
-
 const Audiences = () => {
   return (
     <div className="w-auto mx-6 mt-12 lg:h-screen lg:mt-0 2xl:w-[1400px] 2xl:mx-auto">
@@ -24,7 +23,7 @@ const Audiences = () => {
 
         <div data-aos="fade-up-left" className="w-[95%] mx-auto flex lg:w-1/2 ">
           <video autoPlay playsInline loop muted>
-            <source src="/engagement-section/hero-buffer-engage-animation.mp4" type="video/mp4" />
+            <source src="/engagement-section/EngagementVideo.mp4" type="video/mp4" />
           </video>
         </div>
       </div>

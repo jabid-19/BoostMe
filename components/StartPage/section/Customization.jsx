@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
-
+import imageLoader from '../../../helper/imageLoader'
+import PostCustomization from '../../../public/start-page/PostCustomization.png'
 const Customization = () => {
   return (
     <div className="flex items-center w-auto mx-6 mb-20 mt-10 lg:h-screen lg:mb-0 2xl:w-[1400px] 2xl:mx-auto">
@@ -23,7 +24,13 @@ const Customization = () => {
           </button>
         </div>
         <div data-aos="fade-down-left" className="w-[95%] mx-auto flex lg:w-1/2 ">
-          <Image src="/start-page/customize-1.png" width={650} height={600} alt="Engagement" />
+          <Image
+            src={PostCustomization}
+            width={650}
+            height={600}
+            alt="Social Media Post Customization"
+            loader={imageLoader}
+          />
         </div>
       </div>
     </div>

@@ -1,12 +1,22 @@
 import Image from 'next/image'
 import React from 'react'
-
+import imageLoader from '../../../helper/imageLoader'
+import BoxBackground from '../../../public/landing-section/BoxBackground.png'
+import Calender from '../../../public/landing-section/Calender.png'
+import Clock from '../../../public/landing-section/Clock.png'
+import Mobile from '../../../public/landing-section/Mobile.png'
 const BrandBuild = () => {
   return (
     <div className="hero min-h-screen relative mb-24">
       <div className="flex flex-col">
         <div data-aos="fade-down-right" className="hidden lg:block lg:absolute lg:left-0 lg:top-0">
-          <Image src="/landing-section/Frame 10.png" width={500} height={100} alt="brandbuilding" />
+          <Image
+            src={BoxBackground}
+            width={500}
+            height={100}
+            alt="BoostMe's Background"
+            loader={imageLoader}
+          />
         </div>
         <h1
           data-aos="fade-down-left"
@@ -21,11 +31,12 @@ const BrandBuild = () => {
             className="card card-compact w-64 border-4 border-secondary rounded-[25px]">
             <figure className="mb-4">
               <Image
-                src="/landing-section/Clock.png"
+                src={Clock}
                 width={270}
                 height={190}
                 alt="Clock"
                 className="object-none"
+                loader={imageLoader}
               />
             </figure>
             <div className="card-body">
@@ -38,11 +49,12 @@ const BrandBuild = () => {
             className="card card-compact w-64 border-4 border-secondary rounded-[25px]">
             <figure className="mb-4">
               <Image
-                src="/landing-section/Mobile.png"
+                src={Mobile}
                 width={270}
                 height={190}
                 alt="Clock"
                 className="object-none mb-2"
+                loader={imageLoader}
               />
             </figure>
             <div className="card-body">
@@ -55,11 +67,12 @@ const BrandBuild = () => {
             className="card card-compact w-64 border-4 border-secondary rounded-[25px]">
             <figure className="mb-4">
               <Image
-                src="/landing-section/Calender.png"
+                src={Calender}
                 width={270}
                 height={190}
                 alt="Clock"
                 className="object-none mb-2"
+                loader={imageLoader}
               />
             </figure>
             <div className="card-body">
