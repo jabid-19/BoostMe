@@ -1,9 +1,9 @@
-import '../styles/globals.css'
-import Navbar from '../components/Shared/Navbar'
-import Footer from '../components/Shared/Footer'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
 import { useEffect } from 'react'
+import Footer from '../components/Shared/Footer'
+import Navbar from '../components/Shared/Navbar'
+import '../styles/globals.css'
 
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
@@ -11,7 +11,7 @@ function MyApp({ Component, pageProps }) {
   }, [])
 
   return (
-    <div>
+    <div className="">
       <Navbar />
       <div className="overflow-x-hidden">
         <Component {...pageProps} />

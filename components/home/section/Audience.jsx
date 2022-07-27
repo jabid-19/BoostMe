@@ -1,5 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
+import imageLoader from '../../../helper/imageLoader'
+import Dashboard from '../../../public/landing-section/Dashboard.png'
 
 const Audience = () => {
   return (
@@ -7,11 +9,12 @@ const Audience = () => {
       <div className="hero-content flex-col lg:flex-row-reverse">
         <Image
           data-aos="fade-left"
-          src="/landing-section/Rectangle 5.png"
+          src={Dashboard}
           width={423}
           height={460}
           className="max-w-sm rounded-lg shadow-2xl"
-          alt="Landing"
+          alt="Digital Marketing Dashboard"
+          loader={imageLoader}
         />
         <div
           data-aos="fade-right"

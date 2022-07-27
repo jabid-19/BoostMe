@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
-
+import imageLoader from '../../../helper/imageLoader'
 const CommentsCheck = () => {
   return (
     <div className="flex items-center w-auto mx-6 mb-20 mt-10 lg:h-screen lg:mb-0 2xl:w-[1400px] 2xl:mx-auto">
@@ -8,10 +8,11 @@ const CommentsCheck = () => {
       <div className="flex flex-col gap-10 w-full md:flex-row">
         <div data-aos="fade-right" className="w-[95%] mx-auto flex lg:w-1/2 ">
           <Image
-            src="/engagement-section/engage-comments.png"
+            src="/engagement-section/engage-comment.png"
             width={700}
             height={600}
-            alt="Engagement"
+            alt="Social Media Engagement"
+            loader={imageLoader}
           />
         </div>
         <div

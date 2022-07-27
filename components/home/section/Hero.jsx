@@ -1,24 +1,29 @@
 import Image from 'next/image'
 import React from 'react'
 import { BsPlayBtn } from 'react-icons/bs'
+import imageLoader from '../../../helper/imageLoader'
+import Background from '../../../public/common/BoxBackground.png'
 const Hero = () => {
   return (
     <div className="min-h-screen w-full bg-cover bg-center hero place-items-center">
       <div className="flex flex-col justify-center gap-4 h-3/5 items-center lg:flex-row">
         <div data-aos="fade-right" className="flex justify-around items-center gap-4 lg:flex-col">
           <Image
-            src="/landing-section/Group 8.png"
+            src="/landing-section/SocialMedia_Facebook.png"
             width={240}
             height={270}
-            alt="Landing"
+            alt="Facebook Digital Marketing"
             className="max-w-full h-auto rounded-lg"
+            loader={imageLoader}
+            priority={true}
           />
           <Image
-            src="/landing-section/Group 9.png"
+            src="/landing-section/SocialMedia_Instagram.png"
             width={240}
             height={270}
-            alt="Landing"
+            alt="Instagram Digital Marketing"
             className="max-w-full h-auto rounded-lg"
+            priority={true}
           />
         </div>
         <div className="flex flex-col items-center justify-start lg:items-center lg:justify-start">
@@ -32,11 +37,13 @@ const Hero = () => {
           <div className="h-auto flex flex-col items-center justify-center lg:flex-row lg:items-start">
             <div data-aos="fade-up">
               <Image
-                src="/landing-section/Group 10.png"
+                src="/landing-section/SocialMedia_Likes.png"
                 width={240}
                 height={270}
-                alt="Landing"
+                alt="Social Media Likes"
                 className="max-w-full h-auto rounded-lg"
+                loader={imageLoader}
+                priority={true}
               />
             </div>
             <div data-aos="fade-left">
@@ -66,11 +73,12 @@ const Hero = () => {
           </div>
           <div className="hidden lg:block lg:absolute lg:bottom-0 lg:right-0 lg:h-[100px] lg:w-[500px] ">
             <Image
-              src="/landing-section/Frame 10.png"
+              src={Background}
               width={500}
               height={100}
-              alt="Landing"
+              alt="BoostMe's Background"
               className="max-w-full h-auto rounded-lg"
+              loader={imageLoader}
             />
           </div>
         </div>

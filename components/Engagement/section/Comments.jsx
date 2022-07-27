@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
-
+import imageLoader from '../../../helper/imageLoader'
+import EngagementDashboard from '../../../public/engagement-section/engagement-dashboard.png'
 const Comments = () => {
   return (
     <div className="flex flex-col items-center w-auto mb-10 mx-6 lg:h-screen 2xl:w-[1400px] 2xl:mx-auto">
@@ -18,10 +19,11 @@ const Comments = () => {
       <div>
         <Image
           data-aos="fade-up"
-          src="/engagement-section/engagement-dashboard.png"
+          src={EngagementDashboard}
           width={1200}
           height={700}
-          alt="Engagement"
+          alt="BoostMe's Digital Marketing Dashboard"
+          loader={imageLoader}
         />
       </div>
     </div>
