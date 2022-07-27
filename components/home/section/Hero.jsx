@@ -34,7 +34,7 @@ const Hero = () => {
               <span className="text-secondary">grow</span> your brand
             </h1>
           </div>
-          <div className="h-auto flex flex-col items-center justify-center lg:flex-row lg:items-start">
+          <div className="h-auto flex flex-col items-center justify-center lg:flex-row lg:items-start z-20">
             <div data-aos="fade-up">
               <Image
                 src="/landing-section/SocialMedia_Likes.png"

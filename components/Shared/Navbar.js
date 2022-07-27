@@ -86,7 +86,7 @@ const Navbar = () => {
                 BN
               </button>
             </div>
-            <li tabIndex="0">
+            {/* <li tabIndex="0">
               <a>
                 <p>Jhon Doe</p>
                 <div className="avatar placeholder">
@@ -118,15 +118,15 @@ const Navbar = () => {
                   </Link>
                 </li>
               </ul>
-            </li>
-            {/* <li>
+            </li> */}
+            <li>
               <a>Login</a>
             </li>
             <li>
               <Link href={{ pathname: 'login', query: { keyword: 'register' } }}>
                 <button className="btn btn-primary text-white mt-1.5">Get Started</button>
               </Link>
-            </li> */}
+            </li>
           </ul>
         </div>
         <a href="/">
@@ -196,10 +196,7 @@ const Navbar = () => {
               BN
             </button>
           </div>
-          {/* <li className="text-primary mr-4">
-            <a href="login">Login</a>
-          </li> */}
-          <li tabIndex="0">
+          {/* <li tabIndex="0">
             <a>
               <p>Jhon Doe</p>
               <div className="avatar placeholder">
@@ -233,12 +230,15 @@ const Navbar = () => {
                 </Link>
               </li>
             </ul>
+          </li> */}
+          <li className="text-primary mr-4">
+            <a href="login">Login</a>
           </li>
-          {/* <Link href={{ pathname: 'login', query: { keyword: 'register' } }}>
+          <Link href={{ pathname: 'login', query: { keyword: 'register' } }}>
             <button className="btn btn-primary text-white text-center capitalize rounded-full my-2 px-8">
               Get Started
             </button>
-          </Link> */}
+          </Link>
         </ul>
       </div>
     </div>
