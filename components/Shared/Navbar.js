@@ -86,14 +86,47 @@ const Navbar = () => {
                 BN
               </button>
             </div>
-            <li>
+            <li tabIndex="0">
+              <a>
+                <p>Jhon Doe</p>
+                <div className="avatar placeholder">
+                  <div className="bg-neutral-focus text-neutral-content rounded-full w-12 h-12">
+                    <span>JD</span>
+                  </div>
+                </div>
+                <svg
+                  className="fill-current"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24">
+                  <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
+                </svg>
+              </a>
+              <ul className="p-2 bg-white">
+                <li>
+                  <a href="publishing">Publishing</a>
+                </li>
+                <li>
+                  <Link href="/engagement">
+                    <a>Engagement</a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/start-page">
+                    <a>Start Page</a>
+                  </Link>
+                </li>
+              </ul>
+            </li>
+            {/* <li>
               <a>Login</a>
             </li>
             <li>
               <Link href={{ pathname: 'login', query: { keyword: 'register' } }}>
                 <button className="btn btn-primary text-white mt-1.5">Get Started</button>
               </Link>
-            </li>
+            </li> */}
           </ul>
         </div>
         <a href="/">
