@@ -4,9 +4,8 @@ import RectangleImage from '../../public/common/LoginImage.png'
 
 const Vision = () => {
   return (
-    <div className="hero min-h-screen bg-base-100 mt-36">
+    <div className="hero min-h-screen bg-base-100 mt-36 lg:mt-8">
       <div className="hero-content flex-col lg:flex-row px-8 lg:px-2">
-        {/* <img src="https://placeimg.com/260/400/arch" class="max-w-sm rounded-lg shadow-2xl" /> */}
         <Image
           data-aos="fade-down-right"
           className="rounded-2xl"
