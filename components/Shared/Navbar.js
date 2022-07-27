@@ -143,7 +143,7 @@ const Navbar = () => {
       </div>
       <div className="navbar-end hidden lg:flex">
         <ul className="menu menu-horizontal p-0">
-          <div className="btn-group md:min-w-[70px] my-4 mr-4">
+          <div className="btn-group md:min-w-[70px] my-6 mr-4">
             <button
               className={
                 languageMode == 'EN'
@@ -163,14 +163,49 @@ const Navbar = () => {
               BN
             </button>
           </div>
-          <li className="text-primary mr-4">
+          {/* <li className="text-primary mr-4">
             <a href="login">Login</a>
+          </li> */}
+          <li>
+            <a>John Doe</a>
           </li>
-          <Link href={{ pathname: 'login', query: { keyword: 'register' } }}>
-            <button className="btn btn-primary text-white text-center capitalize rounded-full px-8">
+          <li className="mr-4" tabIndex="0">
+            <a>
+              <div className="avatar placeholder">
+                <div className="bg-neutral-focus text-neutral-content rounded-full w-12 h-12">
+                  <span>JD</span>
+                </div>
+              </div>
+              <svg
+                className="fill-current"
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24">
+                <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
+              </svg>
+            </a>
+            <ul className="p-2 bg-white">
+              <li>
+                <a href="publishing">Publishing</a>
+              </li>
+              <li>
+                <Link href="/engagement">
+                  <a>Engagement</a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/start-page">
+                  <a>Start Page</a>
+                </Link>
+              </li>
+            </ul>
+          </li>
+          {/* <Link href={{ pathname: 'login', query: { keyword: 'register' } }}>
+            <button className="btn btn-primary text-white text-center capitalize rounded-full my-2 px-8">
               Get Started
             </button>
-          </Link>
+          </Link> */}
         </ul>
       </div>
     </div>

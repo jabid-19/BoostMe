@@ -3,7 +3,7 @@ import RectangleImage from '../../public/login-section/Rectangle 10.png'
 import imageLoader from '../../helper/imageLoader'
 const Employee = () => {
   return (
-    <div className="my-36 lg:mx-36">
+    <div className="my-36">
       <div className="flex flex-col lg:flex-row lg:justify-center items-center py-4 px-8 lg:px-36">
         <div data-aos="fade-right" className="avatar">
           <div className="w-52 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
