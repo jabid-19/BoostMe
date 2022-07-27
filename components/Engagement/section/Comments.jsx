@@ -4,7 +4,7 @@ import imageLoader from '../../../helper/imageLoader'
 import EngagementDashboard from '../../../public/engagement-section/engagement-dashboard.png'
 const Comments = () => {
   return (
-    <div className="flex flex-col items-center w-auto mb-10 mx-6 lg:h-screen 2xl:w-[1400px] 2xl:mx-auto">
+    <div className="flex flex-col items-center w-auto mb-10 mx-6 lg:min-h-screen 2xl:w-[1400px] 2xl:mx-auto">
       <div data-aos="fade-down" className="flex flex-col items-center text-center">
         <h1 className="text-4xl font-semibold break-words text-neutral lg:tracking-wide xl:text-5xl">
           Build your <span className="text-primary">audience</span> and
