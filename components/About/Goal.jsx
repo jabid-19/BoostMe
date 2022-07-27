@@ -2,7 +2,7 @@ const Goal = () => {
   return (
     <div
       data-aos="zoom-in"
-      style={{ backgroundImage: `url('/landing-section/Group 28.png')` }}
+      style={{ backgroundImage: `url('/common/BackgroundBanner.png')` }}
       className="bg-no-repeat bg-cover mt-36">
       <div className="py-12 px-8 lg:max-w-5xl lg:mx-auto text-white">
         <h1 className="text-xl md:text-2xl font-semibold break-words lg:text-4xl lg:tracking-wide xl:text-5xl pb-6">

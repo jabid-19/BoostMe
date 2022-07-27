@@ -166,11 +166,9 @@ const Navbar = () => {
           {/* <li className="text-primary mr-4">
             <a href="login">Login</a>
           </li> */}
-          <li>
-            <a>John Doe</a>
-          </li>
-          <li className="mr-4" tabIndex="0">
+          <li tabIndex="0">
             <a>
+              <p>Jhon Doe</p>
               <div className="avatar placeholder">
                 <div className="bg-neutral-focus text-neutral-content rounded-full w-12 h-12">
                   <span>JD</span>
@@ -187,16 +185,18 @@ const Navbar = () => {
             </a>
             <ul className="p-2 bg-white">
               <li>
-                <a href="publishing">Publishing</a>
+                <a className="px-10" href="publishing">
+                  Publishing
+                </a>
               </li>
               <li>
                 <Link href="/engagement">
-                  <a>Engagement</a>
+                  <a className="px-10">Engagement</a>
                 </Link>
               </li>
               <li>
                 <Link href="/start-page">
-                  <a>Start Page</a>
+                  <a className="px-10">Start Page</a>
                 </Link>
               </li>
             </ul>
