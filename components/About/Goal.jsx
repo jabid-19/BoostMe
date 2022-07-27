@@ -1,3 +1,5 @@
+import { TiTick } from 'react-icons/ti'
+
 const Goal = () => {
   return (
     <div
@@ -21,18 +23,25 @@ const Goal = () => {
                 voluptas quibusdam? Iusto obcaecati labore dolores aspernatur:
               </p>
               <p className="pb-2">
-                - Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, nesciunt.
+                <TiTick className="inline-block mr-2" />
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, nesciunt.
               </p>
               <p className="pb-2">
-                - Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, nesciunt.
+                <TiTick className="inline-block mr-2" />
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, nesciunt.
               </p>
               <p className="pb-2">
-                - Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, nesciunt.
+                <TiTick className="inline-block mr-2" />
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, nesciunt.
               </p>
               <p className="pb-2">
-                - Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, nesciunt.
+                <TiTick className="inline-block mr-2" />
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, nesciunt.
               </p>
-              <p>- Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, nesciunt.</p>
+              <p>
+                <TiTick className="inline-block mr-2" />
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, nesciunt.
+              </p>
             </div>
           </div>
         </div>
