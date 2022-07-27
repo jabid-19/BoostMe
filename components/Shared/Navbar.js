@@ -90,7 +90,7 @@ const Navbar = () => {
               <a>
                 <p>Jhon Doe</p>
                 <div className="avatar placeholder">
-                  <div className="bg-neutral-focus text-neutral-content rounded-full w-12 h-12">
+                  <div className="bg-primary-focus text-neutral-content rounded-full w-12 h-12">
                     <span>JD</span>
                   </div>
                 </div>
@@ -203,7 +203,7 @@ const Navbar = () => {
             <a>
               <p>Jhon Doe</p>
               <div className="avatar placeholder">
-                <div className="bg-neutral-focus text-neutral-content rounded-full w-12 h-12">
+                <div className="bg-primary-focus text-neutral-content rounded-full w-12 h-12">
                   <span>JD</span>
                 </div>
               </div>

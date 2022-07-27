@@ -11,7 +11,7 @@ import BoxBackground2 from '../../../public/common/BoxBackground2.png'
 const Testimonials = () => {
   return (
     <div className="relative">
-      <div className="hidden lg:block lg:absolute lg:left-0 lg:top-12">
+      <div data-aos="fade-down-right" className="hidden lg:block lg:absolute lg:left-0 lg:top-12">
         <Image
           src={BoxBackground2}
           width={400}
@@ -20,7 +20,7 @@ const Testimonials = () => {
           loader={imageLoader}
         />
       </div>
-      <div className="w-full flex justify-center lg:justify-end">
+      <div data-aos="fade-down-left" className="w-full flex justify-center lg:justify-end">
         <h1 className="text-2xl font-semibold break-words md:text-4xl text-neutral lg:tracking-wide py-14 xl:text-5xl">
           Business <span className="text-primary">all over the world</span> <br />
           <span className="text-secondary">trust</span> us to build the brand
