@@ -8,7 +8,7 @@ import Neovotech from '../../../public/landing-section/Neovotech.png'
 import Unanitech from '../../../public/landing-section/Unanitech.png'
 const Companies = () => {
   return (
-    <main className="w-full bg-primary">
+    <main className="w-full bg-primary mt-16 mb-20 lg:mt-0 lg:mb-0">
       <div className="w-[90%] mx-auto flex flex-wrap justify-between items-center py-[30px] md:w-[90%] lg:w-[90%] xl:w-[1200px]">
         <div data-aos="zoom-in" className="flex items-center">
           <Image src={Neovotech} width={63} height={77} alt="Neovotech Logo" loader={imageLoader} />

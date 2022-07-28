@@ -3,7 +3,7 @@ import { faqData } from '../../../data/FaqArray'
 
 const FAQ = () => {
   return (
-    <div className="flex items-center justify-center w-auto mx-6 mb-20 mt-10 lg:min-h-screen lg:mb-0 2xl:w-[1400px] 2xl:mx-auto">
+    <div className="flex items-center justify-center w-auto mx-6 mb-20 mt-10 2xl:w-[1400px] 2xl:mx-auto">
       <section className="w-full">
         <div className="flex flex-col justify-center px-4 py-8  md:p-8">
           <div data-aos="fade-down">

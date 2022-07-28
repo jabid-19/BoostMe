@@ -4,7 +4,7 @@ import imageLoader from '../../../helper/imageLoader'
 import PostCustomization from '../../../public/start-page/PostCustomization.png'
 const Customization = () => {
   return (
-    <div className="flex items-center w-auto mx-6 mb-20 mt-10 lg:h-screen lg:mb-0 2xl:w-[1400px] 2xl:mx-auto">
+    <div className="flex items-center w-auto mx-6 mb-20 lg:mb-24 mt-10 lg:mt-36 2xl:w-[1400px] 2xl:mx-auto">
       {/* section div */}
       <div className="flex flex-col-reverse lg:flex-row gap-10 w-full md:flex-row">
         <div

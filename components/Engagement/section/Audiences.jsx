@@ -1,7 +1,7 @@
 import React from 'react'
 const Audiences = () => {
   return (
-    <div className="w-auto mx-6 mt-12 lg:min-h-screen lg:mt-0 2xl:w-[1400px] 2xl:mx-auto">
+    <div className="w-auto mx-6 mt-12 lg:min-h-[85vh] lg:mt-16 2xl:w-[1400px] 2xl:mx-auto">
       {/* section div */}
       <div className="flex flex-col w-full md:flex-row">
         <div

@@ -4,7 +4,7 @@ const Goal = () => {
   return (
     <div
       data-aos="zoom-in"
-      className="hero mt-36 lg:mt-8"
+      className="hero mt-14 lg:mt-8"
       style={{ backgroundImage: `url('/common/BackgroundBanner.png')` }}>
       <div className="hero-overlay bg-opacity-60"></div>
       <div className="hero-content text-neutral-content">

@@ -5,7 +5,7 @@ import ContentWriting from '../../../public/landing-section/ContentWriting.png'
 
 const LearnMore = () => {
   return (
-    <div className="hero min-h-screen">
+    <div className="hero mt-20 md:mt-0 mb-10 lg:mt-28 lg:mb-28">
       <div className="hero-content flex-col lg:flex-row gap-8">
         <Image
           data-aos="flip-left"
@@ -19,7 +19,7 @@ const LearnMore = () => {
         <div
           data-aos="fade-left"
           className="flex flex-col justify-center items-center lg:items-start">
-          <h1 className="text-2xl font-semibold break-words lg:text-4xl text-neutral lg:tracking-wide py-14 xl:text-5xl text-center lg:text-left">
+          <h1 className="text-2xl font-semibold break-words lg:text-4xl text-neutral lg:tracking-wide py-4 lg:py-14 xl:text-5xl text-center lg:text-left">
             Build your <span className="text-primary">audience</span> and{' '}
             <span className="text-secondary">grow</span> your brand
           </h1>

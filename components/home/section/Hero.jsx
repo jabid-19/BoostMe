@@ -5,7 +5,7 @@ import imageLoader from '../../../helper/imageLoader'
 import Background from '../../../public/common/BoxBackground.png'
 const Hero = () => {
   return (
-    <div className="min-h-screen w-full bg-cover bg-center hero place-items-center">
+    <div className="min-h-[85vh] w-full bg-cover bg-center hero place-items-center mt-12 mb-12 lg:mb-0">
       <div className="flex flex-col justify-center gap-4 h-3/5 items-center lg:flex-row">
         <div data-aos="fade-right" className="flex justify-around items-center gap-4 lg:flex-col">
           <Image

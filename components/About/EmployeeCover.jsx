@@ -1,7 +1,7 @@
 const EmployeeCover = () => {
   return (
     <div
-      className="hero min-h-screen mt-36"
+      className="hero min-h-[50vh] mt-24 lg:mt-36"
       style={{ backgroundImage: `url('/common/BackgroundBanner.png')` }}>
       <div className="hero-overlay bg-opacity-60"></div>
       <div className="hero-content text-center text-neutral-content">

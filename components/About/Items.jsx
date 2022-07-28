@@ -4,7 +4,7 @@ import RectangleImage from '../../public/common/LoginImage.png'
 
 const Items = () => {
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 px-8 md:px-36 mt-36">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 px-8 md:px-36 mt-24 lg:mt-36">
       <div className="flex flex-col min-w-xl mx-auto">
         <Image
           data-aos="fade-down"

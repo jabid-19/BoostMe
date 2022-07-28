@@ -4,7 +4,7 @@ import { TiTick } from 'react-icons/ti'
 const PricingChart = ({ headings, pricingPackages }) => {
   const [pricingMode, setPricingMode] = useState('monthly')
   return (
-    <div className="pricingChartContainer container mx-auto">
+    <div className="pricingChartContainer container mt-16 mx-auto">
       <div data-aos="fade-down" className="sectionHeader flex flex-col items-center">
         <p className="text-2xl font-bold text-center my-5">{headings.headings}</p>
         <p className="text-sm w-2/3 text-center mx-auto ">{headings.subHeadings}</p>

@@ -10,7 +10,7 @@ import imageLoader from '../../../helper/imageLoader'
 import BoxBackground2 from '../../../public/common/BoxBackground2.png'
 const Testimonials = () => {
   return (
-    <div className="relative">
+    <div className="relative my-10 lg:my-[7%]">
       <div data-aos="fade-down-right" className="hidden lg:block lg:absolute lg:left-0 lg:top-12">
         <Image
           src={BoxBackground2}
