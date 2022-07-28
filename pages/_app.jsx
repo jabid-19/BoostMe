@@ -2,6 +2,7 @@ import Aos from 'aos'
 import 'aos/dist/aos.css'
 import { useRouter } from 'next/router'
 import { useEffect } from 'react'
+import DashboardMain from '../components/Dashboard/Main'
 import Footer from '../components/Shared/Footer'
 import Navbar from '../components/Shared/Navbar'
 import '../styles/globals.css'
@@ -12,11 +13,11 @@ function MyApp({ Component, pageProps }) {
   useEffect(() => {
     Aos.init({ duration: 1500 })
   }, [])
-  console.log(router.pathname)
+  console.log(Component, 'from APps')
 
   return (
     <div>
-      {router.pathname !== '/dashboard' ? (
+      {router.pathname.split('/')[1] !== 'dashboard' ? (
         <>
           <Navbar />
           <div className="overflow-x-hidden">
@@ -25,7 +26,12 @@ function MyApp({ Component, pageProps }) {
           </div>
         </>
       ) : (
-        <Component {...pageProps} />
+        <>
+          <DashboardMain />
+          <div className="relative ml-96 mt-8 mx-10">
+            <Component {...pageProps} />
+          </div>
+        </>
       )}
     </div>
   )
