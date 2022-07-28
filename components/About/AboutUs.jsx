@@ -8,7 +8,7 @@ const AboutUs = () => {
       <div
         data-aos="zoom-in"
         className="hero-content p-8 lg:m-12 flex-col lg:flex-row-reverse border-4 rounded-2xl border-primary z-20">
-        <div>
+        <div className="text-center lg:text-justify">
           <h1 className=" text-xl md:text-2xl font-semibold break-words lg:text-4xl text-neutral lg:tracking-wide xl:text-5xl">
             About <span className="text-primary">Our Community</span>
           </h1>

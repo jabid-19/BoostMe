@@ -20,12 +20,19 @@ const Testimonials = () => {
           loader={imageLoader}
         />
       </div>
-      <div data-aos="fade-down-left" className="w-full flex justify-center lg:justify-end">
-        <h1 className="text-2xl font-semibold break-words md:text-4xl text-neutral lg:tracking-wide py-14 xl:text-5xl">
+      <div data-aos="fade-down-left" className="w-full flex justify-center lg:justify-end lg:pr-28">
+        <h1 className="text-2xl font-semibold break-words md:text-4xl text-neutral lg:tracking-wide py-14 xl:text-5xl text-center lg:text-left">
           Business <span className="text-primary">all over the world</span> <br />
           <span className="text-secondary">trust</span> us to build the brand
         </h1>
       </div>
+      {/* <h1
+        data-aos="fade-down-left"
+        className=" lg:block lg:absolute lg:top-0 lg:right-28 text-3xl mb-[50px] mt-8 text-center lg:text-end font-semibold break-words text-neutral lg:tracking-wide lg:text-3xl xl:text-5xl">
+        Businesses <span className="text-primary">all over the world</span>
+        <br />
+        <span className="text-secondary">trust</span> us to build their brand
+      </h1> */}
       <div className="relative flex items-center justify-center flex-col w-auto mx-6 2xl:w-[1400px] 2xl:mx-auto mb-20">
         <div className="w-full">
           <Swiper

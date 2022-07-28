@@ -43,7 +43,9 @@ const Navbar = () => {
               </a>
               <ul className="p-2 bg-white">
                 <li>
-                  <a>Publishing</a>
+                  <Link href="/publishing">
+                    <a>Publishing</a>
+                  </Link>
                 </li>
                 <li>
                   <Link href="/engagement">
@@ -58,13 +60,19 @@ const Navbar = () => {
               </ul>
             </li>
             <li>
-              <a>Pricing</a>
+              <Link href="pricing">
+                <a>Pricing</a>
+              </Link>
             </li>
             <li>
-              <a>About</a>
+              <Link href="about">
+                <a>About</a>
+              </Link>
             </li>
             <li>
-              <a>Customers</a>
+              <Link href="customers">
+                <a>Customers</a>
+              </Link>
             </li>
             <div className="btn-group md:min-w-[70px] my-4 ml-4">
               <button
@@ -120,7 +128,9 @@ const Navbar = () => {
               </ul>
             </li> */}
             <li>
-              <a>Login</a>
+              <Link href="login">
+                <a>Login</a>
+              </Link>
             </li>
             <li>
               <Link href={{ pathname: 'login', query: { keyword: 'register' } }}>

@@ -39,7 +39,7 @@ const BrandBuild = () => {
                 loader={imageLoader}
               />
             </figure>
-            <div className="card-body">
+            <div className="card-body text-center lg:text-left">
               <h2 className="text-2xl font-semibold text-primary">Scheduling</h2>
               <p>Create a preset publishing schedule for each social account</p>
             </div>
@@ -57,7 +57,7 @@ const BrandBuild = () => {
                 loader={imageLoader}
               />
             </figure>
-            <div className="card-body">
+            <div className="card-body text-center lg:text-left">
               <h2 className="text-2xl font-semibold text-primary">Tailored posts</h2>
               <p>Create a preset publishing schedule for each social account</p>
             </div>
@@ -75,7 +75,7 @@ const BrandBuild = () => {
                 loader={imageLoader}
               />
             </figure>
-            <div className="card-body">
+            <div className="card-body text-center lg:text-left">
               <h2 className="text-2xl font-semibold text-primary">Calendar</h2>
               <p>Create a preset publishing schedule for each social account</p>
             </div>

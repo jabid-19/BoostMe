@@ -9,7 +9,7 @@ const Goal = () => {
       <div className="hero-overlay bg-opacity-60"></div>
       <div className="hero-content text-neutral-content">
         <div className="max-w-full">
-          <div className="py-12 px-8 lg:max-w-5xl lg:mx-auto text-white">
+          <div className="py-12 px-8 lg:max-w-5xl lg:mx-auto text-white text-center lg:text-justify">
             <h1 className="text-xl md:text-2xl font-semibold break-words lg:text-4xl lg:tracking-wide xl:text-5xl pb-6">
               Goal
             </h1>

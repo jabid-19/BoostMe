@@ -36,15 +36,15 @@ const PricingChart = ({ headings, pricingPackages }) => {
               data-aos="zoom-in"
               className="card-compact min-h-max bg-base-100 border-2 border-primary-300 hover:border-secondary duration-300"
               key={index}>
-              <div className="card-body">
-                <h2 className="card-title">{item.name}</h2>
+              <div className="card-body text-center lg:text-left">
+                <h2 className="card-title mx-auto lg:ml-0">{item.name}</h2>
                 <p className="text-3xl font-bold">
                   {pricingMode == 'monthly' ? item.monthlyPrice : item.yearlyPrice}
                   <span className="text-sm">
                     {pricingMode == 'monthly' ? '  / month' : '  / year'}
                   </span>
                 </p>
-                <p className=" text-justify text-sm">{item.description}</p>
+                <p className=" text-center lg:text-justify text-sm">{item.description}</p>
                 <hr />
                 <ul className="flex flex-col">
                   {item.features.map((feature, index) => {
