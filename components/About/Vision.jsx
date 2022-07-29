@@ -7,7 +7,7 @@ const Vision = () => {
     <div className="hero min-h-screen bg-base-100 mt-8">
       <div className="hero-content flex-col lg:flex-row px-8 lg:px-2">
         <Image
-          data-aos="fade-down-right"
+          data-aos="fade-right"
           className="rounded-2xl"
           width={620}
           height={620}
@@ -15,7 +15,7 @@ const Vision = () => {
           alt="BoostMe's Vision"
           loader={imageLoader}
         />
-        <div data-aos="fade-up-left" className="max-w-2xl lg:pl-8 text-center lg:text-justify">
+        <div data-aos="fade-left" className="max-w-2xl lg:pl-8 text-center lg:text-justify">
           <h1 className="text-xl md:text-2xl font-semibold break-words lg:text-4xl text-neutral lg:tracking-wide xl:text-5xl">
             Vision
           </h1>

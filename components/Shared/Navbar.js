@@ -134,14 +134,16 @@ const Navbar = () => {
             </li>
             <li>
               <Link href={{ pathname: 'login', query: { keyword: 'register' } }}>
-                <button className="btn btn-primary text-white mt-1.5">Get Started</button>
+                <a className="btn btn-primary text-white mt-1.5">Get Started</a>
               </Link>
             </li>
           </ul>
         </div>
-        <a href="/">
-          <Image width={141} height={43} src={Logo} alt="" loader={imageLoader} />
-        </a>
+        <Link href="/">
+          <a>
+            <Image width={141} height={43} src={Logo} alt="" loader={imageLoader} />
+          </a>
+        </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal p-0">
@@ -159,7 +161,9 @@ const Navbar = () => {
             </a>
             <ul className="p-2 bg-white">
               <li>
-                <a href="publishing">Publishing</a>
+                <Link href="publishing">
+                  <a>Publishing</a>
+                </Link>
               </li>
               <li>
                 <Link href="/engagement">
@@ -174,18 +178,24 @@ const Navbar = () => {
             </ul>
           </li>
           <li className="mr-4">
-            <a href="pricing">Pricing</a>
+            <Link href="pricing">
+              <a>Pricing</a>
+            </Link>
           </li>
           <li className="mr-4">
-            <a href="about">About</a>
+            <Link href="about">
+              <a>About</a>
+            </Link>
           </li>
           <li className="mr-4">
-            <a href="customers">Customers</a>
+            <Link href="customers">
+              <a>Customers</a>
+            </Link>
           </li>
         </ul>
       </div>
       <div className="navbar-end hidden lg:flex">
-        <ul className="menu menu-horizontal p-0">
+        <ul className="menu menu-horizontal p-0 lg:items-center">
           <div className="btn-group md:min-w-[70px] my-6 mr-4">
             <button
               className={
@@ -242,12 +252,14 @@ const Navbar = () => {
             </ul>
           </li> */}
           <li className="text-primary mr-4">
-            <a href="login">Login</a>
+            <Link href="login">
+              <a>Login</a>
+            </Link>
           </li>
           <Link href={{ pathname: 'login', query: { keyword: 'register' } }}>
-            <button className="btn btn-primary text-white text-center capitalize rounded-full my-2 px-8">
+            <a className="btn btn-primary text-white text-center capitalize rounded-full px-8">
               Get Started
-            </button>
+            </a>
           </Link>
         </ul>
       </div>

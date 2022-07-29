@@ -8,7 +8,7 @@ const LearnMore = () => {
     <div className="hero mt-20 md:mt-0 mb-10 lg:mt-28 lg:mb-28">
       <div className="hero-content flex-col lg:flex-row gap-8">
         <Image
-          data-aos="flip-left"
+          data-aos="fade-right"
           src={ContentWriting}
           width={423}
           height={460}

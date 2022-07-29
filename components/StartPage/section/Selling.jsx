@@ -6,7 +6,7 @@ const Selling = () => {
     <div className="flex items-center w-auto mx-6 mb-20 mt-10 2xl:w-[1400px] 2xl:mx-auto">
       {/* section div */}
       <div className="flex flex-col gap-10 w-full md:flex-row">
-        <div data-aos="flip-left" className="w-[95%] mx-auto flex justify-center lg:w-1/2 ">
+        <div data-aos="fade-right" className="w-[95%] mx-auto flex justify-center lg:w-1/2 ">
           <Image
             src="/start-page/SmallBusiness.png"
             width={550}
@@ -16,7 +16,7 @@ const Selling = () => {
           />
         </div>
         <div
-          data-aos="flip-right"
+          data-aos="fade-left"
           className="w-[90%] mx-auto flex flex-col justify-center item-center lg:w-1/2 ">
           <h1 className="text-4xl text-center font-semibold break-words text-neutral md:text-start lg:tracking-wide xl:text-5xl">
             Build a loyal and <span className="text-primary">audience</span> on

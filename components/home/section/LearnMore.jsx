@@ -7,7 +7,7 @@ const LearnMore = () => {
     <div className="hero min-h-screen">
       <div className="hero-content flex-col lg:flex-row gap-8">
         <Image
-          data-aos="flip-left"
+          data-aos="fade-right"
           src={ContentWriting}
           width={423}
           height={460}
@@ -16,7 +16,7 @@ const LearnMore = () => {
           loader={imageLoader}
         />
         <div
-          data-aos="flip-right"
+          data-aos="fade-left"
           className="flex flex-col justify-center items-center lg:items-start">
           <h1 className="text-2xl font-semibold break-words lg:text-4xl text-neutral lg:tracking-wide py-14 xl:text-5xl text-center lg:text-left">
             Build your <span className="text-primary">audience</span> and{' '}

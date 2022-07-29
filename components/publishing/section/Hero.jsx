@@ -57,7 +57,7 @@ const Hero = () => {
               loader={imageLoader}
             />
             <div
-              data-aos="fade-down"
+              data-aos="fade-right"
               className="flex flex-col justify-center items-center lg:items-start">
               <h1 className="text-2xl font-semibold break-words lg:text-4xl text-neutral lg:tracking-wide py-4 lg:py-14 xl:text-5xl text-center lg:text-left">
                 Build your <span className="text-primary">audience</span> and{' '}

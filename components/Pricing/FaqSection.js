@@ -2,7 +2,7 @@ import React from 'react'
 
 const FaqSection = ({ faqQuestions }) => {
   return (
-    <div data-aos="fade-up" className="container mx-auto my-24">
+    <div data-aos="flip-up" className="container mx-auto my-24">
       <div className="sectionHeader mb-5">
         <p className="text-2xl font-bold text-center my-10">FAQ</p>
       </div>
