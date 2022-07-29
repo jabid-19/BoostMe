@@ -8,11 +8,9 @@ export const tabsPath = (route) => {
 
 export const sectionPath = (route) => {
     const tabsPath = (route.split('/'))
-    console.log(tabsPath);
     if (tabsPath.length > 2) {
         // convert first letter to upper case
         const firstLetterUpper = tabsPath[3].charAt(0).toUpperCase() + tabsPath[3].slice(1)
-        console.log();
         return firstLetterUpper;
     }
     return null

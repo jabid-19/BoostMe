@@ -1,19 +1,21 @@
 import Aos from 'aos'
 import 'aos/dist/aos.css'
 import { useRouter } from 'next/router'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import DashboardMain from '../components/Dashboard/Main'
+import DashboardTabs from '../components/Dashboard/Tabs'
 import Footer from '../components/Shared/Footer'
 import Navbar from '../components/Shared/Navbar'
 import '../styles/globals.css'
 
 function MyApp({ Component, pageProps }) {
+  const [selectedTabs, setSelectedTabs] = useState([])
+  const [activeTab, setActiveTab] = useState(null)
   const router = useRouter()
 
   useEffect(() => {
     Aos.init({ duration: 1500 })
   }, [])
-  console.log(Component, 'from APps')
 
   return (
     <div>
@@ -26,12 +28,27 @@ function MyApp({ Component, pageProps }) {
           </div>
         </>
       ) : (
-        <>
-          <DashboardMain />
-          <div className="relative ml-96 mt-8 mx-10">
-            <Component {...pageProps} />
+        <div className="h-full">
+          <div className="grid grid-cols-6 grid-rows-1 h-full">
+            <div className="col-span-1">
+              <DashboardMain
+                selectedTabs={selectedTabs}
+                setSelectedTabs={setSelectedTabs}
+                activeTab={activeTab}
+                setActiveTab={setActiveTab}
+              />
+            </div>
+            <div className="col-span-5  overflow xl:mx-24">
+              <DashboardTabs
+                selectedTabs={selectedTabs}
+                setSelectedTabs={setSelectedTabs}
+                activeTab={activeTab}
+                setActiveTab={setActiveTab}
+              />
+              <Component {...pageProps} />
+            </div>
           </div>
-        </>
+        </div>
       )}
     </div>
   )

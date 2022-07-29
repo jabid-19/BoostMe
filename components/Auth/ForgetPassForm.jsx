@@ -5,7 +5,6 @@ const ForgetPassForm = () => {
   const [visibleItem, setVisibleItem] = useState(true)
 
   const loadLoginForm = () => {
-    console.log(visibleItem)
     setVisibleItem(false)
   }
 
