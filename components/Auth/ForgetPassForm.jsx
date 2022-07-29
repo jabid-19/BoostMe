@@ -12,7 +12,7 @@ const ForgetPassForm = () => {
     <div>
       <div data-aos="fade-down-left" className={visibleItem ? 'px-2 lg:mr-24' : 'hidden'}>
         <div className="max-w-md">
-          <div className="h-40 lg:mb-10">
+          <div className="h-40 lg:mb-10 text-center lg:text-left">
             <h1 className="text-2xl font-semibold break-words md:text-5xl text-neutral lg:tracking-wide xl:text-5xl">
               Build your <span className="text-primary">audience</span> and
               <br />

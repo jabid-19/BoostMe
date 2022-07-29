@@ -5,10 +5,10 @@ import ContentWriting from '../../../public/landing-section/ContentWriting.png'
 
 const LearnMore = () => {
   return (
-    <div className="hero min-h-screen">
+    <div className="hero mt-20 md:mt-0 mb-10 lg:mt-28 lg:mb-28">
       <div className="hero-content flex-col lg:flex-row gap-8">
         <Image
-          data-aos="flip-left"
+          data-aos="fade-right"
           src={ContentWriting}
           width={423}
           height={460}
@@ -19,11 +19,11 @@ const LearnMore = () => {
         <div
           data-aos="fade-left"
           className="flex flex-col justify-center items-center lg:items-start">
-          <h1 className="text-2xl font-semibold break-words lg:text-4xl text-neutral lg:tracking-wide py-14 xl:text-5xl">
+          <h1 className="text-2xl font-semibold break-words lg:text-4xl text-neutral lg:tracking-wide py-4 lg:py-14 xl:text-5xl text-center lg:text-left">
             Build your <span className="text-primary">audience</span> and{' '}
             <span className="text-secondary">grow</span> your brand
           </h1>
-          <p className="py-4 text-neutral w-full lg:w-1/2">
+          <p className="py-4 text-neutral w-full lg:w-1/2 text-center lg:text-left">
             Plan and publish your content for Instagram, TikTok, Facebook, Twitter, Pinterest, and
             LinkedIn, all from one simple dashboard.
           </p>

@@ -10,8 +10,8 @@ import imageLoader from '../../../helper/imageLoader'
 import BoxBackground2 from '../../../public/common/BoxBackground2.png'
 const Testimonials = () => {
   return (
-    <div className="relative">
-      <div className="hidden lg:block lg:absolute lg:left-0 lg:top-12">
+    <div className="relative my-10 lg:my-[7%]">
+      <div data-aos="fade-right" className="hidden lg:block lg:absolute lg:left-0 lg:top-12">
         <Image
           src={BoxBackground2}
           width={400}
@@ -20,8 +20,8 @@ const Testimonials = () => {
           loader={imageLoader}
         />
       </div>
-      <div className="w-full flex justify-center lg:justify-end">
-        <h1 className="text-2xl font-semibold break-words md:text-4xl text-neutral lg:tracking-wide py-14 xl:text-5xl">
+      <div data-aos="fade-left" className="w-full flex justify-center lg:justify-end lg:pr-28">
+        <h1 className="text-2xl font-semibold break-words md:text-4xl text-neutral lg:tracking-wide py-14 xl:text-5xl text-center lg:text-left">
           Business <span className="text-primary">all over the world</span> <br />
           <span className="text-secondary">trust</span> us to build the brand
         </h1>

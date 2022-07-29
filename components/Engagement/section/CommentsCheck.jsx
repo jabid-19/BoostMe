@@ -3,7 +3,7 @@ import React from 'react'
 import imageLoader from '../../../helper/imageLoader'
 const CommentsCheck = () => {
   return (
-    <div className="flex items-center w-auto mx-6 mb-20 mt-10 lg:h-screen lg:mb-0 2xl:w-[1400px] 2xl:mx-auto">
+    <div className="flex items-center w-auto mx-6 mb-20 lg:min-h-[70vh] 2xl:w-[1400px] 2xl:mx-auto">
       {/* section div */}
       <div className="flex flex-col gap-10 w-full md:flex-row">
         <div data-aos="fade-right" className="w-[95%] mx-auto flex lg:w-1/2 ">

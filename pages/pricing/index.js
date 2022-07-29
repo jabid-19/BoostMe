@@ -1,6 +1,8 @@
 import React from 'react'
 import PricingChart from '../../components/Pricing/PricingChart'
 import FaqSection from '../../components/Pricing/FaqSection'
+import CustomerHeader from '../../components/Customers/CustomerHeader'
+import Head from 'next/head'
 
 const index = () => {
   // Page static data
@@ -60,8 +62,18 @@ const index = () => {
     { question: 'Question', answer: 'Answer' },
     { question: 'Question', answer: 'Answer' },
   ]
+  const headingDescriptions = {
+    subtitle: "YOU'RE IN GOOD HANDS",
+    title: 'Our',
+    titleSpan: 'Featured Products',
+    description: 'See our featured products and explore the reasonable product prices',
+  }
   return (
     <>
+      <Head>
+        <title>Boost ME | Pricing</title>
+      </Head>
+      <CustomerHeader headingDescriptions={headingDescriptions} />
       <PricingChart headings={headings} pricingPackages={pricingPackages} />
       <FaqSection faqQuestions={faqQuestions} />
     </>

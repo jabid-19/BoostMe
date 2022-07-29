@@ -1,4 +1,5 @@
 import React from 'react'
+import Traffic from '../StartPage/section/Traffic'
 import Background from './section/Background'
 import Banner from './section/Banner'
 import BrandBuild from './section/BrandBuild'
@@ -8,6 +9,7 @@ import LearnMore from './section/LearnMore'
 const PublishingMain = () => {
   return (
     <div className="w-full relative">
+      <Traffic />
       <Hero />
       <Banner />
       <LearnMore />

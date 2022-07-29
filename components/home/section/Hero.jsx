@@ -5,7 +5,7 @@ import imageLoader from '../../../helper/imageLoader'
 import Background from '../../../public/common/BoxBackground.png'
 const Hero = () => {
   return (
-    <div className="min-h-screen w-full bg-cover bg-center hero place-items-center">
+    <div className="min-h-[85vh] w-full bg-cover bg-center hero place-items-center mt-12 mb-12 lg:mb-0">
       <div className="flex flex-col justify-center gap-4 h-3/5 items-center lg:flex-row">
         <div data-aos="fade-right" className="flex justify-around items-center gap-4 lg:flex-col">
           <Image
@@ -27,14 +27,14 @@ const Hero = () => {
           />
         </div>
         <div className="flex flex-col items-center justify-start lg:items-center lg:justify-start">
-          <div data-aos="fade-left" className="h-40 lg:mb-10">
+          <div data-aos="fade-left" className="h-40 text-center lg:text-left lg:mb-10">
             <h1 className="text-2xl font-semibold break-words md:text-4xl text-neutral lg:tracking-wide xl:text-5xl">
               Build your <span className="text-primary">audience</span> and
               <br />
               <span className="text-secondary">grow</span> your brand
             </h1>
           </div>
-          <div className="h-auto flex flex-col items-center justify-center lg:flex-row lg:items-start">
+          <div className="h-auto flex flex-col items-center justify-center lg:flex-row lg:items-start z-20">
             <div data-aos="fade-up">
               <Image
                 src="/landing-section/SocialMedia_Likes.png"
@@ -47,14 +47,14 @@ const Hero = () => {
               />
             </div>
             <div data-aos="fade-left">
-              <div className="flex flex-col items-center md:flex-row md:ml-8 lg:items-start">
+              <div className="flex flex-col items-center justify-center lg:justify-start md:flex-row md:ml-8 lg:items-start text-center lg:text-left">
                 <p className="w-2/3 lg:w-3/4 text-neutral">
                   Plan and publish your content for Instagram, <br /> TikTok, Facebook, Twitter,
                   Pinterest, and LinkedIn,
                   <br /> all from one simple dashboard.
                 </p>
               </div>
-              <div className="flex flex-col mt-4 items-center md:flex-row md:ml-8">
+              <div className="flex flex-col mt-4 items-center justify-center lg:justify-start md:flex-row md:ml-8">
                 <div className="flex md:flex-row">
                   <div className="mb-4 mr-4 md:mb-0">
                     <button className="btn btn-primary normal-case px-12 text-white rounded-full">

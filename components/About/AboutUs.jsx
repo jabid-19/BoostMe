@@ -8,8 +8,8 @@ const AboutUs = () => {
       <div
         data-aos="zoom-in"
         className="hero-content p-8 lg:m-12 flex-col lg:flex-row-reverse border-4 rounded-2xl border-primary z-20">
-        <div>
-          <h1 className=" text-xl md:text-2xl font-semibold break-words lg:text-4xl text-neutral lg:tracking-wide xl:text-5xl">
+        <div className="text-justify">
+          <h1 className=" text-xl md:text-2xl font-semibold break-words lg:text-4xl text-neutral lg:tracking-wide xl:text-5xl text-center lg:text-justify">
             About <span className="text-primary">Our Community</span>
           </h1>
           <p className="text-neutral text-xs lg:text-lg py-6">
@@ -35,7 +35,7 @@ const AboutUs = () => {
           </p>
         </div>
       </div>
-      <div data-aos="fade-up-left" className="absolute bottom-0 right-0">
+      <div data-aos="fade-up-left" className="hidden lg:block lg:absolute lg:bottom-0 lg:right-0">
         <Image width={500} height={117} src={FrameImage} alt="" loader={imageLoader} />
       </div>
     </div>

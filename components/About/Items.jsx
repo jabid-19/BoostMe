@@ -4,8 +4,8 @@ import RectangleImage from '../../public/common/LoginImage.png'
 
 const Items = () => {
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 px-8 lg:px-80 mt-36">
-      <div className="flex flex-col max-w-xl mx-auto">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 px-8 md:px-36 mt-24 lg:mt-36">
+      <div className="flex flex-col min-w-xl mx-auto">
         <Image
           data-aos="fade-down"
           className="rounded-2xl"
@@ -28,7 +28,7 @@ const Items = () => {
           </p>
         </div>
       </div>
-      <div className="flex flex-col lg:flex-col-reverse max-w-xl mx-auto">
+      <div className="flex flex-col lg:flex-col-reverse min-w-xl mx-auto">
         <Image
           data-aos="fade-up"
           className="rounded-2xl"
@@ -51,7 +51,7 @@ const Items = () => {
           </p>
         </div>
       </div>
-      <div className="flex flex-col max-w-xl mx-auto">
+      <div className="flex flex-col min-w-xl mx-auto">
         <Image
           data-aos="fade-down"
           className="rounded-2xl"
@@ -74,7 +74,7 @@ const Items = () => {
           </p>
         </div>
       </div>
-      <div className="flex flex-col lg:flex-col-reverse max-w-xl mx-auto">
+      <div className="flex flex-col lg:flex-col-reverse min-w-xl mx-auto">
         <Image
           data-aos="fade-up"
           className="rounded-2xl"

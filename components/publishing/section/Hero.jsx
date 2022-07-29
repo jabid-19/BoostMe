@@ -7,9 +7,9 @@ import Dashboard from '../../../public/landing-section/Dashboard.png'
 
 const Hero = () => {
   return (
-    <div className="hero min-h-screen">
+    <div className="lg:hero min-h-[90vh]">
       <div className="flex flex-col">
-        <div data-aos="fade-down-right" className="hidden lg:block lg:absolute lg:left-0 lg:top-0">
+        {/* <div data-aos="fade-down-right" className="hidden lg:block lg:absolute lg:left-0 lg:top-0">
           <Image
             src={BoxBackground}
             width={500}
@@ -44,7 +44,7 @@ const Hero = () => {
           Build your <span className="text-primary">audience</span> and
           <br />
           <span className="text-secondary">grow</span> your brand
-        </h1>
+        </h1> */}
         <div>
           <div className="hero-content flex-col lg:flex-row-reverse">
             <Image
@@ -57,13 +57,13 @@ const Hero = () => {
               loader={imageLoader}
             />
             <div
-              data-aos="fade-down"
+              data-aos="fade-right"
               className="flex flex-col justify-center items-center lg:items-start">
-              <h1 className="text-2xl font-semibold break-words lg:text-4xl text-neutral lg:tracking-wide py-14 xl:text-5xl">
+              <h1 className="text-2xl font-semibold break-words lg:text-4xl text-neutral lg:tracking-wide py-4 lg:py-14 xl:text-5xl text-center lg:text-left">
                 Build your <span className="text-primary">audience</span> and{' '}
                 <span className="text-secondary">grow</span> your brand
               </h1>
-              <p className="py-4 text-neutral w-full lg:w-1/2">
+              <p className="py-4 text-neutral w-full lg:w-1/2 text-center lg:text-left">
                 Plan and publish your content for Instagram, TikTok, Facebook, Twitter, Pinterest,
                 and LinkedIn, all from one simple dashboard.
               </p>

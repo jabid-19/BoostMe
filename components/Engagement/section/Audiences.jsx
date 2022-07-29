@@ -1,11 +1,11 @@
 import React from 'react'
 const Audiences = () => {
   return (
-    <div className="w-auto mx-6 mt-12 lg:h-screen lg:mt-0 2xl:w-[1400px] 2xl:mx-auto">
+    <div className="w-auto mx-6 mt-12 lg:min-h-[85vh] lg:mt-16 2xl:w-[1400px] 2xl:mx-auto">
       {/* section div */}
       <div className="flex flex-col w-full md:flex-row">
         <div
-          data-aos="fade-down-right"
+          data-aos="fade-right"
           className="w-[90%] mx-auto flex flex-col justify-center item-center lg:w-1/2 ">
           <h1 className="text-4xl text-center font-semibold break-words text-neutral md:text-start lg:tracking-wide xl:text-5xl">
             Build a loyal and <span className="text-primary">audience</span> on
@@ -21,7 +21,7 @@ const Audiences = () => {
           </button>
         </div>
 
-        <div data-aos="fade-up-left" className="w-[95%] mx-auto flex lg:w-1/2 ">
+        <div data-aos="fade-left" className="w-[95%] mx-auto flex lg:w-1/2 ">
           <video autoPlay playsInline loop muted>
             <source src="/engagement-section/EngagementVideo.mp4" type="video/mp4" />
           </video>

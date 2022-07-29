@@ -6,7 +6,7 @@ const Showcase = () => {
   const [tabs, setTabs] = useState(1)
 
   return (
-    <div className="flex items-center flex-col w-auto mx-6 lg:h-screen 2xl:w-[1400px] 2xl:mx-auto mb-20">
+    <div className="flex items-center flex-col w-auto mx-6 2xl:w-[1400px] 2xl:mx-auto mb-20">
       <div data-aos="zoom-in" className="tabs mb-10">
         <a
           className={`tab tab-lg tab-lifted text-neutral ${

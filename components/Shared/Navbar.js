@@ -43,7 +43,9 @@ const Navbar = () => {
               </a>
               <ul className="p-2 bg-white">
                 <li>
-                  <a>Publishing</a>
+                  <Link href="/publishing">
+                    <a>Publishing</a>
+                  </Link>
                 </li>
                 <li>
                   <Link href="/engagement">
@@ -58,13 +60,19 @@ const Navbar = () => {
               </ul>
             </li>
             <li>
-              <a>Pricing</a>
+              <Link href="pricing">
+                <a>Pricing</a>
+              </Link>
             </li>
             <li>
-              <a>About</a>
+              <Link href="about">
+                <a>About</a>
+              </Link>
             </li>
             <li>
-              <a>Customers</a>
+              <Link href="customers">
+                <a>Customers</a>
+              </Link>
             </li>
             <div className="btn-group md:min-w-[70px] my-4 ml-4">
               <button
@@ -86,19 +94,56 @@ const Navbar = () => {
                 BN
               </button>
             </div>
+            {/* <li tabIndex="0">
+              <a>
+                <p>Jhon Doe</p>
+                <div className="avatar placeholder">
+                  <div className="bg-primary-focus text-neutral-content rounded-full w-12 h-12">
+                    <span>JD</span>
+                  </div>
+                </div>
+                <svg
+                  className="fill-current"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24">
+                  <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
+                </svg>
+              </a>
+              <ul className="p-2 bg-white">
+                <li>
+                  <a href="publishing">Publishing</a>
+                </li>
+                <li>
+                  <Link href="/engagement">
+                    <a>Engagement</a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/start-page">
+                    <a>Start Page</a>
+                  </Link>
+                </li>
+              </ul>
+            </li> */}
             <li>
-              <a>Login</a>
+              <Link href="login">
+                <a>Login</a>
+              </Link>
             </li>
             <li>
               <Link href={{ pathname: 'login', query: { keyword: 'register' } }}>
-                <button className="btn btn-primary text-white mt-1.5">Get Started</button>
+                <a className="btn btn-primary text-white mt-1.5">Get Started</a>
               </Link>
             </li>
           </ul>
         </div>
-        <a href="/">
-          <Image width={141} height={43} src={Logo} alt="" loader={imageLoader} />
-        </a>
+        <Link href="/">
+          <a>
+            <Image width={141} height={43} src={Logo} alt="" loader={imageLoader} />
+          </a>
+        </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal p-0">
@@ -116,7 +161,9 @@ const Navbar = () => {
             </a>
             <ul className="p-2 bg-white">
               <li>
-                <a href="publishing">Publishing</a>
+                <Link href="publishing">
+                  <a>Publishing</a>
+                </Link>
               </li>
               <li>
                 <Link href="/engagement">
@@ -131,19 +178,25 @@ const Navbar = () => {
             </ul>
           </li>
           <li className="mr-4">
-            <a href="pricing">Pricing</a>
+            <Link href="pricing">
+              <a>Pricing</a>
+            </Link>
           </li>
           <li className="mr-4">
-            <a href="about">About</a>
+            <Link href="about">
+              <a>About</a>
+            </Link>
           </li>
           <li className="mr-4">
-            <a href="customers">Customers</a>
+            <Link href="customers">
+              <a>Customers</a>
+            </Link>
           </li>
         </ul>
       </div>
       <div className="navbar-end hidden lg:flex">
-        <ul className="menu menu-horizontal p-0">
-          <div className="btn-group md:min-w-[70px] my-4 mr-4">
+        <ul className="menu menu-horizontal p-0 lg:items-center">
+          <div className="btn-group md:min-w-[70px] my-6 mr-4">
             <button
               className={
                 languageMode == 'EN'
@@ -163,13 +216,50 @@ const Navbar = () => {
               BN
             </button>
           </div>
+          {/* <li tabIndex="0">
+            <a>
+              <p>Jhon Doe</p>
+              <div className="avatar placeholder">
+                <div className="bg-primary-focus text-neutral-content rounded-full w-12 h-12">
+                  <span>JD</span>
+                </div>
+              </div>
+              <svg
+                className="fill-current"
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24">
+                <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
+              </svg>
+            </a>
+            <ul className="p-2 bg-white">
+              <li>
+                <a className="px-10" href="publishing">
+                  Publishing
+                </a>
+              </li>
+              <li>
+                <Link href="/engagement">
+                  <a className="px-10">Engagement</a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/start-page">
+                  <a className="px-10">Start Page</a>
+                </Link>
+              </li>
+            </ul>
+          </li> */}
           <li className="text-primary mr-4">
-            <a href="login">Login</a>
+            <Link href="login">
+              <a>Login</a>
+            </Link>
           </li>
           <Link href={{ pathname: 'login', query: { keyword: 'register' } }}>
-            <button className="btn btn-primary text-white text-center capitalize rounded-full px-8">
+            <a className="btn btn-primary text-white text-center capitalize rounded-full px-8">
               Get Started
-            </button>
+            </a>
           </Link>
         </ul>
       </div>

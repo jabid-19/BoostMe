@@ -7,7 +7,7 @@ import Clock from '../../../public/landing-section/Clock.png'
 import Mobile from '../../../public/landing-section/Mobile.png'
 const BrandBuild = () => {
   return (
-    <div className="hero min-h-screen relative mb-24">
+    <div className="hero min-h-[90vh] relative mb-24 md:mt-32 md:mb-0">
       <div className="flex flex-col">
         <div data-aos="fade-down-right" className="hidden lg:block lg:absolute lg:left-0 lg:top-0">
           <Image
@@ -25,7 +25,7 @@ const BrandBuild = () => {
           <br />
           <span className="text-secondary">trust</span> us to build their brand
         </h1>
-        <div className="flex flex-wrap justify-center items-center flex-col gap-8 lg:gap-x-16 md:flex-row">
+        <div className="md:mt-16 flex flex-wrap justify-center items-center flex-col gap-8 lg:gap-x-16 md:flex-row">
           <div
             data-aos="flip-left"
             className="card card-compact w-64 border-4 border-secondary rounded-[25px]">
@@ -39,7 +39,7 @@ const BrandBuild = () => {
                 loader={imageLoader}
               />
             </figure>
-            <div className="card-body">
+            <div className="card-body text-center lg:text-left">
               <h2 className="text-2xl font-semibold text-primary">Scheduling</h2>
               <p>Create a preset publishing schedule for each social account</p>
             </div>
@@ -57,7 +57,7 @@ const BrandBuild = () => {
                 loader={imageLoader}
               />
             </figure>
-            <div className="card-body">
+            <div className="card-body text-center lg:text-left">
               <h2 className="text-2xl font-semibold text-primary">Tailored posts</h2>
               <p>Create a preset publishing schedule for each social account</p>
             </div>
@@ -75,7 +75,7 @@ const BrandBuild = () => {
                 loader={imageLoader}
               />
             </figure>
-            <div className="card-body">
+            <div className="card-body text-center lg:text-left">
               <h2 className="text-2xl font-semibold text-primary">Calendar</h2>
               <p>Create a preset publishing schedule for each social account</p>
             </div>
