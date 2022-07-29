@@ -23,6 +23,7 @@ const Hero = () => {
             height={270}
             alt="Instagram Digital Marketing"
             className="max-w-full h-auto rounded-lg"
+            loader={imageLoader}
             priority={true}
           />
         </div>
