@@ -38,7 +38,7 @@ function MyApp({ Component, pageProps }) {
                 setActiveTab={setActiveTab}
               />
             </div>
-            <div className="col-span-5  overflow xl:mx-24">
+            <div className="col-span-5  overflow lg:ml-32 xl:ml-24">
               <DashboardTabs
                 selectedTabs={selectedTabs}
                 setSelectedTabs={setSelectedTabs}

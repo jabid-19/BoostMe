@@ -38,7 +38,9 @@ const DashboardMain = ({ selectedTabs, setSelectedTabs, activeTab, setActiveTab 
           />
         </div>
         <div className="cursor-pointer duration-500">
-          <Image src="/common/logo-white.png" width={140} height={40} alt="BoostMe's logo" />
+          <Link href="/">
+            <Image src="/common/logo-white.png" width={140} height={40} alt="BoostMe's logo" />
+          </Link>
         </div>
         <ul className={`p-6 flex flex-col ${!open && 'items-center'}`}>
           {selectedTabs?.map((menu, index) => (
