@@ -1,5 +1,6 @@
 echo "starting the app.." >> /var/log/deploy.log
 cd /root/BoostMe
-npm install
-# Temporarily running this way, will be modified later. 
-npm run dev &
+yarn install
+pm2 delete "boostme-frontend"
+pm2 start "yarn run dev" --name "boostme-frontend"
+echo "deployment completed" >> >> /var/log/deploy.log
