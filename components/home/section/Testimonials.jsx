@@ -1,14 +1,51 @@
 import Image from 'next/image'
 import React from 'react'
-import { Swiper, SwiperSlide } from 'swiper/react'
+import Slider from 'react-slick'
 
-import { Autoplay, Pagination } from 'swiper'
 import 'swiper/css'
 import 'swiper/css/pagination'
+
+// Import css files
+import 'slick-carousel/slick/slick-theme.css'
+import 'slick-carousel/slick/slick.css'
 import { testimonialsData } from '../../../data/TestimonialData'
 import imageLoader from '../../../helper/imageLoader'
 import BoxBackground2 from '../../../public/common/BoxBackground2.png'
+
 const Testimonials = () => {
+  var settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  }
   return (
     <div className="relative my-10 lg:my-[7%]">
       <div data-aos="fade-right" className="hidden lg:block lg:absolute lg:left-0 lg:top-12">
@@ -26,57 +63,33 @@ const Testimonials = () => {
           <span className="text-secondary">trust</span> us to build the brand
         </h1>
       </div>
-      <div className="relative flex items-center justify-center flex-col w-auto mx-6 2xl:w-[1400px] 2xl:mx-auto mb-20">
-        <div className="w-full">
-          <Swiper
-            pagination={{
-              dynamicBullets: true,
-            }}
-            autoplay={{
-              delay: 5500,
-              disableOnInteraction: false,
-            }}
-            modules={[Pagination, Autoplay]}>
-            {testimonialsData.map((testimonial) => (
-              <div key={testimonial.key}>
-                <SwiperSlide key={testimonial.key}>
-                  <div className="w-full ml-2 flex flex-wrap flex-col gap-16 justify-between items-center py-16 lg:flex-row md:px-16">
-                    {Object.keys(testimonial?.data).map((item) => (
-                      <div
-                        className="relative w-[70%] border-4 border-primary rounded-3xl lg:max-w-[25%]"
-                        key={item}>
-                        <div className="w-[80px] absolute -ml-8 -mt-8 md:w-[100px] md:-ml-12 md:-mt-12">
-                          <Image
-                            src={testimonial.data[item]?.image}
-                            width={100}
-                            height="100%"
-                            alt="BoostMe's testimonials"
-                            loader={imageLoader}
-                          />
-                        </div>
-                        <div className="mt-10 py-6">
-                          <div className="flex justify-center">
-                            <div className="w-full px-4">
-                              <p className=" leading-relaxed text-neutral mb-4">
-                                {testimonial.data[item].comment}
-                              </p>
-                              <p className="text-neutral font-bold">
-                                {testimonial.data[item].name}
-                              </p>
-                              <p className="text-neutral font-bold">
-                                {testimonial.data[item].position}
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    ))}
+      <div className="relative container mx-auto">
+        <Slider {...settings}>
+          {testimonialsData.map((testimonial, index) => (
+            <div className="mt-20 mx-14 flex justify-center items-center" key={index}>
+              <div className="relative w-[70%] border-4 border-primary rounded-3xl ">
+                <div className="w-[80px] absolute -ml-8 -mt-8 md:w-[100px] md:-ml-12 md:-mt-12">
+                  <Image
+                    src={testimonial?.image}
+                    width={100}
+                    height="100%"
+                    alt="BoostMe's testimonials"
+                    loader={imageLoader}
+                  />
+                </div>
+                <div className="mt-10 py-6">
+                  <div className="flex justify-center">
+                    <div className="w-full px-4">
+                      <p className=" leading-relaxed text-neutral mb-4">{testimonial.comment}</p>
+                      <p className="text-neutral font-bold">{testimonial.name}</p>
+                      <p className="text-neutral font-bold">{testimonial.position}</p>
+                    </div>
                   </div>
-                </SwiperSlide>
+                </div>
               </div>
-            ))}
-          </Swiper>
-        </div>
+            </div>
+          ))}
+        </Slider>
       </div>
     </div>
   )
