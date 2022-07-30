@@ -21,7 +21,7 @@ const Testimonials = () => {
         />
       </div>
       <div data-aos="fade-left" className="w-full flex justify-center lg:justify-end lg:pr-28">
-        <h1 className="text-2xl font-semibold break-words md:text-4xl text-neutral lg:tracking-wide py-14 xl:text-5xl text-center lg:text-left">
+        <h1 className="text-2xl font-semibold break-words md:text-4xl text-neutral lg:tracking-wide py-14 xl:text-5xl text-center lg:text-left lg:max-w-2xl">
           Business <span className="text-primary">all over the world</span> <br />
           <span className="text-secondary">trust</span> us to build the brand
         </h1>
