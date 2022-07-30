@@ -50,14 +50,14 @@ const Hero = () => {
               />
             </div>
             <div data-aos="fade-left">
-              <div className="flex flex-col items-center justify-center lg:justify-start md:flex-row md:ml-8 lg:items-start text-center lg:text-left">
+              <div className="flex flex-col items-center justify-center lg:justify-start lg:flex-row lg:ml-8 lg:items-start text-center lg:text-left">
                 <p className="w-full lg:w-3/4 max-w-fit text-neutral">
                   Plan and publish your content for Instagram, <br /> TikTok, Facebook, Twitter,
                   Pinterest, and LinkedIn,
                   <br /> all from one simple dashboard.
                 </p>
               </div>
-              <div className="flex flex-col mt-4 items-center justify-center lg:justify-start md:flex-row md:ml-8">
+              <div className="flex flex-col mt-4 items-center justify-center lg:justify-start md:flex-row lg:ml-8">
                 <div className="flex flex-col items-center md:flex-row">
                   <div className="mb-4 md:mr-4 md:mb-0">
                     <button className="btn btn-primary normal-case px-12 text-white rounded-full">
