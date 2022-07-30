@@ -50,7 +50,7 @@ const Showcase = () => {
           </div>
           <div data-aos="fade-up-left" className="w-[95%] mx-auto flex lg:w-1/2 ">
             <Image
-              src="/start-page/PostCustomization.png"
+              src="/start-page/SmallBusiness.png"
               width={650}
               height={600}
               alt="Social Media Post Customization"

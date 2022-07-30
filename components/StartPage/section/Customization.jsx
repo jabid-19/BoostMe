@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 import imageLoader from '../../../helper/imageLoader'
-import PostCustomization from '../../../public/start-page/PostCustomization.png'
+// import SmallBusiness from '../../../public/start-page/SmallBusiness.png'
 const Customization = () => {
   return (
     <div className="flex items-center w-auto mx-6 mb-20 lg:mb-24 mt-10 lg:mt-36 2xl:w-[1400px] 2xl:mx-auto">
@@ -25,7 +25,7 @@ const Customization = () => {
         </div>
         <div data-aos="fade-down-left" className="w-[95%] mx-auto flex lg:w-1/2 ">
           <Image
-            src={PostCustomization}
+            src="/start-page/SmallBusiness.png"
             width={650}
             height={600}
             alt="Social Media Post Customization"
