@@ -4,7 +4,7 @@ import RectangleImage from '../../public/common/LoginImage.png'
 
 const Vision = () => {
   return (
-    <div className="hero min-h-screen bg-base-100 mt-8">
+    <div className="hero min-h-screen bg-base-100 mt-8 max-w-screen-2xl mx-auto">
       <div className="hero-content flex-col lg:flex-row px-8 lg:px-2">
         <Image
           data-aos="fade-right"

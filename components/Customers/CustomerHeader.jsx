@@ -23,7 +23,7 @@ const CustomerHeader = ({ headingDescriptions }) => {
         </div>
         <div
           data-aos="fade-up-left"
-          className="flex flex-col items-center sm:items-end mx-8 mt-4 sm:mt-0">
+          className="flex flex-col items-center sm:items-end mx-8 mt-4 sm:mt-0 max-w-2xl">
           <h4 className="text-secondary text-xs sm:text-sm md:text-md lg:text-lg">
             {headingDescriptions.subtitle}
           </h4>
