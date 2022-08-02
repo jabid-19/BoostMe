@@ -17,7 +17,7 @@ const LearnMore = () => {
         />
         <div
           data-aos="fade-left"
-          className="flex flex-col justify-center items-center lg:items-start">
+          className="flex flex-col justify-center items-center lg:items-start lg:max-w-3xl">
           <h1 className="text-2xl font-semibold break-words lg:text-4xl text-neutral lg:tracking-wide py-14 xl:text-5xl text-center lg:text-left">
             Build your <span className="text-primary">audience</span> and{' '}
             <span className="text-secondary">grow</span> your brand

@@ -20,7 +20,7 @@ const BrandBuild = () => {
         </div>
         <h1
           data-aos="fade-down-left"
-          className=" lg:block lg:absolute lg:top-0 lg:right-28 text-3xl mb-[50px] mt-8 text-center lg:text-end font-semibold break-words text-neutral lg:tracking-wide lg:text-3xl xl:text-5xl">
+          className=" lg:block lg:absolute lg:top-0 lg:right-28 text-3xl mb-[50px] mt-8 text-center lg:text-end font-semibold break-words text-neutral lg:tracking-wide lg:text-3xl xl:text-5xl lg:max-w-2xl">
           Businesses <span className="text-primary">all over the world</span>
           <br />
           <span className="text-secondary">trust</span> us to build their brand

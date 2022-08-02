@@ -1,12 +1,12 @@
 import Image from 'next/image'
 import React from 'react'
 import imageLoader from '../../../helper/imageLoader'
-import EngagementDashboard from '../../../public/engagement-section/engagement-dashboard.png'
+// import EngagementDashboard from '../../../public/engagement-section/engagement-dashboard.png'
 const Comments = () => {
   return (
     <div className="flex flex-col items-center w-auto mb-10 lg:mb-0 mx-6 lg:min-h-[70vh] 2xl:w-[1400px] 2xl:mx-auto">
       <div data-aos="fade-down" className="flex flex-col items-center text-center">
-        <h1 className="text-4xl font-semibold break-words text-neutral lg:tracking-wide xl:text-5xl">
+        <h1 className="max-w-2xl text-4xl font-semibold break-words text-neutral lg:tracking-wide xl:text-5xl">
           Build your <span className="text-primary">audience</span> and
           <br />
           <span className="text-secondary">grow</span> your brand
@@ -16,10 +16,9 @@ const Comments = () => {
           important ones for you.
         </p>
       </div>
-      <div>
+      <div data-aos="fade-up">
         <Image
-          data-aos="fade-up"
-          src={EngagementDashboard}
+          src="/engagement-section/engagement-dashboard.png"
           width={1200}
           height={700}
           alt="BoostMe's Digital Marketing Dashboard"

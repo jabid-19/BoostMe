@@ -6,7 +6,7 @@ import Hero from './section/Hero'
 import LearnMore from './section/LearnMore'
 import Testimonials from './section/Testimonials'
 
-const HomeMain = () => {
+export const HomeMain = () => {
   return (
     <>
       <Hero />
@@ -18,5 +18,3 @@ const HomeMain = () => {
     </>
   )
 }
-
-export default HomeMain

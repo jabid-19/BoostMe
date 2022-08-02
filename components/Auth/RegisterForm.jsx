@@ -21,17 +21,17 @@ const RegisterForm = () => {
           </div>
           <form>
             <input
-              type="text"
+              type="email"
               placeholder="Email address"
               className="input input-bordered input-primary rounded-full w-full min-w-xs mb-4"
             />
             <input
-              type="text"
+              type="password"
               placeholder="Password"
               className="input input-bordered input-primary rounded-full w-full min-w-xs mb-4"
             />
             <input
-              type="text"
+              type="password"
               placeholder="Confirm password"
               className="input input-bordered input-primary rounded-full w-full min-w-xs mb-6"
             />
