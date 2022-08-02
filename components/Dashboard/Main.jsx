@@ -43,13 +43,12 @@ const DashboardMain = ({ selectedTabs, open, setOpen }) => {
           </Link>
         </div>
         <ul className={`p-6 flex flex-col ${!open && 'items-center'}`}>
-          {selectedTabs?.map((menu, index) => (
-            <Link href={menu?.route || '/dashboard/analytics'} key={menu.key}>
+          {selectedTabs?.map((menu) => (
+            <Link href={menu?.route || '/dashboard/analytics'} key={menu.title} forwardRef>
               <li
                 className={`text-white text-sm flex flex-wrap items-center gap-x-4 cursor-pointer p-2 hover:bg-secondary rounded-md ${
                   menu.gap ? 'mt-9' : 'mt-2'
                 } ${menu.title === (selectedSection || subPath) && 'bg-secondary'}`}
-                key={index}
                 onClick={() => setSelectedSection(menu.title)}>
                 {menu.icon}
                 <span className={`${!open && 'hidden'} origin-left duration-200 text-xl`}>

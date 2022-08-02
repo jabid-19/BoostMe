@@ -47,7 +47,11 @@ function MyApp({ Component, pageProps }) {
             className={`grid ${
               open ? 'w-[calc(100vw_-_260px)]' : 'w-[100vw]'
             } grid-cols-1 grid-rows-[80px_calc(100vh_-_80px)]`}>
-            <DashboardTabs setSelectedTabs={setSelectedTabs} />
+            <DashboardTabs
+              setSelectedTabs={setSelectedTabs}
+              activeTab={activeTab}
+              setActiveTab={setActiveTab}
+            />
             <div className="px-[40px] py-[30px] h-full overflow-y-scroll">
               <Component {...pageProps} />
             </div>

@@ -3,7 +3,7 @@ import React, { useEffect } from 'react'
 import { Menus, tabsMenu } from '../../data/Dashboard'
 import { tabsPath } from '../../helper/pathGenerator'
 
-const DashboardTabs = ({ selectedTabs, setSelectedTabs, activeTab, setActiveTab }) => {
+const DashboardTabs = ({ setSelectedTabs, activeTab, setActiveTab }) => {
   const router = useRouter()
   const path = tabsPath(router.pathname)
 
