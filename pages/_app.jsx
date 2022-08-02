@@ -11,6 +11,7 @@ import '../styles/globals.css'
 function MyApp({ Component, pageProps }) {
   const [selectedTabs, setSelectedTabs] = useState([])
   const [activeTab, setActiveTab] = useState(null)
+  const [open, setOpen] = useState(true)
   const router = useRouter()
 
   useEffect(() => {
@@ -28,23 +29,31 @@ function MyApp({ Component, pageProps }) {
           </div>
         </>
       ) : (
-        <div className="h-full">
-          <div className="grid grid-cols-6 grid-rows-1 h-full">
-            <div className="col-span-1">
-              <DashboardMain
-                selectedTabs={selectedTabs}
-                setSelectedTabs={setSelectedTabs}
-                activeTab={activeTab}
-                setActiveTab={setActiveTab}
-              />
-            </div>
-            <div className="col-span-5  overflow lg:ml-32 xl:ml-24">
-              <DashboardTabs
-                selectedTabs={selectedTabs}
-                setSelectedTabs={setSelectedTabs}
-                activeTab={activeTab}
-                setActiveTab={setActiveTab}
-              />
+        <div className="flex w-full h-full">
+          <div
+            className={`${
+              open ? 'w-72' : 'w-20'
+            } duration-300 w-72 flex items-center justify-center flex-col px-[20px]  bg-primary`}>
+            <DashboardMain
+              open={open}
+              setOpen={setOpen}
+              selectedTabs={selectedTabs}
+              setSelectedTabs={setSelectedTabs}
+              activeTab={activeTab}
+              setActiveTab={setActiveTab}
+            />
+          </div>
+          <div
+            className={`grid ${
+              open ? 'w-[calc(100vw_-_260px)]' : 'w-[100vw]'
+            } grid-cols-1 grid-rows-[80px_calc(100vh_-_80px)]`}>
+            <DashboardTabs
+              selectedTabs={selectedTabs}
+              setSelectedTabs={setSelectedTabs}
+              activeTab={activeTab}
+              setActiveTab={setActiveTab}
+            />
+            <div className="px-[40px] py-[30px] h-full overflow-y-scroll">
               <Component {...pageProps} />
             </div>
           </div>

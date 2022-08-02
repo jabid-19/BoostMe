@@ -3,11 +3,18 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import React, { useEffect, useState } from 'react'
 import { sectionPath } from '../../helper/pathGenerator'
-const DashboardMain = ({ selectedTabs, setSelectedTabs, activeTab, setActiveTab }) => {
+const DashboardMain = ({
+  selectedTabs,
+  setSelectedTabs,
+  activeTab,
+  setActiveTab,
+  open,
+  setOpen,
+}) => {
   // imports
   const router = useRouter()
   // states
-  const [open, setOpen] = useState(true)
+
   const [selectedSection, setSelectedSection] = useState(null)
   // functions
   const subPath = sectionPath(router.pathname)
@@ -19,10 +26,10 @@ const DashboardMain = ({ selectedTabs, setSelectedTabs, activeTab, setActiveTab 
     }
     screenSize.addListener(myFunction)
     return () => screenSize.removeListener(myFunction)
-  }, [])
+  }, [setOpen])
 
   return (
-    <div className="">
+    <div className="fixed">
       <div
         className={`${open ? 'w-72' : 'w-20'} duration-300 w-72 bg-primary relative min-h-screen `}>
         <div
