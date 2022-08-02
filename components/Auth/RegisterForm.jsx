@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import LoginForm from './LoginForm'
+import axios from '../../axios'
 
 const RegisterForm = () => {
   const [visibleItem, setVisibleItem] = useState(true)
@@ -24,7 +25,10 @@ const RegisterForm = () => {
 
       const res = await axios.post('/user', user)
       console.log(res.data)
-      return <LoginForm />
+
+      setEmail('')
+      setPassword('')
+      setConfirmPassword('')
     } catch (err) {
       console.log(err.response.data)
     }

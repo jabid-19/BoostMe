@@ -18,6 +18,8 @@ const ForgetPassForm = () => {
     try {
       const res = await axios.post('/user/forget-password', { email })
       console.log(res.data)
+
+      setEmail('')
     } catch (err) {
       console.log(err)
     }
