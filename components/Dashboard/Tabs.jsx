@@ -48,7 +48,7 @@ const DashboardTabs = ({ setSelectedTabs, activeTab, setActiveTab }) => {
             </ul>
           </div>
         </div>
-        <div className="hidden lg:flex">
+        <div className="hidden lg:flex border-b-2">
           <ul className="menu menu-horizontal p-0">
             {tabsMenu.map((menu) => (
               <li key={menu.id}>
