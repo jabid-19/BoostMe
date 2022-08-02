@@ -1,10 +1,14 @@
 import { useState } from 'react'
 import ForgetPassForm from './ForgetPassForm'
 import RegisterForm from './RegisterForm'
+import axios from '../../axios'
 
 const LoginForm = () => {
   const [visibleLoginItem, setVisibleLoginItem] = useState(true)
   const [visibleForgetItem, setVisibleForgetItem] = useState(true)
+
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
 
   const loadRegisterForm = () => {
     setVisibleLoginItem(false)
@@ -12,6 +16,20 @@ const LoginForm = () => {
 
   const loadForgetPassForm = () => {
     setVisibleForgetItem(false)
+  }
+
+  const handleLogin = async (e) => {
+    e.preventDefault()
+
+    try {
+      const res = await axios.post('/user/signin', { email, password })
+      console.log(res.data)
+
+      setEmail('')
+      setPassword('')
+    } catch (err) {
+      console.log(err.response.data)
+    }
   }
 
   return (
@@ -32,17 +50,22 @@ const LoginForm = () => {
               type="email"
               placeholder="Email address"
               className="input input-bordered input-primary rounded-full w-full min-w-xs mb-4"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
             />
             <input
               type="password"
               placeholder="Password"
               className="input input-bordered input-primary rounded-full w-full min-w-xs mb-6"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
             />
             <br />
             <input
               className="bg-secondary hover:bg-orange-400 py-1.5 w-full min-w-xs normal-case text-white rounded-full cursor-pointer"
               type="submit"
               value="Sign In"
+              onClick={handleLogin}
             />
           </form>
           <br />
