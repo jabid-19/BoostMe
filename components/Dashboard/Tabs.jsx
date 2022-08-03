@@ -13,7 +13,7 @@ const DashboardTabs = ({ setSelectedTabs, activeTab, setActiveTab }) => {
 
   return (
     <div>
-      <div className="flex flex-wrap bg-base-100 min-h-[80px] xl:justify-center">
+      <div className="flex flex-wrap bg-base-100 min-h-[80px] xl:justify-center border-b-2">
         <div className="ml-5 lg:hidden">
           <div className="dropdown">
             <label tabIndex="0" className="btn btn-ghost lg:hidden">
@@ -48,14 +48,14 @@ const DashboardTabs = ({ setSelectedTabs, activeTab, setActiveTab }) => {
             </ul>
           </div>
         </div>
-        <div className="hidden lg:flex border-b-2">
+        <div className="hidden lg:flex">
           <ul className="menu menu-horizontal p-0">
             {tabsMenu.map((menu) => (
               <li key={menu.id}>
                 <a
                   className={`font-bold text-neutral text-[16px] ${
                     (activeTab || path) === menu.key && 'text-primary'
-                  } hover:text-primary`}
+                  } hover:text-primary hover:bg-transparent`}
                   onClick={() => setActiveTab(menu.key)}>
                   {menu.icons && menu.iconName}
                   <span className={`${menu.icons && 'px-4'}`}>{menu.title}</span>
