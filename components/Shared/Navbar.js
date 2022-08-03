@@ -4,8 +4,24 @@ import { useState } from 'react'
 import imageLoader from '../../helper/imageLoader'
 import Logo from '../../public/common/logo.png'
 
+// import axios from '../../axios'
+
 const Navbar = () => {
   const [languageMode, setLanguageMode] = useState('EN')
+
+  // API call to change language on button press. Please check and update
+  //-------------------------------------------------------------
+  // const setLanguage = async () => {
+  //   if (languageMode === 'EN') {
+  //     const res = await axios.get('/content/landing/BN')
+  //     console.log(res)
+  //     setLanguageMode('BN')
+  //   } else {
+  //     const res = await axios.get('/content/landing/EN')
+  //     console.log(res)
+  //     setLanguageMode('EN')
+  //   }
+  // }
 
   return (
     <div className={'navbar bg-base-100 shadow-md shadow-pink-300 lg:px-24 py-4 sticky top-0 z-50'}>
