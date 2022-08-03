@@ -58,7 +58,7 @@ const DashboardTabs = ({ setSelectedTabs, activeTab, setActiveTab }) => {
                   } hover:text-primary hover:bg-transparent`}
                   onClick={() => setActiveTab(menu.key)}>
                   {menu.icons && menu.iconName}
-                  <span className={`${menu.icons && 'px-4'}`}>{menu.title}</span>
+                  <span className={`${menu.icons && 'px-2'}`}>{menu.title}</span>
                 </a>
               </li>
             ))}
