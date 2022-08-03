@@ -26,8 +26,8 @@ const Customization = () => {
         <div data-aos="fade-down-left" className="w-[95%] mx-auto flex lg:w-1/2 ">
           <Image
             src="/start-page/SmallBusiness.png"
-            width={650}
-            height={600}
+            width={550}
+            height={620}
             alt="Social Media Post Customization"
             loader={imageLoader}
           />
