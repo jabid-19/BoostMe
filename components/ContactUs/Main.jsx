@@ -110,7 +110,7 @@ const ContactUsMain = () => {
                   name="details"
                   type="text"
                   {...register('details', { required: 'Details is required' })}
-                  className="input input-bordered input-primary h-32 bg-transparent rounded-3xl border-primary w-full min-w-xs px-4 py-4"
+                  className="input input-bordered input-primary h-32 bg-transparent rounded-3xl w-full min-w-xs px-4 py-4"
                 />
                 <div className="text-error text-xs font-bold pl-2 pt-2">
                   {errors.details?.message}
