@@ -74,6 +74,11 @@ const Navbar = () => {
                 <a>Customers</a>
               </Link>
             </li>
+            <li>
+              <Link href="/contact">
+                <a>Contact Us</a>
+              </Link>
+            </li>
             <div className="btn-group md:min-w-[70px] my-4 ml-4">
               <button
                 className={
@@ -94,39 +99,6 @@ const Navbar = () => {
                 BN
               </button>
             </div>
-            {/* <li tabIndex="0">
-              <a>
-                <p>Jhon Doe</p>
-                <div className="avatar placeholder">
-                  <div className="bg-primary-focus text-neutral-content rounded-full w-12 h-12">
-                    <span>JD</span>
-                  </div>
-                </div>
-                <svg
-                  className="fill-current"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24">
-                  <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
-                </svg>
-              </a>
-              <ul className="p-2 bg-white">
-                <li>
-                  <a href="publishing">Publishing</a>
-                </li>
-                <li>
-                  <Link href="/engagement">
-                    <a>Engagement</a>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/start-page">
-                    <a>Start Page</a>
-                  </Link>
-                </li>
-              </ul>
-            </li> */}
             <li>
               <Link href="login">
                 <a>Login</a>
@@ -190,6 +162,11 @@ const Navbar = () => {
           <li className="mr-4">
             <Link href="customers">
               <a>Customers</a>
+            </Link>
+          </li>
+          <li className="mr-4">
+            <Link href="/contact">
+              <a>Contact Us</a>
             </Link>
           </li>
         </ul>
