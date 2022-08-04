@@ -137,7 +137,7 @@ const ContactUsMain = () => {
                 example@example.com
               </a>
             </div>
-            <div className="text-white mt-10 flex gap-5 items-center">
+            <div className="text-white mt-10 flex flex-wrap gap-5 items-center">
               {socialMediaLinks.map((socialMedia) => (
                 <div className="border-2 p-1 rounded-full md:p-2" key={socialMedia.key}>
                   <a href={socialMedia.link} target="_blank" rel="noreferrer">
