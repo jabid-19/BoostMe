@@ -196,7 +196,7 @@ const Navbar = () => {
       </div>
       <div className="navbar-end hidden lg:flex">
         <ul className="menu menu-horizontal p-0 lg:items-center">
-          <div className="btn-group md:min-w-[70px] my-6 mr-4">
+          {/* <div className="btn-group md:min-w-[70px] my-6 mr-4">
             <button
               className={
                 languageMode == 'EN'
@@ -215,7 +215,7 @@ const Navbar = () => {
               onClick={() => setLanguageMode('BN')}>
               BN
             </button>
-          </div>
+          </div> */}
           {/* <li tabIndex="0">
             <a>
               <p>Jhon Doe</p>
@@ -251,7 +251,7 @@ const Navbar = () => {
               </li>
             </ul>
           </li> */}
-          <li className="text-primary mr-4">
+          {/* <li className="text-primary mr-4">
             <Link href="login">
               <a>Login</a>
             </Link>
@@ -259,6 +259,11 @@ const Navbar = () => {
           <Link href={{ pathname: 'login', query: { keyword: 'register' } }}>
             <a className="btn btn-primary text-white text-center capitalize rounded-full px-8">
               Get Started
+            </a>
+          </Link> */}
+          <Link href="">
+            <a className="btn btn-primary text-white text-center capitalize rounded-full px-8">
+              Contact us
             </a>
           </Link>
         </ul>

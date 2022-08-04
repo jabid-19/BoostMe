@@ -32,9 +32,10 @@ const Hero = () => {
             data-aos="fade-left"
             className="h-auto text-center lg:text-left mb-10 max-w-fit z-20">
             <h1 className="text-2xl font-semibold break-words md:text-4xl text-neutral lg:tracking-wide xl:text-5xl">
-              Build your <span className="text-primary">audience</span> and
+              <span className="text-primary">বুস্টিং</span>
+              {/* Build your <span className="text-primary">audience</span> and
               <br />
-              <span className="text-secondary">grow</span> your brand
+              <span className="text-secondary">grow</span> your brand */}
             </h1>
           </div>
           <div className="h-auto flex flex-col items-center justify-center lg:flex-row lg:items-start z-20">
@@ -52,9 +53,12 @@ const Hero = () => {
             <div data-aos="fade-left">
               <div className="flex flex-col items-center justify-center lg:justify-start lg:flex-row lg:ml-8 lg:items-start text-center lg:text-left">
                 <p className="w-full lg:w-3/4 max-w-fit text-neutral">
-                  Plan and publish your content for Instagram, <br /> TikTok, Facebook, Twitter,
+                  বুস্ট করুন আপনার পছন্দের সোশ্যাল মিডিয়া প্ল্যাটফর্মে কোনরকম ক্রেডিট কার্ড ছাড়াই।
+                  বিকাশ, নগদ, ডেবিট কার্ড কিংবা ব্যাংক ট্রান্সফারের মাধ্যমে আপনার সকল সোশ্যাল
+                  মিডিয়া প্ল্যাটফর্ম যেকোনো পোস্ট প্রমোট করতে পারবেন BoostMe অ্যাপ থেকে।
+                  {/* Plan and publish your content for Instagram, <br /> TikTok, Facebook, Twitter,
                   Pinterest, and LinkedIn,
-                  <br /> all from one simple dashboard.
+                  <br /> all from one simple dashboard. */}
                 </p>
               </div>
               <div className="flex flex-col mt-4 items-center justify-center lg:justify-start md:flex-row lg:ml-8">

@@ -60,12 +60,15 @@ const Hero = () => {
               data-aos="fade-right"
               className="flex flex-col justify-center items-center lg:items-start lg:max-w-3xl">
               <h1 className="text-2xl font-semibold break-words lg:text-4xl text-neutral lg:tracking-wide py-4 lg:py-14 xl:text-5xl text-center lg:text-left">
-                Build your <span className="text-primary">audience</span> and{' '}
-                <span className="text-secondary">grow</span> your brand
+                <span className="text-primary">ইনসাইট</span> নিন আপনার{' '}
+                <span className="text-secondary">ডেটা</span> থেকে
+                {/* Build your <span className="text-primary">audience</span> and{' '}
+                <span className="text-secondary">grow</span> your brand */}
               </h1>
               <p className="py-4 text-neutral w-full lg:w-1/2 text-center lg:text-left">
-                Plan and publish your content for Instagram, TikTok, Facebook, Twitter, Pinterest,
-                and LinkedIn, all from one simple dashboard.
+                আপনার অ্যাকাউন্টের পারফরম্যান্সের একটি পরিষ্কার ওভারভিউ পাবেন এবং বিভিন্ন ডেটা
+                মেট্রিক এর সহজে চার্ট এবং গ্রাফের মাধ্যমে আপনার পোস্টের ওভারভিউ পাবেন BoostMe
+                প্লাটফর্ম থেকে।
               </p>
               <div className="flex flex-col md:flex-row">
                 <div className="mb-4 md:mr-4 md:mb-0">
