@@ -1,19 +1,52 @@
+import Image from 'next/image'
 import React from 'react'
 import { useForm } from 'react-hook-form'
-import { AiOutlineMail } from 'react-icons/ai'
+import {
+  AiOutlineFacebook,
+  AiOutlineInstagram,
+  AiOutlineLinkedin,
+  AiOutlineMail,
+  AiOutlineWhatsApp,
+} from 'react-icons/ai'
 import { BsPhone } from 'react-icons/bs'
+import Contact from '../../public/contact-us/contact.png'
 const ContactUsMain = () => {
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm()
-
+  const socialMediaLinks = [
+    {
+      key: 1,
+      title: 'instagram',
+      icon: <AiOutlineInstagram className="inline-block" size={30} />,
+      link: 'https://www.instagram.com/',
+    },
+    {
+      key: 2,
+      title: 'facebook',
+      icon: <AiOutlineFacebook className="inline-block" size={30} />,
+      link: 'https://www.facebook.com/',
+    },
+    {
+      key: 3,
+      title: 'whatsapp',
+      icon: <AiOutlineWhatsApp className="inline-block" size={30} />,
+      link: 'https://web.whatsapp.com/',
+    },
+    {
+      key: 4,
+      title: 'linkedin',
+      icon: <AiOutlineLinkedin className="inline-block" size={30} />,
+      link: 'https://www.linkedin.com/',
+    },
+  ]
   const onSubmit = (data) => {
     console.log(data)
   }
   return (
-    <div className="relative w-full">
+    <div className="relative w-full mb-20 lg:mb-0">
       <div className="w-auto mx-6 mt-12 lg:min-h-[85vh] lg:mt-16 2xl:w-[1400px] 2xl:mx-auto">
         <div className="flex flex-col w-full gap-10 lg:flex-row">
           <div className="w-[90%] mx-auto flex flex-col justify-center item-center lg:w-2/3 ">
@@ -104,11 +137,23 @@ const ContactUsMain = () => {
                 example@example.com
               </a>
             </div>
-            <div className="text-white mt-10">
-              <AiOutlineMail className="inline-block mr-2" size={30} />
-              <a href="mailto:example@example.com" className="text-xl">
-                example@example.com
-              </a>
+            <div className="text-white mt-10 flex justify-between items-center">
+              {socialMediaLinks.map((socialMedia) => (
+                <div className="border-2 p-1 rounded-full md:p-2" key={socialMedia.key}>
+                  <a href={socialMedia.link} target="_blank" rel="noreferrer">
+                    {socialMedia.icon}
+                  </a>
+                </div>
+              ))}
+            </div>
+            <div className="mt-20">
+              <Image
+                src={Contact}
+                alt="BoostMe Contact Image"
+                width={400}
+                height={150}
+                className="rounded-lg"
+              />
             </div>
           </div>
         </div>
