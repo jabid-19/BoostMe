@@ -2,7 +2,7 @@ import Image from 'next/image'
 import React from 'react'
 import imageLoader from '../../../helper/imageLoader'
 // import ContentWriting from '../../../public/landing-section/ContentWriting.png'
-import Balance from '../../../public/landing-section/balance.webp'
+import Balance from '../../../public/landing-section/app-balance.webp'
 const LearnMore = () => {
   return (
     <div className="hero min-h-screen">
