@@ -32,7 +32,7 @@ const Hero = () => {
             data-aos="fade-left"
             className="h-auto text-center lg:text-left mb-10 max-w-fit z-20">
             <h1 className="text-2xl font-semibold break-words md:text-4xl text-neutral lg:tracking-wide xl:text-5xl">
-              <span className="text-primary">বুস্টিং</span>
+              <span className="text-primary">বুস্টিং করুন সহজে</span>
               {/* Build your <span className="text-primary">audience</span> and
               <br />
               <span className="text-secondary">grow</span> your brand */}
