@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import ForgetPassForm from './ForgetPassForm'
 import RegisterForm from './RegisterForm'
-import axios from '../../axios'
+import { backendApi } from '../../backendApi'
 
 const LoginForm = () => {
   const [visibleLoginItem, setVisibleLoginItem] = useState(true)
@@ -22,7 +22,7 @@ const LoginForm = () => {
     e.preventDefault()
 
     try {
-      const res = await axios.post('/user/signin', { email, password })
+      const res = await backendApi.post('/user/signin', { email, password })
       console.log(res.data)
 
       setEmail('')

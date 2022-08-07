@@ -1,8 +1,8 @@
 import axios from 'axios'
 
-const instance = axios.create({
+const backendApi = axios.create({
   baseURL:
     process.env.NODE_ENV === 'production' ? 'http://3.249.53.40:8800/' : 'http://localhost:8800',
 })
 
-export default instance
+module.exports = { backendApi }
