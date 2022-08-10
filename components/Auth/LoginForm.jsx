@@ -2,6 +2,7 @@ import { useState } from 'react'
 import ForgetPassForm from './ForgetPassForm'
 import RegisterForm from './RegisterForm'
 import axios from '../../axios'
+import Router from 'next/router'
 
 const LoginForm = () => {
   const [visibleLoginItem, setVisibleLoginItem] = useState(true)
@@ -27,6 +28,9 @@ const LoginForm = () => {
 
       setEmail('')
       setPassword('')
+
+      // redirect to dashboard with user
+      Router.push('/dashboard')
     } catch (err) {
       console.log(err.response.data)
     }

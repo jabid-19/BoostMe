@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import LoginForm from './LoginForm'
+import Router from 'next/router'
+
 import axios from '../../axios'
 
 const RegisterForm = () => {
@@ -29,6 +31,7 @@ const RegisterForm = () => {
       setEmail('')
       setPassword('')
       setConfirmPassword('')
+      Router.push('/recovery')
     } catch (err) {
       console.log(err.response.data)
     }
