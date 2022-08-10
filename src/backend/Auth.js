@@ -1,4 +1,4 @@
-import backendApi from '../../backendApi'
+import backendApi from './backendApi'
 
 const ENDPOINT = '/user'
 
