@@ -1,8 +1,9 @@
 import { useState } from 'react'
 import ForgetPassForm from './ForgetPassForm'
 import RegisterForm from './RegisterForm'
-import axios from '../../axios'
 import Router from 'next/router'
+
+import { login } from '../../src/backend/Auth'
 
 const LoginForm = () => {
   const [visibleLoginItem, setVisibleLoginItem] = useState(true)
@@ -22,17 +23,15 @@ const LoginForm = () => {
   const handleLogin = async (e) => {
     e.preventDefault()
 
-    try {
-      const res = await axios.post('/user/signin', { email, password })
-      console.log(res.data)
+    const response = await login({ email, password })
+    // console.log(response)
 
+    if (response.status == 200 || response.status == 201) {
       setEmail('')
       setPassword('')
-
-      // redirect to dashboard with user
       Router.push('/dashboard')
-    } catch (err) {
-      console.log(err.response.data)
+    } else {
+      console.log(response.data.error)
     }
   }
 

@@ -2,7 +2,7 @@ import { useState } from 'react'
 import LoginForm from './LoginForm'
 import Router from 'next/router'
 
-import axios from '../../axios'
+import { forgetPassword } from '../../src/backend/Auth'
 
 const ForgetPassForm = () => {
   const [visibleItem, setVisibleItem] = useState(true)
@@ -15,14 +15,13 @@ const ForgetPassForm = () => {
   const handleForgotPassword = async (e) => {
     e.preventDefault()
 
-    try {
-      const res = await axios.post('/user/forget-password', { email })
-      console.log(res.data)
+    const response = await forgetPassword(email)
 
+    if (response.status == 200 || response.status == 201) {
       setEmail('')
       Router.push('/recovery')
-    } catch (err) {
-      console.log(err)
+    } else {
+      console.log(response.data)
     }
   }
 

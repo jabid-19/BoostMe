@@ -42,7 +42,7 @@ const recovery = () => {
               fontSize: '1rem',
               cursor: 'pointer',
             }}
-            onClick={(e) => Router.push('/')}>
+            onClick={(e) => Router.push('/login')}>
             Back to login
           </button>
           <br />
