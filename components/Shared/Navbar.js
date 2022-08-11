@@ -5,7 +5,7 @@ import imageLoader from '../../helper/imageLoader'
 import Logo from '../../public/common/logo.png'
 
 const Navbar = () => {
-  // const [languageMode, setLanguageMode] = useState('EN')
+  const [languageMode, setLanguageMode] = useState('EN')
 
   return (
     <div className={'navbar bg-base-100 shadow-md shadow-pink-300 lg:px-24 py-4 sticky top-0 z-50'}>
@@ -79,7 +79,7 @@ const Navbar = () => {
                 <a>Contact Us</a>
               </Link>
             </li>
-            {/* <div className="btn-group md:min-w-[70px] my-4 ml-4">
+            <div className="btn-group md:min-w-[70px] my-4 ml-4">
               <button
                 className={
                   languageMode == 'EN'
@@ -108,7 +108,7 @@ const Navbar = () => {
               <Link href={{ pathname: 'login', query: { keyword: 'register' } }}>
                 <a className="btn btn-primary text-white mt-1.5">Get Started</a>
               </Link>
-            </li>*/}
+            </li>
           </ul>
         </div>
         <Link href="/">
@@ -173,7 +173,7 @@ const Navbar = () => {
       </div>
       <div className="navbar-end hidden lg:flex">
         <ul className="menu menu-horizontal p-0 lg:items-center">
-          {/* <div className="btn-group md:min-w-[70px] my-6 mr-4">
+          <div className="btn-group md:min-w-[70px] my-6 mr-4">
             <button
               className={
                 languageMode == 'EN'
@@ -192,7 +192,7 @@ const Navbar = () => {
               onClick={() => setLanguageMode('BN')}>
               BN
             </button>
-          </div> */}
+          </div>
           {/* <li tabIndex="0">
             <a>
               <p>Jhon Doe</p>
