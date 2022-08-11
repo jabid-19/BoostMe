@@ -1,8 +1,8 @@
 export default function FormCard({ children, currentStep, prevFormStep, nextFormStep }) {
   console.log(currentStep)
   return (
-    <div className="flex flex-col">
-      <ul className="steps gap-5">
+    <div className="flex flex-col mx-5 w-full">
+      <ul className="steps">
         <li className={`${currentStep === 1 || currentStep >= 1 ? 'step step-primary' : 'step'}`}>
           Step 1
         </li>
@@ -14,6 +14,7 @@ export default function FormCard({ children, currentStep, prevFormStep, nextForm
         </li>
         <li className={`${currentStep === 4 ? 'step step-primary' : 'step'}`}>Step 4</li>
       </ul>
+      <div>{children}</div>
       <div className="flex justify-between my-10">
         <button
           className="
@@ -44,20 +45,21 @@ export default function FormCard({ children, currentStep, prevFormStep, nextForm
           </svg>
           Back
         </button>
-        <button
+        {/* <button
           className="
-                px-6
-                py-2
-                text-sm text-white
-                bg-indigo-500
-                rounded-lg
-                outline-none
-                hover:bg-indigo-600
-                ring-indigo-300
-            "
+              px-6
+              py-2
+              text-sm text-white
+              bg-indigo-500
+              rounded-lg
+              outline-none
+              hover:bg-indigo-600
+              ring-indigo-300
+          "
+          type="submit"
           onClick={currentStep < 4 && currentStep >= 1 ? nextFormStep : null}>
           Next
-        </button>
+        </button> */}
       </div>
     </div>
   )
