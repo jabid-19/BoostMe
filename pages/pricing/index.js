@@ -71,7 +71,7 @@ const index = () => {
   return (
     <>
       <Head>
-        <title>Boost ME | Pricing</title>
+        <title>Boost N Boom | Pricing</title>
       </Head>
       <CustomerHeader headingDescriptions={headingDescriptions} />
       <PricingChart headings={headings} pricingPackages={pricingPackages} />

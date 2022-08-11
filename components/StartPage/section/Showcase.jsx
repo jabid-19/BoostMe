@@ -50,7 +50,7 @@ const Showcase = () => {
           </div>
           <div data-aos="fade-up-left" className="w-[95%] mx-auto flex lg:w-1/2 ">
             <Image
-              src="/start-page/SmallBusiness.png"
+              src="/engagement-section/audience.png"
               width={650}
               height={600}
               alt="Social Media Post Customization"
@@ -63,7 +63,7 @@ const Showcase = () => {
         <div className="flex flex-col gap-10 w-full md:flex-row">
           <div data-aos="fade-up-right" className="w-[95%] mx-auto flex justify-center lg:w-1/2 ">
             <Image
-              src="/start-page/SmallBusiness.png"
+              src="/start-page/social.webp"
               width={550}
               height={620}
               alt="Brand Building using Social Media"
@@ -108,7 +108,7 @@ const Showcase = () => {
           </div>
           <div data-aos="fade-up-left" className="w-[95%] mx-auto flex justify-center lg:w-1/2 ">
             <Image
-              src="/start-page/NFT.png"
+              src="/start-page/NFT.jpg"
               width={550}
               height={620}
               alt="Generate NFTs"

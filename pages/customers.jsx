@@ -13,7 +13,7 @@ const customers = () => {
   return (
     <div>
       <Head>
-        <title>Boost ME | Customers</title>
+        <title>Boost N Boom | Customers</title>
       </Head>
       <CustomerHeader headingDescriptions={headingDescriptions} />
       <CustomerCards />
