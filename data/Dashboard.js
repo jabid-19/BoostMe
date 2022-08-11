@@ -1,4 +1,4 @@
-import { AiOutlineBarChart, AiOutlineDollarCircle, AiOutlineFileSync, AiOutlineHome, AiOutlinePieChart, AiOutlineTeam, AiOutlineUnorderedList } from 'react-icons/ai'
+import { AiOutlineBarChart, AiOutlineDollarCircle, AiOutlineFileAdd, AiOutlineFileSync, AiOutlineHome, AiOutlinePieChart, AiOutlineSchedule, AiOutlineTeam, AiOutlineUnorderedList } from 'react-icons/ai'
 import { BiBuildings, BiCalendar, BiSearchAlt } from 'react-icons/bi'
 import { BsChat, BsGraphUp, BsGrid, BsKanban } from 'react-icons/bs'
 import { FaShopify } from 'react-icons/fa'
@@ -87,5 +87,13 @@ export const tabsMenu = [
         { title: 'Billing', icon: <AiOutlineDollarCircle size={20} />, route: '/dashboard/email/billing'},
         { title: 'Channels', icon: <BsGrid size={20} />, route: '/dashboard/email/channels'},
         { title: 'Organization', icon: <BiBuildings size={20} />, route: '/dashboard/email/organization'},
+    ], 
+    'publishing' : [
+      {title: 'Create Post', icon: <AiOutlineFileAdd size={20} />, route: '/dashboard/publishing/create-post', 
+        subSection: [
+          { title: 'Crate Now', icon: <BiBuildings size={20} />, route: '/dashboard/publishing/create-post/create'},
+          { title: 'Schedule Later', icon: <AiOutlineSchedule size={20} />, route: '/dashboard/publishing/create-post/schedule'},
+        ]
+      }
     ]
  }

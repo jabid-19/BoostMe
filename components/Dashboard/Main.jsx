@@ -7,10 +7,67 @@ const DashboardMain = ({ selectedTabs, open, setOpen }) => {
   // imports
   const router = useRouter()
   // states
-
   const [selectedSection, setSelectedSection] = useState(null)
   // functions
   const subPath = sectionPath(router.pathname)
+
+  const generateMenuItem = (item) => (
+    <Link href={item?.route || '/dashboard/analytics'} key={item.title} passHref>
+      <div>
+        <a
+          className={`text-white text-sm flex flex-wrap items-center gap-x-4 cursor-pointer p-2 hover:bg-secondary rounded-md ${
+            item.gap ? 'mt-9' : 'mt-2'
+          } ${item.title === (selectedSection || subPath) && 'bg-secondary'}`}
+          href={item.route || '/dashboard/analytics'}
+          onClick={() => setSelectedSection(item.title)}>
+          {item.icon}
+          <span className={`${!open && 'hidden'} origin-left duration-200 text-xl`}>
+            {item.title}
+          </span>
+        </a>
+      </div>
+    </Link>
+  )
+  const generateMenu = selectedTabs?.map((route) => {
+    if (!route?.subSection) {
+      return generateMenuItem(route)
+    }
+    if (route?.subSection) {
+      return (
+        <div key={route.route}>
+          <a
+            className={`text-white text-sm flex flex-wrap items-center gap-x-4 cursor-pointer p-2 hover:bg-secondary rounded-md ${
+              route.gap ? 'mt-9' : 'mt-2'
+            }`}
+            onClick={() => setSelectedSection(route.title)}>
+            {route.icon}
+            <span className={`${!open && 'hidden'} origin-left duration-200 text-xl`}>
+              {route.title}
+            </span>
+          </a>
+
+          <ul>
+            {route.subSection.map((subRoute) => (
+              <Link href={subRoute?.route || '/dashboard/analytics'} key={subRoute.title}>
+                <a
+                  className={`text-white text-sm flex flex-wrap items-center justify-end gap-x-4 cursor-pointer p-2 hover:bg-secondary rounded-md  ${
+                    subRoute.title === (selectedSection || subPath) && 'bg-secondary list-disc'
+                  }`}
+                  href={subRoute.route || '/dashboard/analytics'}
+                  onClick={() => setSelectedSection(subRoute.title)}>
+                  {subRoute.icon}
+                  <span className={`${!open && 'hidden'} origin-left duration-200 text-xl`}>
+                    {subRoute.title}
+                  </span>
+                </a>
+              </Link>
+            ))}
+          </ul>
+        </div>
+      )
+    }
+    return null
+  })
 
   useEffect(() => {
     const screenSize = window.matchMedia('(max-width: 1020px)')
@@ -42,22 +99,7 @@ const DashboardMain = ({ selectedTabs, open, setOpen }) => {
             <Image src="/common/logo-white.png" width={140} height={40} alt="BoostMe's logo" />
           </Link>
         </div>
-        <ul className={`p-6 flex flex-col ${!open && 'items-center'}`}>
-          {selectedTabs?.map((menu) => (
-            <Link href={menu?.route || '/dashboard/analytics'} key={menu.title} forwardRef>
-              <li
-                className={`text-white text-sm flex flex-wrap items-center gap-x-4 cursor-pointer p-2 hover:bg-secondary rounded-md ${
-                  menu.gap ? 'mt-9' : 'mt-2'
-                } ${menu.title === (selectedSection || subPath) && 'bg-secondary'}`}
-                onClick={() => setSelectedSection(menu.title)}>
-                {menu.icon}
-                <span className={`${!open && 'hidden'} origin-left duration-200 text-xl`}>
-                  {menu.title}
-                </span>
-              </li>
-            </Link>
-          ))}
-        </ul>
+        <ul className={`p-6 flex flex-col ${!open && 'items-center'}`}>{generateMenu}</ul>
       </div>
     </div>
   )
