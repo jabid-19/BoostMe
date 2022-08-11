@@ -7,7 +7,7 @@ import DashboardTabs from '../components/Dashboard/Tabs'
 import Footer from '../components/Shared/Footer'
 import Navbar from '../components/Shared/Navbar'
 import FormProvider from '../context'
-import '../styles/globals.css'
+import '../styles/globals.scss'
 
 function MyApp({ Component, pageProps }) {
   const [selectedTabs, setSelectedTabs] = useState([])
