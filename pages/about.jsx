@@ -17,7 +17,7 @@ const About = () => {
   return (
     <div>
       <Head>
-        <title>Boost ME | About</title>
+        <title>Boost N Boom | About</title>
       </Head>
       <CustomerHeader headingDescriptions={headingDescriptions} />
       <AboutUs />

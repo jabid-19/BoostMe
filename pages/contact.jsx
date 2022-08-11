@@ -5,7 +5,7 @@ const contact = () => {
   return (
     <div>
       <Head>
-        <title>Boost ME | Contact Us</title>
+        <title>Boost N Boom | Contact Us</title>
         <meta name="description" content="Boost Me Contact Us Page" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
