@@ -164,11 +164,11 @@ const Navbar = () => {
               <a>Customers</a>
             </Link>
           </li>
-          {/* <li className="mr-4">
+          <li className="mr-4">
             <Link href="/contact">
               <a>Contact us</a>
             </Link>
-          </li> */}
+          </li>
         </ul>
       </div>
       <div className="navbar-end hidden lg:flex">
@@ -228,7 +228,7 @@ const Navbar = () => {
               </li>
             </ul>
           </li> */}
-          {/* <li className="text-primary mr-4">
+          <li className="text-primary mr-4">
             <Link href="login">
               <a>Login</a>
             </Link>
@@ -237,12 +237,12 @@ const Navbar = () => {
             <a className="btn btn-primary text-white text-center capitalize rounded-full px-8">
               Get Started
             </a>
-          </Link> */}
-          <Link href="/contact">
+          </Link>
+          {/* <Link href="/contact">
             <a className="btn btn-primary text-white text-center normal-case rounded-full px-8">
               Contact us
             </a>
-          </Link>
+          </Link> */}
         </ul>
       </div>
     </div>
