@@ -1,12 +1,28 @@
 import { useState } from 'react'
 import LoginForm from './LoginForm'
 
+import { backendApi } from '../../backendApi'
+
 const ForgetPassForm = () => {
   const [visibleItem, setVisibleItem] = useState(true)
+  const [email, setEmail] = useState('')
 
   const loadLoginForm = () => {
     console.log(visibleItem)
     setVisibleItem(false)
+  }
+
+  const handleForgotPassword = async (e) => {
+    e.preventDefault()
+
+    try {
+      const res = await backendApi.post('/user/forget-password', { email })
+      console.log(res.data)
+
+      setEmail('')
+    } catch (err) {
+      console.log(err)
+    }
   }
 
   return (
@@ -25,17 +41,15 @@ const ForgetPassForm = () => {
               type="email"
               placeholder="Email address"
               className="input input-bordered input-primary rounded-full w-full min-w-xs mb-4"
-            />
-            <input
-              type="password"
-              placeholder="New password"
-              className="input input-bordered input-primary rounded-full w-full min-w-xs mb-6"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
             />
             <br />
             <input
               className="bg-secondary hover:bg-orange-400 py-1.5 w-full min-w-xs normal-case text-white rounded-full cursor-pointer"
               type="submit"
               value="Submit"
+              onClick={handleForgotPassword}
             />
           </form>
           <br />

@@ -1,7 +1,16 @@
 import Head from 'next/head'
 import { HomeMain } from '../components/home/main'
+import { useEffect } from 'react'
+import axios from 'axios'
 
 export default function Home() {
+  useEffect(() => {
+    axios
+      .get('/api/locateme')
+      .then(({ data }) => console.log({ data }))
+      .catch((error) => console.log({ error }))
+  })
+
   return (
     <div>
       <Head>
