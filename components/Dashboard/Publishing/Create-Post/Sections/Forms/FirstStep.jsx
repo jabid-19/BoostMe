@@ -19,7 +19,6 @@ export default function FirstStep({ formStep, prevFormStep, nextFormStep, formDa
   ]
 
   const onSubmit = (values) => {
-    console.log(values)
     const formData = new FormData()
     formData.append('file', values.logo[0])
     values.logo = formData
@@ -31,7 +30,6 @@ export default function FirstStep({ formStep, prevFormStep, nextFormStep, formDa
     if (event?.target.name !== 'logo') {
       setFormData({ ...formData, [event.target.name]: event.target.value })
     } else {
-      console.log(true)
       setFormData({ ...formData, logo: URL.createObjectURL(event.target.files[0]) })
     }
   }

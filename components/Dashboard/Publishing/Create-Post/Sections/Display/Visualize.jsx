@@ -7,7 +7,6 @@ import { FaTimes } from 'react-icons/fa'
 import { GoGlobe } from 'react-icons/go'
 import { MdCall } from 'react-icons/md'
 const Visualize = ({ formData, setFormData }) => {
-  console.log(formData)
   return (
     <div>
       <div className="mockup-phone border-primary">
