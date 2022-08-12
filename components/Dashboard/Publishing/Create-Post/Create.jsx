@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
+import Visualize from './Sections/Display/Visualize'
 import Forms from './Sections/Forms'
-import Visualize from './Sections/Visualize/Visualize'
 
 const CreatePostCreate = () => {
   const [formData, setFormData] = useState({
