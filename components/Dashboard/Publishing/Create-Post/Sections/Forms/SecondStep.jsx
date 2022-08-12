@@ -1,7 +1,8 @@
 import { useForm } from 'react-hook-form'
 import { useFormData } from '../../../../../../context'
+import NextPrev from './NextPrev'
 
-export default function SecondStep({ formStep, nextFormStep }) {
+export default function SecondStep({ formStep, prevFormStep, nextFormStep }) {
   const { setFormValues, data } = useFormData()
 
   const {
@@ -45,21 +46,7 @@ export default function SecondStep({ formStep, nextFormStep }) {
           />
           {errors.password && <p className="text-error">password is required</p>}
         </div>
-        <button
-          className="
-              mt-4
-              px-6
-              py-2
-              text-sm text-white
-              bg-indigo-500
-              rounded-lg
-              outline-none
-              hover:bg-indigo-600
-              ring-indigo-300
-          "
-          type="submit">
-          Next
-        </button>
+        <NextPrev formStep={formStep} prevFormStep={prevFormStep} />
       </form>
     </div>
   )

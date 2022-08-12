@@ -1,7 +1,8 @@
 import { Controller, useForm } from 'react-hook-form'
 import Select from 'react-select'
 import { useFormData } from '../../../../../../context'
-export default function FirstStep({ formStep, nextFormStep }) {
+import NextPrev from './NextPrev'
+export default function FirstStep({ formStep, prevFormStep, nextFormStep }) {
   const { setFormValues } = useFormData()
 
   const {
@@ -83,7 +84,7 @@ export default function FirstStep({ formStep, nextFormStep }) {
           <Controller
             name="category"
             control={control}
-            rules={{ required: 'category is required' }}
+            rules={{ required: 'Category is required' }}
             render={({ field }) => (
               <Select
                 classNamePrefix="react-select"
@@ -95,7 +96,7 @@ export default function FirstStep({ formStep, nextFormStep }) {
               />
             )}
           />
-          {errors.category && <p className="text-error">Category is required</p>}
+          {errors.category && <p className="text-error">{errors.category?.message}</p>}
         </div>
         <div className="mb-6">
           <label htmlFor="pageUrl" className="inline-flex mb-2 text-xl font-bold text-neutral">
@@ -117,22 +118,8 @@ export default function FirstStep({ formStep, nextFormStep }) {
             })}
           />
           {errors.pageUrl && <p className="text-error">{errors.pageUrl.message}</p>}
+          <NextPrev formStep={formStep} prevFormStep={prevFormStep} />
         </div>
-        <button
-          className="
-            w-full
-            px-3
-            py-3
-            text-gray-800
-            border
-            rounded-lg
-            outline-none
-            bg-primary
-            font-bold
-          "
-          type="submit">
-          Next
-        </button>
       </form>
     </div>
   )

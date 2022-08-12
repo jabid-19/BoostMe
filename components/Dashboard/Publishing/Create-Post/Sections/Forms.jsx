@@ -16,8 +16,12 @@ const Forms = () => {
       prevFormStep={prevFormStep}
       nextFormStep={nextFormStep}
       className="w-full">
-      {formStep >= 1 && <FirstStep formStep={formStep} nextFormStep={nextFormStep} />}
-      {formStep >= 2 && <SecondStep formStep={formStep} nextFormStep={nextFormStep} />}
+      {formStep >= 1 && (
+        <FirstStep formStep={formStep} prevFormStep={prevFormStep} nextFormStep={nextFormStep} />
+      )}
+      {formStep >= 2 && (
+        <SecondStep formStep={formStep} prevFormStep={prevFormStep} nextFormStep={nextFormStep} />
+      )}
     </FormCard>
   )
 }

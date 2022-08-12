@@ -15,7 +15,7 @@ export default function FormCard({ children, currentStep, prevFormStep, nextForm
         <li className={`${currentStep === 4 ? 'step step-primary' : 'step'}`}>Step 4</li>
       </ul>
       <div>{children}</div>
-      <div className="flex justify-between my-10">
+      {/* <div className="flex justify-between my-10">
         <button
           className="
                 inline-flex
@@ -45,7 +45,7 @@ export default function FormCard({ children, currentStep, prevFormStep, nextForm
           </svg>
           Back
         </button>
-        {/* <button
+        <button
           className="
               px-6
               py-2
@@ -59,8 +59,8 @@ export default function FormCard({ children, currentStep, prevFormStep, nextForm
           type="submit"
           onClick={currentStep < 4 && currentStep >= 1 ? nextFormStep : null}>
           Next
-        </button> */}
-      </div>
+        </button>
+      </div> */}
     </div>
   )
 }

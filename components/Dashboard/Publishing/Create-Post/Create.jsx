@@ -1,5 +1,6 @@
 import React from 'react'
 import Forms from './Sections/Forms'
+import Visualize from './Sections/Visualize/Visualize'
 
 const CreatePostCreate = () => {
   return (
@@ -7,7 +8,9 @@ const CreatePostCreate = () => {
       <div className="w-3/5 flex justify-center items-center">
         <Forms />
       </div>
-      <div className="w-2/5 flex justify-center items-center">2</div>
+      <div className="w-2/5 flex justify-center items-center">
+        <Visualize />
+      </div>
     </div>
   )
 }
