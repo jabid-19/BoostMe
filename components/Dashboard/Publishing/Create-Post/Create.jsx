@@ -4,10 +4,10 @@ import Forms from './Sections/Forms'
 const CreatePostCreate = () => {
   return (
     <div className="flex justify-center items-center gap-5 w-full">
-      <div className="w-4/5 flex justify-center items-center">
+      <div className="w-3/5 flex justify-center items-center">
         <Forms />
       </div>
-      <div className="w-1/5 flex justify-center items-center">2</div>
+      <div className="w-2/5 flex justify-center items-center">2</div>
     </div>
   )
 }

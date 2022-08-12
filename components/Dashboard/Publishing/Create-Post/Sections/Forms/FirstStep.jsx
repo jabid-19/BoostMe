@@ -87,7 +87,7 @@ export default function FirstStep({ formStep, nextFormStep }) {
             render={({ field }) => (
               <Select
                 classNamePrefix="react-select"
-                className="alert-border"
+                className={`${errors.category?.message && 'alert-border'}`}
                 isClearable
                 {...field}
                 placeholder="Select Your category"
