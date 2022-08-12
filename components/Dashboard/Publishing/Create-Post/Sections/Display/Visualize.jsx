@@ -45,9 +45,9 @@ const Visualize = ({ formData, setFormData }) => {
             <div className="h-3/6"></div>
             {/* third section */}
 
-            <div className="h-1/6 mt-2 flex items-center mb-2">
+            <div className="h-1/6 mt-2  mb-2 w-full ">
               {formData.pageCategory && formData.pageName ? (
-                <div className="w-full px-4 flex  justify-between items-center mt-6 gap-4 h-1/6 ">
+                <div className="px-4 flex  justify-between items-center mt-6 gap-4 h-1/6 ">
                   <div>
                     <h5 className="text-md font-bold">{formData.pageName}</h5>
                     <p className="text-gray-600">{formData.pageCategory}</p>
