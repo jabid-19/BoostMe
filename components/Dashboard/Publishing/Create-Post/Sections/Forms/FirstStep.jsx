@@ -2,10 +2,11 @@ import { Controller, useForm } from 'react-hook-form'
 import Select from 'react-select'
 import { useFormData } from '../../../../../../context'
 import NextPrev from './NextPrev'
-export default function FirstStep({ formStep, prevFormStep, nextFormStep }) {
+export default function FirstStep({ formStep, prevFormStep, nextFormStep, formData, setFormData }) {
   const { setFormValues } = useFormData()
 
   const {
+    setValue,
     handleSubmit,
     control,
     formState: { errors },
@@ -24,6 +25,15 @@ export default function FirstStep({ formStep, prevFormStep, nextFormStep }) {
     values.logo = formData
     setFormValues(values)
     nextFormStep()
+  }
+
+  const handleBlur = (event) => {
+    if (event?.target.name !== 'logo') {
+      setFormData({ ...formData, [event.target.name]: event.target.value })
+    } else {
+      console.log(true)
+      setFormData({ ...formData, logo: URL.createObjectURL(event.target.files[0]) })
+    }
   }
 
   return (
@@ -49,6 +59,9 @@ export default function FirstStep({ formStep, prevFormStep, nextFormStep }) {
             id="pageName"
             {...register('pageName', {
               required: 'Page Name is required',
+              onChange: (e) => {
+                handleBlur(e)
+              },
             })}
           />
           {errors.pageName && <p className="text-error">{errors.pageName?.message}</p>}
@@ -73,6 +86,9 @@ export default function FirstStep({ formStep, prevFormStep, nextFormStep }) {
             type="file"
             {...register('logo', {
               required: 'Logo is required',
+              onChange: (e) => {
+                handleBlur(e)
+              },
             })}
           />
           {errors.logo && <p className="text-error">{errors.logo?.message}</p>}

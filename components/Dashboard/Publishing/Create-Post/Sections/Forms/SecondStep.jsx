@@ -1,8 +1,11 @@
+import { useEffect, useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { useFormData } from '../../../../../../context'
 import NextPrev from './NextPrev'
 
 export default function SecondStep({ formStep, prevFormStep, nextFormStep }) {
+  const [createObjectURL, setCreateObjectURL] = useState(null)
+
   const { setFormValues, data } = useFormData()
 
   const {
@@ -14,9 +17,13 @@ export default function SecondStep({ formStep, prevFormStep, nextFormStep }) {
   const onSubmit = (values) => {
     setFormValues(values)
     nextFormStep()
-    console.log(data)
   }
 
+  useEffect(() => {
+    if (data.logo) {
+      setCreateObjectURL(window.URL.createObjectURL(data.logo))
+    }
+  }, [data.logo])
   return (
     <div className={`${formStep === 2 ? 'block' : 'hidden'}`}>
       <h2 className="text-center text-3xl font-bold text-neutral">1st Step</h2>
@@ -48,6 +55,7 @@ export default function SecondStep({ formStep, prevFormStep, nextFormStep }) {
         </div>
         <NextPrev formStep={formStep} prevFormStep={prevFormStep} />
       </form>
+      {/* <Image src={createObjectURL || ''} width={200} height={200} alt="logo" /> */}
     </div>
   )
 }

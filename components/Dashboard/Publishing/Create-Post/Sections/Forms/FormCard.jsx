@@ -1,5 +1,4 @@
 export default function FormCard({ children, currentStep, prevFormStep, nextFormStep }) {
-  console.log(currentStep)
   return (
     <div className="flex flex-col mx-5 w-full">
       <ul className="steps">
