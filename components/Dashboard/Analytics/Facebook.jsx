@@ -59,9 +59,9 @@ const Facebook = () => {
   return (
     <div>
       <div>
-        <div className="flex justify-between mb-16">
+        <div className="flex flex-col md:flex-row justify-between mb-16">
           <h2 className="text-3xl font-bold">Overview</h2>
-          <button className="btn btn-outline text-neutral normal-case max-w-xs">
+          <button className="btn btn-outline text-neutral normal-case max-w-xs mt-4 md:mt-0">
             Add to Report
           </button>
         </div>
