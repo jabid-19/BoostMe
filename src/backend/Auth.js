@@ -1,6 +1,6 @@
 import backendApi from './backendApi'
 
-const ENDPOINT = '/api/v1/user'
+const ENDPOINT = '/v1/user'
 
 const signup = async (userObj) => {
   try {
