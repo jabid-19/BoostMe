@@ -1,6 +1,6 @@
 import backendApi from './backendApi'
 
-const ENDPOINT = '/api/v1/contact'
+const ENDPOINT = '/v1/contact'
 
 const contact = async (data) => {
   try {
