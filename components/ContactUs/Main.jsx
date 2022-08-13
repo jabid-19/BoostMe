@@ -9,6 +9,8 @@ import {
   AiOutlineWhatsApp,
 } from 'react-icons/ai'
 import { BsPhone } from 'react-icons/bs'
+import imageLoader from '../../helper/imageLoader'
+import BoxBackground2 from '../../public/common/BoxBackground2.png'
 import Contact from '../../public/contact-us/contact.png'
 
 import { contact } from '../../src/backend/Contact'
@@ -58,11 +60,20 @@ const ContactUsMain = () => {
 
   return (
     <div className="relative w-full mb-20 lg:mb-0">
-      <div className="w-auto mx-6 mt-12 lg:min-h-[85vh] lg:mt-16 2xl:w-[1400px] 2xl:mx-auto">
-        <div className="flex flex-col w-full gap-10 lg:flex-row">
-          <div className="w-[90%] mx-auto flex flex-col justify-center item-center lg:w-2/3 ">
+      <div className="hidden lg:block lg:absolute lg:left-0 lg:-top-14">
+        <Image
+          src={BoxBackground2}
+          width={400}
+          height={100}
+          alt="BoostMe's Background"
+          loader={imageLoader}
+        />
+      </div>
+      <div className="w-auto mx-6 mt-12 lg:min-h-[85vh] lg:mt-16 2xl:w-[1000px] 2xl:mx-auto">
+        <div className="flex flex-col gap-10 w-full lg:flex-row">
+          <div className="w-[90%] mx-auto flex flex-col justify-center item-center lg:w-1/2 lg:mt-10 3xl:mt-0">
             <h1 className="text-3xl text-neutral font-bold">Send a Message</h1>
-            <form onSubmit={handleSubmit(onSubmit)} className="mt-10 lg:w-2/3 ">
+            <form onSubmit={handleSubmit(onSubmit)} className="mt-10">
               <div className="mb-5">
                 <label className="text-xl font-semibold text-neutral pl-2 mb-4">Full Name</label>
                 <input
@@ -134,7 +145,7 @@ const ContactUsMain = () => {
               />
             </form>
           </div>
-          <div className="w-[95%] mx-auto flex flex-col bg-primary rounded-lg p-8 lg:w-1/3">
+          <div className="w-[95%] mx-auto flex flex-col bg-primary rounded-lg p-8 lg:w-1/2">
             <h1 className="text-3xl text-white font-bold">Contact Info</h1>
             <div className="text-white mt-10">
               <BsPhone className="inline-block mr-2" size={30} />
@@ -164,6 +175,7 @@ const ContactUsMain = () => {
                 width={400}
                 height={150}
                 className="rounded-lg"
+                loader={imageLoader}
               />
             </div>
           </div>

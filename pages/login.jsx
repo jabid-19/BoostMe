@@ -11,7 +11,7 @@ const Login = () => {
   return (
     <div>
       <Head>
-        <title>Boost ME | Login</title>
+        <title>Boost N Boom | Login</title>
       </Head>
       <div className="relative">
         <div className="min-h-[91vh] gap-4 lg:grid lg:grid-cols-2">
