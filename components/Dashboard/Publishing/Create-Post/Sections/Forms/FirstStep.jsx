@@ -30,7 +30,9 @@ export default function FirstStep({ formStep, prevFormStep, nextFormStep, formDa
     if (event?.target.name !== 'logo') {
       setFormData({ ...formData, [event.target.name]: event.target.value })
     } else {
-      setFormData({ ...formData, logo: URL.createObjectURL(event.target.files[0]) })
+      if (event.target.name) {
+        setFormData({ ...formData, logo: URL?.createObjectURL(event.target.files[0]) })
+      }
     }
   }
 

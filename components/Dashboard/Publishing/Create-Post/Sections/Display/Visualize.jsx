@@ -55,7 +55,7 @@ const Visualize = ({ formData, setFormData }) => {
                     <div>
                       <MdCall />
                     </div>
-                    <div>CALL NOW</div>
+                    <div className="text-sm">CALL NOW</div>
                   </div>
                 </div>
               ) : null}
