@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.react-select__control {
+  width: 100%;
+  padding: 0.2rem 0.2rem;
+  background-color: #f9fafb !important;
+}
+.alert-border {
+  .react-select__control {
+    border: 1px solid #e12147 !important;
+  }
+}

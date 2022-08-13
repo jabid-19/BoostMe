@@ -8,7 +8,6 @@ const ForgetPassForm = () => {
   const [email, setEmail] = useState('')
 
   const loadLoginForm = () => {
-    console.log(visibleItem)
     setVisibleItem(false)
   }
 
