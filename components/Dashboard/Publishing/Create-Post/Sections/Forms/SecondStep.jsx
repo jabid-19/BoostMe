@@ -1,4 +1,6 @@
+import { useEffect, useState } from 'react'
 import { Controller, useForm } from 'react-hook-form'
+import InputEmoji from 'react-input-emoji'
 
 import Select from 'react-select'
 import { useFormData } from '../../../../../../context'
@@ -10,6 +12,7 @@ export default function SecondStep({
   formData,
   setFormData,
 }) {
+  const [emoteText, setEmoteText] = useState('')
   const { setFormValues, data } = useFormData()
 
   const {
@@ -43,6 +46,9 @@ export default function SecondStep({
     }
   }
 
+  useEffect(() => {
+    setFormData({ ...formData, caption: emoteText })
+  }, [emoteText, setFormData])
   return (
     <div className={`${formStep === 2 ? 'block' : 'hidden'}`}>
       <h2 className="text-center text-3xl font-bold text-neutral">2nd Step</h2>
@@ -51,28 +57,7 @@ export default function SecondStep({
           <label htmlFor="caption" className="inline-flex mb-2 text-xl font-bold text-neutral">
             Post Details
           </label>
-          <textarea
-            className={`
-                w-full
-                px-3
-                py-2
-                text-gray-800
-                border
-                rounded
-                outline-none
-                bg-gray-50
-                ${errors.caption?.message && 'border-error'}
-            `}
-            id="caption"
-            value={formData.caption}
-            type="textarea"
-            {...register('caption', {
-              required: 'Description is required',
-              onChange: (e) => {
-                handleChange(e)
-              },
-            })}
-          />
+          <InputEmoji onChange={setEmoteText} placeholder="Enter post details" borderRadius={7} />
           {errors.caption && <p className="text-error">{errors.caption?.message}</p>}
         </div>
         <div className="mb-6">
@@ -93,7 +78,7 @@ export default function SecondStep({
             `}
             id="media"
             type="file"
-            accept="image/png,image/jpeg"
+            accept="image/png,image/jpeg, image/webp"
             {...register('media', {
               required: 'Media is required',
               onChange: (e) => {

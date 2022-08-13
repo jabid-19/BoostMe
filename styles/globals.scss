@@ -12,3 +12,15 @@
     border: 1px solid #e12147 !important;
   }
 }
+
+.react-input-emoji--container {
+  margin-left: 0px !important;
+  .react-input-emoji--wrapper {
+    .react-input-emoji--input {
+      padding: 16px !important;
+      height: 50px !important;
+      background-color: #f9fafb !important;
+      overflow: hidden;
+    }
+  }
+}
