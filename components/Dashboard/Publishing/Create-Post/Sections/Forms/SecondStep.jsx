@@ -1,4 +1,5 @@
 import { Controller, useForm } from 'react-hook-form'
+
 import Select from 'react-select'
 import { useFormData } from '../../../../../../context'
 import NextPrev from './NextPrev'
@@ -19,8 +20,8 @@ export default function SecondStep({
   } = useForm({ mode: 'all' })
 
   const options = [
-    { value: 'Yes', label: 'yes' },
-    { value: 'No', label: 'No' },
+    { label: 'Yes', value: 'yes' },
+    { label: 'No', value: 'no' },
   ]
 
   const onSubmit = (values) => {
@@ -36,7 +37,6 @@ export default function SecondStep({
     if (event?.target.name !== 'media') {
       setFormData({ ...formData, [event.target.name]: event.target.value })
     } else {
-      console.log(event.target.name)
       if (event.target?.files[0]) {
         setFormData({ ...formData, media: URL?.createObjectURL(event.target?.files[0]) })
       }
@@ -93,6 +93,7 @@ export default function SecondStep({
             `}
             id="media"
             type="file"
+            accept="image/png,image/jpeg"
             {...register('media', {
               required: 'Media is required',
               onChange: (e) => {

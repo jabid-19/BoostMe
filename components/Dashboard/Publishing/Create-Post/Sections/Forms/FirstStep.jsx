@@ -61,6 +61,7 @@ export default function FirstStep({ formStep, prevFormStep, nextFormStep, formDa
                 ${errors.logo?.message && 'border-error'}
             `}
             id="logo"
+            accept="image/png,image/jpeg"
             type="file"
             {...register('logo', {
               required: 'Logo is required',
