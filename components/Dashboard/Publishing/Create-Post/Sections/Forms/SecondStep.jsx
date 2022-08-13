@@ -1,8 +1,7 @@
-import { useEffect, useState } from 'react'
-import { useForm } from 'react-hook-form'
+import { Controller, useForm } from 'react-hook-form'
+import Select from 'react-select'
 import { useFormData } from '../../../../../../context'
 import NextPrev from './NextPrev'
-
 export default function SecondStep({
   formStep,
   prevFormStep,
@@ -10,19 +9,27 @@ export default function SecondStep({
   formData,
   setFormData,
 }) {
-  const [chosenEmoji, setChosenEmoji] = useState(null)
-
   const { setFormValues, data } = useFormData()
 
   const {
+    control,
     handleSubmit,
     formState: { errors },
     register,
   } = useForm({ mode: 'all' })
 
+  const options = [
+    { value: 'Yes', label: 'yes' },
+    { value: 'No', label: 'No' },
+  ]
+
   const onSubmit = (values) => {
     setFormValues(values)
     nextFormStep()
+  }
+
+  const handleSelect = (event) => {
+    if (event?.value && event?.label) setFormData({ ...formData, sendMessage: event?.value })
   }
 
   const handleChange = (event) => {
@@ -35,15 +42,6 @@ export default function SecondStep({
       }
     }
   }
-  const onEmojiClick = (event, emojiObject) => {
-    setChosenEmoji(emojiObject)
-  }
-
-  useEffect(() => {
-    if (chosenEmoji) {
-      setFormData({ ...formData, caption: formData.caption + chosenEmoji.emoji })
-    }
-  }, [chosenEmoji])
 
   return (
     <div className={`${formStep === 2 ? 'block' : 'hidden'}`}>
@@ -103,6 +101,32 @@ export default function SecondStep({
             })}
           />
           {errors.media && <p className="text-error">{errors.media?.message}</p>}
+        </div>
+        <div className="mb-6">
+          <label htmlFor="sendMessage" className="inline-flex mb-2 text-xl font-bold text-neutral">
+            Message Option?
+          </label>
+          <Controller
+            name="sendMessage"
+            control={control}
+            rules={{ required: 'Message Option is required' }}
+            render={({ field }) => (
+              <Select
+                instanceId="sendMessage"
+                classNamePrefix="react-select"
+                className={`${errors.sendMessage?.message && 'alert-border'}`}
+                isClearable
+                {...field}
+                placeholder="Select Your option"
+                options={options}
+                onChange={(value) => {
+                  handleSelect(value)
+                  field.onChange(value)
+                }}
+              />
+            )}
+          />
+          {errors.sendMessage && <p className="text-error">{errors.sendMessage?.message}</p>}
         </div>
         <NextPrev formStep={formStep} prevFormStep={prevFormStep} />
       </form>

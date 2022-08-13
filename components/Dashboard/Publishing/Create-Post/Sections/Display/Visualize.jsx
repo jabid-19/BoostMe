@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 import { AiOutlineLike } from 'react-icons/ai'
-import { BiComment, BiShare } from 'react-icons/bi'
+import { BiComment, BiMessage, BiShare } from 'react-icons/bi'
 import { BsThreeDots } from 'react-icons/bs'
 import { FaTimes } from 'react-icons/fa'
 import { GoGlobe } from 'react-icons/go'
@@ -47,13 +47,7 @@ const Visualize = ({ formData, setFormData }) => {
               </div>
               <div className="">
                 {formData.media && (
-                  <Image
-                    src={formData?.media}
-                    width={500}
-                    height={400}
-                    alt="logo"
-                    className="rounded-full"
-                  />
+                  <Image src={formData?.media} width={500} height={400} alt="logo" />
                 )}
               </div>
             </div>
@@ -66,12 +60,21 @@ const Visualize = ({ formData, setFormData }) => {
                     <h5 className="text-md font-bold">{formData.pageName}</h5>
                     <p className="text-gray-600">{formData.pageCategory}</p>
                   </div>
-                  <div className="border-2 flex items-center gap-2 py-1 px-1 rounded-md">
-                    <div>
-                      <MdCall />
+                  {formData.sendMessage === 'Yes' ? (
+                    <div className="border-2 flex items-center gap-2 py-1 px-1 rounded-md">
+                      <div>
+                        <MdCall />
+                      </div>
+                      <div className="text-sm">CALL NOW</div>
                     </div>
-                    <div className="text-sm">CALL NOW</div>
-                  </div>
+                  ) : (
+                    <div className="border-2 flex items-center gap-2 py-1 px-1 rounded-md">
+                      <div>
+                        <BiMessage />
+                      </div>
+                      <div className="text-sm">SEND MESSAGE</div>
+                    </div>
+                  )}
                 </div>
               ) : null}
             </div>
