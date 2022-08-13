@@ -239,7 +239,7 @@ const Facebook = () => {
         </div>
         <div className="lg:grid grid-cols-1 md:grid-cols-2 md:gap-y-20 lg:grid-cols-3 ">
           <div>
-            <h1 className="text-sky-400/100 font-bold">Month wise Sell</h1>
+            <h1 className="text-secondary font-bold">Month wise Sell</h1>
             <ResponsiveContainer width="80%" height={400}>
               <LineChart
                 className="mx-auto"
@@ -255,12 +255,12 @@ const Facebook = () => {
                 <YAxis />
                 <Tooltip />
                 <Legend />
-                <Line type="monotone" dataKey="sell" stroke="#8884d8" activeDot={{ r: 8 }} />
+                <Line type="monotone" dataKey="sell" stroke="#E1306C" activeDot={{ r: 8 }} />
               </LineChart>
             </ResponsiveContainer>
           </div>
           <div>
-            <h1 className="text-sky-400/100 font-bold">Investment vs Revenue</h1>
+            <h1 className="text-secondary font-bold">Investment vs Revenue</h1>
             <ResponsiveContainer width="80%" height={400}>
               <AreaChart
                 className="mx-auto"
@@ -280,21 +280,21 @@ const Facebook = () => {
                   type="monotone"
                   dataKey="investment"
                   stackId="1"
-                  stroke="#8884d8"
-                  fill="#8884d8"
+                  stroke="#E1306C"
+                  fill="#FCAF45"
                 />
                 <Area
                   type="monotone"
                   dataKey="revenue"
                   stackId="1"
-                  stroke="#82ca9d"
-                  fill="#82ca9d"
+                  stroke="#FCAF45"
+                  fill="#E1306C"
                 />
               </AreaChart>
             </ResponsiveContainer>
           </div>
           <div>
-            <h1 className="text-sky-400/100 font-bold">Investment vs Revenue</h1>
+            <h1 className="text-secondary font-bold">Investment vs Revenue</h1>
             <ResponsiveContainer width="80%" height={400}>
               <BarChart
                 className="mx-auto"
@@ -308,8 +308,8 @@ const Facebook = () => {
                 <YAxis />
                 <Tooltip />
                 <Legend />
-                <Bar dataKey="investment" stackId="a" fill="#8884d8" />
-                <Bar dataKey="revenue" stackId="a" fill="#82ca9d" />
+                <Bar dataKey="investment" stackId="a" fill="#E1306C" />
+                <Bar dataKey="revenue" stackId="a" fill="#FCAF45" />
               </BarChart>
             </ResponsiveContainer>
           </div>
