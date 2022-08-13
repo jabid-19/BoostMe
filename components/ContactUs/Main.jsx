@@ -11,7 +11,9 @@ import {
 import { BsPhone } from 'react-icons/bs'
 import imageLoader from '../../helper/imageLoader'
 import BoxBackground2 from '../../public/common/BoxBackground2.png'
-import Contact from '../../public/contact-us/contact-us-transparent.png'
+import Contact from '../../public/contact-us/contact.png'
+
+import { contact } from '../../src/backend/Contact'
 
 const ContactUsMain = () => {
   const {
@@ -45,7 +47,17 @@ const ContactUsMain = () => {
       link: 'https://www.linkedin.com/',
     },
   ]
-  const onSubmit = (data) => {}
+  const onSubmit = async (data) => {
+    const response = await contact(data)
+    // console.log(response)
+
+    if (response.status == 200 || response.status == 201) {
+      console.log('Successfully sent your query. Thank you')
+    } else {
+      console.log(response.data.error)
+    }
+  }
+
   return (
     <div className="relative w-full mb-20">
       <div data-aos="fade-right" className="hidden lg:block lg:absolute lg:left-0 lg:-top-14">
