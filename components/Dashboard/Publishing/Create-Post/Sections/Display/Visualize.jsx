@@ -41,19 +41,14 @@ const Visualize = ({ formData, setFormData }) => {
             </div>
 
             {/* second section */}
-            <div className="h-3/6 w-full px-4">
-              <div className="h-1/6 text-start overflow-x-auto">
+            <div className="h-auto w-full px-4">
+              <div className="text-start overflow-x-auto">
                 {formData.caption && <p>{formData.caption}</p>}
               </div>
-              {/* <div className="flex flex-col">
-                {formData.media.length > 1 &&
-                  formData.media?.map((media, index) => (
-                    <Image key={index} src={media} width={500} height={400} alt="logo" />
-                  ))}
-              </div> */}
+
               {/* for image more than 4 */}
               {formData.media.length > 4 && (
-                <div className="grid grid-cols-2 gap-2 h-full">
+                <div className="grid grid-cols-2 gap-2">
                   <div className="">
                     <Image
                       src={formData?.media[0]}
@@ -102,6 +97,8 @@ const Visualize = ({ formData, setFormData }) => {
                   </div>
                 </div>
               )}
+
+              {/* image equal 4 */}
               {formData.media.length === 4 && (
                 <div className="grid grid-cols-2 gap-2 h-full">
                   <div className="">
@@ -144,6 +141,8 @@ const Visualize = ({ formData, setFormData }) => {
                   </div>
                 </div>
               )}
+
+              {/* image equal 3 */}
               {formData.media.length === 3 && (
                 <div className="grid grid-cols-2 gap-2 h-full">
                   <div className="">
@@ -177,6 +176,8 @@ const Visualize = ({ formData, setFormData }) => {
                   </div>
                 </div>
               )}
+
+              {/* image equal 2 */}
               {formData.media.length === 2 && (
                 <div className="grid grid-cols-2 gap-2 h-full">
                   <div className="">
@@ -199,6 +200,8 @@ const Visualize = ({ formData, setFormData }) => {
                   </div>
                 </div>
               )}
+
+              {/* image equal 1 */}
               {formData.media.length === 1 && (
                 <div className="grid  h-full">
                   <Image
