@@ -6,6 +6,11 @@ import { BsThreeDots } from 'react-icons/bs'
 import { FaTimes } from 'react-icons/fa'
 import { GoGlobe } from 'react-icons/go'
 import { MdCall } from 'react-icons/md'
+import Four from './ImageSection/Four'
+import FourOrMore from './ImageSection/FourOrMore'
+import One from './ImageSection/One'
+import Three from './ImageSection/Three'
+import Two from './ImageSection/Two'
 const Visualize = ({ formData, setFormData }) => {
   return (
     <div>
@@ -42,181 +47,27 @@ const Visualize = ({ formData, setFormData }) => {
 
             {/* second section */}
             <div className="h-4/6 w-full px-4">
-              <div className="text-start h-20 flex items-center overflow-y-auto break-words">
+              <div className="text-start break-words h-20 flex items-center overflow-y-auto ">
                 {formData.caption && <p>{formData.caption}</p>}
               </div>
-
               {/* for image more than 4 */}
-              {formData.media.length > 4 && (
-                <div className="grid grid-cols-2 gap-1">
-                  <div className="">
-                    <Image
-                      src={formData?.media[0]}
-                      width={500}
-                      height={1000}
-                      alt="logo"
-                      className="object-cover"
-                    />
-                  </div>
-                  <div className="grid-rows-3 h-full">
-                    <div className="h-1/3">
-                      <Image
-                        src={formData?.media[1]}
-                        width={500}
-                        height={320}
-                        alt="logo"
-                        className="object-cover"
-                      />
-                    </div>
-                    <div className="h-1/3">
-                      <Image
-                        src={formData?.media[2]}
-                        width={500}
-                        height={320}
-                        alt="logo"
-                        className="object-cover"
-                      />
-                    </div>
-                    <div className="h-1/3 relative">
-                      <div>
-                        <Image
-                          src={formData?.media[3]}
-                          width={500}
-                          height={320}
-                          alt="logo"
-                          className="object-cover"
-                          style={{ filter: 'brightness(0.5)' }}
-                        />
-                      </div>
-                      <div className="absolute top-[25%] left-[40%] bg-#696969 z-[1000] h-[200px]  border-primary">
-                        <h1 className="text-2xl text-white font-semibold">
-                          +{formData.media.length - 3}
-                        </h1>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              )}
+              {formData.media.length > 4 && <FourOrMore formData={formData} />}
 
               {/* image equal 4 */}
-              {formData.media.length === 4 && (
-                <div className="grid grid-cols-2 gap-1">
-                  <div className="">
-                    <Image
-                      src={formData?.media[0]}
-                      width={500}
-                      height={1000}
-                      alt="logo"
-                      className="object-cover"
-                    />
-                  </div>
-                  <div className="grid-rows-3">
-                    <div className="h-1/3">
-                      <Image
-                        src={formData?.media[1]}
-                        width={500}
-                        height={320}
-                        alt="logo"
-                        className="object-cover"
-                      />
-                    </div>
-                    <div className="h-1/3">
-                      <Image
-                        src={formData?.media[2]}
-                        width={500}
-                        height={320}
-                        alt="logo"
-                        className="object-cover"
-                      />
-                    </div>
-                    <div className="h-1/3 relative">
-                      <Image
-                        src={formData?.media[3]}
-                        width={500}
-                        height={320}
-                        alt="logo"
-                        className="object-cover"
-                      />
-                    </div>
-                  </div>
-                </div>
-              )}
+              {formData.media.length === 4 && <Four formData={formData} />}
 
               {/* image equal 3 */}
-              {formData.media.length === 3 && (
-                <div className="grid grid-cols-2 gap-1">
-                  <div className="">
-                    <Image
-                      src={formData?.media[0]}
-                      width={500}
-                      height={1000}
-                      alt="logo"
-                      className="object-cover"
-                    />
-                  </div>
-                  <div className="grid-rows-2 h-full">
-                    <div className="h-1/2">
-                      <Image
-                        src={formData?.media[1]}
-                        width={500}
-                        height={500}
-                        alt="logo"
-                        className="object-cover"
-                      />
-                    </div>
-                    <div className="h-1/2">
-                      <Image
-                        src={formData?.media[2]}
-                        width={500}
-                        height={500}
-                        alt="logo"
-                        className="object-cover"
-                      />
-                    </div>
-                  </div>
-                </div>
-              )}
+              {formData.media.length === 3 && <Three formData={formData} />}
 
               {/* image equal 2 */}
-              {formData.media.length === 2 && (
-                <div className="grid grid-cols-2 gap-1 h-full">
-                  <div className="">
-                    <Image
-                      src={formData?.media[0]}
-                      width={500}
-                      height={1000}
-                      alt="logo"
-                      className="object-cover"
-                    />
-                  </div>
-                  <div>
-                    <Image
-                      src={formData?.media[1]}
-                      width={500}
-                      height={1000}
-                      alt="logo"
-                      className="object-cover"
-                    />
-                  </div>
-                </div>
-              )}
+              {formData.media.length === 2 && <Two formData={formData} />}
 
               {/* image equal 1 */}
-              {formData.media.length === 1 && (
-                <div className="grid">
-                  <Image
-                    src={formData?.media[0]}
-                    width={1000}
-                    height={1000}
-                    alt="logo"
-                    className="object-cover"
-                  />
-                </div>
-              )}
+              {formData.media.length === 1 && <One formData={formData} />}
             </div>
             {/* third section */}
 
-            <div className="h-auto mt-2 w-full ">
+            <div className="h-1/6 mt-2 w-full ">
               {formData.pageCategory && formData.pageName ? (
                 <div className="px-4 flex  justify-between items-center mt-6 gap-4 h-1/6 ">
                   <div>
@@ -243,7 +94,7 @@ const Visualize = ({ formData, setFormData }) => {
               ) : null}
             </div>
             {/* last section */}
-            <div className="w-full px-4 flex justify-between items-center gap-4 border-t-2 h-0.5/6">
+            <div className="w-full px-4  flex justify-between items-center gap-4 border-t-2 h-0.5/6">
               <div className="flex items-center gap-2">
                 <AiOutlineLike />
                 Like
