@@ -15,6 +15,7 @@ export default function SecondStep({
   const [emoteText, setEmoteText] = useState('')
   const { setFormValues, data } = useFormData()
   const image = []
+  const video = []
   const {
     control,
     handleSubmit,
@@ -36,19 +37,30 @@ export default function SecondStep({
     if (event?.value && event?.label) setFormData({ ...formData, sendMessage: event?.value })
   }
 
+  // preview sections
   const handleChange = (event) => {
     if (event?.target.name !== 'media') {
       setFormData({ ...formData, [event.target.name]: event.target.value })
     } else {
       if (event.target.files.length > 1) {
         Object.values(event.target.files).forEach((file) => {
-          image.push(URL.createObjectURL(file))
-          setFormData({ ...formData, [event.target.name]: image })
+          if (file?.type?.split('/')[0] !== 'video') {
+            image.push(URL.createObjectURL(file))
+            setFormData({ ...formData, [event.target.name]: image })
+          } else {
+            video.push(file)
+            setFormData({ ...formData, [event.target.name]: [...image, ...video] })
+          }
         })
       } else {
         if (event.target.files[0]) {
-          image.push(URL.createObjectURL(event.target.files[0]))
-          setFormData({ ...formData, [event.target.name]: image })
+          if (event.target.files[0]?.type.split('/')[0] !== 'video') {
+            image.push(URL?.createObjectURL(event.target.files[0]))
+            setFormData({ ...formData, [event.target.name]: image })
+          } else {
+            video.push(event.target.files[0])
+            setFormData({ ...formData, [event.target.name]: video })
+          }
         }
       }
     }
@@ -57,7 +69,7 @@ export default function SecondStep({
   useEffect(() => {
     setFormData({ ...formData, caption: emoteText })
   }, [emoteText, setFormData])
-  console.log(formData)
+
   return (
     <div className={`${formStep === 2 ? 'block' : 'hidden'}`}>
       <h2 className="text-center text-3xl font-bold text-neutral">2nd Step</h2>
