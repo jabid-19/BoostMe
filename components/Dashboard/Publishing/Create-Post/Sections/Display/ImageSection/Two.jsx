@@ -1,7 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
 const Two = ({ formData }) => {
-  console.log(formData)
   return (
     <div className="grid grid-cols-2 gap-1 h-full">
       {formData.media[0]?.type?.split('/')[0] === 'video' ? (
