@@ -83,8 +83,8 @@ const Calendar = () => {
           endAccessor="end"
           style={{ height: '80vh' }}
           onSelectSlot={onSelectSlot}
-          popup
           resizable
+          // min={new Date()}
         />
       </div>
       {isOpen && (
