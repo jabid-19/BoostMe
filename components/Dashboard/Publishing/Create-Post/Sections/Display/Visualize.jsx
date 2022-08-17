@@ -41,7 +41,7 @@ const Visualize = ({ formData, setFormData }) => {
             </div>
 
             {/* second section */}
-            <div className="h-auto w-full px-4">
+            <div className="h-4/6 w-full px-4">
               <div className="text-start overflow-x-auto">
                 {formData.caption && <p>{formData.caption}</p>}
               </div>
@@ -100,7 +100,7 @@ const Visualize = ({ formData, setFormData }) => {
 
               {/* image equal 4 */}
               {formData.media.length === 4 && (
-                <div className="grid grid-cols-2 gap-2 h-full">
+                <div className="grid grid-cols-2 gap-2">
                   <div className="">
                     <Image
                       src={formData?.media[0]}
@@ -110,7 +110,7 @@ const Visualize = ({ formData, setFormData }) => {
                       className="object-cover"
                     />
                   </div>
-                  <div className="grid-rows-3 h-full">
+                  <div className="grid-rows-3">
                     <div className="h-1/3">
                       <Image
                         src={formData?.media[1]}
@@ -189,7 +189,7 @@ const Visualize = ({ formData, setFormData }) => {
                       className="object-cover"
                     />
                   </div>
-                  <div className="h-full">
+                  <div>
                     <Image
                       src={formData?.media[1]}
                       width={500}
@@ -203,10 +203,10 @@ const Visualize = ({ formData, setFormData }) => {
 
               {/* image equal 1 */}
               {formData.media.length === 1 && (
-                <div className="grid  h-full">
+                <div className="grid">
                   <Image
                     src={formData?.media[0]}
-                    width={500}
+                    width={1000}
                     height={1000}
                     alt="logo"
                     className="object-cover"
@@ -216,7 +216,7 @@ const Visualize = ({ formData, setFormData }) => {
             </div>
             {/* third section */}
 
-            <div className="h-1/6 mt-2  mb-2 w-full ">
+            <div className="h-1/6 mt-2 mb-2 w-full ">
               {formData.pageCategory && formData.pageName ? (
                 <div className="px-4 flex  justify-between items-center mt-6 gap-4 h-1/6 ">
                   <div>
