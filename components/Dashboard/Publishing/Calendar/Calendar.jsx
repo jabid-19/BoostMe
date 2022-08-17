@@ -2,7 +2,9 @@ import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { Calendar as BigCalendar, momentLocalizer, Views } from 'react-big-calendar'
 import moment from 'moment'
 import 'react-big-calendar/lib/css/react-big-calendar.css'
+// import 'react-big-calendar/lib/sass/styles'
 const localizer = momentLocalizer(moment)
+console.log('localizer', localizer)
 // const myEventsList = [
 //   { id: 0, start: new Date(), end: new Date(), title: 'special event' },
 //   { id: 1, start: new Date(), end: new Date(), title: 'special event2' },
@@ -59,31 +61,118 @@ const localizer = momentLocalizer(moment)
 const Calendar = () => {
   const [isOpen, setIsOpen] = useState(false)
 
+  const CURRENT_DATE = moment().toDate()
+  console.log('current date', CURRENT_DATE)
+
   const onSelectSlot = (event) => {
     // window.alert('Slot is selected')
-    // console.log(event)
-    setIsOpen(true)
+    console.log('Event', event)
+    if (moment(event.start).isBefore(CURRENT_DATE, 'day')) {
+      setIsOpen(false)
+    } else setIsOpen(true)
   }
 
   const isOpenState = () => {
     setIsOpen(false)
   }
 
+  // example implementation of a wrapper
+  // const ColoredDateCellWrapper = ({ children, value }) =>
+  //   React.cloneElement(Children.only(children), {
+  //     style: {
+  //       ...children.style,
+  //       backgroundColor: value < CURRENT_DATE ? 'lightgreen' : 'lightblue',
+  //     },
+  //   })
+  // const today = new Date()
+  // const day = today.getDay()
+  const dayPropGetter = (date) => {
+    let backgroundColor
+    let opacity
+    let color
+    let cursor
+
+    if (moment(date).isBefore(CURRENT_DATE, 'day')) {
+      backgroundColor = '#e8e8e8'
+      // opacity = 0.5
+      cursor = 'default'
+    }
+    if (moment(date).isSameOrAfter(CURRENT_DATE, 'day')) {
+      cursor = 'pointer'
+    }
+    if (moment(date).isSame(CURRENT_DATE, 'day')) {
+      backgroundColor = '#E1306C'
+      opacity = 0.5
+      color = 'white'
+    }
+    // if (moment(date).isBefore(CURRENT_DATE, 'month')) {
+    //   backgroundColor = '#FCAF45'
+    //   opacity = 0.25
+    // }
+    // if (moment(date).isAfter(CURRENT_DATE, 'month')) {
+    //   backgroundColor = '#FCAF45'
+    //   opacity = 0.5
+    // }
+    var style = {
+      backgroundColor,
+      opacity,
+      color,
+      cursor,
+    }
+    return {
+      style: style,
+    }
+    // ...(moment(date).day() < day && {
+    //   style: {
+    //     backgroundColor: 'red',
+    //     color: 'white',
+    //   },
+    // }),
+  }
+
+  // const slotPropGetter = (date) => {
+  //   const CURRENT_DATE = moment().toDate()
+  //   let backgroundColor
+
+  //   if (moment(date).isBefore(CURRENT_DATE, 'month')) {
+  //     backgroundColor = '#f7f8f9'
+  //   }
+
+  //   var style = {
+  //     backgroundColor,
+  //   }
+  //   return {
+  //     style: style,
+  //   }
+  // }
+
   return (
     <div>
       <div className="-z-50">
         <BigCalendar
-          // steps={60}
+          // steps={30}
           selectable={true}
           localizer={localizer}
-          // events={myEventsList}
-          defaultView={Views.WEEK}
+          // events={events}
+          defaultView={Views.MONTH}
           views={[Views.WEEK, Views.MONTH, Views.AGENDA]}
           startAccessor="start"
           endAccessor="end"
-          style={{ height: '80vh' }}
+          style={{ height: '78vh' }}
           onSelectSlot={onSelectSlot}
           resizable
+          // slotPropGetter={slotPropGetter}
+          dayPropGetter={dayPropGetter}
+          // components={{
+          //   dateCellWrapper: function dateCellWrapperFunction() {
+          //     return <div className="bg-primary">click</div>
+          //   },
+          // }}
+          // components={{
+          //   // you have to pass your custom wrapper here
+          //   // so that it actually gets used
+          //   dateCellWrapper: ColoredDateCellWrapper,
+          // }}
           // min={new Date()}
         />
       </div>
