@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
-const Two = () => {
+const Two = ({ formData }) => {
   return (
     <div className="grid grid-cols-2 gap-1 h-full">
       <div className="">

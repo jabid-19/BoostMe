@@ -17,9 +17,9 @@ const Visualize = ({ formData, setFormData }) => {
       <div className="mockup-phone border-primary">
         <div className="camera"></div>
         <div className="display">
-          <div className="artboard artboard-demo phone-1 justify-start min-h-[600px]">
+          <div className="artboard artboard-demo phone-1 justify-start min-h-[650px]">
             {/* top section */}
-            <div className="h-1/6 mt-8 w-full">
+            <div className="h-[10%] mt-8 w-full">
               {formData.logo ? (
                 <div className="flex justify-between items-center gap-2 px-4">
                   <div className="flex items-center gap-2">
@@ -47,7 +47,7 @@ const Visualize = ({ formData, setFormData }) => {
 
             {/* second section */}
             <div className="h-4/6 w-full px-4">
-              <div className="text-start break-words h-20 flex items-center overflow-y-auto ">
+              <div className="text-start break-words h-20 flex items-center overflow-y-auto">
                 {formData.caption && <p>{formData.caption}</p>}
               </div>
               {/* for image more than 4 */}
