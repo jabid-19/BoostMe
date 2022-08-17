@@ -12,7 +12,7 @@ const Visualize = ({ formData, setFormData }) => {
       <div className="mockup-phone border-primary">
         <div className="camera"></div>
         <div className="display">
-          <div className="artboard artboard-demo phone-1 justify-start h-full">
+          <div className="artboard artboard-demo phone-1 justify-start min-h-[600px]">
             {/* top section */}
             <div className="h-1/6 mt-8 w-full">
               {formData.logo ? (
@@ -42,13 +42,13 @@ const Visualize = ({ formData, setFormData }) => {
 
             {/* second section */}
             <div className="h-4/6 w-full px-4">
-              <div className="text-start overflow-x-auto">
+              <div className="text-start h-20 flex items-center overflow-y-auto break-words">
                 {formData.caption && <p>{formData.caption}</p>}
               </div>
 
               {/* for image more than 4 */}
               {formData.media.length > 4 && (
-                <div className="grid grid-cols-2 gap-2">
+                <div className="grid grid-cols-2 gap-1">
                   <div className="">
                     <Image
                       src={formData?.media[0]}
@@ -88,8 +88,8 @@ const Visualize = ({ formData, setFormData }) => {
                           style={{ filter: 'brightness(0.5)' }}
                         />
                       </div>
-                      <div className="absolute top-[25%] left-[30%] bg-#696969 z-[1000] h-[200px]  border-primary">
-                        <h1 className="text-3xl text-white font-bold">
+                      <div className="absolute top-[25%] left-[40%] bg-#696969 z-[1000] h-[200px]  border-primary">
+                        <h1 className="text-2xl text-white font-semibold">
                           +{formData.media.length - 3}
                         </h1>
                       </div>
@@ -100,7 +100,7 @@ const Visualize = ({ formData, setFormData }) => {
 
               {/* image equal 4 */}
               {formData.media.length === 4 && (
-                <div className="grid grid-cols-2 gap-2">
+                <div className="grid grid-cols-2 gap-1">
                   <div className="">
                     <Image
                       src={formData?.media[0]}
@@ -144,7 +144,7 @@ const Visualize = ({ formData, setFormData }) => {
 
               {/* image equal 3 */}
               {formData.media.length === 3 && (
-                <div className="grid grid-cols-2 gap-2 h-full">
+                <div className="grid grid-cols-2 gap-1">
                   <div className="">
                     <Image
                       src={formData?.media[0]}
@@ -179,7 +179,7 @@ const Visualize = ({ formData, setFormData }) => {
 
               {/* image equal 2 */}
               {formData.media.length === 2 && (
-                <div className="grid grid-cols-2 gap-2 h-full">
+                <div className="grid grid-cols-2 gap-1 h-full">
                   <div className="">
                     <Image
                       src={formData?.media[0]}
@@ -216,7 +216,7 @@ const Visualize = ({ formData, setFormData }) => {
             </div>
             {/* third section */}
 
-            <div className="h-1/6 mt-2 mb-2 w-full ">
+            <div className="h-auto mt-2 w-full ">
               {formData.pageCategory && formData.pageName ? (
                 <div className="px-4 flex  justify-between items-center mt-6 gap-4 h-1/6 ">
                   <div>
@@ -243,7 +243,7 @@ const Visualize = ({ formData, setFormData }) => {
               ) : null}
             </div>
             {/* last section */}
-            <div className="w-full px-4 pt-4 flex justify-between items-center gap-4  border-t-2 h-0.5/6">
+            <div className="w-full px-4 flex justify-between items-center gap-4 border-t-2 h-0.5/6">
               <div className="flex items-center gap-2">
                 <AiOutlineLike />
                 Like

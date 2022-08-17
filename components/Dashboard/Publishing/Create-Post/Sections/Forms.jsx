@@ -5,7 +5,7 @@ import SecondStep from './Forms/SecondStep'
 import ThirdStep from './Forms/ThirdStep'
 
 const Forms = ({ formData, setFormData }) => {
-  const [formStep, setFormStep] = useState(1)
+  const [formStep, setFormStep] = useState(2)
 
   const nextFormStep = () => setFormStep((currentStep) => currentStep + 1)
 
