@@ -8,6 +8,7 @@ const CreatePostCreate = () => {
     logo: '',
     category: '',
     pageUrl: '',
+    media: [],
   })
   return (
     <div className="flex justify-center items-center gap-5 w-full">

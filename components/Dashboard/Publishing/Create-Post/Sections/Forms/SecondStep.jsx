@@ -14,7 +14,7 @@ export default function SecondStep({
 }) {
   const [emoteText, setEmoteText] = useState('')
   const { setFormValues, data } = useFormData()
-
+  const image = []
   const {
     control,
     handleSubmit,
@@ -40,8 +40,16 @@ export default function SecondStep({
     if (event?.target.name !== 'media') {
       setFormData({ ...formData, [event.target.name]: event.target.value })
     } else {
-      if (event.target?.files[0]) {
-        setFormData({ ...formData, media: URL?.createObjectURL(event.target?.files[0]) })
+      if (event.target.files.length > 1) {
+        Object.values(event.target.files).forEach((file) => {
+          image.push(URL.createObjectURL(file))
+          setFormData({ ...formData, [event.target.name]: image })
+        })
+      } else {
+        if (event.target.files[0]) {
+          image.push(URL.createObjectURL(event.target.files[0]))
+          setFormData({ ...formData, [event.target.name]: image })
+        }
       }
     }
   }
@@ -49,6 +57,7 @@ export default function SecondStep({
   useEffect(() => {
     setFormData({ ...formData, caption: emoteText })
   }, [emoteText, setFormData])
+  console.log(formData)
   return (
     <div className={`${formStep === 2 ? 'block' : 'hidden'}`}>
       <h2 className="text-center text-3xl font-bold text-neutral">2nd Step</h2>
@@ -78,7 +87,8 @@ export default function SecondStep({
             `}
             id="media"
             type="file"
-            accept="image/png,image/jpeg, image/webp"
+            multiple
+            // accept="image/png, image/jpeg, image/webp, video/*"
             {...register('media', {
               required: 'Media is required',
               onChange: (e) => {
