@@ -88,7 +88,7 @@ const Visualize = ({ formData, setFormData }) => {
                           style={{ filter: 'brightness(0.5)' }}
                         />
                       </div>
-                      <div className="absolute top-[25%] left-[35%] bg-#696969 z-[1000] h-[200px]  border-primary">
+                      <div className="absolute top-[25%] left-[30%] bg-#696969 z-[1000] h-[200px]  border-primary">
                         <h1 className="text-3xl text-white font-bold">
                           +{formData.media.length - 3}
                         </h1>
