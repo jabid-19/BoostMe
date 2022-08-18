@@ -22,6 +22,7 @@ export default function FirstStep({ formStep, prevFormStep, nextFormStep, formDa
     const formData = new FormData()
     formData.append('file', values.logo[0])
     values.logo = formData
+    values.category = values?.category.value
     setFormValues(values)
     nextFormStep()
   }

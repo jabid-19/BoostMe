@@ -5,16 +5,10 @@ export default function ThirdStep({ formStep, prevFormStep, nextFormStep, formDa
   const { setFormValues, data } = useFormData()
 
   const {
-    control,
     handleSubmit,
     formState: { errors },
     register,
   } = useForm({ mode: 'all' })
-
-  const options = [
-    { value: 'Yes', label: 'yes' },
-    { value: 'No', label: 'No' },
-  ]
 
   const onSubmit = (values) => {
     setFormValues(values)
@@ -24,6 +18,7 @@ export default function ThirdStep({ formStep, prevFormStep, nextFormStep, formDa
   const handleChange = (event) => {
     setFormData({ ...formData, [event.target.name]: event.target.value })
   }
+
   return (
     <div className={`${formStep === 3 ? 'block' : 'hidden'}`}>
       <h2 className="text-center text-3xl font-bold text-neutral">2nd Step</h2>
@@ -76,6 +71,32 @@ export default function ThirdStep({ formStep, prevFormStep, nextFormStep, formDa
             })}
           />
           {errors.location && <p className="text-error">{errors.location.message}</p>}
+        </div>
+        <div className="mb-6">
+          <label
+            htmlFor="contractNumber"
+            className="inline-flex mb-2 text-xl font-bold text-neutral">
+            Contract Number
+          </label>
+          <input
+            className={` w-full
+                px-3
+                py-2
+                text-gray-800
+                border
+                rounded
+                outline-none
+                bg-gray-50
+                ${errors.contractNumber?.message ? 'border-error' : ''}`}
+            id="contractNumber"
+            {...register('contractNumber', {
+              required: 'Contract Number is required',
+              onChange: (e) => {
+                handleChange(e)
+              },
+            })}
+          />
+          {errors.contractNumber && <p className="text-error">{errors.contractNumber.message}</p>}
         </div>
         <NextPrev formStep={formStep} prevFormStep={prevFormStep} />
       </form>

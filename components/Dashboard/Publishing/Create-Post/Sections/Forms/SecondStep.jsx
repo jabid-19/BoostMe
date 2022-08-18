@@ -14,6 +14,7 @@ export default function SecondStep({
 }) {
   const [emoteText, setEmoteText] = useState('')
   const { setFormValues, data } = useFormData()
+  const [media, setMedia] = useState([])
   const image = []
   const video = []
   const {
@@ -29,6 +30,13 @@ export default function SecondStep({
   ]
 
   const onSubmit = (values) => {
+    values.description = emoteText
+    const formData = new FormData()
+    media?.map((file, index) => {
+      formData.append(`media${index}`, file)
+    })
+    values.media = formData
+    values.sendMessage = values?.sendMessage?.value
     setFormValues(values)
     nextFormStep()
   }
@@ -39,6 +47,7 @@ export default function SecondStep({
 
   // preview sections
   const handleChange = (event) => {
+    setMedia([...media, ...event.target.files])
     if (event?.target.name !== 'media') {
       setFormData({ ...formData, [event.target.name]: event.target.value })
     } else {
