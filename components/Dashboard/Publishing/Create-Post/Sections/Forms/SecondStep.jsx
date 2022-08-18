@@ -78,7 +78,7 @@ export default function SecondStep({
   useEffect(() => {
     setFormData({ ...formData, caption: emoteText })
   }, [emoteText, setFormData])
-  console.log(formData)
+
   return (
     <div className={`${formStep === 2 ? 'block' : 'hidden'}`}>
       <h2 className="text-center text-3xl font-bold text-neutral">2nd Step</h2>
