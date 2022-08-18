@@ -11,16 +11,14 @@ const DashboardMain = ({ selectedTabs, open, setOpen }) => {
   // functions
   const subPath = sectionPath(router.pathname)
 
-  // eslint-disable-next-line react/display-name
-  const MyMenuList = React.forwardRef(({ item }, ref) => {
-    return (
+  const generateMenuItem = (item) => (
+    <Link href={item?.route || '/dashboard/analytics'} key={item.title} passHref>
       <div>
         <a
           className={`text-white text-sm flex flex-wrap items-center gap-x-4 cursor-pointer p-2 hover:bg-secondary rounded-md ${
             item.gap ? 'mt-9' : 'mt-2'
           } ${item.title === (selectedSection || subPath) && 'bg-secondary'}`}
           href={item.route || '/dashboard/analytics'}
-          ref={ref}
           onClick={() => setSelectedSection(item.title)}>
           {item.icon}
           <span className={`${!open && 'hidden'} origin-left duration-200 text-xl`}>
@@ -28,11 +26,6 @@ const DashboardMain = ({ selectedTabs, open, setOpen }) => {
           </span>
         </a>
       </div>
-    )
-  })
-  const generateMenuItem = (item) => (
-    <Link href={item?.route || '/dashboard/analytics'} key={item.title} passHref>
-      <MyMenuList item={item} />
     </Link>
   )
   const generateMenu = selectedTabs?.map((route) => {
