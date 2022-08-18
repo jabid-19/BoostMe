@@ -13,6 +13,8 @@ import imageLoader from '../../helper/imageLoader'
 import BoxBackground2 from '../../public/common/BoxBackground2.png'
 import Contact from '../../public/contact-us/contact.png'
 
+import { contact } from '../../src/backend/Contact'
+
 const ContactUsMain = () => {
   const {
     register,
@@ -45,10 +47,20 @@ const ContactUsMain = () => {
       link: 'https://www.linkedin.com/',
     },
   ]
-  const onSubmit = (data) => {}
+  const onSubmit = async (data) => {
+    const response = await contact(data)
+    // console.log(response)
+
+    if (response.status == 200 || response.status == 201) {
+      console.log('Successfully sent your query. Thank you')
+    } else {
+      console.log(response.data.error)
+    }
+  }
+
   return (
-    <div className="relative w-full mb-20 lg:mb-0">
-      <div className="hidden lg:block lg:absolute lg:left-0 lg:-top-14">
+    <div className="relative w-full mb-20">
+      <div data-aos="fade-right" className="hidden lg:block lg:absolute lg:left-0 lg:-top-14">
         <Image
           src={BoxBackground2}
           width={400}
@@ -59,7 +71,9 @@ const ContactUsMain = () => {
       </div>
       <div className="w-auto mx-6 mt-12 lg:min-h-[85vh] lg:mt-16 2xl:w-[1000px] 2xl:mx-auto">
         <div className="flex flex-col gap-10 w-full lg:flex-row">
-          <div className="w-[90%] mx-auto flex flex-col justify-center item-center lg:w-1/2 lg:mt-10 3xl:mt-0">
+          <div
+            data-aos="fade-right"
+            className="w-[90%] mx-auto flex flex-col justify-center item-center lg:w-1/2 lg:mt-10 3xl:mt-0">
             <h1 className="text-3xl text-neutral font-bold">Send a Message</h1>
             <form onSubmit={handleSubmit(onSubmit)} className="mt-10">
               <div className="mb-5">
@@ -133,35 +147,39 @@ const ContactUsMain = () => {
               />
             </form>
           </div>
-          <div className="w-[95%] mx-auto flex flex-col bg-primary rounded-lg p-8 lg:w-1/2">
-            <h1 className="text-3xl text-white font-bold">Contact Info</h1>
-            <div className="text-white mt-10">
-              <BsPhone className="inline-block mr-2" size={30} />
-              <a href="tel:+880 123456789" className="text-xl">
-                +880 123456789
-              </a>
+          <div
+            data-aos="fade-left"
+            className="w-[95%] mx-auto flex flex-col bg-primary rounded-lg p-8 lg:w-1/2">
+            <div className="mx-auto">
+              <h1 className="text-3xl text-white font-bold">Contact Info</h1>
+              <div className="text-white mt-10">
+                <BsPhone className="inline-block mr-2" size={30} />
+                <a href="tel:+880 123456789" className="text-xl">
+                  +880 123456789
+                </a>
+              </div>
+              <div className="text-white mt-10">
+                <AiOutlineMail className="inline-block mr-2" size={30} />
+                <a href="mailto:example@example.com" className="text-xl">
+                  example@example.com
+                </a>
+              </div>
+              <div className="text-white mt-10 flex flex-wrap gap-5 items-center">
+                {socialMediaLinks.map((socialMedia) => (
+                  <div className="border-2 p-1 rounded-full md:p-2" key={socialMedia.key}>
+                    <a href={socialMedia.link} target="_blank" rel="noreferrer">
+                      {socialMedia.icon}
+                    </a>
+                  </div>
+                ))}
+              </div>
             </div>
-            <div className="text-white mt-10">
-              <AiOutlineMail className="inline-block mr-2" size={30} />
-              <a href="mailto:example@example.com" className="text-xl">
-                example@example.com
-              </a>
-            </div>
-            <div className="text-white mt-10 flex flex-wrap gap-5 items-center">
-              {socialMediaLinks.map((socialMedia) => (
-                <div className="border-2 p-1 rounded-full md:p-2" key={socialMedia.key}>
-                  <a href={socialMedia.link} target="_blank" rel="noreferrer">
-                    {socialMedia.icon}
-                  </a>
-                </div>
-              ))}
-            </div>
-            <div className="mt-20">
+            <div className="mt-20 flex justify-center">
               <Image
                 src={Contact}
                 alt="BoostMe Contact Image"
-                width={400}
-                height={150}
+                width={300}
+                height={300}
                 className="rounded-lg"
                 loader={imageLoader}
               />

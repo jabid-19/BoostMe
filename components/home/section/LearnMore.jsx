@@ -7,15 +7,17 @@ const LearnMore = () => {
   return (
     <div className="hero min-h-screen">
       <div className="hero-content flex-col lg:flex-row gap-8">
-        <Image
-          data-aos="fade-right"
-          src={Balance}
-          width={423}
-          height={460}
-          className="max-w-sm rounded-lg shadow-2xl object-fill"
-          alt="Social Media Content Writing"
-          loader={imageLoader}
-        />
+        <div className="w-full">
+          <Image
+            data-aos="fade-right"
+            src={Balance}
+            width={423}
+            height={460}
+            className="max-w-sm rounded-lg shadow-2xl object-fill"
+            alt="Social Media Content Writing"
+            loader={imageLoader}
+          />
+        </div>
         <div
           data-aos="fade-left"
           className="flex flex-col justify-center items-center lg:items-start lg:max-w-3xl">
