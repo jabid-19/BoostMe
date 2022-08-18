@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
-import { BsPlayBtn } from 'react-icons/bs'
+import Link from 'next/link'
+// import { BsPlayBtn } from 'react-icons/bs'
 import imageLoader from '../../../helper/imageLoader'
 import Background from '../../../public/common/BoxBackground.png'
 const Hero = () => {
@@ -65,19 +66,27 @@ const Hero = () => {
               <div className="flex flex-col mt-4 items-center justify-center lg:justify-start md:flex-row lg:ml-8">
                 <div className="flex flex-col items-center md:flex-row">
                   <div className="mb-4 md:mr-4 md:mb-0">
-                    <button
-                      disabled
-                      className="btn btn-primary normal-case px-12 text-white rounded-full">
-                      Get Started
-                    </button>
+                    <Link href="login">
+                      <a>
+                        <button className="btn btn-primary normal-case px-12 text-white rounded-full">
+                          Get Started
+                        </button>
+                      </a>
+                    </Link>
                   </div>
                   <div>
-                    <button
-                      disabled
+                    {/* <button
                       className="btn btn-primary normal-case px-10 text-primary rounded-full bg-white hover:bg-transparent">
                       <BsPlayBtn />
                       <span className="ml-2">Watch Video</span>
-                    </button>
+                    </button> */}
+                    <Link href="contact">
+                      <a>
+                        <button className="btn btn-primary normal-case px-12 text-primary rounded-full bg-white hover:bg-transparent">
+                          Contact Us
+                        </button>
+                      </a>
+                    </Link>
                   </div>
                 </div>
               </div>
