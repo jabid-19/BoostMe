@@ -74,7 +74,7 @@ const Visualize = ({ formData, setFormData }) => {
                     <h5 className="text-md font-bold">{formData.pageName}</h5>
                     <p className="text-gray-600">{formData.pageCategory}</p>
                   </div>
-                  {formData.sendMessage === 'yes' && (
+                  {formData.addButton === 'sendMessage' && (
                     <div className="border-2 flex items-center gap-2 py-1 px-1 rounded-md">
                       <div>
                         <BiMessage />
@@ -82,7 +82,7 @@ const Visualize = ({ formData, setFormData }) => {
                       <div className="text-sm">SEND MESSAGE</div>
                     </div>
                   )}
-                  {formData.sendMessage === 'no' && (
+                  {formData.addButton === 'callNow' && (
                     <div className="border-2 flex items-center gap-2 py-1 px-1 rounded-md">
                       <div>
                         <MdCall />

@@ -25,8 +25,8 @@ export default function SecondStep({
   } = useForm({ mode: 'all' })
 
   const options = [
-    { label: 'Yes', value: 'yes' },
-    { label: 'No', value: 'no' },
+    { label: 'Send Message', value: 'sendMessage' },
+    { label: 'Call Now', value: 'callNow' },
   ]
 
   const onSubmit = (values) => {
@@ -36,13 +36,13 @@ export default function SecondStep({
       formData.append(`media${index}`, file)
     })
     values.media = formData
-    values.sendMessage = values?.sendMessage?.value
+    values.addButton = values?.addButton?.value
     setFormValues(values)
     nextFormStep()
   }
 
   const handleSelect = (event) => {
-    if (event?.value && event?.label) setFormData({ ...formData, sendMessage: event?.value })
+    if (event?.value && event?.label) setFormData({ ...formData, addButton: event?.value })
   }
 
   // preview sections
@@ -78,7 +78,7 @@ export default function SecondStep({
   useEffect(() => {
     setFormData({ ...formData, caption: emoteText })
   }, [emoteText, setFormData])
-
+  console.log(formData)
   return (
     <div className={`${formStep === 2 ? 'block' : 'hidden'}`}>
       <h2 className="text-center text-3xl font-bold text-neutral">2nd Step</h2>
@@ -120,18 +120,18 @@ export default function SecondStep({
           {errors.media && <p className="text-error">{errors.media?.message}</p>}
         </div>
         <div className="mb-6">
-          <label htmlFor="sendMessage" className="inline-flex mb-2 text-xl font-bold text-neutral">
-            Message Option?
+          <label htmlFor="addButton" className="inline-flex mb-2 text-xl font-bold text-neutral">
+            Add Button?
           </label>
           <Controller
-            name="sendMessage"
+            name="addButton"
             control={control}
             rules={{ required: 'Message Option is required' }}
             render={({ field }) => (
               <Select
-                instanceId="sendMessage"
+                instanceId="addButton"
                 classNamePrefix="react-select"
-                className={`${errors.sendMessage?.message && 'alert-border'}`}
+                className={`${errors.addButton?.message && 'alert-border'}`}
                 isClearable
                 {...field}
                 placeholder="Select Your option"
@@ -143,7 +143,7 @@ export default function SecondStep({
               />
             )}
           />
-          {errors.sendMessage && <p className="text-error">{errors.sendMessage?.message}</p>}
+          {errors.addButton && <p className="text-error">{errors.addButton?.message}</p>}
         </div>
         <NextPrev formStep={formStep} prevFormStep={prevFormStep} />
       </form>
