@@ -10,8 +10,9 @@ export default function ThirdStep({ formStep, prevFormStep, nextFormStep, formDa
     register,
   } = useForm({ mode: 'all' })
 
-  const onSubmit = (values) => {
+  const onSubmit = async (values) => {
     setFormValues(values)
+    console.log({ ...data, ...values })
     nextFormStep()
   }
 
