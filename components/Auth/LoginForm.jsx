@@ -29,6 +29,7 @@ const LoginForm = () => {
     if (response.status == 200 || response.status == 201) {
       setEmail('')
       setPassword('')
+      localStorage.user = JSON.stringify(response.data.user)
       Router.push('/dashboard')
     } else {
       console.log(response.data.error)

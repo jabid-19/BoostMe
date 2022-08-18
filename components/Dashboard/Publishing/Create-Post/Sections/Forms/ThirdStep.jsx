@@ -1,6 +1,9 @@
 import { useForm } from 'react-hook-form'
 import { useFormData } from '../../../../../../context'
 import NextPrev from './NextPrev'
+
+import { createPost } from '../../../../../../src/backend/Post'
+
 export default function ThirdStep({ formStep, prevFormStep, nextFormStep, formData, setFormData }) {
   const { setFormValues, data } = useFormData()
 
@@ -12,7 +15,30 @@ export default function ThirdStep({ formStep, prevFormStep, nextFormStep, formDa
 
   const onSubmit = async (values) => {
     setFormValues(values)
-    console.log({ ...data, ...values })
+
+    // ===edited by Tahmid: start===
+    const finalData = { ...data, ...values }
+    const fd = new FormData()
+    fd.append('logo', finalData.logo.get('file'))
+    finalData.media.getAll('media').forEach((element) => {
+      fd.append('media', element)
+    })
+    const keys = Object.keys(finalData)
+    keys.forEach((key, index) => {
+      if (key != 'logo' || key != 'media') {
+        fd.append(key, finalData[key])
+      }
+    })
+
+    const user = JSON.parse(localStorage.getItem('user'))
+    const response = await createPost(fd, user.user_id)
+    if (response.status == 200 || response.status == 201) {
+      console.log(response.data.msg)
+    } else {
+      console.log(response.data.error)
+    }
+    // ===edited by Tahmid: end===
+
     nextFormStep()
   }
 

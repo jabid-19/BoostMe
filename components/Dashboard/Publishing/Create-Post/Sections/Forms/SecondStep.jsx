@@ -33,7 +33,7 @@ export default function SecondStep({
     values.description = emoteText
     const formData = new FormData()
     media?.map((file, index) => {
-      formData.append(`media${index}`, file)
+      formData.append('media', file) // edited by Tahmid
     })
     values.media = formData
     values.addButton = values?.addButton?.value
