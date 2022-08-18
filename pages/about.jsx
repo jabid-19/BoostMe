@@ -9,10 +9,11 @@ import Head from 'next/head'
 
 const About = () => {
   const headingDescriptions = {
-    subtitle: "YOU'RE GOING TO KNOW",
-    title: 'About',
-    titleSpan: 'Our Community',
-    description: 'See how our community is growing businesses and explore who we are',
+    subtitle: 'ট্রাডিশনাল মার্কেটের বাইরে',
+    title: 'স্বপ্ন না,',
+    titleSpan: 'শতভাগ সত্য!',
+    description:
+      'সোশ্যাল মিডিয়ার মাধ্যমে কম খরচে ঘরে বসে কাস্টমার বাড়ান! আপনার ব্যবসাকে অনন্য এক উচ্চতায় নিয়ে যেতে আমরা আছি আমার পাশে!',
   }
   return (
     <div>

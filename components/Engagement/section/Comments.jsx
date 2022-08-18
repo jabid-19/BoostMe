@@ -19,7 +19,7 @@ const Comments = () => {
       <div data-aos="fade-up">
         <Image
           src="/engagement-section/audience.png"
-          width={1200}
+          width={700}
           height={700}
           alt="BoostMe's Digital Marketing Dashboard"
           loader={imageLoader}

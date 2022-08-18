@@ -2,7 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react'
 import imageLoader from '../../helper/imageLoader'
-import Logo from '../../public/common/logo.png'
+import Logo from '../../public/common/logo-navbar.png'
 
 // import axios from '../../axios'
 
@@ -129,7 +129,7 @@ const Navbar = () => {
         </div>
         <Link href="/">
           <a>
-            <Image width={141} height={43} src={Logo} alt="" loader={imageLoader} />
+            <Image width={130} height={60} src={Logo} alt="" loader={imageLoader} />
           </a>
         </Link>
       </div>
