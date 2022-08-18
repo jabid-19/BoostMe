@@ -8,7 +8,7 @@ import ResultAnalysis from '../../public/about-section/result-analysis.svg'
 
 const Items = () => {
   return (
-    <div className="mt-24 lg:mt-36">
+    <div className="my-24 lg:mt-36 lg:mb-28">
       <h1 className="text-center text-xl md:text-2xl font-semibold break-words lg:text-4xl text-neutral lg:tracking-wide xl:text-5xl">
         আমাদের <span className="text-primary">বিশেষত্ব</span>
       </h1>
@@ -26,7 +26,7 @@ const Items = () => {
           <div
             data-aos="fade-up"
             className="mt-12 text-center lg:text-start p-8 border-4 rounded-2xl border-primary">
-            <h1 className="text-center text-xl md:text-2xl font-semibold break-words lg:text-4xl text-neutral lg:tracking-wide xl:text-5xl mb-6">
+            <h1 className="text-xl md:text-2xl font-semibold break-words lg:text-4xl text-neutral lg:tracking-wide xl:text-5xl mb-6">
               কনটেন্ট তৈরি
             </h1>
             <p className="text-neutral text-xs lg:text-lg">
@@ -48,7 +48,7 @@ const Items = () => {
           <div
             data-aos="fade-down"
             className="mt-12 lg:mb-0 text-center lg:text-start p-8 border-4 rounded-2xl border-secondary">
-            <h1 className="text-center text-xl md:text-2xl font-semibold break-words lg:text-4xl text-neutral lg:tracking-wide xl:text-5xl mb-6">
+            <h1 className="text-xl md:text-2xl font-semibold break-words lg:text-4xl text-neutral lg:tracking-wide xl:text-5xl mb-6">
               বাজার বিশ্লেষণ
             </h1>
             <p className="text-neutral text-xs lg:text-lg">
@@ -70,7 +70,7 @@ const Items = () => {
           <div
             data-aos="fade-up"
             className="mt-12 lg:mb-12 text-center lg:text-start p-8 border-4 rounded-2xl border-primary">
-            <h1 className="text-center text-xl md:text-2xl font-semibold break-words lg:text-4xl text-neutral lg:tracking-wide xl:text-5xl mb-6">
+            <h1 className="text-xl md:text-2xl font-semibold break-words lg:text-4xl text-neutral lg:tracking-wide xl:text-5xl mb-6">
               মনিটর এক্টিভিটি
             </h1>
             <p className="text-neutral text-xs lg:text-lg">
@@ -94,7 +94,7 @@ const Items = () => {
           <div
             data-aos="fade-up"
             className="mt-12 lg:mb-12 text-center lg:text-start p-8 border-4 rounded-2xl border-secondary">
-            <h1 className="text-center text-xl md:text-2xl font-semibold break-words lg:text-4xl text-neutral lg:tracking-wide xl:text-5xl mb-6">
+            <h1 className="text-xl md:text-2xl font-semibold break-words lg:text-4xl text-neutral lg:tracking-wide xl:text-5xl mb-6">
               ফলাফল বিশ্লেষণ
             </h1>
             <p className="text-neutral text-xs lg:text-lg">

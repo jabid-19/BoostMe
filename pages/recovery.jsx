@@ -1,4 +1,5 @@
 import React from 'react'
+import Router from 'next/router'
 
 const recovery = () => {
   return (
@@ -12,16 +13,6 @@ const recovery = () => {
         backgroundSize: '40px 40px',
         overflow: 'hidden',
       }}>
-      {/* <div
-        className="nav"
-        style={{
-          position: 'absolute',
-          width: '100%',
-          backgroundColor: '#ffffff',
-          padding: '20px',
-        }}>
-        <img src="/logo.png" alt="logo" />
-      </div> */}
       <div
         style={{ height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
         <div
@@ -36,7 +27,8 @@ const recovery = () => {
             Recovery email sent
           </h1>
           <p style={{ color: '#5e3905' }}>
-            Kindly check your email within 2 hours to reset your password
+            Kindly check your email within 60 minutes to reset your password. If not in inbox,
+            please check spam folder.
           </p>
           <button
             style={{
@@ -49,7 +41,8 @@ const recovery = () => {
               padding: '10px 20px',
               fontSize: '1rem',
               cursor: 'pointer',
-            }}>
+            }}
+            onClick={(e) => Router.push('/login')}>
             Back to login
           </button>
           <br />

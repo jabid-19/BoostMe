@@ -1,7 +1,8 @@
 import { useState } from 'react'
 import LoginForm from './LoginForm'
+import Router from 'next/router'
 
-import { backendApi } from '../../backendApi'
+import { forgetPassword } from '../../src/backend/Auth'
 
 const ForgetPassForm = () => {
   const [visibleItem, setVisibleItem] = useState(true)
@@ -14,13 +15,13 @@ const ForgetPassForm = () => {
   const handleForgotPassword = async (e) => {
     e.preventDefault()
 
-    try {
-      const res = await backendApi.post('/user/forget-password', { email })
-      console.log(res.data)
+    const response = await forgetPassword(email)
 
+    if (response.status == 200 || response.status == 201) {
       setEmail('')
-    } catch (err) {
-      console.log(err)
+      Router.push('/recovery')
+    } else {
+      console.log(response.data)
     }
   }
 

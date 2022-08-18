@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer className="footer py-10 px-24 bg-secondary text-white">
       <div>
-        <Image width={130} height={60} src={LogoWhite} alt="" loader={imageLoader} />
+        <Image width={200} height={80} src={LogoWhite} alt="" loader={imageLoader} />
         <p>
           Sector 12, Uttara
           <br />

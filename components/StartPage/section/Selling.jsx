@@ -25,15 +25,15 @@ const Selling = () => {
             <br />
             <span className="text-secondary">social media</span> */}
           </h1>
-          <p className="text-neutral text-center text-base mt-10 md:text-start">
+          <p className="text-neutral text-center text-base mt-10 md:text-start max-w-sm">
             সোশ্যাল ক্যালেন্ডার আপনাকে আপনার সোশ্যাল মিডিয়া স্ট্রেটেজি এবং সম্পাদনের একটি ম্যাক্রো
             এবং একটি মাইক্রো ভিউ দেয়৷
             {/* See all of your comments, stay on top of important <br /> interactions, and turn
             followers into fans <br /> using Buffer. */}
           </p>
-          <button className="btn btn-wide rounded-full mt-10 btn-primary mx-auto text-white normal-case md:mx-0">
+          {/* <button className="btn btn-wide rounded-full mt-10 btn-primary mx-auto text-white normal-case md:mx-0">
             Create Your Page For Free
-          </button>
+          </button> */}
         </div>
       </div>
     </div>

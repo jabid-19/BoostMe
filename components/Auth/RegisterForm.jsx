@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import LoginForm from './LoginForm'
-import { backendApi } from '../../backendApi'
+import Router from 'next/router'
+
+import { signup } from '../../src/backend/Auth'
 
 const RegisterForm = () => {
   const [visibleItem, setVisibleItem] = useState(true)
@@ -16,21 +18,21 @@ const RegisterForm = () => {
   const handleSignup = async (e) => {
     e.preventDefault()
 
-    try {
-      const user = {
-        email: email,
-        password: password,
-        confirmPassword: confirmPassword,
-      }
+    const user = {
+      email: email,
+      password: password,
+      confirmPassword: confirmPassword,
+    }
 
-      const res = await backendApi.post('/user', user)
-      console.log(res.data)
+    const response = await signup(user)
 
+    if (response.status == 200 || response.status == 201) {
       setEmail('')
       setPassword('')
       setConfirmPassword('')
-    } catch (err) {
-      console.log(err.response.data)
+      Router.push('/recovery')
+    } else {
+      console.log(response.data.error)
     }
   }
 

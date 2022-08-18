@@ -30,7 +30,7 @@ export default function FirstStep({ formStep, prevFormStep, nextFormStep, formDa
     if (event?.target.name !== 'logo') {
       setFormData({ ...formData, [event.target.name]: event.target.value })
     } else {
-      if (event.target.name) {
+      if (event.target.files[0]) {
         setFormData({ ...formData, logo: URL?.createObjectURL(event.target.files[0]) })
       }
     }
@@ -131,6 +131,7 @@ export default function FirstStep({ formStep, prevFormStep, nextFormStep, formDa
             rules={{ required: 'Category is required' }}
             render={({ field }) => (
               <Select
+                instanceId="category"
                 classNamePrefix="react-select"
                 className={`${errors.category?.message && 'alert-border'}`}
                 isClearable

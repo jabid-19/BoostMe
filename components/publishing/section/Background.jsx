@@ -9,11 +9,12 @@ const Background = () => {
       <div className="hero-content text-center text-neutral-content">
         <div data-aos="zoom-in" className="max-w-full">
           <h1 className="mb-5 text-5xl font-bold">
-            Build your audience and <br /> grow your brand{' '}
+            {/* Build your audience and <br /> grow your brand{' '} */}
+            আপনার ব্র্যান্ডের দর্শক তৈরি করুন <br /> এবং ব্র্যান্ডের পরিসর বাড়ান{' '}
           </h1>
-          <button className="btn btn-primary normal-case px-12 text-white rounded-full mt-12">
+          {/* <button className="btn btn-primary normal-case px-12 text-white rounded-full mt-12">
             Get Started
-          </button>
+          </button> */}
         </div>
       </div>
     </div>

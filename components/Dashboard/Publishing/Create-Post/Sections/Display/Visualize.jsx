@@ -41,7 +41,22 @@ const Visualize = ({ formData, setFormData }) => {
             </div>
 
             {/* second section */}
-            <div className="h-3/6"></div>
+            <div className="h-3/6 w-full px-4">
+              <div className="h-1/6 text-start overflow-x-auto">
+                {formData.caption && <p>{formData.caption}</p>}
+              </div>
+              <div className="">
+                {formData.media && (
+                  <Image
+                    src={formData?.media}
+                    width={500}
+                    height={400}
+                    alt="logo"
+                    className="rounded-full"
+                  />
+                )}
+              </div>
+            </div>
             {/* third section */}
 
             <div className="h-1/6 mt-2  mb-2 w-full ">

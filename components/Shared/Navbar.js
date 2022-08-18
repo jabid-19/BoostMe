@@ -129,7 +129,7 @@ const Navbar = () => {
         </div>
         <Link href="/">
           <a>
-            <Image width={130} height={60} src={Logo} alt="" loader={imageLoader} />
+            <Image width={200} height={80} src={Logo} alt="" loader={imageLoader} />
           </a>
         </Link>
       </div>

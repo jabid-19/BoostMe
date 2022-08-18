@@ -1,7 +1,9 @@
 import { useState } from 'react'
 import ForgetPassForm from './ForgetPassForm'
 import RegisterForm from './RegisterForm'
-import { backendApi } from '../../backendApi'
+import Router from 'next/router'
+
+import { login } from '../../src/backend/Auth'
 
 const LoginForm = () => {
   const [visibleLoginItem, setVisibleLoginItem] = useState(true)
@@ -21,14 +23,15 @@ const LoginForm = () => {
   const handleLogin = async (e) => {
     e.preventDefault()
 
-    try {
-      const res = await backendApi.post('/user/signin', { email, password })
-      console.log(res.data)
+    const response = await login({ email, password })
+    // console.log(response)
 
+    if (response.status == 200 || response.status == 201) {
       setEmail('')
       setPassword('')
-    } catch (err) {
-      console.log(err.response.data)
+      Router.push('/dashboard')
+    } else {
+      console.log(response.data.error)
     }
   }
 
