@@ -95,7 +95,7 @@ const Navbar = () => {
                 <a>Contact Us</a>
               </Link>
             </li>
-            <div className="btn-group md:min-w-[70px] my-4 ml-4">
+            {/* <div className="btn-group md:min-w-[70px] my-4 ml-4">
               <button
                 className={
                   languageMode == 'EN'
@@ -114,7 +114,7 @@ const Navbar = () => {
                 onClick={() => setLanguageMode('BN')}>
                 BN
               </button>
-            </div>
+            </div> */}
             <li>
               <Link href="login">
                 <a>Login</a>
@@ -189,7 +189,7 @@ const Navbar = () => {
       </div>
       <div className="navbar-end hidden lg:flex">
         <ul className="menu menu-horizontal p-0 lg:items-center">
-          <div className="btn-group md:min-w-[70px] my-6 mr-4">
+          {/* <div className="btn-group md:min-w-[70px] my-6 mr-4">
             <button
               className={
                 languageMode == 'EN'
@@ -208,7 +208,7 @@ const Navbar = () => {
               onClick={() => setLanguageMode('BN')}>
               BN
             </button>
-          </div>
+          </div> */}
           {/* <li tabIndex="0">
             <a>
               <p>Jhon Doe</p>
