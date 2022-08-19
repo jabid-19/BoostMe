@@ -70,7 +70,7 @@ const Hero = () => {
                 মেট্রিক এর সহজে চার্ট এবং গ্রাফের মাধ্যমে আপনার পোস্টের ওভারভিউ পাবেন BoostMe
                 প্লাটফর্ম থেকে।
               </p>
-              <div className="flex flex-col md:flex-row">
+              {/* <div className="flex flex-col md:flex-row">
                 <div className="mb-4 md:mr-4 md:mb-0">
                   <button className="btn btn-primary normal-case px-12 text-white rounded-full">
                     Get Started
@@ -81,7 +81,7 @@ const Hero = () => {
                     Learn More
                   </button>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

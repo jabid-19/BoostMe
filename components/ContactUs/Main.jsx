@@ -11,7 +11,7 @@ import {
 import { BsPhone } from 'react-icons/bs'
 import imageLoader from '../../helper/imageLoader'
 import BoxBackground2 from '../../public/common/BoxBackground2.png'
-import Contact from '../../public/contact-us/contact.png'
+import Contact from '../../public/contact-us/contact-us-transparent.png'
 
 import { contact } from '../../src/backend/Contact'
 
