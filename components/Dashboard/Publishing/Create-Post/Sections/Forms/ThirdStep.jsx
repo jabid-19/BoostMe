@@ -33,7 +33,7 @@ export default function ThirdStep({ formStep, prevFormStep, nextFormStep, formDa
     const user = JSON.parse(localStorage.getItem('user'))
     const response = await createPost(fd, user.user_id)
     if (response.status == 200 || response.status == 201) {
-      console.log(response.data.msg)
+      console.log(response.data)
     } else {
       console.log(response.data.error)
     }
@@ -101,9 +101,9 @@ export default function ThirdStep({ formStep, prevFormStep, nextFormStep, formDa
         </div>
         <div className="mb-6">
           <label
-            htmlFor="contractNumber"
+            htmlFor="contactNumber"
             className="inline-flex mb-2 text-xl font-bold text-neutral">
-            Contract Number
+            Contact Number
           </label>
           <input
             className={` w-full
