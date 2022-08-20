@@ -23,7 +23,6 @@ const ForgetPassForm = () => {
   }
 
   const onSubmit = async (data) => {
-    console.log('data', data)
     const response = await forgetPassword(data.email)
 
     if (response.status == 200 || response.status == 201) {
@@ -31,7 +30,6 @@ const ForgetPassForm = () => {
       Router.push('/recovery')
     } else {
       setForgetError(response.data)
-      console.log(response.data)
     }
   }
 
