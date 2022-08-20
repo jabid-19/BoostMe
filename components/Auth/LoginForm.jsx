@@ -1,7 +1,9 @@
+import React from 'react'
 import { useState } from 'react'
 import ForgetPassForm from './ForgetPassForm'
 import RegisterForm from './RegisterForm'
 import Router from 'next/router'
+import { useForm } from 'react-hook-form'
 
 import { login } from '../../src/backend/Auth'
 
@@ -9,8 +11,14 @@ const LoginForm = () => {
   const [visibleLoginItem, setVisibleLoginItem] = useState(true)
   const [visibleForgetItem, setVisibleForgetItem] = useState(true)
 
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
+  const [loginError, setLoginError] = useState('')
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    // reset,
+  } = useForm()
 
   const loadRegisterForm = () => {
     setVisibleLoginItem(false)
@@ -20,19 +28,17 @@ const LoginForm = () => {
     setVisibleForgetItem(false)
   }
 
-  const handleLogin = async (e) => {
-    e.preventDefault()
-
-    const response = await login({ email, password })
-    // console.log(response)
+  const onSubmit = async (data) => {
+    const response = await login(data)
+    console.log(response)
 
     if (response.status == 200 || response.status == 201) {
-      setEmail('')
-      setPassword('')
       Router.push('/dashboard')
     } else {
-      console.log(response.data.error)
+      setLoginError(response.data.error)
     }
+
+    // reset()
   }
 
   return (
@@ -48,27 +54,28 @@ const LoginForm = () => {
               <span className="text-secondary">grow</span> your brand
             </h1>
           </div>
-          <form>
+          <form onSubmit={handleSubmit(onSubmit)}>
             <input
+              name="email"
               type="email"
               placeholder="Email address"
-              className="input input-bordered input-primary rounded-full w-full min-w-xs mb-4"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              {...register('email', { required: 'Email is required' })}
+              className="input input-bordered input-primary rounded-full w-full min-w-xs"
             />
+            <div className="text-error text-xs font-bold pl-2 pt-2">{errors.email?.message}</div>
             <input
+              name="password"
               type="password"
               placeholder="Password"
-              className="input input-bordered input-primary rounded-full w-full min-w-xs mb-6"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
+              {...register('password', { required: 'Password is required' })}
+              className="input input-bordered input-primary rounded-full w-full min-w-xs mt-4"
             />
-            <br />
+            <div className="text-error text-xs font-bold pl-2 pt-2">{errors.password?.message}</div>
+            <div className="text-error text-xs font-bold pl-2 ">{loginError}</div>
             <input
-              className="bg-secondary hover:bg-orange-400 py-1.5 w-full min-w-xs normal-case text-white rounded-full cursor-pointer"
+              className="bg-secondary hover:bg-orange-400 py-1.5 w-full min-w-xs normal-case text-white rounded-full cursor-pointer mt-6"
               type="submit"
               value="Sign In"
-              onClick={handleLogin}
             />
           </form>
           <br />
