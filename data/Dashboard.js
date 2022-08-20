@@ -1,14 +1,12 @@
 import {
-  AiOutlineBarChart,
-  AiOutlineDollarCircle,
+  AiOutlineBarChart, AiOutlineCalendar, AiOutlineDollarCircle,
   AiOutlineFileAdd,
   AiOutlineFileSync,
   AiOutlineHome,
   AiOutlinePieChart,
   AiOutlineSchedule,
   AiOutlineTeam,
-  AiOutlineUnorderedList,
-  AiOutlineCalendar,
+  AiOutlineUnorderedList
 } from 'react-icons/ai'
 import { BiBuildings, BiCalendar, BiSearchAlt } from 'react-icons/bi'
 import { BsChat, BsGraphUp, BsGrid, BsKanban } from 'react-icons/bs'
@@ -65,6 +63,12 @@ export const tabsMenu = [
     key: 'email',
     icons: false,
   },
+  {
+    id: 9,
+    title: 'Logout',
+    key: 'logout',
+    icons: false,
+  }
 ]
 
 export const Menus = {
@@ -155,7 +159,7 @@ export const Menus = {
       route: '/dashboard/publishing/create-post',
       subSection: [
         {
-          title: 'Crate Now',
+          title: 'Create Now',
           icon: <BiBuildings size={20} />,
           route: '/dashboard/publishing/create-post/create',
         },

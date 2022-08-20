@@ -50,18 +50,29 @@ const DashboardTabs = ({ setSelectedTabs, activeTab, setActiveTab }) => {
         </div>
         <div className="hidden lg:flex">
           <ul className="menu menu-horizontal p-0">
-            {tabsMenu.map((menu) => (
-              <li key={menu.id}>
-                <a
-                  className={`font-bold text-neutral text-[16px] ${
-                    (activeTab || path) === menu.key && 'text-primary'
-                  } hover:text-primary hover:bg-transparent`}
-                  onClick={() => setActiveTab(menu.key)}>
-                  {menu.icons && menu.iconName}
-                  <span className={`${menu.icons && 'px-2'}`}>{menu.title}</span>
-                </a>
-              </li>
-            ))}
+            {tabsMenu.map((menu) =>
+              menu.key !== 'logout' ? (
+                <li key={menu.id}>
+                  <a
+                    className={`font-bold text-neutral text-[16px] ${
+                      (activeTab || path) === menu.key && 'text-primary'
+                    } hover:text-primary hover:bg-transparent`}
+                    onClick={() => setActiveTab(menu.key)}>
+                    {menu.icons && menu.iconName}
+                    <span className={`${menu.icons && 'px-2'}`}>{menu.title}</span>
+                  </a>
+                </li>
+              ) : (
+                <li key={menu.id}>
+                  <a
+                    className={`font-bold text-neutral text-[16px] hover:text-primary hover:bg-transparent`}
+                    onClick={() => localStorage.removeItem('user')}>
+                    {menu.icons && menu.iconName}
+                    <span className={`${menu.icons && 'px-2'}`}>{menu.title}</span>
+                  </a>
+                </li>
+              )
+            )}
           </ul>
         </div>
       </div>
