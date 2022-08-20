@@ -995,11 +995,6 @@ emoji-mart@3.0.1:
     "@babel/runtime" "^7.0.0"
     prop-types "^15.6.0"
 
-emoji-picker-react@^3.6.1:
-  version "3.6.1"
-  resolved "https://registry.npmjs.org/emoji-picker-react/-/emoji-picker-react-3.6.1.tgz"
-  integrity sha512-bJNvpdf3wO+1z4V/GKZC159zSAgUjLP8gdgGzvi/sFjy11Zpi/O9a8/G2rpQwy+QBePnmvS1F+MqcNVJvilEGA==
-
 emoji-regex@^9.2.2:
   version "9.2.2"
   resolved "https://registry.npmjs.org/emoji-regex/-/emoji-regex-9.2.2.tgz"
