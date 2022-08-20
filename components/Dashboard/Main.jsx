@@ -96,7 +96,9 @@ const DashboardMain = ({ selectedTabs, open, setOpen }) => {
         </div>
         <div className="cursor-pointer duration-500">
           <Link href="/">
-            <Image src="/common/logo-white.png" width={140} height={40} alt="BoostMe's logo" />
+            <a>
+              <Image src="/common/logo-white.png" width={140} height={40} alt="BoostMe's logo" />
+            </a>
           </Link>
         </div>
         <ul className={`p-6 flex flex-col ${!open && 'items-center'}`}>{generateMenu}</ul>

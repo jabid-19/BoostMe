@@ -1,20 +1,25 @@
 import Image from 'next/image'
 import React from 'react'
 import { AiOutlineLike } from 'react-icons/ai'
-import { BiComment, BiShare } from 'react-icons/bi'
+import { BiComment, BiMessage, BiShare } from 'react-icons/bi'
 import { BsThreeDots } from 'react-icons/bs'
 import { FaTimes } from 'react-icons/fa'
 import { GoGlobe } from 'react-icons/go'
 import { MdCall } from 'react-icons/md'
+import Four from './ImageSection/Four'
+import FourOrMore from './ImageSection/FourOrMore'
+import One from './ImageSection/One'
+import Three from './ImageSection/Three'
+import Two from './ImageSection/Two'
 const Visualize = ({ formData, setFormData }) => {
   return (
     <div>
       <div className="mockup-phone border-primary">
         <div className="camera"></div>
         <div className="display">
-          <div className="artboard artboard-demo phone-1 justify-start h-full">
+          <div className="artboard artboard-demo phone-1 justify-start min-h-[650px]">
             {/* top section */}
-            <div className="h-1/6 mt-8 w-full">
+            <div className="h-[10%] mt-8 w-full">
               {formData.logo ? (
                 <div className="flex justify-between items-center gap-2 px-4">
                   <div className="flex items-center gap-2">
@@ -41,42 +46,55 @@ const Visualize = ({ formData, setFormData }) => {
             </div>
 
             {/* second section */}
-            <div className="h-3/6 w-full px-4">
-              <div className="h-1/6 text-start overflow-x-auto">
+            <div className="h-4/6 w-full px-4">
+              <div className="text-start break-words h-20 flex items-center overflow-y-auto">
                 {formData.caption && <p>{formData.caption}</p>}
               </div>
-              <div className="">
-                {formData.media && (
-                  <Image
-                    src={formData?.media}
-                    width={500}
-                    height={400}
-                    alt="logo"
-                    className="rounded-full"
-                  />
-                )}
-              </div>
+              {/* for image more than 4 */}
+              {formData.media.length > 4 && <FourOrMore formData={formData} />}
+
+              {/* image equal 4 */}
+              {formData.media.length === 4 && <Four formData={formData} />}
+
+              {/* image equal 3 */}
+              {formData.media.length === 3 && <Three formData={formData} />}
+
+              {/* image equal 2 */}
+              {formData.media.length === 2 && <Two formData={formData} />}
+
+              {/* image equal 1 */}
+              {formData.media.length === 1 && <One formData={formData} />}
             </div>
             {/* third section */}
 
-            <div className="h-1/6 mt-2  mb-2 w-full ">
+            <div className="h-1/6 mt-2 w-full ">
               {formData.pageCategory && formData.pageName ? (
                 <div className="px-4 flex  justify-between items-center mt-6 gap-4 h-1/6 ">
                   <div>
                     <h5 className="text-md font-bold">{formData.pageName}</h5>
                     <p className="text-gray-600">{formData.pageCategory}</p>
                   </div>
-                  <div className="border-2 flex items-center gap-2 py-1 px-1 rounded-md">
-                    <div>
-                      <MdCall />
+                  {formData.addButton === 'sendMessage' && (
+                    <div className="border-2 flex items-center gap-2 py-1 px-1 rounded-md">
+                      <div>
+                        <BiMessage />
+                      </div>
+                      <div className="text-sm">SEND MESSAGE</div>
                     </div>
-                    <div className="text-sm">CALL NOW</div>
-                  </div>
+                  )}
+                  {formData.addButton === 'callNow' && (
+                    <div className="border-2 flex items-center gap-2 py-1 px-1 rounded-md">
+                      <div>
+                        <MdCall />
+                      </div>
+                      <div className="text-sm">CALL NOW</div>
+                    </div>
+                  )}
                 </div>
               ) : null}
             </div>
             {/* last section */}
-            <div className="w-full px-4 pt-4 flex justify-between items-center gap-4  border-t-2 h-0.5/6">
+            <div className="w-full px-4  flex justify-between items-center gap-4 border-t-2 h-0.5/6">
               <div className="flex items-center gap-2">
                 <AiOutlineLike />
                 Like

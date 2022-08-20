@@ -34,59 +34,62 @@ const MenuLeft = ({ routes, closeMenu }) => {
       return generateMenuItem(route)
     }
     if (route?.subMenu) {
-      console.log(route)
       return (
-        // <div tabIndex="0" className="collapse collapse-arrow ">
-        //   <div className="collapse-title text-xl font-medium">
-        //     <Link href={route.url}>
-        //       <a className="flex items-center gap-2">
-        //         <div>{route.icon}</div>
-        //         <div>{route.title}</div>
-        //       </a>
-        //     </Link>
-        //   </div>
-        //   <div className="collapse-content">
-        //     <ul>
-        //       {route?.subMenu.map((subItem) => (
-        //         <li key={subItem?.key}>
-        //           {console.log(true)}
-        //           <Link href={subItem.url} passHref>
-        //             <a onClick={() => console.log(true)}>
-        //               <div className="icon-container">{subItem.icon}</div>
-        //               {subItem.title}
-        //             </a>
-        //           </Link>
-        //         </li>
-        //       ))}
-        //     </ul>
-        //   </div>
-        // </div>
-        <Accordion>
-          <AccordionItem key={1}>
-            <AccordionItemHeading>
-              <AccordionItemButton>
-                <Link href={route.url}>
-                  <a className="flex items-center gap-2">
-                    <div>{route.icon}</div>
-                    <div>{route.title}</div>{' '}
-                  </a>
-                </Link>
-              </AccordionItemButton>
-            </AccordionItemHeading>
-            <AccordionItemPanel>
-              {route.subMenu.map((sub) => (
-                <li key={sub?.key}>
-                  <Link href={sub.url}>
-                    <a onClick={closeMenu ? () => closeMenu(false) : undefined} className="active">
-                      <div className="icon-container">{sub.icon}</div>
-                      {sub.title}
+        <>
+          <div tabIndex="0" className="collapse collapse-arrow ">
+            <div className="collapse-title text-xl font-medium">
+              <Link href={route.url}>
+                <a className="flex items-center gap-2">
+                  <div>{route.icon}</div>
+                  <div>{route.title}</div>
+                </a>
+              </Link>
+            </div>
+            <div className="collapse-content">
+              <ul>
+                {route?.subMenu.map((subItem) => (
+                  <li key={subItem?.key}>
+                    {console.log(true)}
+                    <Link href={subItem.url} passHref>
+                      <a onClick={() => console.log(true)}>
+                        <div className="icon-container">{subItem.icon}</div>
+                        {subItem.title}
+                      </a>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+          <Accordion>
+            <AccordionItem key={1}>
+              <AccordionItemHeading>
+                <AccordionItemButton>
+                  <Link href={route.url}>
+                    <a className="flex items-center gap-2">
+                      <div>{route.icon}</div>
+                      <div>{route.title}</div>{' '}
                     </a>
                   </Link>
-                </li>
-              ))}
-            </AccordionItemPanel>
-          </AccordionItem>
-        </Accordion>
+                </AccordionItemButton>
+              </AccordionItemHeading>
+              <AccordionItemPanel>
+                {route.subMenu.map((sub) => (
+                  <li key={sub?.key}>
+                    <Link href={sub.url}>
+                      <a
+                        onClick={closeMenu ? () => closeMenu(false) : undefined}
+                        className="active">
+                        <div className="icon-container">{sub.icon}</div>
+                        {sub.title}
+                      </a>
+                    </Link>
+                  </li>
+                ))}
+              </AccordionItemPanel>
+            </AccordionItem>
+          </Accordion>
+        </>
       )
     }
     return null
