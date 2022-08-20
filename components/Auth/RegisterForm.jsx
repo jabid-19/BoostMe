@@ -15,7 +15,7 @@ const RegisterForm = () => {
     register,
     handleSubmit,
     formState: { errors },
-    // reset,
+    reset,
   } = useForm()
 
   const loadLoginForm = () => {
@@ -32,13 +32,12 @@ const RegisterForm = () => {
     const response = await signup(user)
 
     if (response.status == 200 || response.status == 201) {
+      reset()
       Router.push('/recovery')
     } else {
       console.log(response.data.error)
       setRegisterError(response.data.error)
     }
-
-    // reset()
   }
 
   return (

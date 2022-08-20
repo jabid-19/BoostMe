@@ -17,7 +17,7 @@ const LoginForm = () => {
     register,
     handleSubmit,
     formState: { errors },
-    // reset,
+    reset,
   } = useForm()
 
   const loadRegisterForm = () => {
@@ -33,12 +33,11 @@ const LoginForm = () => {
     console.log(response)
 
     if (response.status == 200 || response.status == 201) {
+      reset()
       Router.push('/dashboard')
     } else {
       setLoginError(response.data.error)
     }
-
-    // reset()
   }
 
   return (

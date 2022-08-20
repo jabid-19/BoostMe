@@ -1,26 +1,36 @@
+import React from 'react'
 import { useState } from 'react'
 import LoginForm from './LoginForm'
 import Router from 'next/router'
+import { useForm } from 'react-hook-form'
 
 import { forgetPassword } from '../../src/backend/Auth'
 
 const ForgetPassForm = () => {
   const [visibleItem, setVisibleItem] = useState(true)
-  const [email, setEmail] = useState('')
+
+  const [forgetError, setForgetError] = useState('')
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = useForm()
 
   const loadLoginForm = () => {
     setVisibleItem(false)
   }
 
-  const handleForgotPassword = async (e) => {
-    e.preventDefault()
-
-    const response = await forgetPassword(email)
+  const onSubmit = async (data) => {
+    console.log('data', data)
+    const response = await forgetPassword(data.email)
 
     if (response.status == 200 || response.status == 201) {
-      setEmail('')
+      reset()
       Router.push('/recovery')
     } else {
+      setForgetError(response.data)
       console.log(response.data)
     }
   }
@@ -36,20 +46,31 @@ const ForgetPassForm = () => {
               <span className="text-secondary">grow</span> your brand
             </h1>
           </div>
-          <form>
+          <form onSubmit={handleSubmit(onSubmit)}>
             <input
+              name="email"
               type="email"
               placeholder="Email address"
-              className="input input-bordered input-primary rounded-full w-full min-w-xs mb-4"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              {...register('email', {
+                required: {
+                  value: true,
+                  message: 'Email is Required',
+                },
+                pattern: {
+                  value:
+                    /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+                  message: 'Provide a valid Email',
+                },
+              })}
+              className="input input-bordered input-primary rounded-full w-full min-w-xs"
             />
+            <div className="text-error text-xs font-bold pl-2 pt-2">{errors.email?.message}</div>
+            <div className="text-error text-xs font-bold pl-2 ">{forgetError}</div>
             <br />
             <input
               className="bg-secondary hover:bg-orange-400 py-1.5 w-full min-w-xs normal-case text-white rounded-full cursor-pointer"
               type="submit"
               value="Submit"
-              onClick={handleForgotPassword}
             />
           </form>
           <br />
