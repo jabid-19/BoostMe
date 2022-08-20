@@ -33,7 +33,9 @@ const LoginForm = () => {
     // console.log(response)
 
     if (response.status == 200 || response.status == 201) {
-      localStorage.user = JSON.stringify(response.data.user)
+      if (typeof window !== 'undefined') {
+        localStorage.setItem('user', JSON.stringify(response.data.user))
+      }
       reset()
       Router.push('/dashboard')
     } else {
