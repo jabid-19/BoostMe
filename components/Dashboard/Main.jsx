@@ -96,11 +96,11 @@ const DashboardMain = ({ selectedTabs, open, setOpen }) => {
         </div>
         <div
           className={`${
-            open ? 'cursor-pointer duration-500 mx-6' : 'cursor-pointer duration-500 mx-1'
+            open ? 'cursor-pointer duration-500 pt-6 mx-6' : 'cursor-pointer duration-500 pt-2 mx-1'
           }`}>
           <Link href="/">
             <a>
-              <Image src="/common/logo-white.png" width={140} height={40} alt="BoostMe's logo" />
+              <Image src="/common/logo-footer.png" width={200} height={80} alt="BoostMe's logo" />
             </a>
           </Link>
         </div>
