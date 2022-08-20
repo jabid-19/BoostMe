@@ -30,9 +30,10 @@ const LoginForm = () => {
 
   const onSubmit = async (data) => {
     const response = await login(data)
-    console.log(response)
+    // console.log(response)
 
     if (response.status == 200 || response.status == 201) {
+      localStorage.user = JSON.stringify(response.data.user)
       reset()
       Router.push('/dashboard')
     } else {
