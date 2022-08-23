@@ -98,7 +98,7 @@ const LoginForm = () => {
                 outline-secondary
                 bg-gray-50
                 min-w-xs
-                ${errors.email?.message || (status.error.status && 'border-error outline-error')}
+                ${(errors.email?.message || status.error.status) && 'border-error outline-error'}
             `}
             />
             <div className="text-error text-xs font-bold pl-2 pt-2">{errors.email?.message}</div>
@@ -119,7 +119,7 @@ const LoginForm = () => {
                 bg-gray-50
                 min-w-xs
                 mt-4
-                ${errors.password?.message || (status.error.status && 'border-error outline-error')}
+                ${(errors.password?.message || status.error.status) && 'border-error outline-error'}
             `}
             />
             <div className="text-error text-xs font-bold pl-2 pt-2">{errors.password?.message}</div>
