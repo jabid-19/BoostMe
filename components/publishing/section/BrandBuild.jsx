@@ -14,7 +14,7 @@ const BrandBuild = () => {
             src={BoxBackground}
             width={500}
             height={100}
-            alt="BoostMe's Background"
+            alt="BoostnBoom's Background"
             loader={imageLoader}
           />
         </div>
@@ -58,7 +58,7 @@ const BrandBuild = () => {
                 src={Mobile}
                 width={270}
                 height={190}
-                alt="Clock"
+                alt="Mobile"
                 className="object-none mb-2"
                 loader={imageLoader}
               />
@@ -78,7 +78,7 @@ const BrandBuild = () => {
                 src={Calender}
                 width={270}
                 height={190}
-                alt="Clock"
+                alt="Calendar"
                 className="object-none mb-2"
                 loader={imageLoader}
               />

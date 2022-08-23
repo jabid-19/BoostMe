@@ -129,7 +129,13 @@ const Navbar = () => {
         </div>
         <Link href="/">
           <a>
-            <Image width={200} height={80} src={Logo} alt="" loader={imageLoader} />
+            <Image
+              width={200}
+              height={80}
+              src={Logo}
+              alt="BoostnBoom's Logo"
+              loader={imageLoader}
+            />
           </a>
         </Link>
       </div>

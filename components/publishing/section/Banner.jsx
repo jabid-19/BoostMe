@@ -22,7 +22,7 @@ const Banner = () => {
       </div>
       <div data-aos="zoom-in" className="mt-10 md:mt-28 w-full">
         <Image
-          alt="BoostMe's Marketing Banner"
+          alt="BoostnBoom's Marketing Banner"
           src={SocialMediaBanner}
           width="100%"
           height={28}

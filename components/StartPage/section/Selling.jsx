@@ -11,7 +11,7 @@ const Selling = () => {
             src="/start-page/calendar.webp"
             width={550}
             height={620}
-            alt="Manage Social Media Businesses"
+            alt="BoostnBoom's Manage Social Media Businesses"
             loader={imageLoader}
           />
         </div>

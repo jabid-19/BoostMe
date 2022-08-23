@@ -34,7 +34,7 @@ const Audiences = () => {
             width={740}
             height={537}
             className="max-w-sm rounded-lg shadow-2xl object-fill"
-            alt="Digital Marketing Dashboard"
+            alt="BoostnBoom's Digital Marketing Dashboard"
             loader={imageLoader}
           />
           {/* <video autoPlay playsInline loop muted>

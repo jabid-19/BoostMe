@@ -13,7 +13,7 @@ const Vision = () => {
           width={840}
           height={593}
           src={ExcitedWoman}
-          alt="BoostMe's Vision"
+          alt="BoostnBoom's Vision"
           loader={imageLoader}
         />
         <div data-aos="fade-left" className="max-w-2xl lg:pl-8 text-center lg:text-justify">
