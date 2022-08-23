@@ -60,13 +60,27 @@ const ForgetPassForm = () => {
                   message: 'Provide a valid Email',
                 },
               })}
-              className="input input-bordered input-primary rounded-full w-full min-w-xs"
+              // className="input input-bordered input-primary rounded-full w-full min-w-xs"
+              className={`
+                w-full
+                px-3
+                py-2
+                text-gray-800
+                border
+                rounded
+                outline-secondary
+                bg-gray-50
+                min-w-xs
+                ${errors.email?.message && 'border-error outline-error'}
+            `}
             />
             <div className="text-error text-xs font-bold pl-2 pt-2">{errors.email?.message}</div>
             <div className="text-error text-xs font-bold pl-2 ">{forgetError}</div>
             <br />
             <input
-              className="bg-secondary hover:bg-orange-400 py-1.5 w-full min-w-xs normal-case text-white rounded-full cursor-pointer"
+              // className="bg-secondary hover:bg-orange-400 py-1.5 w-full min-w-xs normal-case text-white rounded-full cursor-pointer"
+              className="bg-secondary hover:bg-orange-400 px-3
+              py-2 w-full min-w-xs normal-case text-white rounded cursor-pointer"
               type="submit"
               value="Submit"
             />

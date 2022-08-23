@@ -67,7 +67,19 @@ const RegisterForm = () => {
                   message: 'Provide a valid Email',
                 },
               })}
-              className="input input-bordered input-primary rounded-full w-full min-w-xs"
+              // className="input input-bordered input-primary rounded-full w-full min-w-xs"
+              className={`
+                w-full
+                px-3
+                py-2
+                text-gray-800
+                border
+                rounded
+                outline-secondary
+                bg-gray-50
+                min-w-xs
+                ${errors.email?.message && 'border-error outline-error'}
+            `}
             />
             <div className="text-error text-xs font-bold pl-2 pt-2">{errors.email?.message}</div>
             <input
@@ -85,7 +97,20 @@ const RegisterForm = () => {
                     'Password must be 8 characters or longer and contain at least one uppercase letter, one lowercase letter and one number',
                 },
               })}
-              className="input input-bordered input-primary rounded-full w-full min-w-xs mt-4"
+              // className="input input-bordered input-primary rounded-full w-full min-w-xs mt-4"
+              className={`
+                w-full
+                px-3
+                py-2
+                text-gray-800
+                border
+                rounded
+                outline-secondary
+                bg-gray-50
+                min-w-xs
+                mt-4
+                ${errors.password?.message && 'border-error outline-error'}
+            `}
             />
             <div className="text-error text-xs font-bold pl-2 pt-2">{errors.password?.message}</div>
             <input
@@ -95,10 +120,23 @@ const RegisterForm = () => {
               {...register('confirmPassword', {
                 required: {
                   value: true,
-                  message: 'Password is Required',
+                  message: 'Confirm Password is Required',
                 },
               })}
-              className="input input-bordered input-primary rounded-full w-full min-w-xs mt-4"
+              // className="input input-bordered input-primary rounded-full w-full min-w-xs mt-4"
+              className={`
+                w-full
+                px-3
+                py-2
+                text-gray-800
+                border
+                rounded
+                outline-secondary
+                bg-gray-50
+                min-w-xs
+                mt-4
+                ${errors.confirmPassword?.message && 'border-error outline-error'}
+            `}
             />
             <div className="text-error text-xs font-bold pl-2 pt-2">
               {errors.confirmPassword?.message}
@@ -106,7 +144,9 @@ const RegisterForm = () => {
             <div className="text-error text-xs font-bold pl-2 ">{registerError}</div>
             <br />
             <input
-              className="bg-secondary hover:bg-orange-400 py-1.5 w-full min-w-xs normal-case text-white rounded-full cursor-pointer"
+              // className="bg-secondary hover:bg-orange-400 py-1.5 w-full min-w-xs normal-case text-white rounded-full cursor-pointer"
+              className="bg-secondary hover:bg-orange-400 px-3
+              py-2 w-full min-w-xs normal-case text-white rounded cursor-pointer"
               type="submit"
               value="Sign Up"
             />
