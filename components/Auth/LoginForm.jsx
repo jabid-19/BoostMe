@@ -1,5 +1,5 @@
 import Router from 'next/router'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useForm } from 'react-hook-form'
 import ForgetPassForm from './ForgetPassForm'
 import RegisterForm from './RegisterForm'
@@ -13,7 +13,7 @@ const LoginForm = () => {
     loading: false,
     success: false,
     error: {
-      message: '',
+      message: null,
       status: false,
     },
   })
@@ -55,6 +55,20 @@ const LoginForm = () => {
     }
   }
 
+  // cleanup function
+  useEffect(() => {
+    return () => {
+      setStatus({
+        loading: false,
+        success: false,
+        error: {
+          message: null,
+          status: false,
+        },
+      })
+    }
+  }, [])
+
   return (
     <div>
       <div
@@ -69,13 +83,6 @@ const LoginForm = () => {
             </h1>
           </div>
           <form onSubmit={handleSubmit(onSubmit)}>
-            {/* <input
-              name="email"
-              type="email"
-              placeholder="Email address"
-              {...register('email', { required: 'Email is required' })}
-              className="input input-bordered input-primary rounded-full w-full min-w-xs"
-            /> */}
             <input
               name="email"
               type="email"
@@ -91,20 +98,14 @@ const LoginForm = () => {
                 outline-secondary
                 bg-gray-50
                 min-w-xs
-                ${errors.email?.message && 'border-error outline-error'}
+                ${errors.email?.message || (status.error.status && 'border-error outline-error')}
             `}
             />
             <div className="text-error text-xs font-bold pl-2 pt-2">{errors.email?.message}</div>
-            {/* <input
-              name="password"
-              type="password"
-              placeholder="Password"
-              {...register('password', { required: 'Password is required' })}
-              className="input input-bordered input-primary rounded-full w-full min-w-xs mt-4"
-            /> */}
             <input
               name="password"
               type="password"
+              autoComplete="on"
               placeholder="Password"
               {...register('password', { required: 'Password is required' })}
               className={`
@@ -118,7 +119,7 @@ const LoginForm = () => {
                 bg-gray-50
                 min-w-xs
                 mt-4
-                ${errors.password?.message && 'border-error outline-error'}
+                ${errors.password?.message || (status.error.status && 'border-error outline-error')}
             `}
             />
             <div className="text-error text-xs font-bold pl-2 pt-2">{errors.password?.message}</div>
@@ -126,7 +127,7 @@ const LoginForm = () => {
               <div className="text-error text-xs font-bold pl-2 ">{status?.error.errorMessage}</div>
             )}
             <input
-              className="bg-secondary hover:bg-orange-400 px-3
+              className="bg-secondary font-bold hover:bg-orange-400 px-3
               py-2 w-full min-w-xs normal-case text-white rounded cursor-pointer mt-6"
               type="submit"
               value={`${status?.loading ? 'Loading...' : 'Sign in'}`}
