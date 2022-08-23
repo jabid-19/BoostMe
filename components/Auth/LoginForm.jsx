@@ -76,10 +76,10 @@ const LoginForm = () => {
                 text-gray-800
                 border
                 rounded
-                outline-none
+                outline-secondary
                 bg-gray-50
                 min-w-xs
-                ${errors.email?.message && 'border-error'}
+                ${errors.email?.message && 'border-error outline-error'}
             `}
             />
             <div className="text-error text-xs font-bold pl-2 pt-2">{errors.email?.message}</div>
@@ -102,11 +102,11 @@ const LoginForm = () => {
                 text-gray-800
                 border
                 rounded
-                outline-none
+                outline-secondary
                 bg-gray-50
                 min-w-xs
                 mt-4
-                ${errors.password?.message && 'border-error'}
+                ${errors.password?.message && 'border-error outline-error'}
             `}
             />
             <div className="text-error text-xs font-bold pl-2 pt-2">{errors.password?.message}</div>
