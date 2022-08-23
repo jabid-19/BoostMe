@@ -57,25 +57,64 @@ const LoginForm = () => {
             </h1>
           </div>
           <form onSubmit={handleSubmit(onSubmit)}>
-            <input
+            {/* <input
               name="email"
               type="email"
               placeholder="Email address"
               {...register('email', { required: 'Email is required' })}
               className="input input-bordered input-primary rounded-full w-full min-w-xs"
+            /> */}
+            <input
+              name="email"
+              type="email"
+              placeholder="Email address"
+              {...register('email', { required: 'Email is required' })}
+              className={`
+                w-full
+                px-3
+                py-2
+                text-gray-800
+                border
+                rounded
+                outline-none
+                bg-gray-50
+                min-w-xs
+                ${errors.email?.message && 'border-error'}
+            `}
             />
             <div className="text-error text-xs font-bold pl-2 pt-2">{errors.email?.message}</div>
-            <input
+            {/* <input
               name="password"
               type="password"
               placeholder="Password"
               {...register('password', { required: 'Password is required' })}
               className="input input-bordered input-primary rounded-full w-full min-w-xs mt-4"
+            /> */}
+            <input
+              name="password"
+              type="password"
+              placeholder="Password"
+              {...register('password', { required: 'Password is required' })}
+              className={`
+                w-full
+                px-3
+                py-2
+                text-gray-800
+                border
+                rounded
+                outline-none
+                bg-gray-50
+                min-w-xs
+                mt-4
+                ${errors.password?.message && 'border-error'}
+            `}
             />
             <div className="text-error text-xs font-bold pl-2 pt-2">{errors.password?.message}</div>
             <div className="text-error text-xs font-bold pl-2 ">{loginError}</div>
             <input
-              className="bg-secondary hover:bg-orange-400 py-1.5 w-full min-w-xs normal-case text-white rounded-full cursor-pointer mt-6"
+              // className="bg-secondary hover:bg-orange-400 py-1.5 w-full min-w-xs normal-case text-white rounded-full cursor-pointer mt-6"
+              className="bg-secondary hover:bg-orange-400 px-3
+              py-2 w-full min-w-xs normal-case text-white rounded cursor-pointer mt-6"
               type="submit"
               value="Sign In"
             />
