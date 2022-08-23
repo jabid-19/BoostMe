@@ -50,7 +50,7 @@ const LoginForm = () => {
         ...status,
         loading: false,
         success: false,
-        error: { status: true, errorMessage: response?.data?.error },
+        error: { status: true, message: response?.data?.error },
       })
     }
   }
@@ -124,7 +124,7 @@ const LoginForm = () => {
             />
             <div className="text-error text-xs font-bold pl-2 pt-2">{errors.password?.message}</div>
             {status?.error.status && (
-              <div className="text-error text-xs font-bold pl-2 ">{status?.error.errorMessage}</div>
+              <div className="text-error text-md font-bold pl-2">{status?.error.message}</div>
             )}
             <input
               className="bg-secondary font-bold hover:bg-orange-400 px-3
