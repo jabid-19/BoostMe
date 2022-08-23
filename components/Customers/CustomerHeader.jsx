@@ -13,13 +13,19 @@ const CustomerHeader = ({ headingDescriptions }) => {
           width={1000}
           height={130}
           src={firstPattern}
-          alt=""
+          alt="BoostnBoom's Background Image"
           loader={imageLoader}
         />
       </div>
       <div className="flex flex-col sm:flex-row items-end md:items-center justify-center sm:justify-between">
         <div data-aos="fade-up-right" className="pr-48 sm:pr-4">
-          <Image width={600} height={145} src={secondPattern} alt="" loader={imageLoader} />
+          <Image
+            width={600}
+            height={145}
+            src={secondPattern}
+            alt="BoostnBoom's Background Image"
+            loader={imageLoader}
+          />
         </div>
         <div
           data-aos="fade-up-left"

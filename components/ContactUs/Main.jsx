@@ -80,7 +80,7 @@ const ContactUsMain = () => {
           src={BoxBackground2}
           width={400}
           height={100}
-          alt="BoostMe's Background"
+          alt="BoostnBoom's Background"
           loader={imageLoader}
         />
       </div>
@@ -260,7 +260,7 @@ const ContactUsMain = () => {
             <div className="mt-20 flex justify-center">
               <Image
                 src={Contact}
-                alt="BoostMe Contact Image"
+                alt="BoostnBoom's Contact Image"
                 width={300}
                 height={300}
                 className="rounded-lg"

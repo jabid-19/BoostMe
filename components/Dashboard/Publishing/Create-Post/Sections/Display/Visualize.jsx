@@ -27,7 +27,7 @@ const Visualize = ({ formData, setFormData }) => {
                       src={formData?.logo}
                       width={50}
                       height={50}
-                      alt="logo"
+                      alt="BoostnBoom's logo"
                       className="rounded-full"
                     />
                     <div>

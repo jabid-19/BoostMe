@@ -56,7 +56,7 @@ const Showcase = () => {
               src="/engagement-section/audience.png"
               width={650}
               height={600}
-              alt="Social Media Post Customization"
+              alt="BoostnBoom's Social Media Post Customization"
               loader={imageLoader}
             />
           </div>
@@ -69,7 +69,7 @@ const Showcase = () => {
               src="/start-page/social.webp"
               width={550}
               height={620}
-              alt="Brand Building using Social Media"
+              alt="BoostnBoom's Brand Building using Social Media"
               loader={imageLoader}
             />
           </div>
@@ -120,7 +120,7 @@ const Showcase = () => {
               src="/start-page/NFT.jpg"
               width={550}
               height={620}
-              alt="Generate NFTs"
+              alt="BoostnBoom's Generate NFTs"
               loader={imageLoader}
             />
           </div>

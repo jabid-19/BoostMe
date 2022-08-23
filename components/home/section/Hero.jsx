@@ -97,7 +97,7 @@ const Hero = () => {
               src={Background}
               width={500}
               height={100}
-              alt="BoostMe's Background"
+              alt="BoostnBoom's Background"
               className="max-w-full h-auto rounded-lg"
               loader={imageLoader}
             />

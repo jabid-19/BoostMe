@@ -9,7 +9,7 @@ const LoginFrameImage = () => {
         width={500}
         height={117}
         src={FrameImage}
-        alt="BoostMe's Background Image"
+        alt="BoostnBoom's Background Image"
         loader={imageLoader}
       />
     </div>

@@ -19,7 +19,7 @@ const Items = () => {
             width={520}
             height={520}
             src={CreateContent}
-            alt="Create Content"
+            alt="BoostnBoom's Content Creation"
             loader={imageLoader}
           />
           <div
@@ -41,7 +41,7 @@ const Items = () => {
             width={520}
             height={520}
             src={MarketAnalysis}
-            alt="Market Analysis"
+            alt="BoostnBoom's Market Analysis"
             loader={imageLoader}
           />
           <div
@@ -63,7 +63,7 @@ const Items = () => {
             width={520}
             height={520}
             src={MonitorActivity}
-            alt="Monitor Activity"
+            alt="BoostnBoom's Monitor Activity"
             loader={imageLoader}
           />
           <div
@@ -87,7 +87,7 @@ const Items = () => {
             width={520}
             height={520}
             src={ResultAnalysis}
-            alt="Result Analysis"
+            alt="BoostnBoom's Result Analysis"
             loader={imageLoader}
           />
           <div

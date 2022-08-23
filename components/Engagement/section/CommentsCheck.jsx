@@ -11,7 +11,7 @@ const CommentsCheck = () => {
             src="/engagement-section/multitask.webp"
             width={700}
             height={600}
-            alt="Social Media Engagement"
+            alt="BoostnBoom's Social Media Engagement"
             loader={imageLoader}
           />
         </div>

@@ -25,7 +25,7 @@ const Comments = () => {
           src="/engagement-section/audience.png"
           width={700}
           height={700}
-          alt="BoostMe's Digital Marketing Dashboard"
+          alt="BoostnBoom's Digital Marketing Dashboard"
           loader={imageLoader}
         />
       </div>

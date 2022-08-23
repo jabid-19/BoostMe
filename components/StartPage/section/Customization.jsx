@@ -32,7 +32,7 @@ const Customization = () => {
             src="/start-page/customize.webp"
             width={650}
             height={600}
-            alt="Social Media Post Customization"
+            alt="BoostnBoom's Social Media Post Customization"
             loader={imageLoader}
           />
         </div>

@@ -14,7 +14,7 @@ const AboutUs = () => {
             আমাদের <span className="text-primary">সম্পর্কে</span>
           </h1>
           <p className="text-neutral text-xs lg:text-lg py-6">
-            BooSTME বাংলাদেশের অন্যতম সেরা ডিজিটাল মার্কেটিং এজেন্সি, যেখানে আপনি একদম কম খরচে
+            BoostnBoom বাংলাদেশের অন্যতম সেরা ডিজিটাল মার্কেটিং এজেন্সি, যেখানে আপনি একদম কম খরচে
             ঝামেলা বিহীনভাবে আপনার প্রতিষ্ঠানের প্রোডাক্ট বা সার্ভিস ব্যান্ডিং করতে পারেন। গতানুগতিক
             মার্কেটিং সিস্টেম এর বাইরে আধুনিক জীবন ব্যবস্থার সাথে তাল মিলিয়ে আমরা আপনার প্রোডাক্ট বা
             সেবা কাস্টমারের কাছে পৌঁছে দিতে চাই। ফেসবুক, ইউটিউব, ইনস্টাগ্রাম - এর মতো সোশ্যাল
@@ -33,7 +33,13 @@ const AboutUs = () => {
         </div>
       </div>
       <div data-aos="fade-up-left" className="hidden lg:block lg:absolute lg:bottom-0 lg:right-0">
-        <Image width={500} height={117} src={FrameImage} alt="" loader={imageLoader} />
+        <Image
+          width={500}
+          height={117}
+          src={FrameImage}
+          alt="BoostnBoom's About Us Background Image"
+          loader={imageLoader}
+        />
       </div>
     </div>
   )

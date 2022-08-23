@@ -100,7 +100,12 @@ const DashboardMain = ({ selectedTabs, open, setOpen }) => {
           }`}>
           <Link href="/">
             <a>
-              <Image src="/common/logo-footer.png" width={200} height={80} alt="BoostMe's logo" />
+              <Image
+                src="/common/logo-footer.png"
+                width={200}
+                height={80}
+                alt="BoostnBoom's logo"
+              />
             </a>
           </Link>
         </div>

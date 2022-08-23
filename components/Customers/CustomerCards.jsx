@@ -10,7 +10,7 @@ const customersInfo = [
   {
     companyLogo: CampaignLogo,
     customerReview:
-      'BoostMe helps us measure what networks, and what content, is working best for us.',
+      'BoostnBoom helps us measure what networks, and what content, is working best for us.',
     customerPicture: CampaignPicture,
     customerName: 'Aaron Beashel',
     borderColor: 'primary',
@@ -19,7 +19,7 @@ const customersInfo = [
   {
     companyLogo: CampaignLogo,
     customerReview:
-      'BoostMe helps us measure what networks, and what content, is working best for us.',
+      'BoostnBoom helps us measure what networks, and what content, is working best for us.',
     customerPicture: CampaignPicture,
     customerName: 'Aaron Beashel',
     borderColor: 'secondary',
@@ -28,7 +28,7 @@ const customersInfo = [
   {
     companyLogo: CampaignLogo,
     customerReview:
-      'BoostMe helps us measure what networks, and what content, is working best for us.',
+      'BoostnBoom helps us measure what networks, and what content, is working best for us.',
     customerPicture: CampaignPicture,
     customerName: 'Aaron Beashel',
     borderColor: 'secondary',
@@ -37,7 +37,7 @@ const customersInfo = [
   {
     companyLogo: CampaignLogo,
     customerReview:
-      'BoostMe helps us measure what networks, and what content, is working best for us.',
+      'BoostnBoom helps us measure what networks, and what content, is working best for us.',
     customerPicture: CampaignPicture,
     customerName: 'Aaron Beashel',
     borderColor: 'primary',
@@ -46,7 +46,7 @@ const customersInfo = [
   {
     companyLogo: CampaignLogo,
     customerReview:
-      'BoostMe helps us measure what networks, and what content, is working best for us.',
+      'BoostnBoom helps us measure what networks, and what content, is working best for us.',
     customerPicture: CampaignPicture,
     customerName: 'Aaron Beashel',
     borderColor: 'primary',
@@ -55,7 +55,7 @@ const customersInfo = [
   {
     companyLogo: CampaignLogo,
     customerReview:
-      'BoostMe helps us measure what networks, and what content, is working best for us.',
+      'BoostnBoom helps us measure what networks, and what content, is working best for us.',
     customerPicture: CampaignPicture,
     customerName: 'Aaron Beashel',
     borderColor: 'secondary',
@@ -64,7 +64,7 @@ const customersInfo = [
   {
     companyLogo: CampaignLogo,
     customerReview:
-      'BoostMe helps us measure what networks, and what content, is working best for us.',
+      'BoostnBoom helps us measure what networks, and what content, is working best for us.',
     customerPicture: CampaignPicture,
     customerName: 'Aaron Beashel',
     borderColor: 'secondary',
@@ -73,7 +73,7 @@ const customersInfo = [
   {
     companyLogo: CampaignLogo,
     customerReview:
-      'BoostMe helps us measure what networks, and what content, is working best for us.',
+      'BoostnBoom helps us measure what networks, and what content, is working best for us.',
     customerPicture: CampaignPicture,
     customerName: 'Aaron Beashel',
     borderColor: 'primary',
@@ -95,7 +95,7 @@ const CustomerCards = () => {
             width={200}
             height={50}
             src={item.companyLogo}
-            alt="BoostMe's customer company logo"
+            alt="BoostnBoom's customer company logo"
             loader={imageLoader}
           />
           <GoQuote size={'2em'} color={'#777777'} className="text-lg" />
@@ -115,7 +115,7 @@ const CustomerCards = () => {
                   width={50}
                   height={50}
                   src={item.customerPicture}
-                  alt="BoostMe's customer image"
+                  alt="BoostnBoom's customer image"
                   loader={imageLoader}
                 />
               </div>

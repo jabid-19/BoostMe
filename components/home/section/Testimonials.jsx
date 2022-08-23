@@ -50,7 +50,7 @@ const Testimonials = () => {
           src={BoxBackground2}
           width={400}
           height={100}
-          alt="BoostMe's Background"
+          alt="BoostnBoom's Background"
           loader={imageLoader}
         />
       </div>
@@ -74,7 +74,7 @@ const Testimonials = () => {
                     src={testimonial?.image}
                     width={100}
                     height="100%"
-                    alt="BoostMe's testimonials"
+                    alt="BoostnBoom's testimonials"
                     loader={imageLoader}
                   />
                 </div>

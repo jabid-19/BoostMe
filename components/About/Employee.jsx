@@ -8,7 +8,13 @@ const Employee = () => {
       <div className="flex flex-col lg:flex-row lg:justify-center items-center py-4 px-8 lg:px-36">
         <div data-aos="fade-right" className="avatar">
           <div className="w-52 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-            <Image width={320} height={320} src={MaleAvatar} alt="" loader={imageLoader} />
+            <Image
+              width={320}
+              height={320}
+              src={MaleAvatar}
+              alt="BoostnBoom's Team Member"
+              loader={imageLoader}
+            />
           </div>
         </div>
         <div data-aos="fade-left" className="mt-6 lg:pl-12 text-center lg:text-start">
@@ -24,7 +30,13 @@ const Employee = () => {
       <div className="flex flex-col lg:flex-row lg:justify-center items-center py-4 px-8 lg:px-36">
         <div data-aos="fade-right" className="avatar">
           <div className="w-52 rounded-full ring ring-secondary ring-offset-base-100 ring-offset-2">
-            <Image width={320} height={320} src={FemaleAvatar} alt="" loader={imageLoader} />
+            <Image
+              width={320}
+              height={320}
+              src={FemaleAvatar}
+              alt="BoostnBoom's Team Member"
+              loader={imageLoader}
+            />
           </div>
         </div>
         <div data-aos="fade-left" className="mt-6 lg:pl-12 text-center lg:text-start">
@@ -40,7 +52,13 @@ const Employee = () => {
       <div className="flex flex-col lg:flex-row lg:justify-center items-center py-4 px-8 lg:px-36">
         <div data-aos="fade-right" className="avatar">
           <div className="w-52 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-            <Image width={320} height={320} src={MaleAvatar} alt="" loader={imageLoader} />
+            <Image
+              width={320}
+              height={320}
+              src={MaleAvatar}
+              alt="BoostnBoom's Team Member"
+              loader={imageLoader}
+            />
           </div>
         </div>
         <div data-aos="fade-left" className="mt-6 lg:pl-12 text-center lg:text-start">

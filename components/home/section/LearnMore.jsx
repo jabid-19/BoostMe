@@ -14,7 +14,7 @@ const LearnMore = () => {
             width={423}
             height={460}
             className="max-w-sm rounded-lg shadow-2xl object-fill"
-            alt="Social Media Content Writing"
+            alt="BoostnBoom's Social Media Content Writing"
             loader={imageLoader}
           />
         </div>
@@ -28,7 +28,7 @@ const LearnMore = () => {
           </h1>
           <p className="py-4 text-neutral w-full lg:w-1/2 text-center lg:text-left">
             পেমেন্ট গেটওয়ের মাধ্যমে বাংলাদেশের যে কোন ডিজিটাল মোবাইল ফিনান্সিয়াল সার্ভিস, ডেবিট
-            কার্ড, ক্রেডিট কার্ড এবং ব্যাংক একাউন্ট থেকে BoostMe একাউন্টে ক্রেডিট লোড করুন সহজেই।
+            কার্ড, ক্রেডিট কার্ড এবং ব্যাংক একাউন্ট থেকে BoostnBoom একাউন্টে ক্রেডিট লোড করুন সহজেই।
             {/* Plan and publish your content for Instagram, TikTok, Facebook, Twitter, Pinterest, and
             LinkedIn, all from one simple dashboard. */}
           </p>

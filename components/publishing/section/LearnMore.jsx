@@ -13,7 +13,7 @@ const LearnMore = () => {
           width={423}
           height={460}
           className="max-w-sm rounded-lg shadow-2xl"
-          alt="Social Media Content Writing"
+          alt="BoostnBoom's Social Media Content Writing"
           loader={imageLoader}
         />
         <div
