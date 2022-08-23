@@ -1,15 +1,20 @@
-import React from 'react'
-import { useState } from 'react'
-import LoginForm from './LoginForm'
 import Router from 'next/router'
+import React, { useEffect, useState } from 'react'
 import { useForm } from 'react-hook-form'
+import LoginForm from './LoginForm'
 
 import { forgetPassword } from '../../src/backend/Auth'
 
 const ForgetPassForm = () => {
   const [visibleItem, setVisibleItem] = useState(true)
-
-  const [forgetError, setForgetError] = useState('')
+  const [status, setStatus] = useState({
+    loading: false,
+    success: false,
+    error: {
+      message: null,
+      status: false,
+    },
+  })
 
   const {
     register,
@@ -23,15 +28,40 @@ const ForgetPassForm = () => {
   }
 
   const onSubmit = async (data) => {
+    setStatus({ ...status, loading: true })
     const response = await forgetPassword(data.email)
 
     if (response.status == 200 || response.status == 201) {
+      setStatus({ ...status, loading: false, success: true })
       reset()
       Router.push('/recovery')
     } else {
-      setForgetError(response.data)
+      console.log(response.data)
+      setStatus({
+        ...status,
+        loading: false,
+        success: false,
+        error: {
+          status: true,
+          message: response?.data?.error,
+        },
+      })
     }
   }
+
+  // cleanup function
+  useEffect(() => {
+    return () => {
+      setStatus({
+        loading: false,
+        success: false,
+        error: {
+          message: null,
+          status: false,
+        },
+      })
+    }
+  }, [])
 
   return (
     <div>
@@ -60,7 +90,6 @@ const ForgetPassForm = () => {
                   message: 'Provide a valid Email',
                 },
               })}
-              // className="input input-bordered input-primary rounded-full w-full min-w-xs"
               className={`
                 w-full
                 px-3
@@ -75,14 +104,15 @@ const ForgetPassForm = () => {
             `}
             />
             <div className="text-error text-xs font-bold pl-2 pt-2">{errors.email?.message}</div>
-            <div className="text-error text-xs font-bold pl-2 ">{forgetError}</div>
+            {status?.error.status && (
+              <div className="text-error text-md font-bold pl-2">{status.error?.message}</div>
+            )}
             <br />
             <input
-              // className="bg-secondary hover:bg-orange-400 py-1.5 w-full min-w-xs normal-case text-white rounded-full cursor-pointer"
-              className="bg-secondary hover:bg-orange-400 px-3
+              className="bg-secondary font-bold hover:bg-orange-400 px-3
               py-2 w-full min-w-xs normal-case text-white rounded cursor-pointer"
               type="submit"
-              value="Submit"
+              value={`${status.loading ? 'Loading...' : 'Submit'}`}
             />
           </form>
           <br />

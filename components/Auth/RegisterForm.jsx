@@ -1,15 +1,20 @@
-import React from 'react'
-import { useState } from 'react'
-import LoginForm from './LoginForm'
 import Router from 'next/router'
+import React, { useEffect, useState } from 'react'
 import { useForm } from 'react-hook-form'
+import LoginForm from './LoginForm'
 
 import { signup } from '../../src/backend/Auth'
 
 const RegisterForm = () => {
   const [visibleItem, setVisibleItem] = useState(true)
-
-  const [registerError, setRegisterError] = useState('')
+  const [status, setStatus] = useState({
+    loading: false,
+    success: false,
+    error: {
+      message: null,
+      status: false,
+    },
+  })
 
   const {
     register,
@@ -23,22 +28,43 @@ const RegisterForm = () => {
   }
 
   const onSubmit = async (data) => {
+    setStatus({ ...status, loading: true })
     const user = {
       email: data.email,
       password: data.password,
       confirmPassword: data.confirmPassword,
     }
-
     const response = await signup(user)
-
     if (response.status == 200 || response.status == 201) {
+      setStatus({ ...status, loading: false, success: true })
       reset()
       Router.push('/recovery')
     } else {
-      console.log(response.data.error)
-      setRegisterError(response.data.error)
+      setStatus({
+        ...status,
+        loading: false,
+        success: false,
+        error: {
+          status: true,
+          message: response?.data?.error,
+        },
+      })
     }
   }
+
+  // cleanup function
+  useEffect(() => {
+    return () => {
+      setStatus({
+        loading: false,
+        success: false,
+        error: {
+          message: null,
+          status: false,
+        },
+      })
+    }
+  }, [])
 
   return (
     <div>
@@ -67,7 +93,6 @@ const RegisterForm = () => {
                   message: 'Provide a valid Email',
                 },
               })}
-              // className="input input-bordered input-primary rounded-full w-full min-w-xs"
               className={`
                 w-full
                 px-3
@@ -78,7 +103,7 @@ const RegisterForm = () => {
                 outline-secondary
                 bg-gray-50
                 min-w-xs
-                ${errors.email?.message && 'border-error outline-error'}
+                ${(errors.email?.message || status.error?.status) && 'border-error outline-error'}
             `}
             />
             <div className="text-error text-xs font-bold pl-2 pt-2">{errors.email?.message}</div>
@@ -86,6 +111,7 @@ const RegisterForm = () => {
               name="password"
               type="password"
               placeholder="Password"
+              autoComplete="on"
               {...register('password', {
                 required: {
                   value: true,
@@ -97,7 +123,6 @@ const RegisterForm = () => {
                     'Password must be 8 characters or longer and contain at least one uppercase letter, one lowercase letter and one number',
                 },
               })}
-              // className="input input-bordered input-primary rounded-full w-full min-w-xs mt-4"
               className={`
                 w-full
                 px-3
@@ -109,7 +134,10 @@ const RegisterForm = () => {
                 bg-gray-50
                 min-w-xs
                 mt-4
-                ${errors.password?.message && 'border-error outline-error'}
+                ${
+                  (errors.password?.message || status?.error?.status) &&
+                  'border-error outline-error'
+                }
             `}
             />
             <div className="text-error text-xs font-bold pl-2 pt-2">{errors.password?.message}</div>
@@ -117,13 +145,13 @@ const RegisterForm = () => {
               name="confirmPassword"
               type="password"
               placeholder="Confirm password"
+              autoComplete="onc"
               {...register('confirmPassword', {
                 required: {
                   value: true,
                   message: 'Confirm Password is Required',
                 },
               })}
-              // className="input input-bordered input-primary rounded-full w-full min-w-xs mt-4"
               className={`
                 w-full
                 px-3
@@ -135,20 +163,24 @@ const RegisterForm = () => {
                 bg-gray-50
                 min-w-xs
                 mt-4
-                ${errors.confirmPassword?.message && 'border-error outline-error'}
+                ${
+                  (errors.confirmPassword?.message || status?.error?.status) &&
+                  'border-error outline-error'
+                }
             `}
             />
             <div className="text-error text-xs font-bold pl-2 pt-2">
               {errors.confirmPassword?.message}
             </div>
-            <div className="text-error text-xs font-bold pl-2 ">{registerError}</div>
+            {status.error.status && (
+              <div className="text-error text-md font-bold pl-2">{status.error?.message}</div>
+            )}
             <br />
             <input
-              // className="bg-secondary hover:bg-orange-400 py-1.5 w-full min-w-xs normal-case text-white rounded-full cursor-pointer"
-              className="bg-secondary hover:bg-orange-400 px-3
+              className="bg-secondary font-bold hover:bg-orange-400 px-3
               py-2 w-full min-w-xs normal-case text-white rounded cursor-pointer"
               type="submit"
-              value="Sign Up"
+              value={`${status.loading ? 'Loading...' : 'Sign up'}`}
             />
           </form>
           <br />
