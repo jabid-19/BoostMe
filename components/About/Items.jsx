@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import imageLoader from '../../helper/imageLoader'
-import RectangleImage from '../../public/common/LoginImage.png'
 import CreateContent from '../../public/about-section/content-create.svg'
 import MarketAnalysis from '../../public/about-section/market-analysis.svg'
 import MonitorActivity from '../../public/about-section/monitor-activity.svg'

@@ -11,7 +11,7 @@ import {
 import { BsPhone } from 'react-icons/bs'
 import imageLoader from '../../helper/imageLoader'
 import BoxBackground2 from '../../public/common/BoxBackground2.png'
-import Contact from '../../public/contact-us/contact-us-transparent.png'
+import Contact from '../../public/contact-us/contact-us-animate.svg'
 
 import { contact } from '../../src/backend/Contact'
 
@@ -83,7 +83,18 @@ const ContactUsMain = () => {
                   placeholder="John Doe"
                   type="text"
                   {...register('name', { required: 'Name is required' })}
-                  className="input input-bordered input-primary bg-transparent rounded-full w-full min-w-xs"
+                  // className="input input-bordered input-primary bg-transparent rounded-full w-full min-w-xs"
+                  className={`w-full
+                  px-3
+                  py-2
+                  text-gray-800
+                  border
+                  rounded
+                  outline-secondary
+                  bg-gray-50
+                  min-w-xs
+                  ${errors.name?.message && 'border-error outline-error'}
+                  `}
                 />
                 <div className="text-error text-xs font-bold pl-2 pt-2">{errors.name?.message}</div>
               </div>
@@ -95,7 +106,18 @@ const ContactUsMain = () => {
                     placeholder="+1 (555) 555-5555"
                     type="tel"
                     {...register('phone', { required: 'Phone Number is required' })}
-                    className="input input-bordered input-primary bg-transparent rounded-full w-full min-w-xs"
+                    // className="input input-bordered input-primary bg-transparent rounded-full w-full min-w-xs"
+                    className={`w-full
+                  px-3
+                  py-2
+                  text-gray-800
+                  border
+                  rounded
+                  outline-secondary
+                  bg-gray-50
+                  min-w-xs
+                  ${errors.phone?.message && 'border-error outline-error'}
+                  `}
                   />
                   <div className="text-error text-xs font-bold pl-2 pt-2">
                     {errors.phone?.message}
@@ -108,7 +130,18 @@ const ContactUsMain = () => {
                     placeholder="example@example.com"
                     type="email"
                     {...register('email', { required: 'Email is required' })}
-                    className="input input-bordered input-primary bg-transparent rounded-full w-full min-w-xs"
+                    // className="input input-bordered input-primary bg-transparent rounded-full w-full min-w-xs"
+                    className={`w-full
+                  px-3
+                  py-2
+                  text-gray-800
+                  border
+                  rounded
+                  outline-secondary
+                  bg-gray-50
+                  min-w-xs
+                  ${errors.email?.message && 'border-error outline-error'}
+                  `}
                   />
                   <div className="text-error text-xs font-bold pl-2 pt-2">
                     {errors.email?.message}
@@ -122,7 +155,18 @@ const ContactUsMain = () => {
                   placeholder="XXXXX"
                   type="text"
                   {...register('subject', { required: 'Subject is required' })}
-                  className="input input-bordered input-primary bg-transparent rounded-full w-full min-w-xs"
+                  // className="input input-bordered input-primary bg-transparent rounded-full w-full min-w-xs"
+                  className={`w-full
+                  px-3
+                  py-2
+                  text-gray-800
+                  border
+                  rounded
+                  outline-secondary
+                  bg-gray-50
+                  min-w-xs
+                  ${errors.subject?.message && 'border-error outline-error'}
+                  `}
                 />
                 <div className="text-error text-xs font-bold pl-2 pt-2">
                   {errors.subject?.message}
@@ -134,14 +178,27 @@ const ContactUsMain = () => {
                   name="details"
                   type="text"
                   {...register('details', { required: 'Details is required' })}
-                  className="input input-bordered input-primary h-32 bg-transparent rounded-3xl w-full min-w-xs px-4 py-4"
+                  // className="input input-bordered input-primary h-32 bg-transparent rounded-3xl w-full min-w-xs px-4 py-4"
+                  className={`w-full
+                  px-3
+                  py-2
+                  text-gray-800
+                  border
+                  rounded
+                  outline-secondary
+                  bg-gray-50
+                  min-w-xs
+                  ${errors.details?.message && 'border-error outline-error'}
+                  `}
                 />
                 <div className="text-error text-xs font-bold pl-2 pt-2">
                   {errors.details?.message}
                 </div>
               </div>
               <input
-                className="input bg-secondary hover:bg-orange-400 py-1.5 w-full min-w-xs normal-case text-white rounded-full cursor-pointer"
+                // className="input bg-secondary hover:bg-orange-400 py-1.5 w-full min-w-xs normal-case text-white rounded-full cursor-pointer"
+                className="bg-secondary hover:bg-orange-400 px-3
+              py-2 w-full min-w-xs normal-case text-white rounded cursor-pointer"
                 type="submit"
                 value="Sign In"
               />
