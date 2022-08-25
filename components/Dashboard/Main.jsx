@@ -1,15 +1,13 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import React, { useEffect, useState } from 'react'
-import { sectionPath } from '../../helper/pathGenerator'
+import React, { useEffect } from 'react'
 const DashboardMain = ({ selectedTabs, open, setOpen }) => {
   // imports
   const router = useRouter()
-  // states
-  const [selectedSection, setSelectedSection] = useState(null)
+
   // functions
-  const subPath = sectionPath(router.pathname)
+  const subPath = router.pathname
 
   const generateMenuItem = (item) => (
     <Link href={item?.route || '/dashboard/analytics'} key={item.title} passHref>
@@ -17,9 +15,8 @@ const DashboardMain = ({ selectedTabs, open, setOpen }) => {
         <a
           className={`text-white text-sm flex flex-wrap items-center gap-x-4 cursor-pointer p-2 hover:bg-secondary rounded-md ${
             item.gap ? 'mt-9' : 'mt-2'
-          } ${item.title === (selectedSection || subPath) && 'bg-secondary'}`}
-          href={item.route || '/dashboard/analytics'}
-          onClick={() => setSelectedSection(item.title)}>
+          } ${item.route === subPath && 'bg-secondary'}`}
+          href={item.route || '/dashboard/analytics'}>
           {item.icon}
           <span className={`${!open && 'hidden'} origin-left duration-200 text-xl`}>
             {item.title}
@@ -38,8 +35,7 @@ const DashboardMain = ({ selectedTabs, open, setOpen }) => {
           <a
             className={`text-white text-sm flex flex-wrap items-center gap-x-4 cursor-pointer p-2 hover:bg-secondary rounded-md ${
               route.gap ? 'mt-9' : 'mt-2'
-            }`}
-            onClick={() => setSelectedSection(route.title)}>
+            }`}>
             {route.icon}
             <span className={`${!open && 'hidden'} origin-left duration-200 text-xl`}>
               {route.title}
@@ -51,10 +47,9 @@ const DashboardMain = ({ selectedTabs, open, setOpen }) => {
               <Link href={subRoute?.route || '/dashboard/analytics'} key={subRoute.title}>
                 <a
                   className={`text-white text-sm flex flex-wrap items-center justify-end gap-x-4 cursor-pointer p-2 hover:bg-secondary rounded-md  ${
-                    subRoute.title === (selectedSection || subPath) && 'bg-secondary list-disc'
+                    subRoute.route === subPath && 'bg-secondary list-disc'
                   }`}
-                  href={subRoute.route || '/dashboard/analytics'}
-                  onClick={() => setSelectedSection(subRoute.title)}>
+                  href={subRoute.route || '/dashboard/analytics'}>
                   {subRoute.icon}
                   <span className={`${!open && 'hidden'} origin-left duration-200 text-xl`}>
                     {subRoute.title}

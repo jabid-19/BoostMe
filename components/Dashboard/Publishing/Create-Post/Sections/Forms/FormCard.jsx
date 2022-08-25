@@ -11,7 +11,6 @@ export default function FormCard({ children, currentStep, prevFormStep, nextForm
         <li className={`${currentStep === 3 || currentStep >= 3 ? 'step step-primary' : 'step'}`}>
           Step 3
         </li>
-        <li className={`${currentStep === 4 ? 'step step-primary' : 'step'}`}>Step 4</li>
       </ul>
       <div>{children}</div>
     </div>
