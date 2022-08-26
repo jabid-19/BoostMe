@@ -7,7 +7,7 @@ import Logo from '../../public/common/logo-navbar.png'
 // import axios from '../../axios'
 
 const Navbar = () => {
-  const [email, setEmail] = useState(null) 
+  const [email, setEmail] = useState(null)
   const [languageMode, setLanguageMode] = useState('EN')
 
   // API call to change language on button press. Please check and update
@@ -27,10 +27,10 @@ const Navbar = () => {
   // get data from localStorage
   useEffect(() => {
     const localData = localStorage.getItem('user')
-    const userEmail = !!localData ? JSON.parse(localData) : undefined;
-    setEmail(userEmail.email)
-  },[])
-  
+    const userEmail = !!localData ? JSON.parse(localData) : undefined
+    setEmail(userEmail?.email)
+  }, [])
+
   return (
     <div className={'navbar bg-base-100 shadow-md shadow-pink-300 lg:px-24 py-4 sticky top-0 z-50'}>
       <div className="navbar-start">
@@ -125,7 +125,7 @@ const Navbar = () => {
             </div> */}
             <li>
               <Link href="login">
-                <a>{email || 'Login' }</a>
+                <a>{email || 'Login'}</a>
               </Link>
             </li>
             <li>
