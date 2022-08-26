@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { useRouter } from 'next/router'
 import React, { useEffect } from 'react'
 import { Menus, tabsMenu } from '../../data/Dashboard'
@@ -64,12 +65,14 @@ const DashboardTabs = ({ setSelectedTabs, activeTab, setActiveTab }) => {
                 </li>
               ) : (
                 <li key={menu.id}>
-                  <a
-                    className={`font-bold text-neutral text-[16px] hover:text-primary hover:bg-transparent`}
-                    onClick={() => localStorage.removeItem('user')}>
-                    {menu.icons && menu.iconName}
-                    <span className={`${menu.icons && 'px-2'}`}>{menu.title}</span>
-                  </a>
+                  <Link href="/login">
+                    <a
+                      className={`font-bold text-neutral text-[16px] hover:text-primary hover:bg-transparent`}
+                      onClick={() => localStorage.removeItem('user')}>
+                      {menu.icons && menu.iconName}
+                      <span className={`${menu.icons && 'px-2'}`}>{menu.title}</span>
+                    </a>
+                  </Link>
                 </li>
               )
             )}

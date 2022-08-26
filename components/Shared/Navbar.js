@@ -28,7 +28,7 @@ const Navbar = () => {
   useEffect(() => {
     const localData = localStorage.getItem('user')
     const userEmail = !!localData ? JSON.parse(localData) : undefined;
-    setEmail(userEmail.email)
+    setEmail(userEmail?.email)
   },[])
   
   return (
@@ -259,7 +259,7 @@ const Navbar = () => {
             </ul>
           </li> */}
           <li className="text-primary mr-4">
-            <Link href="login">
+            <Link href={email ? 'dashboard/publishing/create-post/create' : 'login'}>
               <a>{email || 'Login'}</a>
             </Link>
           </li>
