@@ -3,10 +3,7 @@ import {
   AiOutlineFileAdd,
   AiOutlineFileSync,
   AiOutlineHome,
-  AiOutlinePieChart,
-  AiOutlineSchedule,
-  AiOutlineTeam,
-  AiOutlineUnorderedList
+  AiOutlinePieChart, AiOutlineUnorderedList
 } from 'react-icons/ai'
 import { BiBuildings, BiCalendar, BiSearchAlt } from 'react-icons/bi'
 import { BsChat, BsGraphUp, BsGrid, BsKanban } from 'react-icons/bs'
@@ -20,49 +17,49 @@ export const tabsMenu = [
     key: 'publishing',
     icons: false,
   },
-  {
-    id: 2,
-    title: 'Analytics',
-    key: 'analytics',
-    icons: false,
-  },
-  {
-    id: 3,
-    title: 'Engagements',
-    key: 'engagements',
-    icons: false,
-  },
-  {
-    id: 4,
-    title: 'Start Page',
-    key: 'startPage',
-    icons: false,
-  },
-  {
-    id: 5,
-    title: 'Invite Your Team',
-    icons: true,
-    key: 'inviteYourTeam',
-    iconName: <AiOutlineTeam />,
-  },
-  {
-    id: 6,
-    title: 'Apps',
-    key: 'apps',
-    icons: false,
-  },
-  {
-    id: 7,
-    title: 'Help',
-    key: 'help',
-    icons: false,
-  },
-  {
-    id: 8,
-    title: 'Email',
-    key: 'email',
-    icons: false,
-  },
+  // {
+  //   id: 2,
+  //   title: 'Analytics',
+  //   key: 'analytics',
+  //   icons: false,
+  // },
+  // {
+  //   id: 3,
+  //   title: 'Engagements',
+  //   key: 'engagements',
+  //   icons: false,
+  // },
+  // {
+  //   id: 4,
+  //   title: 'Start Page',
+  //   key: 'startPage',
+  //   icons: false,
+  // },
+  // {
+  //   id: 5,
+  //   title: 'Invite Your Team',
+  //   icons: true,
+  //   key: 'inviteYourTeam',
+  //   iconName: <AiOutlineTeam />,
+  // },
+  // {
+  //   id: 6,
+  //   title: 'Apps',
+  //   key: 'apps',
+  //   icons: false,
+  // },
+  // {
+  //   id: 7,
+  //   title: 'Help',
+  //   key: 'help',
+  //   icons: false,
+  // },
+  // {
+  //   id: 8,
+  //   title: 'Email',
+  //   key: 'email',
+  //   icons: false,
+  // },
   {
     id: 9,
     title: 'Logout',
@@ -163,11 +160,11 @@ export const Menus = {
           icon: <BiBuildings size={20} />,
           route: '/dashboard/publishing/create-post/create',
         },
-        {
-          title: 'Schedule Later',
-          icon: <AiOutlineSchedule size={20} />,
-          route: '/dashboard/publishing/create-post/schedule',
-        },
+        // {
+        //   title: 'Schedule Later',
+        //   icon: <AiOutlineSchedule size={20} />,
+        //   route: '/dashboard/publishing/create-post/schedule',
+        // },
       ],
     },
     {

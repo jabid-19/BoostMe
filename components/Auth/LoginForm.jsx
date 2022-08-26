@@ -44,7 +44,7 @@ const LoginForm = () => {
         localStorage.setItem('user', JSON.stringify(response.data.user))
       }
       reset()
-      Router.push('/dashboard')
+      Router.push('/dashboard/publishing/create-post/create')
     } else {
       setStatus({
         ...status,
