@@ -1,12 +1,13 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import imageLoader from '../../helper/imageLoader'
 import Logo from '../../public/common/logo-navbar.png'
 
 // import axios from '../../axios'
 
 const Navbar = () => {
+  const [email, setEmail] = useState(null)
   const [languageMode, setLanguageMode] = useState('EN')
 
   // API call to change language on button press. Please check and update
@@ -22,6 +23,13 @@ const Navbar = () => {
   //     setLanguageMode('EN')
   //   }
   // }
+
+  // get data from localStorage
+  useEffect(() => {
+    const localData = localStorage.getItem('user')
+    const userEmail = !!localData ? JSON.parse(localData) : undefined
+    setEmail(userEmail?.email)
+  }, [])
 
   return (
     <div className={'navbar bg-base-100 shadow-md shadow-pink-300 lg:px-24 py-4 sticky top-0 z-50'}>
@@ -117,7 +125,7 @@ const Navbar = () => {
             </div> */}
             <li>
               <Link href="login">
-                <a>Login</a>
+                <a>{email || 'Login'}</a>
               </Link>
             </li>
             <li>
@@ -252,7 +260,7 @@ const Navbar = () => {
           </li> */}
           <li className="text-primary mr-4">
             <Link href="login">
-              <a>Login</a>
+              <a>{email || 'Login'}</a>
             </Link>
           </li>
           <Link href={{ pathname: 'login', query: { keyword: 'register' } }}>

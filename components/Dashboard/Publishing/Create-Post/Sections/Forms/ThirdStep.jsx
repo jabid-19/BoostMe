@@ -51,7 +51,7 @@ export default function ThirdStep({ formStep, prevFormStep, nextFormStep, formDa
 
   return (
     <div className={`${formStep === 3 ? 'block' : 'hidden'}`}>
-      <h2 className="text-center text-3xl font-bold text-neutral">2nd Step</h2>
+      <h2 className="text-center text-3xl font-bold text-neutral">3rd Step</h2>
       {status.success && !status.error ? (
         <h1>Form Submitted</h1>
       ) : (
