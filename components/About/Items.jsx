@@ -35,18 +35,19 @@ const Items = () => {
           </div>
         </div>
         <div className="flex flex-col lg:flex-col-reverse min-w-xl mx-auto">
-          <Image
-            data-aos="fade-up"
-            className="rounded-2xl"
-            width={520}
-            height={520}
-            src={MarketAnalysis}
-            alt="BoostnBoom's Market Analysis"
-            loader={imageLoader}
-          />
+          <div data-aos="fade-up" className="lg:mt-4">
+            <Image
+              className="rounded-2xl"
+              width={520}
+              height={520}
+              src={MarketAnalysis}
+              alt="BoostnBoom's Market Analysis"
+              loader={imageLoader}
+            />
+          </div>
           <div
             data-aos="fade-down"
-            className="mt-12 lg:mb-0 text-center lg:text-start p-8 border-4 rounded-2xl border-secondary">
+            className="mt-8 lg:mb-0 text-center lg:text-start p-8 border-4 rounded-2xl border-secondary">
             <h1 className="text-xl md:text-2xl font-semibold break-words lg:text-4xl text-neutral lg:tracking-wide xl:text-5xl mb-6">
               বাজার বিশ্লেষণ
             </h1>

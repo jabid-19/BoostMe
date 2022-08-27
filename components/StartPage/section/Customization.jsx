@@ -21,7 +21,7 @@ const Customization = () => {
             followers into fans <br /> using Buffer. */}
             ছবি, ভিডিও, জিআইএফ, ট্যাগ এবং আরও অনেক কিছু সহ প্রতিটি সোশ্যাল মিডিয়া প্ল্যাটফর্মের
             জন্য কাস্টমাইজড পোস্ট তৈরি এবং শিডিউল করুন সহজেই৷ সর্বচ্চ 500টি পর্যন্ত পোস্ট বাল্ক
-            শিডিউল করতে পারেন BoostMe প্লাটফর্ম থেকে।
+            শিডিউল করতে পারেন BoostnBoom প্লাটফর্ম থেকে।
           </p>
           {/* <button className="btn btn-wide rounded-full mt-10 btn-primary mx-auto text-white normal-case md:mx-0">
             Create Your Page For Free
