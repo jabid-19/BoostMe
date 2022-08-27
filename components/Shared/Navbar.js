@@ -31,7 +31,7 @@ const Navbar = () => {
     const userEmail = !!localData ? JSON.parse(localData) : undefined
     setEmail(userEmail?.email)
   }, [email])
-  console.log('email', email)
+
   return (
     <div className={'navbar bg-base-100 shadow-md shadow-pink-300 lg:px-24 py-4 sticky top-0 z-50'}>
       <div className="navbar-start">
@@ -302,7 +302,11 @@ const Navbar = () => {
               </li> */}
                 <li>
                   <Link href="/login">
-                    <a className="pl-4" onClick={() => {localStorage.removeItem('user'), setEmail(null)}}>
+                    <a
+                      className="pl-4"
+                      onClick={() => {
+                        localStorage.removeItem('user'), setEmail(null)
+                      }}>
                       Sign out
                     </a>
                   </Link>
