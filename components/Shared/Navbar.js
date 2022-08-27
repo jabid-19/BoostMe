@@ -259,7 +259,7 @@ const Navbar = () => {
             </ul>
           </li> */}
           <li className="text-primary mr-4">
-            <Link href="login">
+            <Link href={email ? 'dashboard/publishing/create-post/create' : 'login'}>
               <a>{email || 'Login'}</a>
             </Link>
           </li>
