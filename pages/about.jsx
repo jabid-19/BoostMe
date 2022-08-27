@@ -1,11 +1,11 @@
 import Items from '../components/About/Items'
 import Vision from '../components/About/Vision'
 // import Employee from '../components/About/Employee'
-import Goal from '../components/About/Goal'
 import AboutUs from '../components/About/AboutUs'
+import Goal from '../components/About/Goal'
 // import EmployeeCover from '../components/About/EmployeeCover'
-import CustomerHeader from '../components/Customers/CustomerHeader'
 import Head from 'next/head'
+import CustomerHeader from '../components/Customers/CustomerHeader'
 
 const About = () => {
   const headingDescriptions = {
@@ -19,6 +19,7 @@ const About = () => {
     <div>
       <Head>
         <title>Boost N Boom | About</title>
+        <meta name="description" content="Boost N Boom About" />
       </Head>
       <CustomerHeader headingDescriptions={headingDescriptions} />
       <AboutUs />

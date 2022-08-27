@@ -1,9 +1,9 @@
+import Head from 'next/head'
+import { useRouter } from 'next/router'
 import LoginForm from '../components/Auth/LoginForm'
 import LoginFrameImage from '../components/Auth/LoginFrameImage'
 import RectangleLoginImage from '../components/Auth/RectangleLoginImage'
-import { useRouter } from 'next/router'
 import RegisterForm from '../components/Auth/RegisterForm'
-import Head from 'next/head'
 
 const Login = () => {
   const router = useRouter()
@@ -12,6 +12,7 @@ const Login = () => {
     <div>
       <Head>
         <title>Boost N Boom | Login</title>
+        <meta name="description" content="Boost N Boom Login" />
       </Head>
       <div className="relative">
         <div className="min-h-[91vh] gap-4 lg:grid lg:grid-cols-2">
