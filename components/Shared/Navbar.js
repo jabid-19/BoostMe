@@ -1,9 +1,9 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
+import { CgProfile } from 'react-icons/cg'
 import imageLoader from '../../helper/imageLoader'
 import Logo from '../../public/common/logo-navbar.png'
-import { CgProfile } from 'react-icons/cg'
 
 // import axios from '../../axios'
 
@@ -30,7 +30,7 @@ const Navbar = () => {
     const localData = localStorage.getItem('user')
     const userEmail = !!localData ? JSON.parse(localData) : undefined
     setEmail(userEmail?.email)
-  }, [])
+  }, [email])
   console.log('email', email)
   return (
     <div className={'navbar bg-base-100 shadow-md shadow-pink-300 lg:px-24 py-4 sticky top-0 z-50'}>
@@ -302,7 +302,7 @@ const Navbar = () => {
               </li> */}
                 <li>
                   <Link href="/login">
-                    <a className="pl-4" onClick={() => localStorage.removeItem('user')}>
+                    <a className="pl-4" onClick={() => {localStorage.removeItem('user'), setEmail(null)}}>
                       Sign out
                     </a>
                   </Link>
