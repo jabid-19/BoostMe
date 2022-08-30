@@ -3,11 +3,12 @@ import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import imageLoader from '../../helper/imageLoader'
 import Logo from '../../public/common/logo-navbar.png'
+import { CgProfile } from 'react-icons/cg'
 
 // import axios from '../../axios'
 
 const Navbar = () => {
-  const [email, setEmail] = useState(null) 
+  const [email, setEmail] = useState(null)
   const [languageMode, setLanguageMode] = useState('EN')
 
   // API call to change language on button press. Please check and update
@@ -27,10 +28,10 @@ const Navbar = () => {
   // get data from localStorage
   useEffect(() => {
     const localData = localStorage.getItem('user')
-    const userEmail = !!localData ? JSON.parse(localData) : undefined;
+    const userEmail = !!localData ? JSON.parse(localData) : undefined
     setEmail(userEmail?.email)
-  },[])
-  
+  }, [])
+
   return (
     <div className={'navbar bg-base-100 shadow-md shadow-pink-300 lg:px-24 py-4 sticky top-0 z-50'}>
       <div className="navbar-start">
@@ -123,16 +124,61 @@ const Navbar = () => {
                 BN
               </button>
             </div> */}
-            <li>
-              <Link href="login">
-                <a>{email || 'Login' }</a>
-              </Link>
-            </li>
-            <li>
-              <Link href={{ pathname: 'login', query: { keyword: 'register' } }}>
-                <a className="btn btn-primary text-white mt-1.5">Get Started</a>
-              </Link>
-            </li>
+            {email && (
+              <li tabIndex="0">
+                <a className="justify-between">
+                  <div className="flex flex-col space-y-2">
+                    <p>{email}</p>
+                    {/* <div className="avatar placeholder">
+                    <div className="bg-primary-focus text-neutral-content rounded-full w-12 h-12">
+                      <span>
+                        <CgProfile className="w-12 h-12" />
+                      </span>
+                    </div>
+                  </div> */}
+                  </div>
+                  <svg
+                    className="fill-current"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24">
+                    <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
+                  </svg>
+                </a>
+                <ul className="p-2 bg-white">
+                  <li>
+                    <Link href="/dashboard">
+                      <a className="pl-4">Dashboard</a>
+                    </Link>
+                  </li>
+                  {/* <li>
+                <Link href="/profile">
+                  <a className="pl-4">Profile</a>
+                </Link>
+              </li> */}
+                  <li>
+                    <Link href="/login">
+                      <a className="pl-4">Sign out</a>
+                    </Link>
+                  </li>
+                </ul>
+              </li>
+            )}
+            {!email && (
+              <li>
+                <Link href="login">
+                  <a>Login</a>
+                </Link>
+              </li>
+            )}
+            {!email && (
+              <li>
+                <Link href={{ pathname: 'login', query: { keyword: 'register' } }}>
+                  <a className="btn btn-primary text-white mt-1.5">Get Started</a>
+                </Link>
+              </li>
+            )}
           </ul>
         </div>
         <Link href="/">
