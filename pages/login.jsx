@@ -12,7 +12,10 @@ const Login = () => {
     <div>
       <Head>
         <title>Boost N Boom | Login</title>
-        <meta name="description" content="Boost N Boom Login" />
+        <meta
+          name="description"
+          content="Want boosting and content management for your business here comes Boost N Boom | Login"
+        />
       </Head>
       <div className="relative">
         <div className="min-h-[91vh] gap-4 lg:grid lg:grid-cols-2">

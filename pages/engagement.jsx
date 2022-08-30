@@ -7,7 +7,10 @@ const engagement = () => {
     <div>
       <Head>
         <title>Boost N Boom | Engagement</title>
-        <meta name="description" content="Boost N Boom Engagement" />
+        <meta
+          name="description"
+          content="Want boosting and content management for your business here comes Boost N Boom | Engagement"
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <EngagementMain />

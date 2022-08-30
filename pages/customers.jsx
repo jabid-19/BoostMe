@@ -15,7 +15,10 @@ const customers = () => {
     <div>
       <Head>
         <title>Boost N Boom | Customers</title>
-        <meta name="description" content="Boost N Boom Customers" />
+        <meta
+          name="description"
+          content="Want boosting and content management for your business here comes Boost N Boom | Customer"
+        />
       </Head>
       <CustomerHeader headingDescriptions={headingDescriptions} />
       <CustomerCards />

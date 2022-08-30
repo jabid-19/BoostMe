@@ -19,7 +19,10 @@ const About = () => {
     <div>
       <Head>
         <title>Boost N Boom | About</title>
-        <meta name="description" content="Boost N Boom About" />
+        <meta
+          name="description"
+          content="Want boosting and content management for your business here comes Boost N Boom | About"
+        />
       </Head>
       <CustomerHeader headingDescriptions={headingDescriptions} />
       <AboutUs />

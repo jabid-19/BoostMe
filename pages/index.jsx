@@ -15,7 +15,10 @@ export default function Home() {
     <div>
       <Head>
         <title>Boost N Boom | Home</title>
-        <meta name="description" content="Boost N Boom Home" />
+        <meta
+          name="description"
+          content="Want boosting and content management for your business here comes Boost N Boom | Home"
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>

@@ -7,7 +7,10 @@ const publishing = () => {
     <div>
       <Head>
         <title>Boost N Boom | Publishing</title>
-        <meta name="description" content="Boost N Boom Publishing" />
+        <meta
+          name="description"
+          content="Want boosting and content management for your business here comes Boost N Boom | Publishing"
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <PublishingMain />

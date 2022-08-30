@@ -6,7 +6,10 @@ const contact = () => {
     <div>
       <Head>
         <title>Boost N Boom | Contact Us</title>
-        <meta name="description" content="Boost Me Contact Us Page" />
+        <meta
+          name="description"
+          content="Want boosting and content management for your business here comes Boost N Boom | Contact Us"
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <ContactUsMain />

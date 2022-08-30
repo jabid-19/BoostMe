@@ -7,7 +7,10 @@ const StartPage = () => {
     <div>
       <Head>
         <title>Boost N Boom | Start Page</title>
-        <meta name="description" content="Boost N Boom Start page" />
+        <meta
+          name="description"
+          content="Want boosting and content management for your business here comes Boost N Boom | Start Page"
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <StartPageMain />
