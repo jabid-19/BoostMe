@@ -114,7 +114,7 @@ const Calendar = () => {
   // console.log('current date', CURRENT_DATE)
 
   const onSelectSlot = (event) => {
-    // console.log('Event', event)
+    console.log('Event', event)
     if (view === 'month') {
       if (moment(event.start).isBefore(CURRENT_DATE, 'day')) {
         setIsOpen(false)
@@ -207,7 +207,7 @@ const Calendar = () => {
       <div className="-z-50">
         <BigCalendar
           step={30}
-          timeslots={1}
+          timeslots={2}
           selectable={true}
           localizer={localizer}
           // events={events}
