@@ -206,7 +206,8 @@ const Calendar = () => {
     <div>
       <div className="-z-50">
         <BigCalendar
-          // steps={30}
+          step={30}
+          timeslots={1}
           selectable={true}
           localizer={localizer}
           // events={events}
