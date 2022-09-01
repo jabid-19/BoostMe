@@ -4,7 +4,9 @@ import { Calendar as BigCalendar, momentLocalizer, Views } from 'react-big-calen
 import 'react-big-calendar/lib/css/react-big-calendar.css'
 import { FaTimes } from 'react-icons/fa'
 import styles from './Calendar.module.scss'
+
 const localizer = momentLocalizer(moment)
+
 const Calendar = () => {
   const [view, setView] = useState({
     view: Views.MONTH,
@@ -68,6 +70,8 @@ const Calendar = () => {
     <div>
       <div className="-z-50">
         <BigCalendar
+          step={30}
+          timeslots={2}
           selectable={true}
           localizer={localizer}
           defaultView={Views.MONTH}
