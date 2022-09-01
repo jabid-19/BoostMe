@@ -3,6 +3,7 @@ import React, { useCallback, useState } from 'react'
 import { Calendar as BigCalendar, momentLocalizer, Views } from 'react-big-calendar'
 import 'react-big-calendar/lib/css/react-big-calendar.css'
 import { FaTimes } from 'react-icons/fa'
+import styles from './Calendar.module.scss'
 const localizer = momentLocalizer(moment)
 const Calendar = () => {
   const [view, setView] = useState({
@@ -33,6 +34,7 @@ const Calendar = () => {
     let opacity
     let color
     let cursor
+    let customStyle
 
     if (moment(date).isBefore(CURRENT_DATE, 'day')) {
       backgroundColor = '#e8e8e8'
@@ -40,10 +42,13 @@ const Calendar = () => {
     }
     if (moment(date).isSameOrAfter(CURRENT_DATE, 'day')) {
       cursor = 'pointer'
+      if (view === 'month') {
+        customStyle = styles.dayStyle
+      }
     }
     if (moment(date).isSame(CURRENT_DATE, 'day')) {
       backgroundColor = '#E1306C'
-      opacity = 0.5
+      opacity = 0.75
       color = 'white'
     }
 
@@ -54,6 +59,7 @@ const Calendar = () => {
       cursor,
     }
     return {
+      className: customStyle,
       style: style,
     }
   }
