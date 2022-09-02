@@ -1,7 +1,13 @@
 .dayStyle:hover {
   background-image: url('../../../../public/calendar/plus-icon-transparent.jpg');
   background-repeat: no-repeat;
-  background-size: 25px 25px;
+  background-size: 50px 50px;
   background-position: center;
   background-color: #e7ebe7;
+}
+
+@media screen and (max-width: 600px) {
+  .dayStyle:hover {
+    background-size: 25px 25px;
+  }
 }

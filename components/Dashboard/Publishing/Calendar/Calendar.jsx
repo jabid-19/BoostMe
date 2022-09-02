@@ -55,9 +55,9 @@ const Calendar = () => {
       backgroundColor = '#e8e8e8'
       cursor = 'default'
     }
-    if (moment(date).isSameOrAfter(CURRENT_DATE, 'day')) {
-      cursor = 'pointer'
-      if (view === 'month') {
+    if (view === 'month') {
+      if (moment(date).isSameOrAfter(CURRENT_DATE, 'day')) {
+        cursor = 'pointer'
         customStyle = styles.dayStyle
       }
     }
@@ -79,14 +79,24 @@ const Calendar = () => {
     }
   }
 
+  const slotGroupPropGetter = useCallback(
+    () => ({
+      style: {
+        minHeight: 100,
+      },
+    }),
+    []
+  )
+
   return (
     <div>
       <div className="-z-50">
         <BigCalendar
-          step={30}
+          step={15}
           timeslots={2}
           selectable={true}
           localizer={localizer}
+          scrollToTime={new Date()}
           defaultView={Views.MONTH}
           views={[Views.WEEK, Views.MONTH, Views.AGENDA]}
           startAccessor="start"
@@ -95,7 +105,13 @@ const Calendar = () => {
           onSelectSlot={onSelectSlot}
           resizable
           dayPropGetter={dayPropGetter}
+          slotGroupPropGetter={slotGroupPropGetter}
           onView={onView}
+          messages={{
+            previous: '<',
+            next: '>',
+            agenda: 'Events',
+          }}
         />
       </div>
       {calendar.isOpen && (
