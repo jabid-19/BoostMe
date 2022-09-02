@@ -14,7 +14,7 @@ const modules = {
     [{ size: [] }],
     ['bold', 'italic', 'underline', 'strike', 'blockquote'],
     [{ list: 'ordered' }, { list: 'bullet' }, { indent: '-1' }, { indent: '+1' }],
-    ['link', 'image', 'video'],
+    // ['link', 'image', 'video'],
   ],
   clipboard: {
     // toggle to add extra line breaks when pasting HTML:
@@ -87,7 +87,9 @@ const Calendar = () => {
     }),
     []
   )
-
+  const handleChange = (e) => {
+    setCalendar({ ...calendar, value: e })
+  }
   return (
     <div>
       <div className="-z-50">
@@ -133,7 +135,24 @@ const Calendar = () => {
                 </div>
                 {/*body*/}
                 <div className="relative p-6 flex-auto">
-                  <ReactQuill modules={modules} theme="snow" />
+                  {/* text editor */}
+                  <ReactQuill modules={modules} theme="snow" onChange={handleChange} />
+                  {/* image selector */}
+                  <div className="mt-8">
+                    <span className="sr-only">Choose profile photo</span>
+                    <input
+                      type="file"
+                      multiple
+                      className="block w-full text-sm text-slate-500
+                      file:mr-4 file:py-2 file:px-4
+                      file:rounded-full file:border-0
+                      file:text-sm file:font-semibold
+                      file:bg-violet-50 file:text-violet-700
+                      hover:file:bg-violet-100
+                    "
+                    />
+                  </div>
+                  {/* time selector */}
                   <div className="flex justify-between items-center gap-16 mt-10">
                     <p className="text-neutral">
                       Schedule Date:
