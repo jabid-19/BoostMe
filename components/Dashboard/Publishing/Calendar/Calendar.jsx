@@ -4,30 +4,27 @@ import { Calendar as BigCalendar, momentLocalizer, Views } from 'react-big-calen
 import 'react-big-calendar/lib/css/react-big-calendar.css'
 import { FaTimes } from 'react-icons/fa'
 import styles from './Calendar.module.scss'
-
 const localizer = momentLocalizer(moment)
 
 const Calendar = () => {
-  const [view, setView] = useState({
-    view: Views.MONTH,
-    selectedDate: null,
+  const [view, setView] = useState(Views.MONTH)
+  const [calendar, setCalendar] = useState({
+    isOpen: false,
+    scheduleTime: null,
   })
   const onView = useCallback((newView) => setView(newView), [setView])
-
-  const [isOpen, setIsOpen] = useState(false)
-
   const CURRENT_DATE = moment().toDate()
 
   const onSelectSlot = (event) => {
-    if (view.view === 'month') {
+    if (view === 'month') {
       if (moment(event.start).isBefore(CURRENT_DATE, 'day')) {
-        setIsOpen(false)
-      } else setIsOpen(true)
+        setCalendar({ ...calendar, isOpen: false, scheduleTime: event.start })
+      } else setCalendar({ ...calendar, isOpen: true, scheduleTime: event.start })
     }
-    if (view.view === 'week') {
+    if (view === 'week') {
       if (moment(event.start).isBefore(CURRENT_DATE, 'minute')) {
-        setIsOpen(false)
-      } else setIsOpen(true)
+        setCalendar({ ...calendar, isOpen: false, scheduleTime: event.start })
+      } else setCalendar({ ...calendar, isOpen: true, scheduleTime: event.start })
     }
   }
 
@@ -65,7 +62,7 @@ const Calendar = () => {
       style: style,
     }
   }
-
+  console.log(calendar)
   return (
     <div>
       <div className="-z-50">
@@ -85,7 +82,7 @@ const Calendar = () => {
           onView={onView}
         />
       </div>
-      {isOpen && (
+      {calendar.isOpen && (
         <>
           <div className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
             <div className="relative w-auto my-6 mx-auto max-w-3xl">
@@ -96,7 +93,7 @@ const Calendar = () => {
                   <h3 className="text-2xl font-semibold">Create Post</h3>
                   <button
                     className="p-1 ml-auto bg-transparent opacity-50 border-0 text-black float-right leading-none font-semibold outline-none focus:outline-none"
-                    onClick={() => setIsOpen(false)}>
+                    onClick={() => setCalendar({ ...calendar, isOpen: false })}>
                     <span className="bg-transparent text-black h-6 w-6 text-2xl block outline-none focus:outline-none">
                       <FaTimes />
                     </span>
@@ -104,26 +101,39 @@ const Calendar = () => {
                 </div>
                 {/*body*/}
                 <div className="relative p-6 flex-auto">
-                  <p className="my-4 text-slate-500 text-lg leading-relaxed">
-                    I always felt like I could do anything. That’s the main thing people are
-                    controlled by! Thoughts- their perception of themselves! They're slowed down by
-                    their perception of themselves. If you're taught you can’t do anything, you
-                    won’t do anything. I was taught I could do everything.
-                  </p>
-                  <p>Schedule Date</p>
+                  <textarea
+                    type="text"
+                    placeholder="Title"
+                    className="w-full mb-6 border border-slate-200 rounded-md p-2 pb-32"
+                    // style={{ height: '150px' }}
+                  />
+                  <div className="flex justify-between items-center gap-16">
+                    <p className="text-neutral">
+                      Schedule Date:{' '}
+                      <span className="font-bold">
+                        {moment(calendar.scheduleTime).format('MMMM Do, h:mm A')}
+                      </span>
+                    </p>
+                    <input
+                      className="border-2 rounded-md px-2 py-1 text-neutral"
+                      type="datetime-local"
+                      defaultValue={moment(calendar.scheduleTime).format('YYYY-MM-DDThh:mm')}
+                      onChange={(e) => setCalendar({ ...calendar, scheduleTime: e.target.value })}
+                    />
+                  </div>
                 </div>
                 {/*footer*/}
                 <div className="flex items-center justify-end gap-4 py-3 px-6 border-t border-solid border-slate-200 rounded-b">
                   <button
                     className="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white"
                     type="button"
-                    onClick={() => setIsOpen(false)}>
+                    onClick={() => setCalendar({ ...calendar, isOpen: false })}>
                     Close
                   </button>
                   <button
                     className="text-white bg-blue-600 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
                     type="button"
-                    onClick={() => setIsOpen(false)}>
+                    onClick={() => setCalendar({ ...calendar, isOpen: false })}>
                     Save Changes
                   </button>
                 </div>
