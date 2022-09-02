@@ -1,16 +1,32 @@
 import moment from 'moment'
+import dynamic from 'next/dynamic'
 import React, { useCallback, useState } from 'react'
 import { Calendar as BigCalendar, momentLocalizer, Views } from 'react-big-calendar'
 import 'react-big-calendar/lib/css/react-big-calendar.css'
 import { FaTimes } from 'react-icons/fa'
 import styles from './Calendar.module.scss'
-const localizer = momentLocalizer(moment)
 
+const localizer = momentLocalizer(moment)
+const ReactQuill = dynamic(() => import('react-quill'), { ssr: false })
+const modules = {
+  toolbar: [
+    [{ header: '1' }, { header: '2' }],
+    [{ size: [] }],
+    ['bold', 'italic', 'underline', 'strike', 'blockquote'],
+    [{ list: 'ordered' }, { list: 'bullet' }, { indent: '-1' }, { indent: '+1' }],
+    ['link', 'image', 'video'],
+  ],
+  clipboard: {
+    // toggle to add extra line breaks when pasting HTML:
+    matchVisual: false,
+  },
+}
 const Calendar = () => {
   const [view, setView] = useState(Views.MONTH)
   const [calendar, setCalendar] = useState({
     isOpen: false,
     scheduleTime: null,
+    value: '',
   })
   const onView = useCallback((newView) => setView(newView), [setView])
   const CURRENT_DATE = moment().toDate()
@@ -62,7 +78,7 @@ const Calendar = () => {
       style: style,
     }
   }
-  console.log(calendar)
+
   return (
     <div>
       <div className="-z-50">
@@ -101,15 +117,10 @@ const Calendar = () => {
                 </div>
                 {/*body*/}
                 <div className="relative p-6 flex-auto">
-                  <textarea
-                    type="text"
-                    placeholder="Title"
-                    className="w-full mb-6 border border-slate-200 rounded-md p-2 pb-32"
-                    // style={{ height: '150px' }}
-                  />
-                  <div className="flex justify-between items-center gap-16">
+                  <ReactQuill modules={modules} theme="snow" />
+                  <div className="flex justify-between items-center gap-16 mt-10">
                     <p className="text-neutral">
-                      Schedule Date:{' '}
+                      Schedule Date:
                       <span className="font-bold">
                         {moment(calendar.scheduleTime).format('MMMM Do, h:mm A')}
                       </span>

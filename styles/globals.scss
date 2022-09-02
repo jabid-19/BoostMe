@@ -24,3 +24,24 @@
     }
   }
 }
+
+.quill {
+  .ql-container {
+    .ql-editor {
+      min-height: 200px;
+      padding: 16px;
+      background-color: #f9fafb !important;
+
+      p {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        img {
+          width: 150px;
+          height: auto;
+        }
+      }
+    }
+  }
+}
