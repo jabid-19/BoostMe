@@ -90,6 +90,7 @@ const Calendar = () => {
   const handleChange = (e) => {
     setCalendar({ ...calendar, value: e })
   }
+  console.log(moment(new Date()).format('YYYY-MM-DDThh:mm'))
   return (
     <div>
       <div className="-z-50">
@@ -144,18 +145,18 @@ const Calendar = () => {
                       type="file"
                       multiple
                       className="block w-full text-sm text-slate-500
-                      file:mr-4 file:py-2 file:px-4
-                      file:rounded-full file:border-0
-                      file:text-sm file:font-semibold
-                      file:bg-violet-50 file:text-violet-700
-                      hover:file:bg-violet-100
-                    "
+                        file:mr-4 file:py-2 file:px-4
+                        file:rounded-full file:border-0
+                        file:text-sm file:font-semibold
+                        file:bg-violet-50 file:text-violet-700
+                        hover:file:bg-violet-100
+                      "
                     />
                   </div>
                   {/* time selector */}
                   <div className="flex justify-between items-center gap-16 mt-10">
                     <p className="text-neutral">
-                      Schedule Date:
+                      Schedule Date:{' '}
                       <span className="font-bold">
                         {moment(calendar.scheduleTime).format('MMMM Do, h:mm A')}
                       </span>
@@ -163,6 +164,8 @@ const Calendar = () => {
                     <input
                       className="border-2 rounded-md px-2 py-1 text-neutral"
                       type="datetime-local"
+                      min={moment(new Date()).format('YYYY-MM-DDThh:mm')}
+                      aria-disabled="true"
                       defaultValue={moment(calendar.scheduleTime).format('YYYY-MM-DDThh:mm')}
                       onChange={(e) => setCalendar({ ...calendar, scheduleTime: e.target.value })}
                     />
