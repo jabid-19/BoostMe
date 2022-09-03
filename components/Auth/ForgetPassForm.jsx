@@ -33,8 +33,9 @@ const ForgetPassForm = () => {
 
     if (response.status == 200 || response.status == 201) {
       setStatus({ ...status, loading: false, success: true })
+      const uid = response.data.id
       reset()
-      Router.push('/recovery')
+      Router.push(`/recovery/forget-pass/${uid}`)
     } else {
       console.log(response.data)
       setStatus({
