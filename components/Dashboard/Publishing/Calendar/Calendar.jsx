@@ -1,5 +1,6 @@
 import moment from 'moment'
 import dynamic from 'next/dynamic'
+import Image from 'next/image'
 import React, { useCallback, useState } from 'react'
 import { Calendar as BigCalendar, momentLocalizer, Views } from 'react-big-calendar'
 import 'react-big-calendar/lib/css/react-big-calendar.css'
@@ -14,7 +15,6 @@ const modules = {
     [{ size: [] }],
     ['bold', 'italic', 'underline', 'strike', 'blockquote'],
     [{ list: 'ordered' }, { list: 'bullet' }, { indent: '-1' }, { indent: '+1' }],
-    // ['link', 'image', 'video'],
   ],
   clipboard: {
     // toggle to add extra line breaks when pasting HTML:
@@ -27,6 +27,7 @@ const Calendar = () => {
     isOpen: false,
     scheduleTime: null,
     value: '',
+    images: [],
   })
   const onView = useCallback((newView) => setView(newView), [setView])
   const CURRENT_DATE = moment().toDate()
@@ -90,9 +91,23 @@ const Calendar = () => {
   const handleChange = (e) => {
     setCalendar({ ...calendar, value: e })
   }
-  console.log(moment(new Date()).format('YYYY-MM-DDThh:mm'))
+
+  const handleImageChange = (e) => {
+    if (e.target?.files) {
+      const files = Array.from(e.target.files)
+      setCalendar({ ...calendar, images: files })
+    }
+  }
+
   return (
     <div>
+      <div className="relative">
+        <button
+          className="px-8 py-2 rounded-md bg-primary text-white font-bold hover:bg-red-600 mb-4"
+          onClick={() => setCalendar({ ...calendar, isOpen: true })}>
+          Create A Post
+        </button>
+      </div>
       <div className="-z-50">
         <BigCalendar
           step={15}
@@ -128,7 +143,7 @@ const Calendar = () => {
                   <h3 className="text-2xl font-semibold">Create Post</h3>
                   <button
                     className="p-1 ml-auto bg-transparent opacity-50 border-0 text-black float-right leading-none font-semibold outline-none focus:outline-none"
-                    onClick={() => setCalendar({ ...calendar, isOpen: false })}>
+                    onClick={() => setCalendar({ ...calendar, isOpen: false, images: [] })}>
                     <span className="bg-transparent text-black h-6 w-6 text-2xl block outline-none focus:outline-none">
                       <FaTimes />
                     </span>
@@ -150,15 +165,38 @@ const Calendar = () => {
                         file:text-sm file:font-semibold
                         file:bg-violet-50 file:text-violet-700
                         hover:file:bg-violet-100
+                        file:hover:cursor-pointer
                       "
+                      onChange={handleImageChange}
                     />
+                    {calendar?.images.length >= 1 && (
+                      <div className="flex items-center gap-4 mt-5">
+                        {calendar.images.map((image, index) => (
+                          <div key={index}>
+                            <Image
+                              src={URL.createObjectURL(image)}
+                              width={150}
+                              height={150}
+                              alt="post"
+                              className="rounded-md object-cover"
+                            />
+                            <p className="relative text-xs w-[150px] break-words">
+                              <span>{image.name}</span>
+                              <span className="absolute bottom-0 right-0 font-bold">
+                                ({(image?.size / (1000 * 1000)).toFixed(2)}MB)
+                              </span>
+                            </p>
+                          </div>
+                        ))}
+                      </div>
+                    )}
                   </div>
                   {/* time selector */}
                   <div className="flex justify-between items-center gap-16 mt-10">
                     <p className="text-neutral">
                       Schedule Date:{' '}
                       <span className="font-bold">
-                        {moment(calendar.scheduleTime).format('MMMM Do, h:mm A')}
+                        {moment(calendar.scheduleTime || new Date()).format('MMMM Do, h:mm A')}
                       </span>
                     </p>
                     <input
@@ -166,7 +204,9 @@ const Calendar = () => {
                       type="datetime-local"
                       min={moment(new Date()).format('YYYY-MM-DDThh:mm')}
                       aria-disabled="true"
-                      defaultValue={moment(calendar.scheduleTime).format('YYYY-MM-DDThh:mm')}
+                      defaultValue={moment(calendar.scheduleTime || new Date()).format(
+                        'YYYY-MM-DDThh:mm'
+                      )}
                       onChange={(e) => setCalendar({ ...calendar, scheduleTime: e.target.value })}
                     />
                   </div>
@@ -176,13 +216,13 @@ const Calendar = () => {
                   <button
                     className="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white"
                     type="button"
-                    onClick={() => setCalendar({ ...calendar, isOpen: false })}>
+                    onClick={() => setCalendar({ ...calendar, isOpen: false, images: [] })}>
                     Close
                   </button>
                   <button
                     className="text-white bg-blue-600 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
                     type="button"
-                    onClick={() => setCalendar({ ...calendar, isOpen: false })}>
+                    onClick={() => setCalendar({ ...calendar, isOpen: false, images: [] })}>
                     Save Changes
                   </button>
                 </div>
