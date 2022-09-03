@@ -46,7 +46,7 @@ const DashboardMain = ({ selectedTabs, open, setOpen }) => {
             {route.subSection.map((subRoute) => (
               <Link href={subRoute?.route || '/dashboard/analytics'} key={subRoute.title}>
                 <a
-                  className={`text-white text-sm flex flex-wrap items-center justify-end gap-x-4 cursor-pointer p-2 hover:bg-secondary rounded-md  ${
+                  className={`text-white text-sm flex flex-wrap items-center justify-center gap-x-4 cursor-pointer p-2 hover:bg-secondary rounded-md  ${
                     subRoute.route === subPath && 'bg-secondary list-disc'
                   }`}
                   href={subRoute.route || '/dashboard/analytics'}>

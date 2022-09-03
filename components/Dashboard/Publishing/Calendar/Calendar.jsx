@@ -1,118 +1,73 @@
-import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react'
-import { Calendar as BigCalendar, momentLocalizer, Views } from 'react-big-calendar'
 import moment from 'moment'
+import dynamic from 'next/dynamic'
+import Image from 'next/image'
+import React, { useCallback, useState } from 'react'
+import { Calendar as BigCalendar, momentLocalizer, Views } from 'react-big-calendar'
 import 'react-big-calendar/lib/css/react-big-calendar.css'
-// import 'react-big-calendar/lib/sass/styles'
+import { FaTimes } from 'react-icons/fa'
+import styles from './Calendar.module.scss'
+
 const localizer = momentLocalizer(moment)
-console.log('localizer', localizer)
-// const myEventsList = [
-//   { id: 0, start: new Date(), end: new Date(), title: 'special event' },
-//   { id: 1, start: new Date(), end: new Date(), title: 'special event2' },
-//   { id: 2, start: new Date(), end: new Date(), title: 'special event3' },
-// ]
-
-// const events = [
-//   {
-//     id: 0,
-//     title: 'Board meeting',
-//     start: new Date(2022, 7, 17, 9, 0, 0),
-//     end: new Date(2022, 7, 17, 11, 0, 0),
-//     // resourceId: 1,
-//   },
-//   {
-//     id: 1,
-//     title: 'MS training',
-//     start: new Date(2022, 7, 18, 14, 30, 0),
-//     end: new Date(2022, 7, 18, 16, 30, 0),
-//     // resourceId: 2,
-//   },
-//   {
-//     id: 2,
-//     title: 'Team lead meeting',
-//     // allDay: true,
-//     start: new Date(2022, 7, 16, 8, 30, 0),
-//     end: new Date(2022, 7, 19, 11, 30, 0),
-//     // resourceId: 3,
-//   },
-//   {
-//     id: 3,
-//     title: 'Birthday Party',
-//     start: new Date(2022, 7, 19, 7, 0, 0),
-//     end: new Date(2022, 7, 19, 10, 30, 0),
-//     // resourceId: 4,
-//   },
-// ]
-
-// const resourceMap = [
-//   { resourceId: 1, resourceTitle: 'Board room' },
-//   { resourceId: 2, resourceTitle: 'Training room' },
-//   { resourceId: 3, resourceTitle: 'Meeting room 1' },
-//   { resourceId: 4, resourceTitle: 'Meeting room 2' },
-// ]
-
-// const styles = {
-//   container: {
-//     width: '80wh',
-//     height: '75vh',
-//     margin: '2em',
-//   },
-// }
-
+const ReactQuill = dynamic(() => import('react-quill'), { ssr: false })
+const modules = {
+  toolbar: [
+    [{ header: '1' }, { header: '2' }],
+    [{ size: [] }],
+    ['bold', 'italic', 'underline', 'strike', 'blockquote'],
+    [{ list: 'ordered' }, { list: 'bullet' }, { indent: '-1' }, { indent: '+1' }],
+  ],
+  clipboard: {
+    // toggle to add extra line breaks when pasting HTML:
+    matchVisual: false,
+  },
+}
 const Calendar = () => {
-  const [isOpen, setIsOpen] = useState(false)
-
+  const [view, setView] = useState(Views.MONTH)
+  const [calendar, setCalendar] = useState({
+    isOpen: false,
+    scheduleTime: null,
+    value: '',
+    images: [],
+  })
+  const onView = useCallback((newView) => setView(newView), [setView])
   const CURRENT_DATE = moment().toDate()
-  console.log('current date', CURRENT_DATE)
 
   const onSelectSlot = (event) => {
-    // window.alert('Slot is selected')
-    console.log('Event', event)
-    if (moment(event.start).isBefore(CURRENT_DATE, 'day')) {
-      setIsOpen(false)
-    } else setIsOpen(true)
+    if (view === 'month') {
+      if (moment(event.start).isBefore(CURRENT_DATE, 'day')) {
+        setCalendar({ ...calendar, isOpen: false, scheduleTime: event.start })
+      } else setCalendar({ ...calendar, isOpen: true, scheduleTime: event.start })
+    }
+    if (view === 'week') {
+      if (moment(event.start).isBefore(CURRENT_DATE, 'minute')) {
+        setCalendar({ ...calendar, isOpen: false, scheduleTime: event.start })
+      } else setCalendar({ ...calendar, isOpen: true, scheduleTime: event.start })
+    }
   }
 
-  const isOpenState = () => {
-    setIsOpen(false)
-  }
-
-  // example implementation of a wrapper
-  // const ColoredDateCellWrapper = ({ children, value }) =>
-  //   React.cloneElement(Children.only(children), {
-  //     style: {
-  //       ...children.style,
-  //       backgroundColor: value < CURRENT_DATE ? 'lightgreen' : 'lightblue',
-  //     },
-  //   })
-  // const today = new Date()
-  // const day = today.getDay()
   const dayPropGetter = (date) => {
     let backgroundColor
     let opacity
     let color
     let cursor
+    let customStyle
 
     if (moment(date).isBefore(CURRENT_DATE, 'day')) {
       backgroundColor = '#e8e8e8'
-      // opacity = 0.5
       cursor = 'default'
     }
-    if (moment(date).isSameOrAfter(CURRENT_DATE, 'day')) {
-      cursor = 'pointer'
+    if (view === 'month') {
+      if (moment(date).isSameOrAfter(CURRENT_DATE, 'day')) {
+        cursor = 'pointer'
+        customStyle = styles.dayStyle
+      }
     }
     if (moment(date).isSame(CURRENT_DATE, 'day')) {
       backgroundColor = '#E1306C'
-      opacity = 0.5
+      opacity = 0.75
       color = 'white'
     }
-    // if (moment(date).isBefore(CURRENT_DATE, 'month')) {
-    //   backgroundColor = '#FCAF45'
-    //   opacity = 0.25
-    // }
-    // if (moment(date).isAfter(CURRENT_DATE, 'month')) {
-    //   backgroundColor = '#FCAF45'
-    //   opacity = 0.5
-    // }
+
     var style = {
       backgroundColor,
       opacity,
@@ -120,40 +75,46 @@ const Calendar = () => {
       cursor,
     }
     return {
+      className: customStyle,
       style: style,
     }
-    // ...(moment(date).day() < day && {
-    //   style: {
-    //     backgroundColor: 'red',
-    //     color: 'white',
-    //   },
-    // }),
   }
 
-  // const slotPropGetter = (date) => {
-  //   const CURRENT_DATE = moment().toDate()
-  //   let backgroundColor
+  const slotGroupPropGetter = useCallback(
+    () => ({
+      style: {
+        minHeight: 100,
+      },
+    }),
+    []
+  )
+  const handleChange = (e) => {
+    setCalendar({ ...calendar, value: e })
+  }
 
-  //   if (moment(date).isBefore(CURRENT_DATE, 'month')) {
-  //     backgroundColor = '#f7f8f9'
-  //   }
-
-  //   var style = {
-  //     backgroundColor,
-  //   }
-  //   return {
-  //     style: style,
-  //   }
-  // }
+  const handleImageChange = (e) => {
+    if (e.target?.files) {
+      const files = Array.from(e.target.files)
+      setCalendar({ ...calendar, images: files })
+    }
+  }
 
   return (
     <div>
+      <div className="relative">
+        <button
+          className="px-8 py-2 rounded-md bg-primary text-white font-bold hover:bg-red-600 mb-4"
+          onClick={() => setCalendar({ ...calendar, isOpen: true })}>
+          Create A Post
+        </button>
+      </div>
       <div className="-z-50">
         <BigCalendar
-          // steps={30}
+          step={15}
+          timeslots={2}
           selectable={true}
           localizer={localizer}
-          // events={events}
+          scrollToTime={new Date()}
           defaultView={Views.MONTH}
           views={[Views.WEEK, Views.MONTH, Views.AGENDA]}
           startAccessor="start"
@@ -161,42 +122,115 @@ const Calendar = () => {
           style={{ height: '78vh' }}
           onSelectSlot={onSelectSlot}
           resizable
-          // slotPropGetter={slotPropGetter}
           dayPropGetter={dayPropGetter}
-          // components={{
-          //   dateCellWrapper: function dateCellWrapperFunction() {
-          //     return <div className="bg-primary">click</div>
-          //   },
-          // }}
-          // components={{
-          //   // you have to pass your custom wrapper here
-          //   // so that it actually gets used
-          //   dateCellWrapper: ColoredDateCellWrapper,
-          // }}
-          // min={new Date()}
+          slotGroupPropGetter={slotGroupPropGetter}
+          onView={onView}
+          messages={{
+            previous: '<',
+            next: '>',
+            agenda: 'Events',
+          }}
         />
       </div>
-      {isOpen && (
-        <div className="w-full h-full fixed top-0 left-0 bg-slate-200/50 z-50">
-          <div className="flex justify-center items-center mt-60">
-            <div className=" flex justify-center items-center bg-white border-8 border-primary shadow-lg shadow-black rounded-lg max-w-[220px] sm:max-w-[400px] md:max-w-[500px] lg:max-w-[700px] min-h-[240px] p-2 md:p-8 overflow-auto">
-              <div>
-                <div className="flex flex-row-reverse justify-between">
-                  <label onClick={isOpenState} className="btn btn-sm btn-circle btn-primary">
-                    ✕
-                  </label>
-                  <h3 className="text-lg font-bold">Schedule Event!</h3>
+      {calendar.isOpen && (
+        <>
+          <div className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
+            <div className="relative w-auto my-6 mx-auto max-w-3xl">
+              {/*content*/}
+              <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
+                {/*header*/}
+                <div className="flex items-start justify-between p-5 border-b border-solid border-slate-200 rounded-t">
+                  <h3 className="text-2xl font-semibold">Create Post</h3>
+                  <button
+                    className="p-1 ml-auto bg-transparent opacity-50 border-0 text-black float-right leading-none font-semibold outline-none focus:outline-none"
+                    onClick={() => setCalendar({ ...calendar, isOpen: false, images: [] })}>
+                    <span className="bg-transparent text-black h-6 w-6 text-2xl block outline-none focus:outline-none">
+                      <FaTimes />
+                    </span>
+                  </button>
                 </div>
-                <div>
-                  <p className="py-4">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex earum reprehenderit
-                    maiores sapiente, excepturi corporis eum cum ipsam consequatur porro.
-                  </p>
+                {/*body*/}
+                <div className="relative p-6 flex-auto">
+                  {/* text editor */}
+                  <ReactQuill modules={modules} theme="snow" onChange={handleChange} />
+                  {/* image selector */}
+                  <div className="mt-8">
+                    <span className="sr-only">Choose profile photo</span>
+                    <input
+                      type="file"
+                      multiple
+                      className="block w-full text-sm text-slate-500
+                        file:mr-4 file:py-2 file:px-4
+                        file:rounded-full file:border-0
+                        file:text-sm file:font-semibold
+                        file:bg-violet-50 file:text-violet-700
+                        hover:file:bg-violet-100
+                        file:hover:cursor-pointer
+                      "
+                      onChange={handleImageChange}
+                    />
+                    {calendar?.images.length >= 1 && (
+                      <div className="flex items-center gap-4 mt-5">
+                        {calendar.images.map((image, index) => (
+                          <div key={index}>
+                            <Image
+                              src={URL.createObjectURL(image)}
+                              width={150}
+                              height={150}
+                              alt="post"
+                              className="rounded-md object-cover"
+                            />
+                            <p className="relative text-xs w-[150px] break-words">
+                              <span>{image.name}</span>
+                              <span className="absolute bottom-0 right-0 font-bold">
+                                ({(image?.size / (1000 * 1000)).toFixed(2)}MB)
+                              </span>
+                            </p>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                  {/* time selector */}
+                  <div className="flex justify-between items-center gap-16 mt-10">
+                    <p className="text-neutral">
+                      Schedule Date:{' '}
+                      <span className="font-bold">
+                        {moment(calendar.scheduleTime || new Date()).format('MMMM Do, h:mm A')}
+                      </span>
+                    </p>
+                    <input
+                      className="border-2 rounded-md px-2 py-1 text-neutral"
+                      type="datetime-local"
+                      min={moment(new Date()).format('YYYY-MM-DDThh:mm')}
+                      aria-disabled="true"
+                      defaultValue={moment(calendar.scheduleTime || new Date()).format(
+                        'YYYY-MM-DDThh:mm'
+                      )}
+                      onChange={(e) => setCalendar({ ...calendar, scheduleTime: e.target.value })}
+                    />
+                  </div>
+                </div>
+                {/*footer*/}
+                <div className="flex items-center justify-end gap-4 py-3 px-6 border-t border-solid border-slate-200 rounded-b">
+                  <button
+                    className="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white"
+                    type="button"
+                    onClick={() => setCalendar({ ...calendar, isOpen: false, images: [] })}>
+                    Close
+                  </button>
+                  <button
+                    className="text-white bg-blue-600 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+                    type="button"
+                    onClick={() => setCalendar({ ...calendar, isOpen: false, images: [] })}>
+                    Save Changes
+                  </button>
                 </div>
               </div>
             </div>
           </div>
-        </div>
+          <div className="opacity-25 fixed inset-0 z-40 bg-black"></div>
+        </>
       )}
     </div>
   )
