@@ -29,4 +29,13 @@ const forgetPassword = async (email) => {
   }
 }
 
-module.exports = { signup, login, forgetPassword }
+const resendMail = async (from, uid) => {
+  try {
+    const res = await backendApi.get(`${ENDPOINT}/resend-mail/${from}/${uid}`)
+    return res
+  } catch (err) {
+    return err.response
+  }
+}
+
+module.exports = { signup, login, forgetPassword, resendMail }

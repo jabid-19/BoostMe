@@ -2,6 +2,9 @@ import React from 'react'
 import Router from 'next/router'
 
 const recovery = () => {
+  const resend = () => {
+    console.log('resend')
+  }
   return (
     <div
       style={{
@@ -30,6 +33,21 @@ const recovery = () => {
             Kindly check your email within 60 minutes to reset your password. If not in inbox,
             please check spam folder.
           </p>
+          <button
+            style={{
+              display: 'block',
+              width: '100%',
+              margin: '10px 0',
+              background: '#e1306c',
+              color: 'white',
+              border: 0,
+              padding: '10px 20px',
+              fontSize: '1rem',
+              cursor: 'pointer',
+            }}
+            onClick={resend}>
+            Resend Email
+          </button>
           <button
             style={{
               display: 'block',

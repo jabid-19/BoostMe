@@ -37,8 +37,9 @@ const RegisterForm = () => {
     const response = await signup(user)
     if (response.status == 200 || response.status == 201) {
       setStatus({ ...status, loading: false, success: true })
+      const uid = response.data.user.user_id
       reset()
-      Router.push('/recovery')
+      Router.push(`/recovery/signup/${uid}`)
     } else {
       setStatus({
         ...status,
