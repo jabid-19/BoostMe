@@ -1,7 +1,7 @@
 import React from 'react'
 import Router from 'next/router'
 
-const recovery = () => {
+const Recovery = () => {
   const resend = () => {
     console.log('resend')
   }
@@ -73,4 +73,4 @@ const recovery = () => {
   )
 }
 
-export default recovery
+export default Recovery

@@ -3,7 +3,7 @@ import Router from 'next/router'
 import { useRouter } from 'next/router'
 import { resendMail } from '../../../src/backend/Auth'
 
-const recovery = () => {
+const Recovery = () => {
   const router = useRouter()
 
   const resend = async () => {
@@ -84,4 +84,4 @@ const recovery = () => {
   )
 }
 
-export default recovery
+export default Recovery
