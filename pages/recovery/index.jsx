@@ -1,7 +1,10 @@
 import React from 'react'
 import Router from 'next/router'
 
-const recovery = () => {
+const Recovery = () => {
+  const resend = () => {
+    console.log('resend')
+  }
   return (
     <div
       style={{
@@ -42,6 +45,21 @@ const recovery = () => {
               fontSize: '1rem',
               cursor: 'pointer',
             }}
+            onClick={resend}>
+            Resend Email
+          </button>
+          <button
+            style={{
+              display: 'block',
+              width: '100%',
+              margin: '10px 0',
+              background: '#e1306c',
+              color: 'white',
+              border: 0,
+              padding: '10px 20px',
+              fontSize: '1rem',
+              cursor: 'pointer',
+            }}
             onClick={(e) => Router.push('/login')}>
             Back to login
           </button>
@@ -55,4 +73,4 @@ const recovery = () => {
   )
 }
 
-export default recovery
+export default Recovery
