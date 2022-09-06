@@ -15,6 +15,7 @@ const modules = {
     [{ size: [] }],
     ['bold', 'italic', 'underline', 'strike', 'blockquote'],
     [{ list: 'ordered' }, { list: 'bullet' }, { indent: '-1' }, { indent: '+1' }],
+    ['emoji'],
   ],
   clipboard: {
     // toggle to add extra line breaks when pasting HTML:
@@ -24,6 +25,11 @@ const modules = {
 const Calendar = () => {
   const [view, setView] = useState(Views.MONTH)
   const [calendar, setCalendar] = useState({
+    status: {
+      loading: false,
+      error: null,
+      success: null,
+    },
     isOpen: false,
     scheduleTime: null,
     value: '',
@@ -99,6 +105,28 @@ const Calendar = () => {
     }
   }
 
+  const handleCreate = () => {
+    if (calendar.value !== '<p><br></p>' && calendar.value.length) {
+      setCalendar({ ...calendar, status: { loading: true } })
+      setTimeout(() => {
+        setCalendar({
+          ...calendar,
+          status: { loading: false, success: true },
+        })
+      }, 6000)
+    }
+  }
+
+  const handleClearStates = () => {
+    setCalendar({
+      isOpen: false,
+      images: [],
+      value: '',
+      scheduleTime: null,
+      status: { loading: false, error: null, success: null },
+    })
+  }
+
   return (
     <div>
       <div className="relative">
@@ -143,7 +171,7 @@ const Calendar = () => {
                   <h3 className="text-2xl font-semibold">Create Post</h3>
                   <button
                     className="p-1 ml-auto bg-transparent opacity-50 border-0 text-black float-right leading-none font-semibold outline-none focus:outline-none"
-                    onClick={() => setCalendar({ ...calendar, isOpen: false, images: [] })}>
+                    onClick={handleClearStates}>
                     <span className="bg-transparent text-black h-6 w-6 text-2xl block outline-none focus:outline-none">
                       <FaTimes />
                     </span>
@@ -152,7 +180,15 @@ const Calendar = () => {
                 {/*body*/}
                 <div className="relative p-6 flex-auto">
                   {/* text editor */}
-                  <ReactQuill modules={modules} theme="snow" onChange={handleChange} />
+                  <ReactQuill
+                    modules={modules}
+                    placeholder="Write post details"
+                    theme="snow"
+                    onChange={handleChange}
+                  />
+                  {(calendar.value === '<p><br></p>' || !calendar.value.length) && (
+                    <p className="text-error text-xs p-1">*Post details is required!</p>
+                  )}
                   {/* image selector */}
                   <div className="mt-8">
                     <span className="sr-only">Choose profile photo</span>
@@ -214,16 +250,19 @@ const Calendar = () => {
                 {/*footer*/}
                 <div className="flex items-center justify-end gap-4 py-3 px-6 border-t border-solid border-slate-200 rounded-b">
                   <button
-                    className="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white"
+                    className="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10"
                     type="button"
-                    onClick={() => setCalendar({ ...calendar, isOpen: false, images: [] })}>
+                    onClick={handleClearStates}>
                     Close
                   </button>
                   <button
-                    className="text-white bg-blue-600 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+                    className={`text-white bg-blue-600 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center ${
+                      (calendar.value === '<p><br></p>' || !calendar.value.length) &&
+                      'bg-gray-400 hover:bg-gray-400'
+                    }`}
                     type="button"
-                    onClick={() => setCalendar({ ...calendar, isOpen: false, images: [] })}>
-                    Save Changes
+                    onClick={handleCreate}>
+                    {calendar.status.loading ? 'Loading...' : 'Create Post'}
                   </button>
                 </div>
               </div>
