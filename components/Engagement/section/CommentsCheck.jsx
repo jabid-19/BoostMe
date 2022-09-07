@@ -11,7 +11,7 @@ const CommentsCheck = () => {
             src="/engagement-section/multitask.webp"
             width={700}
             height={600}
-            alt="Social Media Engagement"
+            alt="BoostnBoom's Social Media Engagement"
             loader={imageLoader}
           />
         </div>
@@ -25,16 +25,16 @@ const CommentsCheck = () => {
             <br />
             <span className="text-secondary">social media</span> */}
           </h1>
-          <p className="text-neutral text-center text-base mt-10 md:text-start">
+          <p className="text-neutral text-center text-base mt-10 md:text-start max-w-sm">
             তা হোক কমেন্ট, মেসেজ, ইনস্টাগ্রাম স্টরির রিপ্লাই, অথবা আপনার ফেসবুক পেজের আপনার
             ফলোয়ারদের করা পোস্ট, আমাদের সোশ্যাল ইনবক্স থেকে সব প্লাটফর্মের মেসেজ এর রিপ্লাই দিন
             সহজেই৷
             {/* See all of your comments, stay on top of important <br /> interactions, and turn
             followers into fans <br /> using Buffer. */}
           </p>
-          <button className="btn btn-wide rounded-full mt-10 btn-primary mx-auto text-white normal-case md:mx-0">
+          {/* <button className="btn btn-wide rounded-full mt-10 btn-primary mx-auto text-white normal-case md:mx-0">
             Start 14 Days Free Trial
-          </button>
+          </button> */}
         </div>
       </div>
     </div>

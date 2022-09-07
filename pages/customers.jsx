@@ -8,12 +8,13 @@ const customers = () => {
     subtitle: "YOU'RE IN GOOD COMPANY",
     title: 'Our',
     titleSpan: 'Featured Customers',
-    description: 'See how big brands and growing businesses find social media success with BoostMe',
+    description:
+      'See how big brands and growing businesses find social media success with BoostnBoom',
   }
   return (
     <div>
       <Head>
-        <title>Boost ME | Customers</title>
+        <title>Boost N Boom | Customers</title>
       </Head>
       <CustomerHeader headingDescriptions={headingDescriptions} />
       <CustomerCards />

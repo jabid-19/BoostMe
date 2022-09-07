@@ -4,39 +4,42 @@ import FrameImage from '../../public/common/BoxBackground.png'
 
 const AboutUs = () => {
   return (
-    <div className="hero min-h-screen p-8 mx-auto relative">
+    <div className="hero lg:min-h-screen p-8 mx-auto relative">
       <div
         data-aos="zoom-in"
         className="hero-content p-8 lg:m-12 flex-col lg:flex-row-reverse border-4 rounded-2xl border-primary z-20">
         <div className="text-justify">
           <h1 className=" text-xl md:text-2xl font-semibold break-words lg:text-4xl text-neutral lg:tracking-wide xl:text-5xl text-center lg:text-justify">
-            About <span className="text-primary">Our Community</span>
+            {/* About <span className="text-primary">Our Community</span> */}
+            আমাদের <span className="text-primary">সম্পর্কে</span>
           </h1>
           <p className="text-neutral text-xs lg:text-lg py-6">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus, culpa explicabo!
-            Totam omnis, repellat veritatis voluptates, culpa nostrum laborum quo ipsam odio dolore
-            sapiente quaerat porro ipsum, cum fuga quos animi autem repudiandae possimus doloremque.
-            Quidem quos perferendis laboriosam doloremque, molestias beatae cumque fugiat dolor
-            aspernatur voluptatum consequuntur expedita quod, corporis earum. Magnam nesciunt
-            laudantium dolorum quibusdam ipsam necessitatibus corporis delectus illo doloribus vero
-            ratione reiciendis, et quae iusto veniam aperiam qui exercitationem! Numquam, voluptatem
-            placeat eligendi nobis excepturi alias delectus quos suscipit eaque illo sapiente,
-            aliquam, reiciendis tempora facere deserunt! Laudantium fugiat dolorem minus commodi
-            ipsa deserunt quia id nisi enim? Earum corporis odit neque maiores facere. Laboriosam,
-            perspiciatis quasi! Sed, labore atque! Praesentium, quasi. Sit amet ipsa itaque, quod
-            similique blanditiis voluptatibus accusantium dicta ipsum iusto, ea alias id!
-            Temporibus, sunt quia. Provident, illo. Id earum vel modi veniam corporis non atque
-            dignissimos sequi rem culpa iusto suscipit nemo, laudantium distinctio ex ut inventore
-            sapiente maxime magni perferendis molestiae fugiat fugit provident facere? Consequuntur
-            sed doloremque autem necessitatibus quaerat rem delectus, dolorum dolor ad nostrum
-            quibusdam ab asperiores eum quisquam natus repellat magnam mollitia aspernatur id? Esse
-            ipsum doloremque incidunt, eum exercitationem architecto ducimus distinctio nostrum
-            adipisci voluptatibus?
+            BoostnBoom বাংলাদেশের অন্যতম সেরা ডিজিটাল মার্কেটিং এজেন্সি, যেখানে আপনি একদম কম খরচে
+            ঝামেলা বিহীনভাবে আপনার প্রতিষ্ঠানের প্রোডাক্ট বা সার্ভিস ব্যান্ডিং করতে পারেন। গতানুগতিক
+            মার্কেটিং সিস্টেম এর বাইরে আধুনিক জীবন ব্যবস্থার সাথে তাল মিলিয়ে আমরা আপনার প্রোডাক্ট বা
+            সেবা কাস্টমারের কাছে পৌঁছে দিতে চাই। ফেসবুক, ইউটিউব, ইনস্টাগ্রাম - এর মতো সোশ্যাল
+            সাইটগুলো এখন আর শুধু ছবি কিংবা স্ট্যাটাস শেয়ারের মধ্যে সীমাবদ্ধ নেই। বিলিয়ন ডলারের
+            ব্যবসা পরিচালিত হয় প্রতিদিন এসব সোশ্যাল সাইটগুলোর ওপর ভিত্তি করে! যেহেতু এসব প্লাটফর্মে
+            প্রতিদিন কোটি কোটি মানুষের আনাগোনা, তাই ব্যবসায়িক উদ্দেশ্যে অনেকেই একসাথে অসংখ্য মানুষের
+            এনগেজমেন্টের এই সুযোগটা কাজে লাগায়। তাহলে আপনি অন্যদের থেকে পিছিয়ে থাকবেন কেন?
+            <br /> <br />
+            আপনি কি চান না আমাদের এক ক্লিকে আপনার প্রোডাক্ট কিংবা সার্ভিস পৌঁছে যাক দেশ- বিদেশের
+            প্রতিটি টার্গেট কাস্টমারের কাছে? আপনি যদি হ্যাসেল ফ্রি মার্কেটিং করতে চান, খুব সহজে
+            নামমাত্র খরচে নিজের ব্যবসার পরিধি বাড়াতে চান, তাহলে আমরা আছি আপনার পাশে। দেশসহ দেশের
+            বাইরেও অসংখ্য ক্লায়েন্টকে আমরা সেবা প্রদান করে আসছি। আমাদের দক্ষতা ও অভিজ্ঞতা হোক আপনার
+            ব্যবসায়িক সাফল্যের হাতিয়ার। প্রোডাক্ট বা সার্ভিস আপনার, ব্যান্ডিং করার দায়িক্ত আমাদের।
+            তাহলে দেরি কেন?
           </p>
         </div>
       </div>
       <div data-aos="fade-up-left" className="hidden lg:block lg:absolute lg:bottom-0 lg:right-0">
-        <Image width={500} height={117} src={FrameImage} alt="" loader={imageLoader} />
+        <Image
+          width={500}
+          height={117}
+          src={FrameImage}
+          alt="BoostnBoom's About Us Background Image"
+          loader={imageLoader}
+        />
       </div>
     </div>
   )

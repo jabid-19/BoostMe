@@ -14,7 +14,7 @@ const Audience = () => {
           width={423}
           height={460}
           className="max-w-sm rounded-lg shadow-2xl object-fill"
-          alt="Digital Marketing Dashboard"
+          alt="BoostnBoom's Digital Marketing Dashboard"
           loader={imageLoader}
         />
         <div
@@ -28,11 +28,11 @@ const Audience = () => {
           </h1>
           <p className="py-4 text-neutral w-full lg:w-1/2 text-center lg:text-left">
             আপনি শুধু আপনার কোম্পানির ব্র্যান্ডের প্রমোশনের জন্য চিন্তা করবেন পেমেন্ট রিলেটেড এবং
-            অন্য সমস্যা ভাবনা শুধুমাত্র BoostMe এর।
+            অন্য সমস্যা ভাবনা শুধুমাত্র BoostnBoom এর।
             {/* Plan and publish your content for Instagram, TikTok, Facebook, Twitter, Pinterest, and
             LinkedIn, all from one simple dashboard. */}
           </p>
-          <div className="flex flex-col md:flex-row">
+          {/* <div className="flex flex-col md:flex-row">
             <div className="mb-4 md:mr-4 md:mb-0">
               <button className="btn btn-primary normal-case px-12 text-white rounded-full">
                 Get Started
@@ -43,7 +43,7 @@ const Audience = () => {
                 Learn More
               </button>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

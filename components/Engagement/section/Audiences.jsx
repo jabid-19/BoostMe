@@ -16,15 +16,15 @@ const Audiences = () => {
             <br />
             <span className="text-secondary">social media</span> */}
           </h1>
-          <p className="text-neutral text-center text-base mt-10 md:text-start">
+          <p className="text-neutral text-center text-base mt-10 md:text-start max-w-sm">
             আমাদের সহজ এবং কার্যকর সোশ্যাল ইনবক্সের সাথে কথোপকথন কন্টিনিউ রাখুন৷ আপনার অডিয়ান্সের
             সাথে কানেক্টেড থাকুন এবং ইনস্টাগ্রাম এবং Facebook-এর চ্যাটএর ট্র্যাক রাখুন৷
             {/* See all of your comments, stay on top of important <br /> interactions, and turn
             followers into fans <br /> using Buffer. */}
           </p>
-          <button className="btn btn-wide mt-10 btn-primary mx-auto rounded-full text-white normal-case md:mx-0">
+          {/* <button className="btn btn-wide mt-10 btn-primary mx-auto rounded-full text-white normal-case md:mx-0">
             Start 14 Days Free Trial
-          </button>
+          </button> */}
         </div>
 
         <div data-aos="fade-left" className="w-[95%] mx-auto flex lg:justify-end lg:w-1/2 ">
@@ -34,7 +34,7 @@ const Audiences = () => {
             width={740}
             height={537}
             className="max-w-sm rounded-lg shadow-2xl object-fill"
-            alt="Digital Marketing Dashboard"
+            alt="BoostnBoom's Digital Marketing Dashboard"
             loader={imageLoader}
           />
           {/* <video autoPlay playsInline loop muted>

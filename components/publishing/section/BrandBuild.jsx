@@ -14,16 +14,20 @@ const BrandBuild = () => {
             src={BoxBackground}
             width={500}
             height={100}
-            alt="BoostMe's Background"
+            alt="BoostnBoom's Background"
             loader={imageLoader}
           />
         </div>
         <h1
           data-aos="fade-down-left"
-          className=" lg:block lg:absolute lg:top-0 lg:right-28 text-3xl mb-[50px] mt-8 text-center lg:text-end font-semibold break-words text-neutral lg:tracking-wide lg:text-3xl xl:text-5xl lg:max-w-2xl">
-          Businesses <span className="text-primary">all over the world</span>
+          className=" lg:block lg:absolute lg:top-0 lg:right-28 text-3xl mb-[50px] mt-8 text-center lg:text-end font-semibold break-words text-neutral lg:tracking-wide lg:text-3xl xl:text-5xl lg:max-w-3xl">
+          {/* Businesses <span className="text-primary">all over the world</span>
           <br />
-          <span className="text-secondary">trust</span> us to build their brand
+          <span className="text-secondary">trust</span> us to build their brand */}
+          <span className="text-primary">ব্যবসা</span> ছড়িয়ে দিন গোটা{' '}
+          <span className="text-secondary">বিশ্বে</span> <br />
+          <span className="text-secondary">আস্থা</span> রাখুন{' '}
+          <span className="text-primary">আমাদের</span> উপর
         </h1>
         <div className="md:mt-16 flex flex-wrap justify-center items-center flex-col gap-8 lg:gap-x-16 md:flex-row">
           <div
@@ -40,8 +44,10 @@ const BrandBuild = () => {
               />
             </figure>
             <div className="card-body text-center lg:text-left">
-              <h2 className="text-2xl font-semibold text-primary">Scheduling</h2>
-              <p>Create a preset publishing schedule for each social account</p>
+              {/* <h2 className="text-2xl font-semibold text-primary">Scheduling</h2> */}
+              {/* <p>Create a preset publishing schedule for each social account</p> */}
+              <h2 className="text-2xl font-semibold text-primary">শিডিউল করুন</h2>
+              <p>প্রতিটি সোশ্যাল একাউন্টের জন্য আগে থেকে শিডিউল করে রাখুন</p>
             </div>
           </div>
           <div
@@ -52,14 +58,16 @@ const BrandBuild = () => {
                 src={Mobile}
                 width={270}
                 height={190}
-                alt="Clock"
+                alt="Mobile"
                 className="object-none mb-2"
                 loader={imageLoader}
               />
             </figure>
             <div className="card-body text-center lg:text-left">
-              <h2 className="text-2xl font-semibold text-primary">Tailored posts</h2>
-              <p>Create a preset publishing schedule for each social account</p>
+              {/* <h2 className="text-2xl font-semibold text-primary">Tailored posts</h2>
+              <p>Create a preset publishing schedule for each social account</p> */}
+              <h2 className="text-2xl font-semibold text-primary">টেইলরড পোস্ট</h2>
+              <p>প্রটিটি সোশ্যাল একাউন্টের জন্য আগে থেকে পোস্ট তৈরি করে রাখুন</p>
             </div>
           </div>
           <div
@@ -70,14 +78,16 @@ const BrandBuild = () => {
                 src={Calender}
                 width={270}
                 height={190}
-                alt="Clock"
+                alt="Calendar"
                 className="object-none mb-2"
                 loader={imageLoader}
               />
             </figure>
             <div className="card-body text-center lg:text-left">
-              <h2 className="text-2xl font-semibold text-primary">Calendar</h2>
-              <p>Create a preset publishing schedule for each social account</p>
+              {/* <h2 className="text-2xl font-semibold text-primary">Calendar</h2>
+              <p>Create a preset publishing schedule for each social account</p> */}
+              <h2 className="text-2xl font-semibold text-primary">ক্যালেন্ডার</h2>
+              <p>ক্যালেন্ডারের মাধ্যমে শিডিউল করুন এবং শিডিউল চেক করুন</p>
             </div>
           </div>
         </div>

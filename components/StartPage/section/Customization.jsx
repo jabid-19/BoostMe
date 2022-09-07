@@ -16,20 +16,23 @@ const Customization = () => {
             <br />
             <span className="text-secondary">social media</span> */}
           </h1>
-          <p className="text-neutral text-center text-base mt-10 md:text-start">
-            See all of your comments, stay on top of important <br /> interactions, and turn
-            followers into fans <br /> using Buffer.
+          <p className="text-neutral text-center text-base mt-10 md:text-start max-w-sm">
+            {/* See all of your comments, stay on top of important <br /> interactions, and turn
+            followers into fans <br /> using Buffer. */}
+            ছবি, ভিডিও, জিআইএফ, ট্যাগ এবং আরও অনেক কিছু সহ প্রতিটি সোশ্যাল মিডিয়া প্ল্যাটফর্মের
+            জন্য কাস্টমাইজড পোস্ট তৈরি এবং শিডিউল করুন সহজেই৷ সর্বচ্চ 500টি পর্যন্ত পোস্ট বাল্ক
+            শিডিউল করতে পারেন BoostnBoom প্লাটফর্ম থেকে।
           </p>
-          <button className="btn btn-wide rounded-full mt-10 btn-primary mx-auto text-white normal-case md:mx-0">
+          {/* <button className="btn btn-wide rounded-full mt-10 btn-primary mx-auto text-white normal-case md:mx-0">
             Create Your Page For Free
-          </button>
+          </button> */}
         </div>
         <div data-aos="fade-down-left" className="w-[95%] mx-auto flex lg:w-1/2 ">
           <Image
             src="/start-page/customize.webp"
             width={650}
             height={600}
-            alt="Social Media Post Customization"
+            alt="BoostnBoom's Social Media Post Customization"
             loader={imageLoader}
           />
         </div>

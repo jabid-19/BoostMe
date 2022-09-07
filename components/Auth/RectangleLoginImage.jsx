@@ -9,7 +9,7 @@ const RectangleLoginImage = () => {
           width={620}
           height={620}
           src={RectangleImage}
-          alt="BoostMe's Login Section"
+          alt="BoostnBoom's Login Section Image"
           loader={imageLoader}
         />
       </div>

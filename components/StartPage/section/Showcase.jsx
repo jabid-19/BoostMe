@@ -36,24 +36,27 @@ const Showcase = () => {
             data-aos="fade-up-right"
             className="w-[90%] mx-auto flex flex-col justify-center item-center lg:w-1/2 ">
             <h1 className="text-4xl text-center font-semibold break-words text-neutral md:text-start lg:tracking-wide xl:text-5xl">
-              Build a loyal and <span className="text-primary">audience</span> on
+              {/* Build a loyal and <span className="text-primary">audience</span> on
               <br />
-              <span className="text-secondary">social media</span>
+              <span className="text-secondary">social media</span> */}
+              <span className="text-primary">সোশ্যাল মিডিয়ায়</span> ব্র্যান্ড গড়ুন <br /> এবং
+              স্থায়ী <span className="text-secondary">দর্শক</span> তৈরি করুন{' '}
             </h1>
-            <p className="text-neutral text-center text-base mt-10 md:text-start">
-              See all of your comments, stay on top of important <br /> interactions, and turn
-              followers into fans <br /> using Buffer.
+            <p className="text-neutral text-center text-base mt-10 md:text-start max-w-sm">
+              {/* See all of your comments, stay on top of important <br /> interactions, and turn
+              followers into fans <br /> using Buffer. */}
+              সকল কমেন্ট দেখুন, সবার সাথে যোগাযোগ রাখুন এবং ফলোয়ারদেরকে ফ্যানে পরিণত করুন।
             </p>
-            <button className="btn btn-wide rounded-full mt-10 btn-primary mx-auto text-white normal-case md:mx-0">
+            {/* <button className="btn btn-wide rounded-full mt-10 btn-primary mx-auto text-white normal-case md:mx-0">
               Create Your Page For Free
-            </button>
+            </button> */}
           </div>
           <div data-aos="fade-up-left" className="w-[95%] mx-auto flex lg:w-1/2 ">
             <Image
               src="/engagement-section/audience.png"
               width={650}
               height={600}
-              alt="Social Media Post Customization"
+              alt="BoostnBoom's Social Media Post Customization"
               loader={imageLoader}
             />
           </div>
@@ -66,7 +69,7 @@ const Showcase = () => {
               src="/start-page/social.webp"
               width={550}
               height={620}
-              alt="Brand Building using Social Media"
+              alt="BoostnBoom's Brand Building using Social Media"
               loader={imageLoader}
             />
           </div>
@@ -74,17 +77,20 @@ const Showcase = () => {
             data-aos="fade-up-left"
             className="w-[90%] mx-auto flex flex-col justify-center item-center lg:w-1/2 ">
             <h1 className="text-4xl text-center font-semibold break-words text-neutral md:text-start lg:tracking-wide xl:text-5xl">
-              Build a loyal and <span className="text-primary">audience</span> on
+              {/* Build a loyal and <span className="text-primary">audience</span> on
               <br />
-              <span className="text-secondary">social media</span>
+              <span className="text-secondary">social media</span> */}
+              <span className="text-primary">সোশ্যাল মিডিয়ায়</span> ব্র্যান্ড গড়ুন <br /> এবং
+              স্থায়ী <span className="text-secondary">দর্শক</span> তৈরি করুন{' '}
             </h1>
-            <p className="text-neutral text-center text-base mt-10 md:text-start">
-              See all of your comments, stay on top of important <br /> interactions, and turn
-              followers into fans <br /> using Buffer.
+            <p className="text-neutral text-center text-base mt-10 md:text-start max-w-sm">
+              {/* See all of your comments, stay on top of important <br /> interactions, and turn
+              followers into fans <br /> using Buffer. */}
+              সকল কমেন্ট দেখুন, সবার সাথে যোগাযোগ রাখুন এবং ফলোয়ারদেরকে ফ্যানে পরিণত করুন।
             </p>
-            <button className="btn btn-wide rounded-full mt-10 btn-primary mx-auto text-white normal-case md:mx-0">
+            {/* <button className="btn btn-wide rounded-full mt-10 btn-primary mx-auto text-white normal-case md:mx-0">
               Create Your Page For Free
-            </button>
+            </button> */}
           </div>
         </div>
       )}
@@ -94,24 +100,27 @@ const Showcase = () => {
             data-aos="fade-up-right"
             className="w-[90%] mx-auto flex flex-col justify-center item-center lg:w-1/2 ">
             <h1 className="text-4xl text-center font-semibold break-words text-neutral md:text-start lg:tracking-wide xl:text-5xl">
-              Build a loyal and <span className="text-primary">audience</span> on
+              {/* Build a loyal and <span className="text-primary">audience</span> on
               <br />
-              <span className="text-secondary">social media</span>
+              <span className="text-secondary">social media</span> */}
+              <span className="text-primary">সোশ্যাল মিডিয়ায়</span> ব্র্যান্ড গড়ুন <br /> এবং
+              স্থায়ী <span className="text-secondary">দর্শক</span> তৈরি করুন{' '}
             </h1>
-            <p className="text-neutral text-center text-base mt-10 md:text-start">
-              See all of your comments, stay on top of important <br /> interactions, and turn
-              followers into fans <br /> using Buffer.
+            <p className="text-neutral text-center text-base mt-10 md:text-start max-w-sm">
+              {/* See all of your comments, stay on top of important <br /> interactions, and turn
+              followers into fans <br /> using Buffer. */}
+              সকল কমেন্ট দেখুন, সবার সাথে যোগাযোগ রাখুন এবং ফলোয়ারদেরকে ফ্যানে পরিণত করুন।
             </p>
-            <button className="btn btn-wide rounded-full mt-10 btn-primary mx-auto text-white normal-case md:mx-0">
+            {/* <button className="btn btn-wide rounded-full mt-10 btn-primary mx-auto text-white normal-case md:mx-0">
               Create Your Page For Free
-            </button>
+            </button> */}
           </div>
           <div data-aos="fade-up-left" className="w-[95%] mx-auto flex justify-center lg:w-1/2 ">
             <Image
               src="/start-page/NFT.jpg"
               width={550}
               height={620}
-              alt="Generate NFTs"
+              alt="BoostnBoom's Generate NFTs"
               loader={imageLoader}
             />
           </div>

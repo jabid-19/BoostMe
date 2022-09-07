@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import React from 'react'
+import React, { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import {
   AiOutlineFacebook,
@@ -9,8 +9,21 @@ import {
   AiOutlineWhatsApp,
 } from 'react-icons/ai'
 import { BsPhone } from 'react-icons/bs'
-import Contact from '../../public/contact-us/contact.png'
+import imageLoader from '../../helper/imageLoader'
+import BoxBackground2 from '../../public/common/BoxBackground2.png'
+import Contact from '../../public/contact-us/contact-us-animate.svg'
+
+import { contact } from '../../src/backend/Contact'
+
 const ContactUsMain = () => {
+  const [status, setStatus] = useState({
+    loading: false,
+    success: false,
+    error: {
+      message: null,
+      status: false,
+    },
+  })
   const {
     register,
     handleSubmit,
@@ -42,117 +55,216 @@ const ContactUsMain = () => {
       link: 'https://www.linkedin.com/',
     },
   ]
-  const onSubmit = (data) => {
-    console.log(data)
+  const onSubmit = async (data) => {
+    setStatus({ ...status, loading: true })
+    const response = await contact(data)
+    if (response.status == 200 || response.status == 201) {
+      setStatus({ ...status, loading: false, success: true })
+    } else {
+      setStatus({
+        ...status,
+        loading: false,
+        success: false,
+        error: {
+          status: true,
+          message: response?.data?.error,
+        },
+      })
+    }
   }
+
   return (
-    <div className="relative w-full mb-20 lg:mb-0">
-      <div className="w-auto mx-6 mt-12 lg:min-h-[85vh] lg:mt-16 2xl:w-[1400px] 2xl:mx-auto">
-        <div className="flex flex-col w-full gap-10 lg:flex-row">
-          <div className="w-[90%] mx-auto flex flex-col justify-center item-center lg:w-2/3 ">
-            <h1 className="text-3xl text-neutral font-bold">Send a Message</h1>
-            <form onSubmit={handleSubmit(onSubmit)} className="mt-10 lg:w-2/3 ">
-              <div className="mb-5">
-                <label className="text-xl font-semibold text-neutral pl-2 mb-4">Full Name</label>
-                <input
-                  name="name"
-                  placeholder="John Doe"
-                  type="text"
-                  {...register('name', { required: 'Name is required' })}
-                  className="input input-bordered input-primary bg-transparent rounded-full w-full min-w-xs"
-                />
-                <div className="text-error text-xs font-bold pl-2 pt-2">{errors.name?.message}</div>
-              </div>
-              <div className="mb-5 flex gap-4">
-                <div className="w-1/2">
-                  <label className="text-xl font-semibold text-neutral pl-2">Phone</label>
+    <div className="relative w-full mb-20">
+      <div data-aos="fade-right" className="hidden lg:block lg:absolute lg:left-0 lg:-top-14">
+        <Image
+          src={BoxBackground2}
+          width={400}
+          height={100}
+          alt="BoostnBoom's Background"
+          loader={imageLoader}
+        />
+      </div>
+      <div className="w-auto mx-6 mt-12 lg:min-h-[85vh] lg:mt-16 2xl:w-[1000px] 2xl:mx-auto">
+        <div className="flex flex-col gap-10 w-full lg:flex-row">
+          {!status.success && (
+            <div
+              data-aos="fade-right"
+              className="w-[90%] mx-auto flex flex-col justify-center item-center lg:w-1/2 lg:mt-10 3xl:mt-0">
+              <h1 className="text-3xl text-neutral font-bold">Send a Message</h1>
+              <form onSubmit={handleSubmit(onSubmit)} className="mt-10">
+                <div className="mb-5">
+                  <label className="text-xl font-semibold text-neutral pl-2 mb-4">Full Name</label>
                   <input
-                    name="phone"
-                    placeholder="+1 (555) 555-5555"
-                    type="tel"
-                    {...register('phone', { required: 'Phone Number is required' })}
-                    className="input input-bordered input-primary bg-transparent rounded-full w-full min-w-xs"
+                    name="name"
+                    placeholder="John Doe"
+                    type="text"
+                    {...register('name', { required: 'Name is required' })}
+                    className={`w-full
+                  px-3
+                  py-2
+                  text-gray-800
+                  border
+                  rounded
+                  outline-secondary
+                  bg-gray-50
+                  min-w-xs
+                  ${(errors.name?.message || status.error?.status) && 'border-error outline-error'}
+                  `}
                   />
                   <div className="text-error text-xs font-bold pl-2 pt-2">
-                    {errors.phone?.message}
+                    {errors.name?.message}
                   </div>
                 </div>
-                <div className="w-1/2">
-                  <label className="text-xl font-semibold text-neutral pl-2">Email</label>
+                <div className="mb-5 flex gap-4">
+                  <div className="w-1/2">
+                    <label className="text-xl font-semibold text-neutral pl-2">Phone</label>
+                    <input
+                      name="phone"
+                      placeholder="+880 111111111"
+                      type="tel"
+                      {...register('phone', { required: 'Phone Number is required' })}
+                      className={`w-full
+                  px-3
+                  py-2
+                  text-gray-800
+                  border
+                  rounded
+                  outline-secondary
+                  bg-gray-50
+                  min-w-xs
+                  ${(errors.phone?.message || status.error?.status) && 'border-error outline-error'}
+                  `}
+                    />
+                    <div className="text-error text-xs font-bold pl-2 pt-2">
+                      {errors.phone?.message}
+                    </div>
+                  </div>
+                  <div className="w-1/2">
+                    <label className="text-xl font-semibold text-neutral pl-2">Email</label>
+                    <input
+                      name="email"
+                      placeholder="example@example.com"
+                      type="email"
+                      {...register('email', { required: 'Email is required' })}
+                      className={`w-full
+                  px-3
+                  py-2
+                  text-gray-800
+                  border
+                  rounded
+                  outline-secondary
+                  bg-gray-50
+                  min-w-xs
+                  ${(errors.email?.message || status.error?.status) && 'border-error outline-error'}
+                  `}
+                    />
+                    <div className="text-error text-xs font-bold pl-2 pt-2">
+                      {errors.email?.message}
+                    </div>
+                  </div>
+                </div>
+                <div className="mb-5">
+                  <label className="text-xl font-semibold text-neutral pl-2">Subject</label>
                   <input
-                    name="email"
-                    placeholder="example@example.com"
-                    type="email"
-                    {...register('email', { required: 'Email is required' })}
-                    className="input input-bordered input-primary bg-transparent rounded-full w-full min-w-xs"
+                    name="subject"
+                    placeholder="XXXXX"
+                    type="text"
+                    {...register('subject', { required: 'Subject is required' })}
+                    className={`w-full
+                  px-3
+                  py-2
+                  text-gray-800
+                  border
+                  rounded
+                  outline-secondary
+                  bg-gray-50
+                  min-w-xs
+                  ${
+                    (errors.subject?.message || status.error?.status) &&
+                    'border-error outline-error'
+                  }
+                  `}
                   />
                   <div className="text-error text-xs font-bold pl-2 pt-2">
-                    {errors.email?.message}
+                    {errors.subject?.message}
                   </div>
                 </div>
-              </div>
-              <div className="mb-5">
-                <label className="text-xl font-semibold text-neutral pl-2">Subject</label>
+                <div className="mb-5">
+                  <label className="text-xl font-semibold text-neutral pl-2">
+                    How can we help?
+                  </label>
+                  <textarea
+                    name="details"
+                    type="text"
+                    {...register('details', { required: 'Details is required' })}
+                    className={`w-full
+                  px-3
+                  py-2
+                  text-gray-800
+                  border
+                  rounded
+                  outline-secondary
+                  bg-gray-50
+                  min-w-xs
+                  ${
+                    (errors.details?.message || status.error?.status) &&
+                    'border-error outline-error'
+                  }
+                  `}
+                  />
+                  <div className="text-error text-xs font-bold pl-2 pt-2">
+                    {errors.details?.message}
+                  </div>
+                </div>
                 <input
-                  name="subject"
-                  placeholder="XXXXX"
-                  type="text"
-                  {...register('subject', { required: 'Subject is required' })}
-                  className="input input-bordered input-primary bg-transparent rounded-full w-full min-w-xs"
+                  className="bg-secondary font-bold hover:bg-orange-400 px-3
+              py-2 w-full min-w-xs normal-case text-white rounded cursor-pointer"
+                  type="submit"
+                  value={`${status.loading ? 'Loading...' : 'Submit'}`}
                 />
-                <div className="text-error text-xs font-bold pl-2 pt-2">
-                  {errors.subject?.message}
-                </div>
+              </form>
+            </div>
+          )}
+          {status.success && !status.loading && (
+            <h1 className="flex items-center text-xl font-bold">
+              Thank you, your submission has been received.
+            </h1>
+          )}
+          <div
+            // data-aos="fade-left"
+            className="w-[95%] mx-auto flex flex-col bg-primary rounded-lg p-8 lg:w-1/2">
+            <div className="mx-auto">
+              <h1 className="text-3xl text-white font-bold">Contact Info</h1>
+              <div className="text-white mt-10">
+                <BsPhone className="inline-block mr-2" size={30} />
+                <a href="tel:+880 123456789" className="text-xl">
+                  +880 123456789
+                </a>
               </div>
-              <div className="mb-5">
-                <label className="text-xl font-semibold text-neutral pl-2">How can we help?</label>
-                <textarea
-                  name="details"
-                  type="text"
-                  {...register('details', { required: 'Details is required' })}
-                  className="input input-bordered input-primary h-32 bg-transparent rounded-3xl w-full min-w-xs px-4 py-4"
-                />
-                <div className="text-error text-xs font-bold pl-2 pt-2">
-                  {errors.details?.message}
-                </div>
+              <div className="text-white mt-10">
+                <AiOutlineMail className="inline-block mr-2" size={30} />
+                <a href="mailto:example@example.com" className="text-xl">
+                  example@example.com
+                </a>
               </div>
-              <input
-                className="input bg-secondary hover:bg-orange-400 py-1.5 w-full min-w-xs normal-case text-white rounded-full cursor-pointer"
-                type="submit"
-                value="Sign In"
-              />
-            </form>
-          </div>
-          <div className="w-[95%] mx-auto flex flex-col bg-primary rounded-lg p-8 lg:w-1/3">
-            <h1 className="text-3xl text-white font-bold">Contact Info</h1>
-            <div className="text-white mt-10">
-              <BsPhone className="inline-block mr-2" size={30} />
-              <a href="tel:+880 123456789" className="text-xl">
-                +880 123456789
-              </a>
+              <div className="text-white mt-10 flex flex-wrap gap-5 items-center">
+                {socialMediaLinks.map((socialMedia) => (
+                  <div className="border-2 p-1 rounded-full md:p-2" key={socialMedia.key}>
+                    <a href={socialMedia.link} target="_blank" rel="noreferrer">
+                      {socialMedia.icon}
+                    </a>
+                  </div>
+                ))}
+              </div>
             </div>
-            <div className="text-white mt-10">
-              <AiOutlineMail className="inline-block mr-2" size={30} />
-              <a href="mailto:example@example.com" className="text-xl">
-                example@example.com
-              </a>
-            </div>
-            <div className="text-white mt-10 flex flex-wrap gap-5 items-center">
-              {socialMediaLinks.map((socialMedia) => (
-                <div className="border-2 p-1 rounded-full md:p-2" key={socialMedia.key}>
-                  <a href={socialMedia.link} target="_blank" rel="noreferrer">
-                    {socialMedia.icon}
-                  </a>
-                </div>
-              ))}
-            </div>
-            <div className="mt-20">
+            <div className="mt-20 flex justify-center">
               <Image
                 src={Contact}
-                alt="BoostMe Contact Image"
-                width={400}
-                height={150}
+                alt="BoostnBoom's Contact Image"
+                width={300}
+                height={300}
                 className="rounded-lg"
+                loader={imageLoader}
               />
             </div>
           </div>

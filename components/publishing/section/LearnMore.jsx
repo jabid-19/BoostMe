@@ -13,7 +13,7 @@ const LearnMore = () => {
           width={423}
           height={460}
           className="max-w-sm rounded-lg shadow-2xl"
-          alt="Social Media Content Writing"
+          alt="BoostnBoom's Social Media Content Writing"
           loader={imageLoader}
         />
         <div
@@ -32,7 +32,7 @@ const LearnMore = () => {
             {/* Plan and publish your content for Instagram, TikTok, Facebook, Twitter, Pinterest, and
             LinkedIn, all from one simple dashboard. */}
           </p>
-          <div className="flex flex-col md:flex-row">
+          {/* <div className="flex flex-col md:flex-row">
             <div className="mb-4 md:mr-4 md:mb-0">
               <button className="btn btn-primary normal-case px-12 text-white rounded-full">
                 Get Started
@@ -43,7 +43,7 @@ const LearnMore = () => {
                 Learn More
               </button>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

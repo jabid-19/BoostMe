@@ -14,7 +14,7 @@ const EngagementMain = () => {
     titleSecondary: 'শিডিউল ',
     titleLast: 'করুন সহজেই',
     description:
-      'Facebook, Instragam, TikTok, Google Business Pages, YouTube সহ সকল সোশ্যাল মিডিয়া প্ল্যাটফর্মে সহজে পোস্ট শিডিউল করুন এবং পোস্ট করুন BoostMe থেকে সহজেই।',
+      'Facebook, Instragam, TikTok, Google Business Pages, YouTube সহ সকল সোশ্যাল মিডিয়া প্ল্যাটফর্মে সহজে পোস্ট শিডিউল করুন এবং পোস্ট করুন BoostnBoom থেকে সহজেই।',
   }
 
   return (

@@ -50,14 +50,18 @@ const Testimonials = () => {
           src={BoxBackground2}
           width={400}
           height={100}
-          alt="BoostMe's Background"
+          alt="BoostnBoom's Background"
           loader={imageLoader}
         />
       </div>
       <div data-aos="fade-left" className="w-full flex justify-center lg:justify-end lg:pr-28">
-        <h1 className="text-2xl font-semibold break-words md:text-4xl text-neutral lg:tracking-wide py-14 xl:text-5xl text-center lg:text-left lg:max-w-2xl">
-          Business <span className="text-primary">all over the world</span> <br />
-          <span className="text-secondary">trust</span> us to build the brand
+        <h1 className="text-2xl font-semibold break-words md:text-4xl text-neutral lg:tracking-wide py-14 xl:text-5xl text-center lg:text-left lg:max-w-3xl">
+          {/* Business <span className="text-primary">all over the world</span> <br />
+          <span className="text-secondary">trust</span> us to build the brand */}
+          <span className="text-primary">ব্যবসা</span> ছড়িয়ে দিন গোটা{' '}
+          <span className="text-secondary">বিশ্বে</span> <br />
+          <span className="text-secondary">আস্থা</span> রাখুন{' '}
+          <span className="text-primary">আমাদের</span> উপর
         </h1>
       </div>
       <div className="relative container mx-auto">
@@ -70,7 +74,7 @@ const Testimonials = () => {
                     src={testimonial?.image}
                     width={100}
                     height="100%"
-                    alt="BoostMe's testimonials"
+                    alt="BoostnBoom's testimonials"
                     loader={imageLoader}
                   />
                 </div>

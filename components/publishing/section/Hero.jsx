@@ -14,7 +14,7 @@ const Hero = () => {
             src={BoxBackground}
             width={500}
             height={100}
-            alt="BoostMe's Background"
+            alt="BoostnBoom's Background"
             loader={imageLoader}
           />
         </div>
@@ -23,7 +23,7 @@ const Hero = () => {
             src={BoxBackground2}
             width={500}
             height={100}
-            alt="BoostMe's Background"
+            alt="BoostnBoom's Background"
             loader={imageLoader}
           />
         </div>
@@ -34,7 +34,7 @@ const Hero = () => {
             src={BoxBackground}
             width={500}
             height={100}
-            alt="BoostMe's Background"
+            alt="BoostnBoom's Background"
             loader={imageLoader}
           />
         </div>
@@ -53,7 +53,7 @@ const Hero = () => {
               width={423}
               height={460}
               className="max-w-sm rounded-lg shadow-2xl"
-              alt="Digital Marketing Dashboard"
+              alt="BoostnBoom's Digital Marketing Dashboard"
               loader={imageLoader}
             />
             <div
@@ -67,10 +67,10 @@ const Hero = () => {
               </h1>
               <p className="py-4 text-neutral w-full lg:w-1/2 text-center lg:text-left">
                 আপনার অ্যাকাউন্টের পারফরম্যান্সের একটি পরিষ্কার ওভারভিউ পাবেন এবং বিভিন্ন ডেটা
-                মেট্রিক এর সহজে চার্ট এবং গ্রাফের মাধ্যমে আপনার পোস্টের ওভারভিউ পাবেন BoostMe
+                মেট্রিক এর সহজে চার্ট এবং গ্রাফের মাধ্যমে আপনার পোস্টের ওভারভিউ পাবেন BoostnBoom
                 প্লাটফর্ম থেকে।
               </p>
-              <div className="flex flex-col md:flex-row">
+              {/* <div className="flex flex-col md:flex-row">
                 <div className="mb-4 md:mr-4 md:mb-0">
                   <button className="btn btn-primary normal-case px-12 text-white rounded-full">
                     Get Started
@@ -81,7 +81,7 @@ const Hero = () => {
                     Learn More
                   </button>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

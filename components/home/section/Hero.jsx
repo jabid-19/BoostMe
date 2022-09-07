@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
-import { BsPlayBtn } from 'react-icons/bs'
+import Link from 'next/link'
+// import { BsPlayBtn } from 'react-icons/bs'
 import imageLoader from '../../../helper/imageLoader'
 import Background from '../../../public/common/BoxBackground.png'
 const Hero = () => {
@@ -32,7 +33,8 @@ const Hero = () => {
             data-aos="fade-left"
             className="h-auto text-center lg:text-left mb-10 max-w-fit z-20">
             <h1 className="text-2xl font-semibold break-words md:text-4xl text-neutral lg:tracking-wide xl:text-5xl">
-              <span className="text-primary">বুস্টিং করুন সহজে</span>
+              <span className="text-primary">বুস্টিং</span> করুন{' '}
+              <span className="text-secondary">সহজে</span>
               {/* Build your <span className="text-primary">audience</span> and
               <br />
               <span className="text-secondary">grow</span> your brand */}
@@ -55,7 +57,7 @@ const Hero = () => {
                 <p className="w-full lg:w-3/4 max-w-fit text-neutral">
                   বুস্ট করুন আপনার পছন্দের সোশ্যাল মিডিয়া প্ল্যাটফর্মে কোনরকম ক্রেডিট কার্ড ছাড়াই।
                   বিকাশ, নগদ, ডেবিট কার্ড কিংবা ব্যাংক ট্রান্সফারের মাধ্যমে আপনার সকল সোশ্যাল
-                  মিডিয়া প্ল্যাটফর্ম যেকোনো পোস্ট প্রমোট করতে পারবেন BoostMe অ্যাপ থেকে।
+                  মিডিয়া প্ল্যাটফর্ম যেকোনো পোস্ট প্রমোট করতে পারবেন BoostnBoom অ্যাপ থেকে।
                   {/* Plan and publish your content for Instagram, <br /> TikTok, Facebook, Twitter,
                   Pinterest, and LinkedIn,
                   <br /> all from one simple dashboard. */}
@@ -64,15 +66,27 @@ const Hero = () => {
               <div className="flex flex-col mt-4 items-center justify-center lg:justify-start md:flex-row lg:ml-8">
                 <div className="flex flex-col items-center md:flex-row">
                   <div className="mb-4 md:mr-4 md:mb-0">
-                    <button className="btn btn-primary normal-case px-12 text-white rounded-full">
-                      Get Started
-                    </button>
+                    <Link href="login">
+                      <a>
+                        <button className="btn btn-primary normal-case px-12 text-white rounded-full">
+                          Get Started
+                        </button>
+                      </a>
+                    </Link>
                   </div>
                   <div>
-                    <button className="btn btn-primary normal-case px-10 text-primary rounded-full bg-white hover:bg-transparent">
+                    {/* <button
+                      className="btn btn-primary normal-case px-10 text-primary rounded-full bg-white hover:bg-transparent">
                       <BsPlayBtn />
                       <span className="ml-2">Watch Video</span>
-                    </button>
+                    </button> */}
+                    <Link href="contact">
+                      <a>
+                        <button className="btn btn-primary normal-case px-12 text-primary rounded-full bg-white hover:bg-transparent">
+                          Contact Us
+                        </button>
+                      </a>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -83,7 +97,7 @@ const Hero = () => {
               src={Background}
               width={500}
               height={100}
-              alt="BoostMe's Background"
+              alt="BoostnBoom's Background"
               className="max-w-full h-auto rounded-lg"
               loader={imageLoader}
             />

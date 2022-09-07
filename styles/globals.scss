@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.react-select__control {
+  width: 100%;
+  padding: 0.2rem 0.2rem;
+  background-color: #f9fafb !important;
+}
+.alert-border {
+  .react-select__control {
+    border: 1px solid #e12147 !important;
+  }
+}
+
+.react-input-emoji--container {
+  margin-left: 0px !important;
+  .react-input-emoji--wrapper {
+    .react-input-emoji--input {
+      padding: 16px !important;
+      height: 50px !important;
+      background-color: #f9fafb !important;
+      overflow: hidden;
+    }
+  }
+}
+
+.quill {
+  .ql-container {
+    .ql-editor {
+      min-height: 200px;
+      padding: 16px;
+      background-color: #f9fafb !important;
+    }
+  }
+}

@@ -22,9 +22,9 @@ const Traffic = ({ trafficHeading }) => {
           your best content in one place. Share it in your bios on Instagram, YouTube, TikTok, or
           any other social profiles. */}
         </p>
-        <button className="btn btn-wide mt-10 btn-primary mx-auto rounded-full text-white normal-case md:mx-0">
+        {/* <button className="btn btn-wide mt-10 btn-primary mx-auto rounded-full text-white normal-case md:mx-0">
           Start 14 days Free Trial
-        </button>
+        </button> */}
       </div>
     </div>
   )
