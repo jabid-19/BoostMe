@@ -108,12 +108,6 @@ const Calendar = () => {
   const handleCreate = () => {
     if (calendar.value !== '<p><br></p>' && calendar.value.length) {
       setCalendar({ ...calendar, status: { loading: true } })
-      setTimeout(() => {
-        setCalendar({
-          ...calendar,
-          status: { loading: false, success: true },
-        })
-      }, 6000)
     }
   }
 
